@@ -1,17 +1,18 @@
 <template lang="html">
   <b-button
-    :class="[$style.lmButton, $style[variant]]"
+    :class="[$style.LmButton, $style[variant]]"
     :size="size"
     :to="to"
     :block="block"
   >
-    <slot></slot>
+    <slot />
   </b-button>
 </template>
 
 <script>
 export default {
-  name: "lm-button",
+  name: "LmButton",
+  // eslint-disable-next-line
   props: ["variant", "size", "block", "to"]
 };
 </script>
@@ -20,7 +21,7 @@ export default {
 $border-width: 2px;
 $border-radius: 9999em;
 
-.lmButton {
+.LmButton {
   position: relative;
   z-index: 1;
   font-weight: 500;
@@ -68,7 +69,7 @@ $border-radius: 9999em;
     transform: translate($border-width * 2, $border-width * 2);
   }
 
-  &.lmButton--light {
+  &.LmButton--light {
     color: $white;
 
     &:hover,
@@ -109,7 +110,7 @@ $border-radius: 9999em;
   }
 }
 
-.lmButton--danger {
+.LmButton--danger {
   &::after {
     background-color: theme-color("danger");
   }

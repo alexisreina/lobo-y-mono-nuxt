@@ -5,20 +5,23 @@
       <p>{{about.lead}}</p>
       <b-row>
         <b-col
-          md="6"
           v-for="person in about.people"
           :key="about[person].id"
+          md="6"
         >
+
           <b-img
-            fluid
-            class="mb-3"
             :src="about[person].img"
             :alt="about[person].name"
+            fluid
+            class="mb-3"
           />
+
           <h3>
             {{about[person].name}}
           </h3>
-          <p v-html="about[person].bio"></p>
+
+          <p v-html="about[person].bio" />
         </b-col>
       </b-row>
     </b-col>
@@ -27,7 +30,7 @@
 
 <script>
 export default {
-  name: "about-people",
+  name: "AboutPeople",
   data() {
     return {
       about: {

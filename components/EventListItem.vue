@@ -1,5 +1,5 @@
 <template lang="html">
-  <router-link :to="{ name: 'event', params: { id: event.id } }">
+  <b-link :to="{ name: 'event', params: { id: event.id } }">
     <figure class="event-list-item">
       <b-img
         fluid
@@ -11,12 +11,12 @@
         {{event.title}}, {{event.place}}, {{event.date}}.
       </figcaption>
     </figure>
-  </router-link>
+  </b-link>
 </template>
 
 <script>
 export default {
-  name: "events-list-item",
+  name: "EventListItem",
   props: {
     event: {
       type: Object,

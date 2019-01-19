@@ -1,3 +1,4 @@
+<!-- eslint-disable -->
 <template lang="html">
   <div>
     <h2>{{header}}</h2>
@@ -7,7 +8,7 @@
 
 <script>
 export default {
-  name: "tale",
+  name: "Tale",
   data() {
     return {
       header: "Cuento",

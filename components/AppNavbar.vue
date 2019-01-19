@@ -8,12 +8,11 @@
     <b-navbar-brand to="/">
       {{brand}}
     </b-navbar-brand>
-    <b-collapse is-nav id="nav_collapse">
+    <b-collapse id="nav_collapse" is-nav>
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
         <b-nav-item
           v-for="nav in navList"
-          :class="$style.myNavLink"
           :key="nav.id"
           :to="nav.link"
         >
@@ -26,7 +25,7 @@
 
 <script>
 export default {
-  name: "Navbar",
+  name: "AppNavbar",
   data() {
     return {
       brand: "Lobo y Mono",
@@ -68,10 +67,4 @@ export default {
 </script>
 
 <style module lang="scss">
-.myNavbar {
-}
-
-.myNavLink {
-  font-size: 0.75rem;
-}
 </style>

@@ -1,14 +1,14 @@
 <template lang="html">
-  <span class="text-rorator">
-    {{ currentWord }}
+  <span class="text-rotator">
+    {{currentWord}}
   </span>
 </template>
 
 <script>
-let theInterval = 0
+let theInterval = null;
 
 export default {
-  name: 'TextRotator',
+  name: "TextRotator",
   props: {
     words: {
       type: Array,
@@ -27,35 +27,35 @@ export default {
     return {
       currentWord: this.words[0],
       count: 0
-    }
+    };
   },
   created() {
-    const total = this.words.length - 1
+    const total = this.words.length - 1;
 
     theInterval = setInterval(() => {
-      this.count += 1
+      this.count += 1;
 
       if (this.count > total) {
-        this.count = 0
+        this.count = 0;
 
         if (!this.infinite) {
-          return clearInterval(theInterval)
+          return clearInterval(theInterval);
         }
       }
 
-      this.currentWord = this.words[this.count]
-    }, this.interval)
+      this.currentWord = this.words[this.count];
+    }, this.interval);
   },
   destroyed() {
     if (theInterval) {
-      clearInterval(theInterval)
+      clearInterval(theInterval);
     }
   }
-}
+};
 </script>
 
-<style scoped lang="css">
-  .text-rorator {
+<style lang="css" scoped>
+  .text-rotator {
     display: inline-block;
   }
 </style>

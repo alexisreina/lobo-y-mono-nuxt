@@ -1,22 +1,24 @@
 <template lang="html">
-  <figure class="">
+  <figure>
+
     <b-img
-      class="mb-2"
-      fluid
       :src="artist.img.src"
       :srcset="artist.img.srcset"
       :alt="artist.name"
+      class="mb-2"
+      fluid
     />
-    
+
     <figcaption class="mb-3">
       {{artist.name}}
     </figcaption>
+
   </figure>
 </template>
 
 <script>
 export default {
-  name: "artist-list-item",
+  name: "ArtistListItem",
   props: {
     artist: {
       type: Object,

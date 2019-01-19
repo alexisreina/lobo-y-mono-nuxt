@@ -1,12 +1,30 @@
 <template lang="html">
   <b-row class="py-3">
     <b-col lg="10" offset-lg="1">
-      <h2 class="mb-4 text-uppercase text-center">{{title}}</h2>
-      <div v-for="key in items" :key="key">
-        <h3>{{values[key].title}}</h3>
-        <p>{{values[key].text}}</p>
+      <h2 class="mb-4 text-uppercase text-center">
+        {{title}}
+      </h2>
+
+      <div
+        v-for="key in items"
+        :key="key"
+      >
+
+        <h3>
+          {{values[key].title}}
+        </h3>
+
+        <p>
+          {{values[key].text}}
+        </p>
+
         <ul v-if="values[key].list">
-          <li v-for="item in values[key].list" :key="item">{{item}}</li>
+          <li
+            v-for="item in values[key].list"
+            :key="item"
+          >
+            {{item}}
+          </li>
         </ul>
       </div>
     </b-col>
@@ -15,7 +33,7 @@
 
 <script>
 export default {
-  name: "about-values",
+  name: "AboutValues",
   data() {
     return {
       title: "Nuestros Valores",

@@ -2,9 +2,9 @@
   <div class="d-xs-flex flex-xs-row align-items-xs-center justify-content-xs-center">
     <div class="py-5 text-center">
       <lm-button
+        :to="link"
         variant="primary"
         size="lg"
-        :to="link"
       >
         {{label}}
       </lm-button>
@@ -13,12 +13,12 @@
 </template>
 
 <script>
-import lmButton from "@/components/lmButton.vue";
+import LmButton from "@/components/LmButton.vue";
 
 export default {
-  name: "home-cta",
+  name: "HomeCta",
   components: {
-    lmButton
+    LmButton
   },
   data() {
     return {

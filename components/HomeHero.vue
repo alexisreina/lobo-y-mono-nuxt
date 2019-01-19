@@ -1,3 +1,4 @@
+<!-- eslint-disable -->
 <template lang="html">
   <header class="py-5" :class="$style.header">
     <b-container class="py-lg-3">
@@ -27,7 +28,7 @@
 import TextRotator from "@/components/TextRotator.vue";
 
 export default {
-  name: "home-hero",
+  name: "HomeHero",
   components: {
     TextRotator
   },

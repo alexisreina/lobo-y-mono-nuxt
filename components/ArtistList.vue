@@ -3,11 +3,11 @@
     <b-container>
       <b-row>
         <b-col
+          v-for="artist in data"
+          :key="artist.id"
           md="6"
           lg="4"
           class="pb-3"
-          v-for="artist in data"
-          :key="artist.id"
         >
           <artist-list-item :artist="artist" />
         </b-col>
@@ -20,7 +20,7 @@
 import ArtistListItem from "@/components/ArtistListItem.vue";
 
 export default {
-  name: "artist-list",
+  name: "ArtistList",
   components: {
     ArtistListItem
   },

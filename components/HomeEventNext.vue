@@ -1,9 +1,16 @@
+<!-- eslint-disable -->
 <template lang="html">
   <b-row align-v="center">
     <b-col md="6">
       <div>
-        <h2>{{title}}</h2>
-        <p>{{text}}</p>
+        <h2>
+          {{title}}
+        </h2>
+
+        <p>
+          {{text}}
+        </p>
+
         <lm-button
           v-for="(key, index) in actions.items"
           :key="key"
@@ -15,24 +22,25 @@
         </lm-button>
       </div>
     </b-col>
+
     <b-col md="6">
       <b-img
-        fluid
         :src="img.src"
         :srcset="img.srcset"
         :alt="img.alt"
+        fluid
       />
     </b-col>
   </b-row>
 </template>
 
 <script>
-import lmButton from "@/components/lmButton.vue";
+import LmButton from "@/components/LmButton.vue";
 
 export default {
-  name: "home-next-event",
+  name: "HomeEventNext",
   components: {
-    lmButton
+    LmButton
   },
   data() {
     return {

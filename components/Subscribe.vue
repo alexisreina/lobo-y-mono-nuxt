@@ -1,3 +1,4 @@
+<!-- eslint-disable -->
 <template lang="html">
   <b-form>
     <b-row align-v="center">
@@ -20,18 +21,18 @@
         >
           {{btn.label}}
         </lm-button>
-      </b-col>  
+      </b-col>
     </b-row>
   </b-form>
 </template>
 
 <script>
-import lmButton from "@/components/lmButton.vue";
+import LmButton from "@/components/LmButton.vue";
 
 export default {
-  name: "subscribe",
+  name: "Subscribe",
   components: {
-    lmButton
+    LmButton
   },
   data() {
     return {
