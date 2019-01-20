@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <header role="banner" class="bg-light">
-      <b-container class="py-3 py-lg-4 text-center mb-3 mb-lg-4">
+      <b-container class="py-3 py-lg-4 text-center mb-3 mb-lg-5">
         <b-row>
           <b-col lg="10" offset-lg="1">
             <h1 class="mb-3">
@@ -18,43 +18,89 @@
       <b-container>
         <b-row>
           <b-col lg="10" offset-lg="1">
-            <div
-              v-for="item in page.list"
-              :key="item.id"
-            >
-              <h3 class="h4">
-                {{item.title}}
-              </h3>
-
-              <Markdown :content="item.description" />
-            </div>
-
-
-            <h4 class="h5">
-              {{page.other.title}}
-            </h4>
-
-            <Markdown :content="page.other.description" />
+            <ServicesList />
           </b-col>
         </b-row>
       </b-container>
     </section>
 
-    <section>
-      <b-container>
-        <b-row>
-          <b-col lg="10" offset-lg="1">
-            <ServiceBundles />
-          </b-col>
-        </b-row>
-      </b-container>
-    </section>
-
-    <section class="bg-light">
+    <section class="bg-light mb-5">
       <b-container>
         <b-row>
           <b-col lg="10" offset-lg="1">
             <ServicesCta />
+          </b-col>
+        </b-row>
+      </b-container>
+    </section>
+
+    <section class="mb-lg-5">
+      <b-container>
+        <b-row>
+          <b-col lg="10" offset-lg="1">
+            <b-row align-v="center">
+              <b-col md="6">
+                <b-img
+                  blank
+                  blank-color="#777"
+                  width="540"
+                  height="325"
+                  alt=""
+                  rounded
+                  fluid
+                />
+              </b-col>
+
+              <b-col md="6">
+                <h2>
+                  EVENTOS A MEDIDA
+                </h2>
+
+                <p>
+                  ¡Pero esto no es todo! si deseas que seamos tus nar-
+                  radoras y demos forma a tu idea, contacta con no-
+                  sotras. Pondremos toda nuestra experiencia y creativ-
+                  idad a tu disposición, te ayudamos a que tu evento sea divertido, diferente y todo un éxito.
+                </p>
+
+              </b-col>
+            </b-row>
+          </b-col>
+        </b-row>
+      </b-container>
+    </section>
+
+    <section class="mb-lg-5">
+      <b-container>
+        <b-row>
+          <b-col lg="10" offset-lg="1">
+            <ServicesBundles />
+          </b-col>
+        </b-row>
+      </b-container>
+    </section>
+
+    <section class="py-5 bg-light">
+      <b-container>
+        <b-row>
+          <b-col lg="10" offset-lg="1">
+            <ServicesOther />
+          </b-col>
+        </b-row>
+      </b-container>
+    </section>
+
+    <section class="py-5 text-center">
+      <b-container>
+        <b-row>
+          <b-col lg="10" offset-lg="1">
+            <LmButton
+              to="/contacto"
+              variant="primary"
+              size="lg"
+            >
+              Contacta con nosotras
+            </LmButton>
           </b-col>
         </b-row>
       </b-container>
@@ -64,7 +110,10 @@
 
 <script>
 import Markdown from "@/components/Markdown.vue";
-import ServiceBundles from "@/components/ServiceBundles";
+import LmButton from "@/components/LmButton.vue";
+import ServicesOther from "@/components/ServicesOther.vue";
+import ServicesList from "@/components/ServicesList.vue";
+import ServicesBundles from "@/components/ServicesBundles.vue";
 import ServicesCta from "@/components/ServicesCta.vue";
 
 export default {
@@ -72,7 +121,10 @@ export default {
   layout: "page",
   components: {
     Markdown,
-    ServiceBundles,
+    LmButton,
+    ServicesOther,
+    ServicesList,
+    ServicesBundles,
     ServicesCta
   },
   computed: {

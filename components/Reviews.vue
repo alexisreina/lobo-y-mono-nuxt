@@ -9,9 +9,7 @@
       <div
         class="p-3 p-lg-4 bg-light rounded"
       >
-        <p class="mb-0 lead">
-          {{review.text}}
-        </p>
+        <Markdown class="review-body" :content="review.text" />
 
         <div class="pt-4 d-flex flex-row align-items-center">
           <b-img
@@ -30,9 +28,7 @@
               {{review.author.name}}
             </p>
 
-            <small>
-              {{review.author.info}}
-            </small>
+            <Markdown class="review-info small" :content="review.author.info" />
           </div>
 
         </div>
@@ -43,8 +39,13 @@
 </template>
 
 <script>
+import Markdown from "~/components/Markdown.vue";
+
 export default {
   name: "Reviews",
+  components: {
+    Markdown
+  },
   computed: {
     reviews() {
       return this.$store.state.reviews.list;
@@ -53,5 +54,14 @@ export default {
 };
 </script>
 
-<style lang="css">
+<style scoped lang="scss">
+.review-info /deep/ p {
+  margin-bottom: 0.25rem;
+}
+
+.review-body /deep/ p {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
 </style>

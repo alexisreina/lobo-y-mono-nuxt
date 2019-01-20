@@ -5,5 +5,33 @@
   "cta": {
     "label": "Crea tu evento",
     "link": "/crea-tu-evento"
+  },
+  "services": {
+    "title": "Qué te ofrece Lobo y Mono",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "link": {
+      "label": "Descubre lo que te ofrece Lobo y Mono",
+      "url": "/que-ofrecemos"
+    },
+    "list": [
+      {
+        "id": "0",
+        "title": "Cultura y Ocio como transformación social",
+        "image": "",
+        "description": "Nos dedicamos a crear eventos culturales en todo su espectro. Utilizamos el ocio y la diversión como herramienta de transformación social.\nPensamos el ocio como una oportunidad para aprender disfrutando."
+      },
+      {
+        "id": "1",
+        "title": "Diversidad",
+        "image": "",
+        "description": "Nuestras propuestas están orientadas a la pluralidad y la diversidad.\nLa diversidad es riqueza, cada día las familias son más plurales y diferentes."
+      },
+      {
+        "id": "3",
+        "title": "Intergeneracional",
+        "image": "",
+        "description": "Apostamos por el cuidado de la infancia. Nuestra prioridad es que tanto adultos como pequeños experimenten la calidad en el ocio de forma intergeneracional. Los peques lo pasarán genial y los mayores, ¡Aún mejor!."
+      }
+    ]
   }
 }

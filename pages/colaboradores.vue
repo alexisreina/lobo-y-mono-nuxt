@@ -1,15 +1,22 @@
 <template lang="html">
   <div>
 
-    <header class="py-5">
+    <header class="py-3">
       <b-container>
-        <h1>
-          {{page.header}}
-        </h1>
+        <b-row>
+          <b-col
+            lg="8"
+            offset-lg="0"
+          >
+            <h1>
+              {{page.header}}
+            </h1>
 
-        <p class="lead">
-          {{page.intro}}
-        </p>
+            <p class="lead">
+              {{page.intro}}
+            </p>
+          </b-col>
+        </b-row>
       </b-container>
     </header>
 

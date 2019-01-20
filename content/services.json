@@ -5,49 +5,35 @@
     {
       "id": "0",
       "title": "Cultura y Ocio como transformación social",
+      "image": "",
       "description": "Nos dedicamos a crear eventos culturales en todo su espectro. Utilizamos el ocio y la diversión como herramienta de transformación social.\nPensamos el ocio como una oportunidad para aprender disfrutando."
     },
     {
       "id": "1",
       "title": "Diversidad",
+      "image": "",
       "description": "Nuestras propuestas están orientadas a la pluralidad y la diversidad.\nLa diversidad es riqueza, cada día las familias son más plurales y diferentes."
     },
     {
       "id": "3",
       "title": "Intergeneracional",
+      "image": "",
       "description": "Apostamos por el cuidado de la infancia. Nuestra prioridad es que tanto adultos como pequeños experimenten la calidad en el ocio de forma intergeneracional. Los peques lo pasarán genial y los mayores, ¡Aún mejor!."
     }
   ],
-  "bundles": [
-    {
-      "id": "0",
-      "title": "Paquetes prediseñados"
-    },
-    {
-      "id": "1",
-      "title": "Libroscopia"
-    },
-    {
-      "id": "2",
-      "title": "Al fresquito"
-    },
-    {
-      "id": "3",
-      "title": "Carnivàle"
-    },
-    {
-      "id": "4",
-      "title": "Business party"
-    },
-    {
-      "id": "5",
-      "title": "Fiesta música electrónica para familias"
-    },
-    {
-      "id": "6",
-      "title": "Veranillo"
-    }
-  ],
+  "bundles": {
+    "title": "Paquetes prediseñados",
+    "intro": "",
+    "image": "",
+    "list": [
+      "Libroscopia",
+      "Al fresquito",
+      "Carnivàle",
+      "Business party",
+      "Fiesta música electrónica para familias",
+      "Veranillo"
+    ]
+  },
   "other": {
     "title": "Otros Servicios Complementarios:",
     "description": "* Catering.\n* Cobertura audiovisual.\n* Decoración.\n* Personal tecnico.\n* Diseño y difusión."

@@ -5,19 +5,17 @@
         <header class="row">
           <b-col lg="8">
             <h2 class="h3">
-              {{title}}
+              {{services.title}}
             </h2>
 
-            <p class="mb-5">
-              {{text}}
-            </p>
+            <Markdown :content="services.intro" />
           </b-col>
         </header>
 
         <b-row>
           <b-col
-            v-for="service in services"
-            :key="service.is"
+            v-for="service in services.list"
+            :key="service.id"
             md="4"
           >
             <div class="py-2">
@@ -37,9 +35,7 @@
                 {{service.title}}
               </h3>
 
-              <p>
-                {{service.text}}
-              </p>
+              <Markdown :content="service.text" />
 
               <b-link :to="service.link.to">
                 {{service.link.label}}
@@ -53,46 +49,17 @@
 </template>
 
 <script>
+import Markdown from "@/components/Markdown.vue";
+
 export default {
   name: "HomeServices",
-  data() {
-    return {
-      title: "Qué te ofrece Lobo y Mono",
-      text:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      services: [
-        {
-          id: 0,
-          icon: "//via.placeholder.com/75x75",
-          title: "Service 1",
-          text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-          link: {
-            label: "Descubre todo lo que hacemos",
-            to: "/que-ofrecemos"
-          }
-        },
-        {
-          id: 1,
-          icon: "//via.placeholder.com/75x75",
-          title: "Service 2",
-          text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-          link: {
-            label: "Descubre todo lo que hacemos",
-            to: "/que-ofrecemos"
-          }
-        },
-        {
-          id: 3,
-          icon: "//via.placeholder.com/75x75",
-          title: "Service 1",
-          text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-          link: {
-            label: "Descubre todo lo que hacemos",
-            to: "/que-ofrecemos"
-          }
-        }
-      ]
-    };
+  components: {
+    Markdown
+  },
+  computed: {
+    services() {
+      return this.$store.state.home.services;
+    }
   }
 };
 </script>

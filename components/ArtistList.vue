@@ -5,7 +5,6 @@
       :key="artist.id"
       md="6"
       lg="4"
-      class="pb-3"
     >
       <ArtistListItem :artist="artist" />
     </b-col>

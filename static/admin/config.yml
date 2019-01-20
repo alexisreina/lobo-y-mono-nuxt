@@ -4,39 +4,228 @@ backend:
 # This line should *not* be indented
 media_folder: "assets/uploads"
 collections:
-  - label: "General"
-    name: general
+  - label: Contenidos
+    name: cms
     files:
-      - label: "General"
+      - label: General
         name: general
         file: "content/general.json"
         fields:
-          - label: "Ajustes Generales"
+          - label: Ajustes Generales
             name: site
             widget: object
             fields:
-              - { label: "Nombre del sitio", name: name, widget: string }
-              - { label: "Slogan", name: claim, widget: string }
-              - { label: "Idioma", name: lang, widget: hidden }
-  - label: "Artistas"
-    name: artistsList
-    files:
-      - label: "Artistas"
-        name: artist
-        file: "content/artist.json"
+              - { label: Nombre del sitio, name: name, widget: string }
+              - { label: Slogan, name: claim, widget: string }
+              - { label: Idioma, name: lang, widget: hidden }
+          - label: Menu
+            name: menu
+            widget: list
+            fields:
+              - { label: id, name: id, widget: string }
+              - { label: Nombre, name: label, widget: string }
+              - { label: url, name: url, widget: string, default: "/" }
+          - label: Redes Sociales
+            name: rrss
+            widget: list
+            fields:
+              - { label: id, name: id, widget: string }
+              - { label: Nombre, name: label, widget: string }
+              - { label: url, name: url, widget: string }
+              - { label: Icono, name: icon, widget: image }
+          - label: Footer
+            name: footer
+            widget: object
+            fields:
+              - { label: Copyright, name: copyright, widget: markdown }
+              - label: Navegación
+                name: navigation
+                widget: list
+                fields:
+                  - { label: id, name: id, widget: string }
+                  - { label: Título, name: title, widget: string }
+                  - label: Enlaces
+                    name: list
+                    widget: list
+                    fields:
+                      - { label: id, name: id, widget: string }
+                      - { label: Nombre, name: label, widget: string }
+                      - { label: url, name: url, widget: string, default: "/" }
+      - label: Texto Rotativo
+        name: rotator
+        file: "content/rotator.json"
         fields:
-          - label: "Todos los Artistas"
+          - { label: Palabras, name: words, widget: list }
+      - label: Portfolio
+        name: portfolio
+        file: "content/portfolio.json"
+        fields:
+          - label: Eventos
             name: list
             widget: list
             fields:
-              - { label: ID, name: id, widget: string }
+              - { label: id, name: id, widget: string }
+              - { label: Título, name: title, widget: string }
+              - { label: slug, name: slug, widget: string }
+              - { label: Imagen destacada, name: image, widget: image }
+              - { label: Fecha, name: date, widget: string }
+              - { label: Descripción, name: description, widget: markdown }
+              - { label: Miscelánea, name: miscellaneus, widget: list }
+              - label: Galería
+                name: gallery,
+                widget: list
+                field: { label: Image, name: image, widget: image }
+      - label: Colaboradores
+        name: artist
+        file: "content/artist.json"
+        fields:
+          - label: Artistas
+            name: list
+            widget: list
+            fields:
+              - { label: id, name: id, widget: string }
               - { label: Nombre, name: name, widget: string }
               - { label: Foto, name: photo, widget: image }
-  # - label: "Páginas"
-  #   name: pages
-  # - label: "Eventos"
-  #   name: portfolio
-  # - label: "Reviews"
-  #   name: reviews
-  # - label: "Partners"
-  #   name: partners
+      - label: Reviews
+        name: reviews
+        file: "content/reviews.json"
+        fields:
+          - label: Items
+            name: list
+            widget: list
+            fields:
+              - { label: id, name: id, widget: string }
+              - { label: Texto, name: text, widget: markdown }
+              - label: Autor
+                name: author
+                widget: object
+                fields:
+                  - { label: Nombre, name: name, widget: string }
+                  - { label: Foto, name: photo, widget: image }
+                  - label: Información Relacionada
+                    name: info
+                    widget: markdown
+      - label: Partners
+        name: partners
+        file: "content/partners.json"
+        fields:
+          - label: Logos
+            name: list
+            widget: list
+            fields:
+              - { label: id, name: id, widget: string }
+              - { label: Nombre, name: label, widget: string }
+              - { label: Logo, name: logo, widget: image }
+  - label: Páginas
+    name: pages
+    files:
+      - label: Inicio
+        name: home
+        file: "content/home.json"
+        fields:
+          - { label: Título, name: header, widget: string }
+          - { label: Descripción, name: intro, widget: markdown }
+          - { label: Imagen, name: image, widget: image }
+          - label: CTA
+            name: cta
+            widget: object
+            fields:
+              - { label: Texto, name: label, widget: string }
+              - { label: Url, name: link, widget: string, default: "/" }
+          - label: Servicios
+            name: services
+            widget: object
+            fields:
+              - { label: Título, name: title, widget: string }
+              - { label: Descripción, name: intro, widget: markdown }
+              - label: Enlace
+                name: link
+                widget: object
+                fields:
+                  - { label: Texto, name: label, widget: string }
+                  - { label: Url, name: url, widget: string }
+              - label: Listado
+                name: list
+                widget: list
+                fields:
+                  - { label: id, name: id, widget: string }
+                  - { label: Título, name: title, widget: string }
+                  - { label: Imagen, name: image, widget: image }
+                  - { label: Descripción, name: description, widget: markdown }
+      - label: Quienes Somos
+        name: about
+        file: "content/about.json"
+        fields:
+          - { label: Título, name: header, widget: string }
+          - { label: Descripción, name: intro, widget: markdown }
+          - label: Equipo
+            name: team
+            widget: object
+            fields:
+              - { label: Título, name: title, widget: string }
+              - { label: Descripción, name: intro, widget: markdown }
+              - label: Personas
+                name: people
+                widget: list
+                fields:
+                  - { label: id, name: id, widget: string }
+                  - { label: Nombre, name: name, widget: string }
+                  - { label: Foto, name: photo, widget: image }
+                  - { label: Bio, name: bio, widget: markdown }
+          - label: Valores
+            name: values
+            widget: object
+            fields:
+              - { label: Título, name: title, widget: string }
+              - label: Items
+                name: list
+                widget: list
+                fields:
+                  - { label: id, name: id, widget: string }
+                  - { label: Imagen, name: image, widget: image }
+                  - { label: Descripción, name: text, widget: markdown }
+                  - { label: Lista, name: items, widget: list }
+      - label: Qué Ofrecemos
+        name: services
+        file: "content/services.json"
+        fields:
+          - { label: Título, name: header, widget: string }
+          - { label: Descripción, name: intro, widget: markdown }
+          - label: Listado
+            name: list
+            widget: list
+            fields:
+              - { label: id, name: id, widget: string }
+              - { label: Título, name: title, widget: string }
+              - { label: Image, name: image, widget: image }
+              - { label: Descripción, name: description, widget: markdown }
+      - label: Eventos
+        name: events
+        file: "content/events.json"
+        fields:
+          - { label: Título, name: header, widget: string }
+          - { label: Descripción, name: intro, widget: markdown }
+      - label: Colaboradores
+        name: collab
+        file: "content/collaborators.json"
+        fields:
+          - { label: Título, name: header, widget: string }
+          - { label: Descripción, name: intro, widget: markdown }
+          - label: CTA
+            name: cta
+            widget: object
+            fields:
+              - { label: Título, name: title, widget: string }
+              - { label: Descripción, name: description, widget: markdown }
+              - label: Botón
+                name: button
+                widget: object
+                fields:
+                  - { label: Texto, name: label, widget: string }
+                  - { label: Url, name: link, widget: string, default: "/" }
+      - label: Contacto
+        name: contact
+        file: "content/contact.json"
+        fields:
+          - { label: Título, name: header, widget: string }
+          - { label: Descripción, name: intro, widget: markdown }

@@ -30,9 +30,7 @@
           {{value.title}}
         </h3>
 
-        <p>
-          {{value.text}}
-        </p>
+        <Markdown :content="value.text" />
 
         <ul v-if="value.items">
           <li
@@ -49,8 +47,13 @@
 </template>
 
 <script>
+import Markdown from "@/components/Markdown.vue";
+
 export default {
   name: "AboutValues",
+  components: {
+    Markdown
+  },
   computed: {
     values() {
       return this.$store.state.about.values;
