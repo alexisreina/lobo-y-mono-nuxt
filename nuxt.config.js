@@ -7,6 +7,9 @@ module.exports = {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: "es-ES"
+    },
     title: "Lobo y Mono - Eventos Salvajemente Familiares",
     meta: [
       { charset: "utf-8" },
@@ -20,6 +23,9 @@ module.exports = {
         href:
           "https://fonts.googleapis.com/css?family=Schoolbell|Work+Sans:300,400"
       }
+    ],
+    script: [
+      { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" }
     ]
   },
 

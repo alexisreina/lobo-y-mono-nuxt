@@ -1,8 +1,8 @@
 <template>
   <div>
-    <app-navbar />
+    <AppNavbar />
     <nuxt />
-    <app-footer />
+    <AppFooter />
   </div>
 </template>
 

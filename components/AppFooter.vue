@@ -8,18 +8,23 @@
           :key="social.id"
           :href="social.url"
           class="d-flex flex-column flex-sm-row justify-content-center align-items-center mx-3"
-          rel="noopener"
+          rel="noopener noreferrer nofollow"
           target="_blank"
         >
+
           <b-img
-            blank
+            :src="social.icon"
+            :blank="!social.icon"
             blank-color="#777"
             rounded="circle"
             width="32"
             height="32"
             class="mb-1 mb-sm-0 mr-sm-2"
           />
-          <span>{{social.label}}</span>
+
+          <span>
+            {{social.label}}
+          </span>
         </b-link>
       </div>
       <!-- /social media -->
@@ -34,24 +39,32 @@
         >
           <b-row>
             <b-col
-              v-for="item in navigation"
-              :key="item.id"
+              v-for="menu in navigation"
+              :key="menu.id"
               md="6"
               lg="3"
             >
               <h4 class="h5">
-                {{item.header}}
+                {{menu.title}}
               </h4>
 
               <ul class="list-unstyled">
                 <li
-                  v-for="link in item.links"
-                  :key="link.id"
+                  v-for="item in menu.list"
+                  :key="item.id"
                 >
                   <b-link
-                    :to="link.link"
+                    v-if="item.external"
+                    :href="item.url"
                   >
-                    {{link.label}}
+                    {{item.label}}
+                  </b-link>
+
+                  <b-link
+                    v-else
+                    :to="item.url"
+                  >
+                    {{item.label}}
                   </b-link>
                 </li>
               </ul>
@@ -67,113 +80,13 @@
 <script>
 export default {
   name: "AppFooter",
-  data() {
-    return {
-      rrss: [
-        {
-          id: 0,
-          label: "Facebook",
-          icon: "",
-          url: "#"
-        },
-        {
-          id: 1,
-          label: "Instagram",
-          icon: "",
-          url: "#"
-        },
-        {
-          id: 3,
-          label: "Linkedin",
-          icon: "",
-          url: "#"
-        }
-      ],
-      navigation: [
-        {
-          id: 0,
-          header: "Eventos",
-          links: [
-            {
-              id: 0,
-              label: "Próximo Evento",
-              link: "/eventos"
-            },
-            {
-              id: 1,
-              label: "Galería de Eventos",
-              link: "/eventos"
-            },
-            {
-              id: 2,
-              label: "Eventos en familia",
-              link: "/eventos"
-            }
-          ]
-        },
-        {
-          id: 1,
-          header: "Quienes Somos",
-          links: [
-            {
-              id: 0,
-              label: "Lobo y Mono",
-              link: "/quienes-somos"
-            },
-            {
-              id: 1,
-              label: "Cuento",
-              link: "/cuento"
-            }
-          ]
-        },
-        {
-          id: 2,
-          header: "Servicios",
-          links: [
-            {
-              id: 0,
-              label: "Qué ofrecemos",
-              link: "/"
-            },
-            {
-              id: 1,
-              label: "Configura tu evento",
-              link: "/"
-            },
-            {
-              id: 2,
-              label: "Artistas",
-              link: "/"
-            },
-            {
-              id: 3,
-              label: "Trabaja con nosotras",
-              link: "/"
-            }
-          ]
-        },
-        {
-          id: 3,
-          header: "Contacto",
-          links: [
-            {
-              id: 0,
-              label: "Email",
-              link: ""
-            },
-            {
-              id: 1,
-              label: "Teléfono",
-              link: ""
-            }
-          ]
-        }
-      ]
-    };
+  computed: {
+    rrss() {
+      return this.$store.state.general.rrss;
+    },
+    navigation() {
+      return this.$store.state.general.footer.navigation;
+    }
   }
 };
 </script>
-
-<style module lang="scss">
-</style>

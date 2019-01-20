@@ -54,6 +54,7 @@
           <b-row>
             <b-col
               v-for="(photo, index) in event.gallery"
+              :key="index"
               sm="4"
               class="mb-4"
             >
