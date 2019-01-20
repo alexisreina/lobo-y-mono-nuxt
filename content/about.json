@@ -1,0 +1,56 @@
+{
+  "header": "Quienes Somos",
+  "team": {
+    "title": "Detrás de Lobo y Mono",
+    "intro": "El equipo humano en Lobo y mono lo conforman dos personas blabla...",
+    "people": [
+      {
+        "id": "laura",
+        "name": "Laura Hermoso",
+        "photo": "",
+        "bio": "Soy una Madrileña de culo inquieto que no deja de emprender y participar en proyectos que hagan de este mundo un lugar mejor, más amable y más divertido!. “Belloartista” licenciada con máster incluido y varios proyectos en marcha. Puedes visitar mi perfil en [Linkedin](https://www.linkedin.com/in/laura-hermoso-84baba20/)."
+      },
+      {
+        "id": "sara",
+        "name": "Sara Formoso",
+        "photo": "",
+        "bio": "Creadora de eventos desde el 2013, me encanta embarcarme en nuevos proyectos sin miedo a nuevos retos. Mamá de dos hijos formada en artes plásticas. Todoterreno perfeccionista. Me gusta disfrutar de la maternidad sin dejar de crecer personal y profesionalmente. Soy feliz al sol y disfruto cada minuto compartido con la inteligencia innata de la infancia. Puedes visitar mi Perfil en [Linkedin](#)."
+      }
+    ]
+  },
+  "values": {
+    "title": "Nuestros Valores",
+    "list": [
+      {
+        "id": "family",
+        "title": "Eventos para todos los miembros de la familia.",
+        "image": "",
+        "text": "Por ello creemos indispensable proporcionar espacios en el que las familias en toda su diversidad encuentren un momento de diversión para compartir con los más peques. Nos merecemos espacios de ocio alternativo en el que los adultos podamos enseñar cuáles fueron las cosas que nos motivaron de jóvenes y las que nos mueven actualmente."
+      },
+      {
+        "id": "focus",
+        "title": "Eventos con objetivos",
+        "text": "Nuestras propuestas siempre incluyen pilares que creemos imprescindibles, como el respeto a la infancia",
+        "image": "",
+        "items": [
+          "Cuidado de la infancia",
+          "Cultura, tradición y Educación",
+          "Ecología y concienciación",
+          "Respeto a los animales y el medio ambiente"
+        ]
+      },
+      {
+        "id": "service",
+        "title": "Atención al cliente",
+        "text": "Gracias a nuestra formación artística valoramos los detalles y le damos importancia a todo lo relacionado con lo estético y cuidado. Nos encanta reinventar conceptos y darle una vuelta a cualquier propuesta para que sea exclusiva y diferente.",
+        "image": "",
+        "items": [
+          "Atención al detalle",
+          "Te escuchamos",
+          "Hacemos que sea fácil",
+          "Nos adaptamos a tus necesidades"
+        ]
+      }
+    ]
+  }
+}

@@ -1,4 +1,3 @@
-<!-- eslint-disable -->
 <template lang="html">
   <div class="cuento">
     <b-container>

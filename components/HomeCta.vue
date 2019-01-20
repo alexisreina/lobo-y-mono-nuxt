@@ -2,11 +2,11 @@
   <div class="d-xs-flex flex-xs-row align-items-xs-center justify-content-xs-center">
     <div class="py-5 text-center">
       <lm-button
-        :to="link"
+        :to="cta.link"
         variant="primary"
         size="lg"
       >
-        {{label}}
+        {{cta.label}}
       </lm-button>
     </div>
   </div>
@@ -20,11 +20,10 @@ export default {
   components: {
     LmButton
   },
-  data() {
-    return {
-      label: "Crea tu evento",
-      link: "/crea-tu-evento"
-    };
+  computed: {
+    cta() {
+      return this.$store.state.home.cta;
+    }
   }
 };
 </script>

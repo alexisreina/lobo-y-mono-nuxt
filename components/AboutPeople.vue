@@ -1,67 +1,54 @@
 <template lang="html">
-  <b-row>
-    <b-col lg="10" offset-lg="1">
-      <h2>{{about.header}}</h2>
-      <p>{{about.lead}}</p>
-      <b-row>
-        <b-col
-          v-for="person in about.people"
-          :key="about[person].id"
-          md="6"
-        >
+  <div>
+    <h2 class="text-md-center">
+      {{team.title}}
+    </h2>
 
-          <b-img
-            :src="about[person].img"
-            :alt="about[person].name"
-            fluid
-            class="mb-3"
-          />
+    <p class="text-md-center mb-3 mb-md-5">
+      {{team.intro}}
+    </p>
 
-          <h3>
-            {{about[person].name}}
-          </h3>
+    <b-row>
+      <b-col
+        v-for="person in team.people"
+        :key="person.id"
+        md="6"
+      >
 
-          <p v-html="about[person].bio" />
-        </b-col>
-      </b-row>
-    </b-col>
-  </b-row>
+        <b-img
+          :src="person.photo"
+          :alt="person.name"
+          :blank="!person.photo"
+          :width="!person.photo ? 150 : null"
+          :height="!person.photo ? 150: null"
+          rounded="circle"
+          blank-color="#777"
+          fluid
+          class="d-block mb-3 mb-md-4 mx-md-auto"
+        />
+
+        <h3 class="text-md-center">
+          {{person.name}}
+        </h3>
+
+        <Markdown :content="person.bio" />
+      </b-col>
+    </b-row>
+  </div>
 </template>
 
 <script>
+import Markdown from "@/components/Markdown";
+
 export default {
   name: "AboutPeople",
-  data() {
-    return {
-      about: {
-        header: "Detrás de Lobo y Mono",
-        lead:
-          "El equipo humano en Lobo y mono lo conforman dos personas blabla...",
-        people: ["laura", "sara"],
-        laura: {
-          id: "laura",
-          img: "//via.placeholder.com/800x475",
-          name: `Laura Hermoso`,
-          bio: `Soy una Madrileña de culo inquieto que no deja de emprender y
-            participar en proyectos que hagan de este mundo un lugar mejor, más
-            amable y más divertido!. “Belloartista” licenciada con máster
-            incluido y varios proyectos en marcha. Puedes visitar mi perfil en
-            <a href='#' target='_blank'>linkedin<a>.`
-        },
-        sara: {
-          id: "sara",
-          img: "//via.placeholder.com/800x475",
-          name: "Sara Formoso",
-          bio: `Creadora de eventos desde el 2013, me encanta embarcarme en
-          nuevos proyectos sin miedo a nuevos retos. Mamá de dos hijos formada
-          en artes plásticas. Todoterreno perfeccionista. Me gusta disfrutar de
-          la maternidad sin dejar de crecer personal y profesionalmente. Soy
-          feliz al sol y disfruto cada minuto compartido con la inteligencia
-          innata de la infancia. Puedes visitar mi Perfil en <a href ="#"
-          target="_blank">Linkedin.</a>`
-        }
-      }
-    };
+  components: {
+    Markdown
+  },
+  computed: {
+    team() {
+      return this.$store.state.about.team;
+    }
   }
 };
 </script>

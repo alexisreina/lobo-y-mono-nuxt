@@ -1,17 +1,25 @@
 <template lang="html">
-  <b-link :to="{ name: 'event', params: { id: event.id } }">
+  <nuxt-link
+    :to="{ name: 'eventos-slug', params: { slug: event.slug } }"
+  >
     <figure class="event-list-item">
       <b-img
-        fluid
+        :src="event.image"
+        :alt="event.title"
+        :blank="!event.image"
+        :rounded="!event.image"
+        blank-color="#777"
+        width="350"
+        height="275"
         class="mb-2"
-        :src="event.img.src"
-        :srcset="event.img.srcset"
+        fluid
       />
+
       <figcaption class="mb-2">
-        {{event.title}}, {{event.place}}, {{event.date}}.
+        {{event.title}}, {{event.location}}, {{event.date}}.
       </figcaption>
     </figure>
-  </b-link>
+  </nuxt-link>
 </template>
 
 <script>

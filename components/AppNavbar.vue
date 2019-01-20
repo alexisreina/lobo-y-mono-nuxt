@@ -14,7 +14,7 @@
         <b-nav-item
           v-for="nav in navList"
           :key="nav.id"
-          :to="nav.link"
+          :to="nav.url"
         >
           {{nav.label}}
         </b-nav-item>
@@ -28,40 +28,13 @@ export default {
   name: "AppNavbar",
   data() {
     return {
-      brand: "Lobo y Mono",
-      navList: [
-        {
-          id: 0,
-          label: "Eventos",
-          link: "/eventos"
-        },
-        {
-          id: 1,
-          label: "Quienes Somos",
-          link: "/quienes-somos"
-        },
-        {
-          id: 2,
-          label: "Qué Ofrecemos",
-          link: "/que-ofrecemos"
-        },
-        {
-          id: 3,
-          label: "Colaboradores",
-          link: "/colaboradores"
-        },
-        {
-          id: 4,
-          label: "Crea tu evento",
-          link: "/crea-tu-evento"
-        },
-        {
-          id: 5,
-          label: "Contacto",
-          link: "/contacto"
-        }
-      ]
+      brand: "Lobo y Mono"
     };
+  },
+  computed: {
+    navList() {
+      return this.$store.state.menu.list;
+    }
   }
 };
 </script>

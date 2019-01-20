@@ -1,0 +1,34 @@
+{
+  "list": [
+    {
+      "id": "0",
+      "label": "Eventos",
+      "url": "/eventos"
+    },
+    {
+      "id": "1",
+      "label": "Quienes Somos",
+      "url": "/quienes-somos"
+    },
+    {
+      "id": "2",
+      "label": "Qué Ofrecemos",
+      "url": "/que-ofrecemos"
+    },
+    {
+      "id": "3",
+      "label": "Colaboradores",
+      "url": "/colaboradores"
+    },
+    {
+      "id": "4",
+      "label": "Crea tu evento",
+      "url": "/crea-tu-evento"
+    },
+    {
+      "id": "5",
+      "label": "Contacto",
+      "url": "/contacto"
+    }
+  ]
+}

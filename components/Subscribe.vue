@@ -1,4 +1,3 @@
-<!-- eslint-disable -->
 <template lang="html">
   <b-form>
     <b-row align-v="center">
@@ -7,8 +6,8 @@
       </b-col>
       <b-col>
         <b-form-input
-          v-model="form.email.model"
           :id="form.email.id"
+          v-model="form.email.model"
           :type="form.email.type"
           :placeholder="form.email.placeholder"
           :required="form.email.required"

@@ -15,7 +15,9 @@
 
         <div class="pt-4 d-flex flex-row align-items-center">
           <b-img
-            blank
+            :src="review.author.photo"
+            :alt="review.author.name"
+            :blank="!review.author.photo"
             blank-color="#777"
             width="52"
             height="52"
@@ -35,27 +37,6 @@
 
         </div>
 
-        <!-- <b-row class="pt-2 pt-lg-4">
-          <b-col cols="4">
-            <b-img
-              blank
-              blank-color="#777"
-              width="52"
-              height="52"
-              rounded="circle"
-            />
-          </b-col>
-
-          <b-col cols="8">
-            <p class="mb-1">
-              {{review.author.name}}
-            </p>
-            <small>
-              {{review.author.info}}
-            </small>
-          </b-col>
-        </b-row> -->
-
       </div>
     </b-col>
   </b-row>
@@ -64,31 +45,10 @@
 <script>
 export default {
   name: "Reviews",
-  data() {
-    return {
-      reviews: [
-        {
-          id: 0,
-          text:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          author: {
-            name: "Author Name",
-            pic: "",
-            info: "Related author info"
-          }
-        },
-        {
-          id: 1,
-          text:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          author: {
-            name: "Author Name",
-            pic: "",
-            info: "Related author info"
-          }
-        }
-      ]
-    };
+  computed: {
+    reviews() {
+      return this.$store.state.reviews.list;
+    }
   }
 };
 </script>

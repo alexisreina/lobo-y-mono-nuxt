@@ -6,12 +6,13 @@
       cols="4"
     >
       <b-img
-        blank
+        :src="partner.logo"
+        :rounded="!partner.logo"
+        :blank="!partner.logo"
         blank-color="#777"
         width="120"
-        height="80"
+        height="60"
         fluid
-        rounded
         class="d-block mx-auto"
         :class="{
           'ml-md-auto mr-md-0': partners.indexOf(partner) === 0,
@@ -34,35 +35,10 @@
 <script>
 export default {
   name: "Partners",
-  data() {
-    return {
-      partners: [
-        {
-          id: 0,
-          label: "Company Name",
-          img: {
-            src: "//via.placeholder.com/250x60&text=logo",
-            srcset: "//via.placeholder.com/500x120&text=logo 2x"
-          }
-        },
-        {
-          id: 1,
-          label: "Company Name",
-          img: {
-            src: "//via.placeholder.com/250x60&text=logo",
-            srcset: "//via.placeholder.com/500x120&text=logo 2x"
-          }
-        },
-        {
-          id: 2,
-          label: "Company Name",
-          img: {
-            src: "//via.placeholder.com/250x60&text=logo",
-            srcset: "//via.placeholder.com/500x120&text=logo 2x"
-          }
-        }
-      ]
-    };
+  computed: {
+    partners() {
+      return this.$store.state.partners.list;
+    }
   }
 };
 </script>

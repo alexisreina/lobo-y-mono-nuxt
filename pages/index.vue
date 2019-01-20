@@ -1,8 +1,13 @@
 <!-- eslint-disable -->
 <template>
   <div class="home">
-
-    <!-- <home-hero /> -->
+    <!--
+    <header class="header py-5">
+      <b-container class="py-lg-3">
+        <home-hero />
+      </b-container>
+    </header>
+    -->
 
     <main>
       <section class="py-5">
@@ -74,5 +79,8 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.header {
+  background-color: $black;
+}
 </style>

@@ -1,73 +1,68 @@
 <template lang="html">
-  <b-row class="py-3">
-    <b-col lg="10" offset-lg="1">
-      <h2 class="mb-4 text-uppercase text-center">
-        {{title}}
-      </h2>
+  <div>
+    <h2 class="mb-5 text-uppercase text-center">
+      {{values.title}}
+    </h2>
 
-      <div
-        v-for="key in items"
-        :key="key"
-      >
+    <b-row
+      v-for="value in values.list"
+      :key="value.id"
+      :class="[reverseRow(value)]"
+      class="mb-3 mb-md-5 align-items-md-center"
+    >
+      <b-col md="6">
 
-        <h3>
-          {{values[key].title}}
+        <b-img
+          :src="value.image"
+          :blank="!value.image"
+          :width="!value.image ? 540 : null"
+          :height="!value.image ? 325: null"
+          :rounded="!value.image"
+          blank-color="#777"
+          class="mb-3 mb-md-0"
+          fluid
+        />
+
+      </b-col>
+
+      <b-col md="6">
+        <h3 class="mb-md-3">
+          {{value.title}}
         </h3>
 
         <p>
-          {{values[key].text}}
+          {{value.text}}
         </p>
 
-        <ul v-if="values[key].list">
+        <ul v-if="value.items">
           <li
-            v-for="item in values[key].list"
+            v-for="item in value.items"
             :key="item"
           >
             {{item}}
           </li>
         </ul>
-      </div>
-    </b-col>
-  </b-row>
+
+      </b-col>
+    </b-row>
+  </div>
 </template>
 
 <script>
 export default {
   name: "AboutValues",
-  data() {
-    return {
-      title: "Nuestros Valores",
-      items: ["family", "focus", "service"],
-      values: {
-        family: {
-          title: "Eventos para todos los miembros de la familia.",
-          text:
-            "Por ello creemos indispensable proporcionar espacios en el que las familias en toda su diversidad encuentren un momento de diversión para compartir con los más peques. Nos merecemos espacios de ocio alternativo en el que los adultos podamos enseñar cuáles fueron las cosas que nos motivaron de jóvenes y las que nos mueven actualmente."
-        },
-        focus: {
-          title: "Eventos con objetivos",
-          text:
-            "Nuestras propuestas siempre incluyen pilares que creemos imprescindibles, como el respeto a la infancia",
-          list: [
-            "Cuidado de la infancia",
-            "Cultura, tradición y Educación",
-            "Ecología y concienciación",
-            "Respeto a los animales y el medio ambiente"
-          ]
-        },
-        service: {
-          title: "Atención al cliente",
-          text:
-            "Gracias a nuestra formación artística valoramos los detalles y le damos importancia a todo lo relacionado con lo estético y cuidado. Nos encanta reinventar conceptos y darle una vuelta a cualquier propuesta para que sea exclusiva y diferente.",
-          list: [
-            "Atención al detalle",
-            "Te escuchamos",
-            "Hacemos que sea fácil",
-            "Nos adaptamos a tus necesidades"
-          ]
-        }
-      }
-    };
+  computed: {
+    values() {
+      return this.$store.state.about.values;
+    }
+  },
+  methods: {
+    reverseRow(value) {
+      const values = this.$store.state.about.values;
+      return values.list.indexOf(value) % 2 !== 0
+        ? "flex-md-row-reverse"
+        : null;
+    }
   }
 };
 </script>
