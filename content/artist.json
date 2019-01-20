@@ -3,65 +3,47 @@
     {
       "id": "0",
       "name": "Nombre del Artista",
-      "img": {
-        "src": ""
-      }
+      "photo": ""
     },
     {
       "id": "1",
       "name": "Nombre del Artista",
-      "img": {
-        "src": ""
-      }
+      "photo": ""
     },
     {
       "id": "2",
       "name": "Nombre del Artista",
-      "img": {
-        "src": ""
-      }
+      "photo": ""
     },
     {
       "id": "3",
       "name": "Nombre del Artista",
-      "img": {
-        "src": ""
-      }
+      "photo": ""
     },
     {
       "id": "4",
       "name": "Nombre del Artista",
-      "img": {
-        "src": ""
-      }
+      "photo": ""
     },
     {
       "id": "5",
       "name": "Nombre del Artista",
-      "img": {
-        "src": ""
-      }
+      "photo": ""
     },
     {
       "id": "6",
       "name": "Nombre del Artista",
-      "img": {
-        "src": ""
-      }
+      "photo": ""
     },
     {
       "id": "7",
       "name": "Nombre del Artista",
-      "img": {
-        "src": ""
-      }
+      "photo": ""
     },
     {
       "id": "8",
       "name": "Nombre del Artista",
-      "img": {
-        "src": ""
-      }
+      "photo": ""
     }
   ]
 }

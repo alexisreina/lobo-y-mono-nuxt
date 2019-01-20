@@ -2,12 +2,12 @@
   <figure>
 
     <b-img
-      :src="artist.img.src"
+      :src="artist.photo"
       :alt="artist.name"
-      :blank="!artist.img.src"
-      :width="!artist.img.src ? 350 : null"
-      :height="!artist.img.src ? 275 : null"
-      :rounded="!artist.img.src"
+      :blank="!artist.photo"
+      :width="!artist.photo ? 350 : null"
+      :height="!artist.photo ? 275 : null"
+      :rounded="!artist.photo"
       blank-color="#777"
       class="mb-2"
       fluid

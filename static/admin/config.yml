@@ -3,3 +3,40 @@ backend:
   branch: next # Branch to update (optional; defaults to master)
 # This line should *not* be indented
 media_folder: "assets/uploads"
+collections:
+  - label: "General"
+    name: general
+    files:
+      - label: "General"
+        name: general
+        file: "content/general.json"
+        fields:
+          - label: "Ajustes Generales"
+            name: site
+            widget: object
+            fields:
+              - { label: "Nombre del sitio", name: name, widget: string }
+              - { label: "Slogan", name: claim, widget: string }
+              - { label: "Idioma", name: lang, widget: hidden }
+  - label: "Artistas"
+    name: artistsList
+    files:
+      - label: "Artistas"
+        name: artist
+        file: "content/artist.json"
+        fields:
+          - label: "Todos los Artistas"
+            name: list
+            widget: list
+            fields:
+              - { label: ID, name: id, widget: string }
+              - { label: Nombre, name: name, widget: string }
+              - { label: Foto, name: photo, widget: image }
+  # - label: "Páginas"
+  #   name: pages
+  # - label: "Eventos"
+  #   name: portfolio
+  # - label: "Reviews"
+  #   name: reviews
+  # - label: "Partners"
+  #   name: partners
