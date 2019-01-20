@@ -12,19 +12,23 @@
     <main>
       <section class="py-5">
         <b-container>
-          <home-services />
+          <b-row>
+            <b-col>
+              <HomeServices />
+            </b-col>
+          </b-row>
         </b-container>
       </section>
 
       <section class="pb-5">
         <b-container>
-          <reviews />
+          <Reviews />
         </b-container>
       </section>
 
       <section class="py-5 bg-light">
         <b-container class="py-3">
-          <home-cta />
+          <HomeCta />
         </b-container>
       </section>
 
@@ -46,7 +50,7 @@
 
       <section class="py-4">
         <b-container>
-          <partners />
+          <Partners />
         </b-container>
       </section>
     </main>

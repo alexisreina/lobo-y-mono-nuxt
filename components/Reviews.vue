@@ -6,9 +6,8 @@
       md="6"
       class="mb-3 mb-md-0"
     >
-      <div
-        class="p-3 p-lg-4 bg-light rounded"
-      >
+      <div class="review p-3 p-lg-4 bg-light mx-auto rounded">
+
         <Markdown class="review-body" :content="review.text" />
 
         <div class="pt-4 d-flex flex-row align-items-center">
@@ -55,6 +54,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.review {
+  max-width: 25rem;
+}
+
 .review-info /deep/ p {
   margin-bottom: 0.25rem;
 }
