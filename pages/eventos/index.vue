@@ -13,7 +13,7 @@
 
     <main>
       <b-container>
-        <EventList />
+        <EventList :list="portfolio.list" />
       </b-container>
     </main>
 
@@ -24,6 +24,10 @@
 import Markdown from "@/components/Markdown.vue";
 import EventList from "@/components/EventList.vue";
 
+// Content
+import page from "@/content/events.json";
+import portfolio from "@/content/portfolio.json";
+
 export default {
   name: "EventsPage",
   layout: "page",
@@ -31,10 +35,11 @@ export default {
     Markdown,
     EventList
   },
-  computed: {
-    page() {
-      return this.$store.state.events;
-    }
+  data() {
+    return {
+      page,
+      portfolio
+    };
   }
 };
 </script>

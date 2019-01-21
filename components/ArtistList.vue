@@ -1,7 +1,7 @@
 <template lang="html">
   <b-row>
     <b-col
-      v-for="artist in artists"
+      v-for="artist in list"
       :key="artist.id"
       md="6"
       lg="4"
@@ -19,9 +19,10 @@ export default {
   components: {
     ArtistListItem
   },
-  computed: {
-    artists() {
-      return this.$store.state.artist.list;
+  props: {
+    list: {
+      type: Array,
+      required: true
     }
   }
 };

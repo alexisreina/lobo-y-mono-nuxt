@@ -1,10 +1,9 @@
 <template lang="html">
   <b-row align-v="center">
-
     <b-col lg="6">
       <b-img
-        :src="home.image"
-        :blank="!home.image"
+        :src="image"
+        :blank="!image"
         width="450"
         height="450"
         blank-color="#d6d4d6"
@@ -16,16 +15,14 @@
 
     <b-col lg="6" class="text-md-center text-lg-left">
       <h1 class="title h1 mb-3 text-uppercase mb-4">
-
         <span class="d-block mb-2">
-          {{home.header}}
+          {{title}}
         </span>
 
-        <TextRotator :words="words" />
+        <TextRotator v-if="rotator" :words="words" />
       </h1>
 
-      <Markdown :content="home.intro" class="intro" />
-
+      <Markdown :content="intro" class="intro" />
     </b-col>
 
   </b-row>
@@ -35,19 +32,40 @@
 import TextRotator from "@/components/TextRotator.vue";
 import Markdown from "@/components/Markdown.vue";
 
+// Contents
+import data from "@/content/rotator.json";
+
 export default {
   name: "HomeHero",
   components: {
     TextRotator,
     Markdown
   },
-  computed: {
-    home() {
-      return this.$store.state.home;
+  props: {
+    title: {
+      type: String,
+      required: true
     },
-    words() {
-      return this.$store.state.rotator.words;
+    intro: {
+      type: String,
+      required: false,
+      default: null
+    },
+    image: {
+      type: String,
+      required: false,
+      default: null
+    },
+    rotator: {
+      type: Boolean,
+      required: false,
+      default: false
     }
+  },
+  data() {
+    return {
+      words: data.words
+    };
   }
 };
 </script>

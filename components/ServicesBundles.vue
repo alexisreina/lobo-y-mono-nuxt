@@ -39,9 +39,10 @@ export default {
   components: {
     Markdown
   },
-  computed: {
-    bundles() {
-      return this.$store.state.services.bundles;
+  props: {
+    bundles: {
+      type: Object,
+      required: true
     }
   }
 };

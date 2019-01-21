@@ -45,9 +45,10 @@ export default {
   components: {
     Markdown
   },
-  computed: {
-    reviews() {
-      return this.$store.state.reviews.list;
+  props: {
+    reviews: {
+      type: Array,
+      required: true
     }
   }
 };

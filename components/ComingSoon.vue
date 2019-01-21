@@ -4,13 +4,13 @@
     <div class="cComingSoon__wrapper">
       <img
         class="cComingSoon__image"
-        src="@/assets/svg/LYM-logo-svg-16.svg"
+        src="~/assets/svg/LYM-logo-svg-16.svg"
         alt="Ilustración de Lobo y Mono"
       >
 
       <img
         class="cComingSoon__logo"
-        src="@/assets/svg/LYM-logotipo-17.svg"
+        src="~/assets/svg/LYM-logotipo-17.svg"
         alt="Logo de Lobo y Mono"
       >
 
@@ -34,6 +34,10 @@
 
 <script>
 import TextRotator from "@/components/TextRotator";
+
+// Content
+import data from "@/content/rotator.json";
+
 export default {
   name: "ComingSoon",
   components: {
@@ -41,7 +45,7 @@ export default {
   },
   data() {
     return {
-      words: ["Familiares", "Divertidos", "Inclusivos", "Diversos"],
+      words: data.words,
       revealMsg: false
     };
   },
@@ -52,7 +56,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css?family=Schoolbell|Work+Sans:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,600");
 
 .cComingSoon {
   display: flex;

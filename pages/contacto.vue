@@ -19,8 +19,11 @@
 </template>
 
 <script>
-import Markdown from "@/components/Markdown";
-import ContactForm from "@/components/ContactForm";
+import Markdown from "@/components/Markdown.vue";
+import ContactForm from "@/components/ContactForm.vue";
+
+// content
+import page from "@/content/contact.json";
 
 export default {
   name: "ContactPage",
@@ -29,10 +32,10 @@ export default {
     Markdown,
     ContactForm
   },
-  computed: {
-    page() {
-      return this.$store.state.contact;
-    }
+  data() {
+    return {
+      page
+    };
   }
 };
 </script>

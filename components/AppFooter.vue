@@ -39,7 +39,7 @@
         >
           <b-row>
             <b-col
-              v-for="menu in navigation"
+              v-for="menu in menus"
               :key="menu.id"
               md="6"
               lg="3"
@@ -80,12 +80,14 @@
 <script>
 export default {
   name: "AppFooter",
-  computed: {
-    rrss() {
-      return this.$store.state.general.rrss;
+  props: {
+    rrss: {
+      type: Array,
+      required: true
     },
-    navigation() {
-      return this.$store.state.general.footer.navigation;
+    menus: {
+      type: Array,
+      required: true
     }
   }
 };

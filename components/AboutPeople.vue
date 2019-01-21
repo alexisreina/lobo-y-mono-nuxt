@@ -45,9 +45,10 @@ export default {
   components: {
     Markdown
   },
-  computed: {
-    team() {
-      return this.$store.state.about.team;
+  props: {
+    team: {
+      type: Object,
+      required: true
     }
   }
 };

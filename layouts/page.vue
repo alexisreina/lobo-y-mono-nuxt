@@ -1,8 +1,16 @@
 <template>
   <div>
-    <AppNavbar />
+    <AppNavbar
+      :brand="data.site.name"
+      :menu="data.menu"
+    />
+
     <nuxt />
-    <AppFooter />
+
+    <AppFooter
+      :rrss="data.rrss"
+      :menus="data.footer.navigation"
+    />
   </div>
 </template>
 
@@ -10,10 +18,18 @@
 import AppNavbar from "@/components/AppNavbar";
 import AppFooter from "@/components/AppFooter";
 
+// Content
+import data from "@/content/general.json";
+
 export default {
   components: {
     AppNavbar,
     AppFooter
+  },
+  data() {
+    return {
+      data
+    };
   }
 };
 </script>

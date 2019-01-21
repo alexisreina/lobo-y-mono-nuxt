@@ -107,6 +107,9 @@
 import Markdown from "@/components/Markdown.vue";
 import LmButton from "@/components/LmButton.vue";
 
+// Content
+import portfolio from "@/content/portfolio.json";
+
 export default {
   name: "EventPage",
   layout: "page",
@@ -116,7 +119,7 @@ export default {
   },
   computed: {
     event() {
-      return this.$store.state.portfolio.list.find(
+      return portfolio.list.find(
         event => event.slug === this.$route.params.slug
       );
     }

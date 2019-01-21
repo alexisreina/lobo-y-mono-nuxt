@@ -24,9 +24,10 @@ export default {
     Markdown,
     LmButton
   },
-  computed: {
-    cta() {
-      return this.$store.state.services.cta;
+  props: {
+    cta: {
+      type: Object,
+      required: true
     }
   }
 };

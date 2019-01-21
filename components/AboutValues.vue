@@ -54,14 +54,15 @@ export default {
   components: {
     Markdown
   },
-  computed: {
-    values() {
-      return this.$store.state.about.values;
+  props: {
+    values: {
+      type: Object,
+      required: true
     }
   },
   methods: {
     reverseRow(value) {
-      const values = this.$store.state.about.values;
+      const values = this.$props.values;
       return values.list.indexOf(value) % 2 !== 0
         ? "flex-md-row-reverse"
         : null;

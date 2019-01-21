@@ -32,12 +32,14 @@
 <script>
 export default {
   name: "AppNavbar",
-  computed: {
-    menu() {
-      return this.$store.state.general.menu;
+  props: {
+    menu: {
+      type: Array,
+      required: true
     },
-    brand() {
-      return this.$store.state.general.site.name;
+    brand: {
+      type: String,
+      required: true
     }
   }
 };

@@ -1,20 +1,22 @@
-<!-- eslint-disable -->
 <template>
   <div class="home">
-    <!--
-    <header class="header py-5">
+    <!-- <header class="header py-5">
       <b-container class="py-lg-3">
-        <home-hero />
+        <HomeHero
+          :title="page.header"
+          :intro="page.intro"
+          :image="page.image"
+          rotator
+        />
       </b-container>
-    </header>
-    -->
+    </header> -->
 
     <main>
       <section class="py-5">
         <b-container>
           <b-row>
             <b-col>
-              <HomeServices />
+              <HomeServices :services="page.services" />
             </b-col>
           </b-row>
         </b-container>
@@ -22,35 +24,31 @@
 
       <section class="pb-5">
         <b-container>
-          <Reviews />
+          <Reviews :reviews="reviews.list" />
         </b-container>
       </section>
 
       <section class="py-5 bg-light">
         <b-container class="py-3">
-          <HomeCta />
+          <HomeCta :cta="page.cta" />
         </b-container>
       </section>
 
-      <!--
-      <section class="py-5">
+      <!-- <section class="py-5">
         <b-container>
           <home-event-gallery />
         </b-container>
-      </section>
-      -->
+      </section> -->
 
-      <!--
-      <section class="py-5 bg-light">
+      <!-- <section class="py-5 bg-light">
         <b-container>
           <subscribe />
         </b-container>
-      </section>
-      -->
+      </section> -->
 
       <section class="py-4">
         <b-container>
-          <Partners />
+          <Partners :partners="partners.list" />
         </b-container>
       </section>
     </main>
@@ -67,6 +65,11 @@ import HomeCta from "@/components/HomeCta";
 // import Subscribe from "@/components/Subscribe";
 import Partners from "@/components/Partners";
 
+// Content
+import page from "@/content/home.json";
+import reviews from "@/content/reviews.json";
+import partners from "@/content/partners.json";
+
 export default {
   name: "HomePage",
   layout: "page",
@@ -79,6 +82,13 @@ export default {
     // HomeEventGallery,
     // Subscribe,
     Partners
+  },
+  data() {
+    return {
+      page,
+      reviews,
+      partners
+    };
   }
 };
 </script>

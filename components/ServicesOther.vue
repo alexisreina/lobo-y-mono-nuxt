@@ -15,9 +15,10 @@ export default {
   components: {
     Markdown
   },
-  computed: {
-    other() {
-      return this.$store.state.services.other;
+  props: {
+    other: {
+      type: Object,
+      required: true
     }
   }
 };

@@ -35,9 +35,10 @@
 <script>
 export default {
   name: "Partners",
-  computed: {
-    partners() {
-      return this.$store.state.partners.list;
+  props: {
+    partners: {
+      type: Array,
+      required: true
     }
   }
 };

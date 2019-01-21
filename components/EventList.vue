@@ -1,7 +1,7 @@
 <template lang="html">
   <b-row>
     <b-col
-      v-for="event in portfolio"
+      v-for="event in list"
       :key="event.id"
       md="4"
     >
@@ -18,9 +18,10 @@ export default {
   components: {
     EventListItem
   },
-  computed: {
-    portfolio() {
-      return this.$store.state.portfolio.list;
+  props: {
+    list: {
+      type: Array,
+      required: true
     }
   }
 };

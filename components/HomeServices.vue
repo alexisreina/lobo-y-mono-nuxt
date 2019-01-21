@@ -56,9 +56,10 @@ export default {
   components: {
     Markdown
   },
-  computed: {
-    services() {
-      return this.$store.state.home.services;
+  props: {
+    services: {
+      type: Object,
+      required: true
     }
   }
 };

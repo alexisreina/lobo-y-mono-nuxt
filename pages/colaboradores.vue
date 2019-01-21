@@ -23,7 +23,7 @@
     <main>
       <section>
         <b-container>
-          <ArtistList />
+          <ArtistList :list="artist.list" />
         </b-container>
       </section>
 
@@ -57,6 +57,10 @@ import ArtistList from "@/components/ArtistList.vue";
 import Markdown from "@/components/Markdown.vue";
 import LmButton from "@/components/LmButton.vue";
 
+// Content
+import page from "@/content/collaborators.json";
+import artist from "@/content/artist.json";
+
 export default {
   name: "CollabPage",
   layout: "page",
@@ -65,10 +69,11 @@ export default {
     Markdown,
     LmButton
   },
-  computed: {
-    page() {
-      return this.$store.state.collaborators;
-    }
+  data() {
+    return {
+      page,
+      artist
+    };
   }
 };
 </script>

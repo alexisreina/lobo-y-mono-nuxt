@@ -1,13 +1,13 @@
 <template lang="html">
   <div class="d-xs-flex flex-xs-row align-items-xs-center justify-content-xs-center">
     <div class="py-5 text-center">
-      <lm-button
+      <LmButton
         :to="cta.link"
         variant="primary"
         size="lg"
       >
         {{cta.label}}
-      </lm-button>
+      </LmButton>
     </div>
   </div>
 </template>
@@ -20,9 +20,10 @@ export default {
   components: {
     LmButton
   },
-  computed: {
-    cta() {
-      return this.$store.state.home.cta;
+  props: {
+    cta: {
+      type: Object,
+      required: true
     }
   }
 };

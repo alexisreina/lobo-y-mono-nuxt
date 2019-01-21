@@ -18,7 +18,7 @@
       <b-container>
         <b-row>
           <b-col lg="10" offset-lg="1">
-            <ServicesList />
+            <ServicesList :services="page.list" />
           </b-col>
         </b-row>
       </b-container>
@@ -28,7 +28,7 @@
       <b-container>
         <b-row>
           <b-col lg="10" offset-lg="1">
-            <ServicesCta />
+            <ServicesCta :cta="page.cta" />
           </b-col>
         </b-row>
       </b-container>
@@ -74,7 +74,7 @@
       <b-container>
         <b-row>
           <b-col lg="10" offset-lg="1">
-            <ServicesBundles />
+            <ServicesBundles :bundles="page.bundles" />
           </b-col>
         </b-row>
       </b-container>
@@ -84,7 +84,7 @@
       <b-container>
         <b-row>
           <b-col lg="10" offset-lg="1">
-            <ServicesOther />
+            <ServicesOther :other="page.other" />
           </b-col>
         </b-row>
       </b-container>
@@ -116,6 +116,9 @@ import ServicesList from "@/components/ServicesList.vue";
 import ServicesBundles from "@/components/ServicesBundles.vue";
 import ServicesCta from "@/components/ServicesCta.vue";
 
+// Content
+import page from "@/content/services.json";
+
 export default {
   name: "ServicesPage",
   layout: "page",
@@ -127,10 +130,10 @@ export default {
     ServicesBundles,
     ServicesCta
   },
-  computed: {
-    page() {
-      return this.$store.state.services;
-    }
+  data() {
+    return {
+      page
+    };
   }
 };
 </script>
