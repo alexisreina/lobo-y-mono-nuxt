@@ -3,7 +3,7 @@ backend:
   branch: next # Branch to update (optional; defaults to master)
 # This line should *not* be indented
 media_folder: "static/uploads"
-media_public_folder: "/uploads"
+public_folder: "/uploads"
 collections:
   - label: Contenidos
     name: cms
