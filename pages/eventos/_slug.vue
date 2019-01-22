@@ -2,13 +2,24 @@
 <template lang="html">
   <div>
     <!-- event title -->
-    <header class="py-5">
+    <header class="py-5" style >
       <b-container>
         <b-row>
-          <b-col>
+          <b-col
+            md="10"
+            offset-md="1"
+            lg="8"
+            offset-lg="2"
+          >
             <h1 class="text-capitalize text-center mb-4">
               {{event.title}}
             </h1>
+
+            <b-img
+              :src="event.image"
+              class="d-block mx-auto"
+              fluid
+            />
           </b-col>
         </b-row>
       </b-container>
@@ -48,8 +59,10 @@
         </b-container>
       </section>
 
+
+
       <!-- event gallery -->
-      <section>
+      <section class="py-3">
         <b-container>
           <b-row>
             <b-col
@@ -58,21 +71,13 @@
               sm="4"
               class="mb-4"
             >
+
               <b-img-lazy
-                v-if="photo.src"
-                :src="photo.src"
+                :style="{ boxShadow: '0 6px 12px -3px  rgba(0,0,0,.32)'}"
+                :src="photo"
                 fluid
               />
 
-              <b-img
-                v-else
-                blank
-                blank-color="#777"
-                width="800"
-                height="600"
-                rounded
-                fluid
-              />
             </b-col>
           </b-row>
         </b-container>
