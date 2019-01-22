@@ -23,17 +23,17 @@ collections:
             name: menu
             widget: list
             fields:
-              - { label: id, name: id, widget: string }
               - { label: Nombre, name: label, widget: string }
               - { label: url, name: url, widget: string, default: "/" }
+              - { label: id, name: id, widget: uuid }
           - label: Redes Sociales
             name: rrss
             widget: list
             fields:
-              - { label: id, name: id, widget: string }
               - { label: Nombre, name: label, widget: string }
               - { label: url, name: url, widget: string }
               - { label: Icono, name: icon, widget: image }
+              - { label: id, name: id, widget: uuid }
           - label: Footer
             name: footer
             widget: object
@@ -43,15 +43,15 @@ collections:
                 name: navigation
                 widget: list
                 fields:
-                  - { label: id, name: id, widget: string }
                   - { label: Título, name: title, widget: string }
+                  - { label: id, name: id, widget: uuid }
                   - label: Enlaces
                     name: list
                     widget: list
                     fields:
-                      - { label: id, name: id, widget: string }
                       - { label: Nombre, name: label, widget: string }
                       - { label: url, name: url, widget: string, default: "/" }
+                      - { label: id, name: id, widget: uuid }
       - label: Texto Rotativo
         name: rotator
         file: "content/rotator.json"
@@ -66,7 +66,6 @@ collections:
             name: list
             widget: list
             fields:
-              - { label: id, name: id, widget: string }
               - { label: slug, name: slug, widget: string }
               - { label: Imagen destacada, name: image, widget: image }
               - { label: Título, name: title, widget: string }
@@ -78,6 +77,7 @@ collections:
                 name: gallery
                 widget: list
                 field: { label: Image, name: image, widget: image }
+              - { label: id, name: id, widget: uuid }
       - label: Colaboradores
         name: artist
         file: "content/artist.json"
@@ -86,9 +86,9 @@ collections:
             name: list
             widget: list
             fields:
-              - { label: id, name: id, widget: string }
               - { label: Nombre, name: name, widget: string }
               - { label: Foto, name: photo, widget: image }
+              - { label: id, name: id, widget: uuid }
       - label: Reviews
         name: reviews
         file: "content/reviews.json"
@@ -97,7 +97,6 @@ collections:
             name: list
             widget: list
             fields:
-              - { label: id, name: id, widget: string }
               - { label: Texto, name: text, widget: markdown }
               - label: Autor
                 name: author
@@ -108,6 +107,7 @@ collections:
                   - label: Información Relacionada
                     name: info
                     widget: markdown
+              - { label: id, name: id, widget: uuid }
       - label: Partners
         name: partners
         file: "content/partners.json"
@@ -116,9 +116,9 @@ collections:
             name: list
             widget: list
             fields:
-              - { label: id, name: id, widget: string }
               - { label: Nombre, name: label, widget: string }
               - { label: Logo, name: logo, widget: image }
+              - { label: id, name: id, widget: uuid }
   - label: Páginas
     name: pages
     files:
@@ -151,10 +151,10 @@ collections:
                 name: list
                 widget: list
                 fields:
-                  - { label: id, name: id, widget: string }
                   - { label: Título, name: title, widget: string }
                   - { label: Imagen, name: image, widget: image }
                   - { label: Descripción, name: description, widget: markdown }
+                  - { label: id, name: id, widget: uuid }
       - label: Quienes Somos
         name: about
         file: "content/about.json"
@@ -171,10 +171,10 @@ collections:
                 name: people
                 widget: list
                 fields:
-                  - { label: id, name: id, widget: string }
                   - { label: Nombre, name: name, widget: string }
                   - { label: Foto, name: photo, widget: image }
                   - { label: Bio, name: bio, widget: markdown }
+                  - { label: id, name: id, widget: uuid }
           - label: Valores
             name: values
             widget: object
@@ -184,10 +184,10 @@ collections:
                 name: list
                 widget: list
                 fields:
-                  - { label: id, name: id, widget: string }
                   - { label: Imagen, name: image, widget: image }
                   - { label: Descripción, name: text, widget: markdown }
                   - { label: Lista, name: items, widget: list }
+                  - { label: id, name: id, widget: uuid }
       - label: Qué Ofrecemos
         name: services
         file: "content/services.json"
@@ -198,10 +198,10 @@ collections:
             name: list
             widget: list
             fields:
-              - { label: id, name: id, widget: string }
               - { label: Título, name: title, widget: string }
               - { label: Image, name: image, widget: image }
               - { label: Descripción, name: description, widget: markdown }
+              - { label: id, name: id, widget: uuid }
       - label: Eventos
         name: events
         file: "content/events.json"
