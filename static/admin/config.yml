@@ -61,6 +61,7 @@ collections:
         file: "content/portfolio.json"
         fields:
           - label: Eventos
+            label_singular: Evento
             name: list
             widget: list
             fields:
