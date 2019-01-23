@@ -11,7 +11,6 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
   <script>
-
     CMS.registerWidget(
       'uuid',
       createClass({
@@ -23,13 +22,11 @@
 
         uuid: function uuid(options) {
           options = options || {};
-
           var size = options.size || 21;
           var url = options.url || "Uint8ArdomValuesObj012345679BCDEFGHIJKLMNPQRSTWXYZ_cfghkpqvwxyz-";
           var id = "";
 
           if (typeof self === "undefined" || (!self.crypto && !self.msCrypto)) {
-            var id = "";
             while (0 < size--) {
               id += url[(Math.random() * 64) | 0];
             }
@@ -37,7 +34,6 @@
           }
 
           // else
-
           var crypto = self.crypto || self.msCrypto;
           var bytes = crypto.getRandomValues(new Uint8Array(size));
 
@@ -47,17 +43,15 @@
 
           return id;
         },
-
         componentDidMount: function() {
           var value = this.props.value;
           var onChange = this.props.onChange;
           var uuid = this.uuid;
 
           if (!value) {
-            onChange(uuid(32));
+            onChange(uuid());
           }
         },
-
         render: function() {
           var value = this.props.value;
           var classNameWrapper = this.props.classNameWrapper;
@@ -67,7 +61,6 @@
         }
       })
     );
-
   </script>
 </body>
 </html>
