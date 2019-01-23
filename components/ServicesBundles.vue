@@ -2,13 +2,13 @@
   <b-row align-v="center" class="flex-md-row-reverse">
     <b-col md="6">
       <b-img
-        :src="bundles.image"
-        :blank="!bundles.image"
+        :src="bundles.image && require(`~/assets/${bundles.image}`)"
+        :alt="bundles.title"
         :rounded="!bundles.image"
-        blank-color="#777"
+        :blank="!bundles.image"
+        :blank-color="!bundles.image && '#e9e9e9'"
         width="540"
         height="325"
-        alt=""
         fluid
       />
     </b-col>

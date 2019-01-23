@@ -1,5 +1,5 @@
 <template lang="html">
-  <footer class="bg-light">
+  <footer class="bg-dark text-white">
     <b-container class="py-3">
       <!-- social media -->
       <div class="py-3 d-flex flex-row justify-content-center">
@@ -13,13 +13,13 @@
         >
 
           <b-img
-            :src="social.icon"
+            :src="social.icon && require(`~/assets/${social.icon}`)"
             :blank="!social.icon"
-            blank-color="#777"
-            rounded="circle"
+            :blank-color="!social.icon && '#e03153'"
+            class="mb-1 mb-sm-0 mr-sm-2"
             width="32"
             height="32"
-            class="mb-1 mb-sm-0 mr-sm-2"
+            rounded="circle"
           />
 
           <span>

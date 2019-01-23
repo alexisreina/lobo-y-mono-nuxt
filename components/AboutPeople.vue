@@ -16,15 +16,15 @@
       >
 
         <b-img
-          :src="person.photo"
+          :src="person.photo && require(`~/assets${person.photo}`)"
           :alt="person.name"
-          :blank="!person.photo"
           :width="!person.photo ? 150 : null"
           :height="!person.photo ? 150: null"
-          rounded="circle"
-          blank-color="#777"
-          fluid
+          :blank="!person.photo"
+          :blank-color="!person.photo && '#e9e9e9'"
           class="d-block mb-3 mb-md-4 mx-md-auto"
+          rounded="circle"
+          fluid
         />
 
         <h3 class="text-md-center">

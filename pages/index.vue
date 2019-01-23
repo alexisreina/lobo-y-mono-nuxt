@@ -46,7 +46,7 @@
         </b-container>
       </section> -->
 
-      <section class="py-4">
+      <section class="py-4 bg-dark">
         <b-container>
           <Partners :partners="partners.list" />
         </b-container>

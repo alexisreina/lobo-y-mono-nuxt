@@ -6,23 +6,24 @@
       md="6"
       class="mb-3 mb-md-0"
     >
-      <div class="review p-3 p-lg-4 bg-light mx-auto rounded">
+      <div class="review mx-auto border rounded">
+        <div class="pt-4 px-2 px-lg-4 pt-lg-4 mb-3 rounded-top">
+          <Markdown class="review-body" :content="review.text" />
+        </div>
 
-        <Markdown class="review-body" :content="review.text" />
-
-        <div class="pt-4 d-flex flex-row align-items-center">
+        <div class="p-4 d-flex flex-row align-items-center bg-light rounde-bottom">
           <b-img
-            :src="review.author.photo"
+            :src="review.author.photo && require(`~/assets/${review.author.photo}`)"
             :alt="review.author.name"
             :blank="!review.author.photo"
-            blank-color="#777"
+            :blank-color="!review.author.photo && '#e03153'"
             width="52"
             height="52"
             rounded="circle"
             class="d-block mr-3"
           />
 
-          <div>
+          <div class="py-1">
             <p class="mb-0">
               {{review.author.name}}
             </p>

@@ -19,13 +19,14 @@
         >
           <div class="py-2">
             <b-img
-              blank
-              blank-color="#777"
-              rounded="circle"
+              :src="service.image && require(`~/assets/${service.image}`)"
+              :alt="service.title"
+              :blank="!service.image"
+              :blank-color="!service.image && '#e9e9e9'"
+              class="d-block mx-auto mb-3"
               width="75"
               height="75"
-              :alt="service.title"
-              class="d-block mx-auto mb-3"
+              rounded="circle"
             />
 
             <h3

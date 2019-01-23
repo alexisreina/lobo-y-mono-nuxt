@@ -1,8 +1,8 @@
 <template lang="html">
   <b-navbar
     toggleable="lg"
-    type="light"
-    variant="light"
+    type="dark"
+    variant="dark"
   >
     <b-navbar-toggle target="nav_collapse" />
 

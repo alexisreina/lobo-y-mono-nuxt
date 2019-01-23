@@ -1,9 +1,14 @@
 <template lang="html">
   <div>
     <header role="banner" class="bg-light">
-      <b-container class="py-3 py-lg-4 text-center mb-3 mb-lg-5">
+      <b-container class="py-3 py-lg-5 text-center mb-3 mb-lg-5">
         <b-row>
-          <b-col lg="10" offset-lg="1">
+          <b-col
+            md="10"
+            lg="8"
+            offset-md="1"
+            offset-lg="2"
+          >
             <h1 class="mb-3">
               {{page.header}}
             </h1>
@@ -42,7 +47,7 @@
               <b-col md="6">
                 <b-img
                   blank
-                  blank-color="#777"
+                  blank-color="#e9e9e9"
                   width="540"
                   height="325"
                   alt=""
@@ -53,7 +58,7 @@
 
               <b-col md="6">
                 <h2>
-                  EVENTOS A MEDIDA
+                  Eventos a medida
                 </h2>
 
                 <p>
@@ -83,7 +88,7 @@
     <section class="py-5 bg-light">
       <b-container>
         <b-row>
-          <b-col lg="10" offset-lg="1">
+          <b-col lg="6" offset-lg="3">
             <ServicesOther :other="page.other" />
           </b-col>
         </b-row>

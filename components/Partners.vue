@@ -6,18 +6,19 @@
       cols="4"
     >
       <b-img
-        :src="partner.logo"
-        :rounded="!partner.logo"
+        :src="partner.logo && require(`~/assets/${partner.logo}`)"
+        :alt="partner.label"
+        :title="partner.label"
         :blank="!partner.logo"
-        blank-color="#777"
-        width="120"
-        height="60"
-        fluid
-        class="d-block mx-auto"
+        :blank-color="!partner.logo && '#fff'"
         :class="{
           'ml-md-auto mr-md-0': partners.indexOf(partner) === 0,
           'ml-md-0 mr-md-auto': partners.indexOf(partner) === partners.length - 1
         }"
+        class="d-block mx-auto"
+        width="120"
+        height="60"
+        fluid
       />
 
       <!--

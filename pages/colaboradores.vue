@@ -1,7 +1,6 @@
 <template lang="html">
   <div>
-
-    <header class="py-3">
+    <header class="py-3 pt-md-4">
       <b-container>
         <b-row>
           <b-col

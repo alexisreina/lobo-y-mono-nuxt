@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="contacto">
-    <b-container class="py-3">
+    <b-container class="py-3 pt-md-4">
       <b-row>
         <b-col lg="10" offset-lg="1">
           <h1>

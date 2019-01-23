@@ -1,8 +1,8 @@
 <template lang="html">
   <div>
-    <h4 class="h5">
+    <h2>
       {{other.title}}
-    </h4>
+    </h2>
 
     <Markdown :content="other.description" />
   </div>

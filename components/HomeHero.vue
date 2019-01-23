@@ -2,11 +2,11 @@
   <b-row align-v="center">
     <b-col lg="6">
       <b-img
-        :src="image"
+        :src="image && require(`~/assets/${image}`)"
         :blank="!image"
-        width="450"
-        height="450"
-        blank-color="#d6d4d6"
+        :width="!image ? 450 : null"
+        :height="!image ? 450 : null"
+        :blank-color="!image && #d6d4d6"
         class="d-block mx-auto mb-3 mb-lg-0"
         rounded="circle"
         fluid

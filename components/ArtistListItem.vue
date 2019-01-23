@@ -2,13 +2,13 @@
   <figure>
 
     <b-img
-      :src="artist.photo"
+      :src="artist.photo && require(`~/assets/${artist.photo}`)"
       :alt="artist.name"
       :blank="!artist.photo"
       :width="!artist.photo ? 350 : null"
       :height="!artist.photo ? 275 : null"
       :rounded="!artist.photo"
-      blank-color="#777"
+      :blank-color="!artist.photo && '#e9e9e9'"
       class="mb-2"
       fluid
     />

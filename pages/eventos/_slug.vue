@@ -16,7 +16,8 @@
             </h1>
 
             <b-img
-              :src="event.image"
+              v-if="event.image"
+              :src="require(`~/assets/${event.image}`)"
               class="d-block mx-auto"
               fluid
             />
@@ -43,7 +44,7 @@
       </section>
 
       <!-- event data -->
-      <section class="mb-5">
+      <section class="mb-5" v-if="event.miscellaneus.length">
         <b-container>
           <b-row>
             <b-col class="text-center">
@@ -59,10 +60,8 @@
         </b-container>
       </section>
 
-
-
       <!-- event gallery -->
-      <section class="py-3">
+      <section class="py-3" v-if="event.gallery.length">
         <b-container>
           <b-row>
             <b-col
@@ -74,7 +73,11 @@
 
               <b-img-lazy
                 :style="{ boxShadow: '0 6px 12px -3px  rgba(0,0,0,.32)'}"
-                :src="photo"
+                :src="photo && require(`~/assets/${photo}`)"
+                width="800"
+                height="600"
+                blank-color="#e9e9e9"
+                blank
                 fluid
               />
 
