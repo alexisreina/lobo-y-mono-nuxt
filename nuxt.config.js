@@ -53,6 +53,7 @@ module.exports = {
     ["nuxt-sass-resources-loader", "@/assets/styles/_custom.scss"],
     // Doc: https://bootstrap-vue.js.org/docs/
     ["bootstrap-vue/nuxt", { css: false }],
+    "~/modules/cms-img-previews",
     "nuxt-imagemin",
     "@nuxtjs/pwa"
   ],
