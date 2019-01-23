@@ -4,23 +4,15 @@
   >
     <figure class="event-list-item">
       <b-img
-        v-if="event.image"
-        :src="require(`~/assets/${event.image.slice(1)}`)"
+        :src="event.image && require(`~/assets/${event.image.slice(1)}`)"
         :alt="event.title"
+        :blank="!event.image"
+        :width="!event.image ? 350 : null"
+        :height="!event.image ? 260 : null"
+        :rounded="!event.image"
+        :blank-color="!event.image && '#e9e9e9'"
         class="mb-2"
         fluid
-      />
-
-      <b-img
-        v-else
-        class="mb-2"
-        alt=""
-        width="350"
-        height="275"
-        blank-color="#777"
-        blank
-        fluid
-        rounded
       />
 
       <figcaption class="mb-2">
