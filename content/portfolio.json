@@ -22,22 +22,6 @@
       ]
     },
     {
-      "slug": "usted-esta-aqui",
-      "date": "Marzo 2012",
-      "gallery": [],
-      "location": "Hub Madrid",
-      "title": "Usted está aquí",
-      "id": "dsS13qY5kgeeYuV6s4X_h",
-      "image": "",
-      "description": "Evento diseñado para Hub Madrid en el proyecto “Hub Art” en el que se creaban redes profesionales entre artistas y nuevos emprendedores.\n\nExposición y presentación del proyecto artístico “Usted está aquí”. \n\nEn la producción del evento se trató de recrear un espacio de diálogo en el que poder debatir sobre Sociología del Arte Urbano y Graffiti. Creando un espacio en el que convivieron tanto artistas urbanos como estudiantes de bellas artes de la Universidad Complutense. \n\nContamos con la participación de diferentes colectivos y sociólogos sobre el tema, así como con vecinos del barrio. El evento fue dirigido por Sr Mu, Dr. Humes y Sara Formoso. \n\nDesde Lobo y Mono, ofrecemos crear y adaptar el espacio, para que tu evento recree el clímax adecuado para que sucedan cosas bonitas. Así como cobertura audiovisual y cualquier cosa que se nos ocurra juntas.",
-      "miscellaneus": [
-        "HUB MADRID. HUB ART",
-        "USTED ESTÁ AQUÍ",
-        "Exposición y Mesa Redonda",
-        "21 marzo 2012"
-      ]
-    },
-    {
       "slug": "veranos-culturales-sanse-2018",
       "image": "/uploads/veranos-culturales-sanse-2018.jpg",
       "title": "Veranos Culturales",
@@ -53,6 +37,22 @@
       "date": "19, 24 y 31 de Diciembre",
       "description": "Diseñamos unas Navidades Culturales en las que nuestra prioridad fué sacar la cultura a la calle. Todos los vecinos del pueblo pudieron disfrutar de espectáculos aptos para toda la familia. Enmarcadas en la Plaza de la Constitución y el Museo Etnográfico se impartieron durante los días 19, 24 y 31 de Diciembre con: talleres de percusión corporal, circo, swing, robótica, creación de videojuegos, cupcakes y laboratorio de texturas.\n\nPintacaras para pequeños y mayores. Actuaciones de: circo, magia, pasacalles y conciertos. \nCon Enrique Suárez participando en la producción y en la creación artística y cartelería.  Durante estas tres jornadas enmarcadas en plena Navidad, todos pudimos disfrutar juntos en familia de una experiencia compartida en la que se respiró un ambiente entrañable.\n\nGarantizamos proyectos en los que cada uno de sus integrantes se sienta cómodo independientemente de si son pequeños o mayores, tíos, hermanos… Buscamos la calidad en cada una de las actuaciones para que la cultura llegue a cada uno con sensibilidad y respeto.",
       "id": "goHBhw8vpPU29T2mbvMBI"
+    },
+    {
+      "slug": "usted-esta-aqui",
+      "date": "Marzo 2012",
+      "gallery": [],
+      "location": "Hub Madrid",
+      "title": "Usted está aquí",
+      "id": "dsS13qY5kgeeYuV6s4X_h",
+      "image": "",
+      "description": "Evento diseñado para Hub Madrid en el proyecto “Hub Art” en el que se creaban redes profesionales entre artistas y nuevos emprendedores.\n\nExposición y presentación del proyecto artístico “Usted está aquí”. \n\nEn la producción del evento se trató de recrear un espacio de diálogo en el que poder debatir sobre Sociología del Arte Urbano y Graffiti. Creando un espacio en el que convivieron tanto artistas urbanos como estudiantes de bellas artes de la Universidad Complutense. \n\nContamos con la participación de diferentes colectivos y sociólogos sobre el tema, así como con vecinos del barrio. El evento fue dirigido por Sr Mu, Dr. Humes y Sara Formoso. \n\nDesde Lobo y Mono, ofrecemos crear y adaptar el espacio, para que tu evento recree el clímax adecuado para que sucedan cosas bonitas. Así como cobertura audiovisual y cualquier cosa que se nos ocurra juntas.",
+      "miscellaneus": [
+        "HUB MADRID. HUB ART",
+        "USTED ESTÁ AQUÍ",
+        "Exposición y Mesa Redonda",
+        "21 marzo 2012"
+      ]
     }
   ]
 }
