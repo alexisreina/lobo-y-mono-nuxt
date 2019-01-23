@@ -44,7 +44,7 @@
       </section>
 
       <!-- event data -->
-      <section class="mb-5" v-if="event.miscellaneus.length">
+      <section class="mb-5" v-if="event.miscellaneus && event.miscellaneus.length">
         <b-container>
           <b-row>
             <b-col class="text-center">
@@ -61,7 +61,7 @@
       </section>
 
       <!-- event gallery -->
-      <section class="py-3" v-if="event.gallery.length">
+      <section class="py-3" v-if="event.gallery && event.gallery.length">
         <b-container>
           <b-row>
             <b-col
