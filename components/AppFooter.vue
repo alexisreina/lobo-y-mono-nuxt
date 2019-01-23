@@ -13,7 +13,7 @@
         >
 
           <b-img
-            :src="social.icon && require(`~/assets/${social.icon}`)"
+            :src="social.icon && require(`~/assets/${social.icon.slice(1)}`)"
             :blank="!social.icon"
             :blank-color="!social.icon && '#e03153'"
             class="mb-1 mb-sm-0 mr-sm-2"

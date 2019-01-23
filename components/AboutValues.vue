@@ -13,7 +13,7 @@
       <b-col md="6">
 
         <b-img
-          :src="value.image && require(`~/assets/${value.image}`)"
+          :src="value.image && require(`~/assets/${value.image.slice(1)}`)"
           :blank="!value.image"
           :width="!value.image ? 540 : null"
           :height="!value.image ? 325: null"

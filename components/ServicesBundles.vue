@@ -2,7 +2,7 @@
   <b-row align-v="center" class="flex-md-row-reverse">
     <b-col md="6">
       <b-img
-        :src="bundles.image && require(`~/assets/${bundles.image}`)"
+        :src="bundles.image && require(`~/assets/${bundles.image.slice(1)}`)"
         :alt="bundles.title"
         :rounded="!bundles.image"
         :blank="!bundles.image"

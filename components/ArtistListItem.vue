@@ -2,7 +2,7 @@
   <figure>
 
     <b-img
-      :src="artist.photo && require(`~/assets/${artist.photo}`)"
+      :src="artist.photo && require(`~/assets/${artist.photo.slice(1)}`)"
       :alt="artist.name"
       :blank="!artist.photo"
       :width="!artist.photo ? 350 : null"

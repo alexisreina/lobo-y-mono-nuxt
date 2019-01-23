@@ -6,7 +6,7 @@
       cols="4"
     >
       <b-img
-        :src="partner.logo && require(`~/assets/${partner.logo}`)"
+        :src="partner.logo && require(`~/assets/${partner.logo.slice(1)}`)"
         :alt="partner.label"
         :title="partner.label"
         :blank="!partner.logo"

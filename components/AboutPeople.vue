@@ -16,7 +16,7 @@
       >
 
         <b-img
-          :src="person.photo && require(`~/assets${person.photo}`)"
+          :src="person.photo && require(`~/assets${person.photo.slice(1)}`)"
           :alt="person.name"
           :width="!person.photo ? 150 : null"
           :height="!person.photo ? 150: null"

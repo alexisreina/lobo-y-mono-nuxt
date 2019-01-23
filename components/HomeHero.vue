@@ -2,7 +2,7 @@
   <b-row align-v="center">
     <b-col lg="6">
       <b-img
-        :src="image && require(`~/assets/${image}`)"
+        :src="image && require(`~/assets/${image.slice(1)}`)"
         :blank="!image"
         :width="!image ? 450 : null"
         :height="!image ? 450 : null"

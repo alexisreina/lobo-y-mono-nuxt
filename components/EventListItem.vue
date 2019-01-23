@@ -5,7 +5,7 @@
     <figure class="event-list-item">
       <b-img
         v-if="event.image"
-        :src="require(`~/assets/${event.image}`)"
+        :src="require(`~/assets/${event.image.slice(1)}`)"
         :alt="event.title"
         class="mb-2"
         fluid

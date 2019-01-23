@@ -7,7 +7,7 @@
     >
 
       <b-img
-        :src="service.image && required(`~/assets/${service.image}`)"
+        :src="service.image && required(`~/assets/${service.image.slice(1)}`)"
         :alt="service.title"
         :blank="!service.image"
         :blank-color="!service.image && '#e9e9e9'"

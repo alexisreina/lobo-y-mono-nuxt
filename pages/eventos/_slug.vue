@@ -17,7 +17,7 @@
 
             <b-img
               v-if="event.image"
-              :src="require(`~/assets/${event.image}`)"
+              :src="require(`~/assets/${event.image.slice(1)}`)"
               class="d-block mx-auto"
               fluid
             />
@@ -73,7 +73,7 @@
 
               <b-img-lazy
                 :style="{ boxShadow: '0 6px 12px -3px  rgba(0,0,0,.32)'}"
-                :src="photo && require(`~/assets/${photo}`)"
+                :src="photo && require(`~/assets/${photo.slice(1)}`)"
                 width="800"
                 height="600"
                 blank-color="#e9e9e9"

@@ -13,7 +13,7 @@
 
         <div class="p-4 d-flex flex-row align-items-center bg-light rounde-bottom">
           <b-img
-            :src="review.author.photo && require(`~/assets/${review.author.photo}`)"
+            :src="review.author.photo && require(`~/assets/${review.author.photo.slice(1)}`)"
             :alt="review.author.name"
             :blank="!review.author.photo"
             :blank-color="!review.author.photo && '#e03153'"
