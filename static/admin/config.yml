@@ -263,3 +263,25 @@ collections:
       - { label: Body, name: body, widget: markdown }
       - { label: slug, name: slug, widget: string }
       - { label: id, name: id, widget: uuid }
+  - label: Portfolio
+    name: portfolio
+    description: Catálogo de eventos realizados
+    folder: "content/portfolio"
+    create: true
+    extension: json
+    format: json
+    identifier_field: slug
+    fields:
+      fields:
+        - { label: slug, name: slug, widget: string }
+        - { label: Título, name: title, widget: string }
+        - { label: Lugar, name: location, width: string }
+        - { label: Fecha, name: date, widget: string }
+        - { label: Imagen destacada, name: image, widget: image }
+        - { label: Descripción, name: description, widget: markdown }
+        - { label: Miscelánea, name: miscellaneus, widget: list }
+        - label: Galería
+          name: gallery
+          widget: list
+          field: { label: Image, name: image, widget: image }
+        - { label: id, name: id, widget: uuid }
