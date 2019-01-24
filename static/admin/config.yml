@@ -249,3 +249,14 @@ collections:
         fields:
           - { label: Título, name: header, widget: string }
           - { label: Descripción, name: intro, widget: markdown }
+  - label: Tests
+    name: tests
+    label_singular: Test
+    description: This is a test
+    folder: "content/tests"
+    create: true
+    extension: json
+    format: json-frontmatter
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Body, name: body, widget: markdown }

@@ -6,7 +6,7 @@
         :blank="!image"
         :width="!image ? 450 : null"
         :height="!image ? 450 : null"
-        :blank-color="!image && #d6d4d6"
+        :blank-color="!image && '#d6d4d6'"
         class="d-block mx-auto mb-3 mb-lg-0"
         rounded="circle"
         fluid
