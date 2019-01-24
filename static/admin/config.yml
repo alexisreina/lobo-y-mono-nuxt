@@ -256,7 +256,7 @@ collections:
     folder: "content/tests"
     create: true
     extension: json
-    format: json-frontmatter
+    format: json
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: markdown }
