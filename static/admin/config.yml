@@ -28,12 +28,29 @@ collections:
               - { label: id, name: id, widget: uuid }
           - label: Redes Sociales
             name: rrss
-            widget: list
+            widget: object
             fields:
-              - { label: Nombre, name: label, widget: string }
-              - { label: url, name: url, widget: string }
-              - { label: Icono, name: icon, widget: image }
-              - { label: id, name: id, widget: uuid }
+              - label: Facebook
+                name: facebook
+                widget: object
+                fields:
+                  - { label: Nombre, name: label, widget: string }
+                  - { label: Icono, name: icon, widget: image }
+                  - { label: url, name: url, widget: string }
+              - label: Instagram
+                name: instagram
+                widget: object
+                fields:
+                  - { label: Nombre, name: label, widget: string }
+                  - { label: Icono, name: icon, widget: image }
+                  - { label: url, name: url, widget: string }
+              - label: Linkedin
+                name: linkedin
+                widget: object
+                fields:
+                  - { label: Nombre, name: label, widget: string }
+                  - { label: Icono, name: icon, widget: image }
+                  - { label: url, name: url, widget: string }
           - label: Footer
             name: footer
             widget: object

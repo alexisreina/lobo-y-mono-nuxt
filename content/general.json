@@ -36,26 +36,23 @@
       "url": "/contacto"
     }
   ],
-  "rrss": [
-    {
-      "id": "0",
+  "rrss": {
+    "facebook": {
       "label": "Facebook",
       "icon": "",
-      "url": "#"
+      "url": ""
     },
-    {
-      "id": "1",
+    "instagram": {
       "label": "Instagram",
       "icon": "",
-      "url": "#"
+      "url": ""
     },
-    {
-      "id": "3",
+    "linkedin": {
       "label": "Linkedin",
       "icon": "",
-      "url": "#"
+      "url": ""
     }
-  ],
+  },
   "footer": {
     "copyright": "",
     "navigation": [

@@ -1,32 +1,12 @@
 <template lang="html">
   <footer class="bg-dark text-white">
     <b-container class="py-3">
+
       <!-- social media -->
-      <div class="py-3 d-flex flex-row justify-content-center">
-        <b-link
-          v-for="social in rrss"
-          :key="social.id"
-          :href="social.url"
-          class="d-flex flex-column flex-sm-row justify-content-center align-items-center mx-3"
-          rel="noopener noreferrer nofollow"
-          target="_blank"
-        >
-
-          <b-img
-            :src="social.icon && require(`~/assets/${social.icon.slice(1)}`)"
-            :blank="!social.icon"
-            :blank-color="!social.icon && '#e03153'"
-            class="mb-1 mb-sm-0 mr-sm-2"
-            width="32"
-            height="32"
-            rounded="circle"
-          />
-
-          <span>
-            {{social.label}}
-          </span>
-        </b-link>
-      </div>
+      <AppFooterSocial
+        :rrss="rrss"
+        class="py-3 d-flex flex-row justify-content-center"
+      />
       <!-- /social media -->
 
       <hr class="mb-4">
@@ -78,8 +58,13 @@
 </template>
 
 <script>
+import AppFooterSocial from "@/components/AppFooterSocial";
+
 export default {
   name: "AppFooter",
+  components: {
+    AppFooterSocial
+  },
   props: {
     rrss: {
       type: Array,
@@ -92,3 +77,11 @@ export default {
   }
 };
 </script>
+
+<style scoped lang="scss">
+.icon {
+  fill: $red;
+  width: 32px;
+  height: 32px;
+}
+</style>
