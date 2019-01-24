@@ -272,16 +272,15 @@ collections:
     format: json
     identifier_field: slug
     fields:
-      fields:
-        - { label: slug, name: slug, widget: string }
-        - { label: Título, name: title, widget: string }
-        - { label: Lugar, name: location, width: string }
-        - { label: Fecha, name: date, widget: string }
-        - { label: Imagen destacada, name: image, widget: image }
-        - { label: Descripción, name: description, widget: markdown }
-        - { label: Miscelánea, name: miscellaneus, widget: list }
-        - label: Galería
-          name: gallery
-          widget: list
-          field: { label: Image, name: image, widget: image }
-        - { label: id, name: id, widget: uuid }
+      - { label: slug, name: slug, widget: string }
+      - { label: Título, name: title, widget: string }
+      - { label: Lugar, name: location, width: string }
+      - { label: Fecha, name: date, widget: string }
+      - { label: Imagen destacada, name: image, widget: image }
+      - { label: Descripción, name: description, widget: markdown }
+      - { label: Miscelánea, name: miscellaneus, widget: list }
+      - label: Galería
+        name: gallery
+        widget: list
+        field: { label: Image, name: image, widget: image }
+      - { label: id, name: id, widget: uuid }
