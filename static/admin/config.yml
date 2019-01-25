@@ -104,17 +104,6 @@ collections:
                     name: info
                     widget: markdown
               - { label: id, name: id, widget: uuid }
-      - label: Partners_OLD
-        name: partners
-        file: "content/partners.json"
-        fields:
-          - label: Logos
-            name: list
-            widget: list
-            fields:
-              - { label: Nombre, name: label, widget: string }
-              - { label: Logo, name: logo, widget: image }
-              - { label: id, name: id, widget: uuid }
   - label: Páginas
     name: pages
     files:
@@ -263,5 +252,5 @@ collections:
     format: json
     fields:
       - { label: Nombre, name: title, widget: string }
-      - { label: Logo, name: logo, widget: image }
+      - { label: Logo, name: logo, widget: image, required: false }
       - { label: id, name: id, widget: uuid }

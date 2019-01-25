@@ -46,9 +46,10 @@
         </b-container>
       </section> -->
 
-      <section class="py-4 bg-dark">
+      <section v-if="$cms.partners" class="py-4 bg-dark">
         <b-container>
-          <Partners :partners="$cms.partners.list" />
+          <pre class="text-white">{{$cms.portfolio._keys}}</pre>
+          <Partners :partners="$cms.partners" />
         </b-container>
       </section>
     </main>

@@ -14,20 +14,14 @@ export default function(moduleOptions) {
     moduleOptions
   );
 
-  const basePath = path.resolve(__dirname, `./../${options.contentFolder}`);
+  const basePath = options.contentFolder;
 
   const mediaFolder = path.resolve(
-    __dirname,
-    "../",
-    `./${this.options.dir.assets}`,
-    `./${options.uploadsFolder}`
+    `${this.options.dir.assets}/${options.uploadsFolder}`
   );
 
   const staticFolder = path.resolve(
-    __dirname,
-    "../",
-    `./${this.options.dir.static}`,
-    `./${options.uploadsFolder}`
+    `${this.options.dir.static}/${options.uploadsFolder}`
   );
 
   const copyImages = () =>
@@ -40,34 +34,39 @@ export default function(moduleOptions) {
   const buildFilesTree = dir => {
     return fs.readdirSync(dir).reduce((map, file) => {
       const filePath = path.join(dir, file);
+
       if (fs.statSync(filePath).isFile()) {
         const key = file.split(".")[0];
         map[key] = JSON.parse(fs.readFileSync(filePath, "utf8"));
       } else {
         map[file] = buildFilesTree(filePath);
       }
+
       return map;
     }, {});
   };
 
   const createJson = cms => {
     fs.writeFileSync(
-      path.resolve(__dirname, `./../${this.options.dir.static}`, `cms.json`),
+      path.resolve(`${this.options.dir.static}/cms.json`),
       JSON.stringify(cms)
     );
   };
 
   // watch for contentChanges
   if (process.env.NODE_ENV === "development") {
-    chokidar.watch(basePath).on("all", (event, path) => {
-      if (event === "ready") return;
-      if (path.includes("uploads")) {
-        copyImages();
-      } else {
-        const cms = buildFilesTree(basePath);
-        createJson(cms);
-      }
-    });
+    chokidar
+      .watch([basePath, mediaFolder], { ignoreInitial: true })
+      .on("all", (event, path) => {
+        if (path.includes("uploads")) {
+          consola.info("Copying uploaded assets to static folder");
+          copyImages();
+        } else {
+          consola.info("Building cms");
+          const cms = buildFilesTree(basePath);
+          createJson(cms);
+        }
+      });
   }
 
   // Build cms
