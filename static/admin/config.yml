@@ -74,27 +74,6 @@ collections:
         file: "content/rotator.json"
         fields:
           - { label: Palabras, name: words, widget: list }
-      - label: Portfolio_OLD
-        name: portfolio
-        file: "content/_portfolio.json"
-        fields:
-          - label: Eventos
-            label_singular: Evento
-            name: list
-            widget: list
-            fields:
-              - { label: slug, name: slug, widget: string }
-              - { label: Imagen destacada, name: image, widget: image }
-              - { label: Título, name: title, widget: string }
-              - { label: Lugar, name: location, width: string }
-              - { label: Fecha, name: date, widget: string }
-              - { label: Descripción, name: description, widget: markdown }
-              - { label: Miscelánea, name: miscellaneus, widget: list }
-              - label: Galería
-                name: gallery
-                widget: list
-                field: { label: Image, name: image, widget: image }
-              - { label: id, name: id, widget: uuid }
       - label: Colaboradores
         name: artist
         file: "content/artist.json"
