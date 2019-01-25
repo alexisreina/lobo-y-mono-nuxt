@@ -278,12 +278,12 @@ collections:
     identifier_field: slug
     fields:
       - { label: slug, name: slug, widget: string }
+      - { label: Título, name: title, widget: string }
       - { label: Lugar, name: location, width: string }
       - { label: Fecha, name: date, widget: string }
-      - { label: Miscelánea, name: miscellaneus, widget: list, required: false }
-      - { label: Título, name: title, widget: string }
-      - { label: Imagen destacada, name: image, widget: image }
+      - { label: Imagen destacada, name: image, widget: image, required: false }
       - { label: Descripción, name: description, widget: markdown }
+      - { label: Miscelánea, name: miscellaneus, widget: list, required: false }
       - label: Galería
         name: gallery
         widget: list
