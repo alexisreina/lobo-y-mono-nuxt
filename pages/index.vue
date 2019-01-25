@@ -16,7 +16,7 @@
         <b-container>
           <b-row>
             <b-col>
-              <HomeServices :services="$cms.pages.homeservices" />
+              <HomeServices :services="$cms.pages.home.services" />
             </b-col>
           </b-row>
         </b-container>
@@ -24,13 +24,13 @@
 
       <section class="pb-5">
         <b-container>
-          <Reviews :reviews="$cms.reviewslist" />
+          <Reviews :reviews="$cms.reviews.list" />
         </b-container>
       </section>
 
       <section class="py-5 bg-light">
         <b-container class="py-3">
-          <HomeCta :cta="$cms.pages.homecta" />
+          <HomeCta :cta="$cms.pages.home.cta" />
         </b-container>
       </section>
 
@@ -48,7 +48,7 @@
 
       <section class="py-4 bg-dark">
         <b-container>
-          <Partners :partners="$cms.partnerslist" />
+          <Partners :partners="$cms.partners.list" />
         </b-container>
       </section>
     </main>

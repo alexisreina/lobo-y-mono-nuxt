@@ -67,7 +67,7 @@ export default {
   },
   props: {
     rrss: {
-      type: Array,
+      type: Object,
       required: true
     },
     menus: {
