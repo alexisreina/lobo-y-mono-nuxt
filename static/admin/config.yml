@@ -104,7 +104,7 @@ collections:
                     name: info
                     widget: markdown
               - { label: id, name: id, widget: uuid }
-      - label: Partners
+      - label: Partners_OLD
         name: partners
         file: "content/partners.json"
         fields:
@@ -233,20 +233,6 @@ collections:
           - { label: id, name: id, widget: hidden }
           - { label: Título, name: header, widget: string }
           - { label: Descripción, name: intro, widget: markdown }
-  # - label: Tests
-  #   name: tests
-  #   label_singular: Test
-  #   description: This is a test
-  #   folder: "content/tests"
-  #   create: true
-  #   extension: json
-  #   format: json
-  #   identifier_field: slug
-  #   fields:
-  #     - { label: Title, name: title, widget: string }
-  #     - { label: Body, name: body, widget: markdown }
-  #     - { label: slug, name: slug, widget: string }
-  #     - { label: id, name: id, widget: uuid }
   - label: Portfolio
     name: portfolio
     description: Catálogo de eventos realizados
@@ -268,4 +254,14 @@ collections:
         widget: list
         required: false
         field: { label: Image, name: image, widget: image }
+      - { label: id, name: id, widget: uuid }
+  - label: Partners
+    name: partners
+    folder: "content/partners"
+    create: true
+    extension: json
+    format: json
+    fields:
+      - { label: Nombre, name: title, widget: string }
+      - { label: Logo, name: logo, widget: image }
       - { label: id, name: id, widget: uuid }
