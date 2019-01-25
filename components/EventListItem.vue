@@ -10,7 +10,7 @@
         :width="!event.image ? 350 : null"
         :height="!event.image ? 260 : null"
         :rounded="!event.image"
-        :blank-color="!event.image && '#e9e9e9'"
+        :blank-color="!event.image ? '#e9e9e9' : null"
         class="mb-2"
         fluid
       />

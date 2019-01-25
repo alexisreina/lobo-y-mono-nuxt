@@ -1,22 +1,21 @@
 <template lang="html">
   <div class="py-5">
-
-    <header class="sr-only">
+    <!-- <pre>{{log()}}</pre> -->
+    <header>
       <b-container>
         <h1>
-          {{page.header}}
+          {{$cms.pages.events.header}}
         </h1>
 
-        <Markdown :content="page.intro" class="lead" />
+        <Markdown :content="$cms.pages.events.intro" class="lead" />
       </b-container>
     </header>
 
     <main>
       <b-container>
-        <EventList :list="portfolio.list" />
+        <EventList :list="$cms.portfolio" />
       </b-container>
     </main>
-
   </div>
 </template>
 
@@ -24,23 +23,31 @@
 import Markdown from "@/components/Markdown.vue";
 import EventList from "@/components/EventList.vue";
 
-// Content
-import page from "@/content/events.json";
-import portfolio from "@/content/portfolio.json";
-
 export default {
   name: "EventsPage",
   layout: "page",
   components: {
     Markdown,
     EventList
-  },
-  data() {
-    return {
-      page,
-      portfolio
-    };
   }
+  // ,
+  // computed: {
+  //   page() {
+  //     return this.$cms.pages.events;
+  //   },
+  //   portfolio() {
+  //     return this.$cms.portfolio;
+  //   }
+  // }
+  // mounted() {
+  //   // eslint-disable-next-line
+  //   console.log(this.$cms.portfolio);
+  // },
+  // methods: {
+  //   log() {
+  //     return this.$cms.portfolio;
+  //   }
+  // }
 };
 </script>
 

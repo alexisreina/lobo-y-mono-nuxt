@@ -8,11 +8,11 @@
             offset-lg="0"
           >
             <h1>
-              {{page.header}}
+              {{$cms.pages.collaborators.header}}
             </h1>
 
             <p class="lead">
-              {{page.intro}}
+              {{$cms.pages.collaborators.intro}}
             </p>
           </b-col>
         </b-row>
@@ -22,27 +22,27 @@
     <main>
       <section>
         <b-container>
-          <ArtistList :list="artist.list" />
+          <ArtistList :list="$cms.artist.list" />
         </b-container>
       </section>
 
       <b-container class="py-5">
         <h2>
-          {{page.cta.title}}
+          {{$cms.pages.collaborators.cta.title}}
         </h2>
 
         <Markdown
-          :content="page.cta.description"
+          :content="$cms.pages.collaborators.cta.description"
           class="lead mb-5"
         />
 
         <div class="text-center">
           <LmButton
-            :to="page.cta.button.link"
+            :to="$cms.pages.collaborators.cta.button.link"
             variant="primary"
             size="lg"
           >
-            {{page.cta.button.label}}
+            {{$cms.pages.collaborators.cta.button.label}}
           </LmButton>
         </div>
       </b-container>
@@ -56,10 +56,6 @@ import ArtistList from "@/components/ArtistList.vue";
 import Markdown from "@/components/Markdown.vue";
 import LmButton from "@/components/LmButton.vue";
 
-// Content
-import page from "@/content/collaborators.json";
-import artist from "@/content/artist.json";
-
 export default {
   name: "CollabPage",
   layout: "page",
@@ -67,15 +63,6 @@ export default {
     ArtistList,
     Markdown,
     LmButton
-  },
-  data() {
-    return {
-      page,
-      artist
-    };
   }
 };
 </script>
-
-<style lang="css">
-</style>

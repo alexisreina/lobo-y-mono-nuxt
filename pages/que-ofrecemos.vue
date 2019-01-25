@@ -10,10 +10,10 @@
             offset-lg="2"
           >
             <h1 class="mb-3">
-              {{page.header}}
+              {{$cms.pages.services.header}}
             </h1>
 
-            <Markdown :content="page.intro" class="lead mb-0" />
+            <Markdown :content="$cms.pages.services.intro" class="lead mb-0" />
           </b-col>
         </b-row>
       </b-container>
@@ -23,7 +23,7 @@
       <b-container>
         <b-row>
           <b-col lg="10" offset-lg="1">
-            <ServicesList :services="page.list" />
+            <ServicesList :services="$cms.pages.services.list" />
           </b-col>
         </b-row>
       </b-container>
@@ -33,7 +33,7 @@
       <b-container>
         <b-row>
           <b-col lg="10" offset-lg="1">
-            <ServicesCta :cta="page.cta" />
+            <ServicesCta :cta="$cms.pages.services.cta" />
           </b-col>
         </b-row>
       </b-container>
@@ -79,7 +79,7 @@
       <b-container>
         <b-row>
           <b-col lg="10" offset-lg="1">
-            <ServicesBundles :bundles="page.bundles" />
+            <ServicesBundles :bundles="$cms.pages.services.bundles" />
           </b-col>
         </b-row>
       </b-container>
@@ -89,7 +89,7 @@
       <b-container>
         <b-row>
           <b-col lg="6" offset-lg="3">
-            <ServicesOther :other="page.other" />
+            <ServicesOther :other="$cms.pages.services.other" />
           </b-col>
         </b-row>
       </b-container>
@@ -121,9 +121,6 @@ import ServicesList from "@/components/ServicesList.vue";
 import ServicesBundles from "@/components/ServicesBundles.vue";
 import ServicesCta from "@/components/ServicesCta.vue";
 
-// Content
-import page from "@/content/services.json";
-
 export default {
   name: "ServicesPage",
   layout: "page",
@@ -134,11 +131,6 @@ export default {
     ServicesList,
     ServicesBundles,
     ServicesCta
-  },
-  data() {
-    return {
-      page
-    };
   }
 };
 </script>

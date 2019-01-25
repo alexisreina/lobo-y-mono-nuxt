@@ -1,11 +1,11 @@
-<template>
+<template lang="html">
   <div class="home">
     <!-- <header class="header py-5">
       <b-container class="py-lg-3">
         <HomeHero
-          :title="page.header"
-          :intro="page.intro"
-          :image="page.image"
+          :title="$cms.pages.homeheader"
+          :intro="$cms.pages.homeintro"
+          :image="$cms.pages.homeimage"
           rotator
         />
       </b-container>
@@ -16,7 +16,7 @@
         <b-container>
           <b-row>
             <b-col>
-              <HomeServices :services="page.services" />
+              <HomeServices :services="$cms.pages.homeservices" />
             </b-col>
           </b-row>
         </b-container>
@@ -24,13 +24,13 @@
 
       <section class="pb-5">
         <b-container>
-          <Reviews :reviews="reviews.list" />
+          <Reviews :reviews="$cms.reviewslist" />
         </b-container>
       </section>
 
       <section class="py-5 bg-light">
         <b-container class="py-3">
-          <HomeCta :cta="page.cta" />
+          <HomeCta :cta="$cms.pages.homecta" />
         </b-container>
       </section>
 
@@ -48,7 +48,7 @@
 
       <section class="py-4 bg-dark">
         <b-container>
-          <Partners :partners="partners.list" />
+          <Partners :partners="$cms.partnerslist" />
         </b-container>
       </section>
     </main>
@@ -65,11 +65,6 @@ import HomeCta from "@/components/HomeCta";
 // import Subscribe from "@/components/Subscribe";
 import Partners from "@/components/Partners";
 
-// Content
-import page from "@/content/home.json";
-import reviews from "@/content/reviews.json";
-import partners from "@/content/partners.json";
-
 export default {
   name: "HomePage",
   layout: "page",
@@ -82,13 +77,6 @@ export default {
     // HomeEventGallery,
     // Subscribe,
     Partners
-  },
-  data() {
-    return {
-      page,
-      reviews,
-      partners
-    };
   }
 };
 </script>

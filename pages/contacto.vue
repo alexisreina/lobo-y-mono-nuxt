@@ -4,10 +4,10 @@
       <b-row>
         <b-col lg="10" offset-lg="1">
           <h1>
-            {{page.header}}
+            {{$cms.pages.contact.header}}
           </h1>
 
-          <Markdown :content="page.intro" />
+          <Markdown :content="$cms.pages.contact.intro" />
         </b-col>
       </b-row>
     </b-container>
@@ -22,23 +22,12 @@
 import Markdown from "@/components/Markdown.vue";
 import ContactForm from "@/components/ContactForm.vue";
 
-// content
-import page from "@/content/contact.json";
-
 export default {
   name: "ContactPage",
   layout: "page",
   components: {
     Markdown,
     ContactForm
-  },
-  data() {
-    return {
-      page
-    };
   }
 };
 </script>
-
-<style lang="css">
-</style>

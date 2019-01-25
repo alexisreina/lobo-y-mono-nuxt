@@ -74,9 +74,9 @@ collections:
         file: "content/rotator.json"
         fields:
           - { label: Palabras, name: words, widget: list }
-      - label: Portfolio
+      - label: Portfolio_OLD
         name: portfolio
-        file: "content/portfolio.json"
+        file: "content/_portfolio.json"
         fields:
           - label: Eventos
             label_singular: Evento
@@ -141,8 +141,9 @@ collections:
     files:
       - label: Inicio
         name: home
-        file: "content/home.json"
+        file: "content/pages/home.json"
         fields:
+          - { label: id, name: id, widget: hidden }
           - { label: Título, name: header, widget: string }
           - { label: Descripción, name: intro, widget: markdown }
           - { label: Imagen, name: image, widget: image }
@@ -174,8 +175,9 @@ collections:
                   - { label: id, name: id, widget: uuid }
       - label: Quienes Somos
         name: about
-        file: "content/about.json"
+        file: "content/pages/about.json"
         fields:
+          - { label: id, name: id, widget: hidden }
           - { label: Título, name: header, widget: string }
           - { label: Descripción, name: intro, widget: markdown }
           - label: Equipo
@@ -207,8 +209,9 @@ collections:
                   - { label: id, name: id, widget: uuid }
       - label: Qué Ofrecemos
         name: services
-        file: "content/services.json"
+        file: "content/pages/services.json"
         fields:
+          - { label: id, name: id, widget: hidden }
           - { label: Título, name: header, widget: string }
           - { label: Descripción, name: intro, widget: markdown }
           - label: Listado
@@ -221,13 +224,14 @@ collections:
               - { label: id, name: id, widget: uuid }
       - label: Eventos
         name: events
-        file: "content/events.json"
+        file: "content/pages/events.json"
         fields:
+          - { label: id, name: id, widget: hidden }
           - { label: Título, name: header, widget: string }
           - { label: Descripción, name: intro, widget: markdown }
       - label: Colaboradores
         name: collab
-        file: "content/collaborators.json"
+        file: "content/pages/collaborators.json"
         fields:
           - { label: Título, name: header, widget: string }
           - { label: Descripción, name: intro, widget: markdown }
@@ -245,24 +249,25 @@ collections:
                   - { label: Url, name: link, widget: string, default: "/" }
       - label: Contacto
         name: contact
-        file: "content/contact.json"
+        file: "content/pages/contact.json"
         fields:
+          - { label: id, name: id, widget: hidden }
           - { label: Título, name: header, widget: string }
           - { label: Descripción, name: intro, widget: markdown }
-  - label: Tests
-    name: tests
-    label_singular: Test
-    description: This is a test
-    folder: "content/tests"
-    create: true
-    extension: json
-    format: json
-    identifier_field: slug
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Body, name: body, widget: markdown }
-      - { label: slug, name: slug, widget: string }
-      - { label: id, name: id, widget: uuid }
+  # - label: Tests
+  #   name: tests
+  #   label_singular: Test
+  #   description: This is a test
+  #   folder: "content/tests"
+  #   create: true
+  #   extension: json
+  #   format: json
+  #   identifier_field: slug
+  #   fields:
+  #     - { label: Title, name: title, widget: string }
+  #     - { label: Body, name: body, widget: markdown }
+  #     - { label: slug, name: slug, widget: string }
+  #     - { label: id, name: id, widget: uuid }
   - label: Portfolio
     name: portfolio
     description: Catálogo de eventos realizados

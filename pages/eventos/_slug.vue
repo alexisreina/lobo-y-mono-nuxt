@@ -1,8 +1,7 @@
-<!-- eslint-disable -->
 <template lang="html">
   <div>
     <!-- event title -->
-    <header class="py-5" style >
+    <header class="py-5" style>
       <b-container>
         <b-row>
           <b-col
@@ -44,7 +43,10 @@
       </section>
 
       <!-- event data -->
-      <section class="mb-5" v-if="event.miscellaneus && event.miscellaneus.length">
+      <section
+        v-if="event.miscellaneus && event.miscellaneus.length"
+        class="mb-5"
+      >
         <b-container>
           <b-row>
             <b-col class="text-center">
@@ -61,7 +63,10 @@
       </section>
 
       <!-- event gallery -->
-      <section class="py-3" v-if="event.gallery && event.gallery.length">
+      <section
+        v-if="event.gallery && event.gallery.length"
+        class="py-3"
+      >
         <b-container>
           <b-row>
             <b-col
@@ -115,9 +120,6 @@
 import Markdown from "@/components/Markdown.vue";
 import LmButton from "@/components/LmButton.vue";
 
-// Content
-import portfolio from "@/content/portfolio.json";
-
 export default {
   name: "EventPage",
   layout: "page",
@@ -127,7 +129,7 @@ export default {
   },
   computed: {
     event() {
-      return portfolio.list.find(
+      return this.$cms.portfolio.list.find(
         event => event.slug === this.$route.params.slug
       );
     }
