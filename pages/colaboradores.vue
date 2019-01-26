@@ -22,7 +22,8 @@
     <main>
       <section>
         <b-container>
-          <ArtistList :list="$cms.artist.list" />
+
+          <ArtistList :list="$cms.artists" />
         </b-container>
       </section>
 
