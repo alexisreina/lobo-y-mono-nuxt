@@ -6,9 +6,29 @@
       "id": "b3694c90-219f-11e9-8001-f1eb21e2a5e3"
     },
     {
-      "label": "Eventos",
+      "label": "Qué ofrecemos",
+      "url": "/que-ofrecemos",
+      "id": "1c93ee70-21a8-11e9-8002-9792dbb11b5f"
+    },
+    {
+      "label": "Portfolio",
       "url": "/eventos",
-      "id": "a4a38f90-219f-11e9-8000-5c2bf3ea0822"
+      "id": "2bedd520-21a8-11e9-8003-bec59c568197"
+    },
+    {
+      "label": "Crea tu evento",
+      "url": "crea-tu-evento",
+      "id": "59551000-21a8-11e9-8004-55ec13565a63"
+    },
+    {
+      "label": "Colaboradores",
+      "url": "/colaboradores",
+      "id": "677f0230-21a8-11e9-8005-2b72cfc60574"
+    },
+    {
+      "label": "Contacto",
+      "url": "/contacto",
+      "id": "73558e80-21a8-11e9-8006-28542a2d07b5"
     }
   ]
 }
