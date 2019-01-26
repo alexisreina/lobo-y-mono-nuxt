@@ -2,7 +2,7 @@
   <div class="home-services">
     <header class="row mb-3">
       <b-col lg="6" offset-lg="1">
-        <h2 class="h3">
+        <h2 class="title h1">
           {{services.title}}
         </h2>
 
@@ -67,4 +67,8 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.title {
+  font-weight: 800;
+  font-size: 36/15 * 1rem;
+}
 </style>

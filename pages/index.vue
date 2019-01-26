@@ -46,7 +46,7 @@
         </b-container>
       </section> -->
 
-      <section v-if="$cms.partners" class="py-4 bg-dark">
+      <section v-if="$cms.partners" class="py-4 partners">
         <b-container>
           <pre class="text-white">{{$cms.portfolio._keys}}</pre>
           <Partners :partners="$cms.partners" />
@@ -83,7 +83,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.header {
+.header,
+.partners {
   background-color: $black;
 }
 </style>

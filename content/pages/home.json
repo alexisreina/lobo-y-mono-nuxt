@@ -8,8 +8,8 @@
     "link": "/crea-tu-evento"
   },
   "services": {
-    "title": "Qué te ofrece Lobo y Mono",
-    "intro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "title": "Qué te ofrecemos",
+    "intro": "Diversión y cultura para todos los públicos.",
     "link": {
       "label": "Descubre lo que te ofrece Lobo y Mono",
       "url": "/que-ofrecemos"
