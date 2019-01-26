@@ -1,0 +1,17 @@
+{
+  "facebook": {
+    "label": "Facebook",
+    "icon": "",
+    "url": ""
+  },
+  "instagram": {
+    "label": "Instagram",
+    "icon": "",
+    "url": ""
+  },
+  "linkedin": {
+    "label": "Linkedin",
+    "icon": "",
+    "url": ""
+  }
+}

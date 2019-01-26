@@ -44,15 +44,13 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ["~/plugins/vue-showdown"],
+  plugins: ["~/plugins/vue-showdown", "~/plugins/bootstrap-vue"],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
     ["nuxt-sass-resources-loader", "@/assets/styles/_custom.scss"],
-    // Doc: https://bootstrap-vue.js.org/docs/
-    ["bootstrap-vue/nuxt", { css: false }],
     "~/modules/my-netlify-cms-module",
     "nuxt-imagemin",
     "@nuxtjs/pwa"

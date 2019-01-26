@@ -1,7 +1,7 @@
 <template lang="html">
-  <div>
+  <div class="py-5">
     <!-- event title -->
-    <header class="py-5" style>
+    <header>
       <b-container>
         <b-row>
           <b-col
@@ -17,9 +17,16 @@
             <b-img
               v-if="event.image"
               :src="require(`~/assets/${event.image.slice(1)}`)"
+              :class="[event.caption ? 'mb-1' : 'mb-3']"
               class="d-block mx-auto"
               fluid
             />
+
+            <div v-if="event.caption" class="mb-3">
+              <small class="text-muted">
+                {{event.caption}}
+              </small>
+            </div>
           </b-col>
         </b-row>
       </b-container>
@@ -77,7 +84,6 @@
             >
 
               <b-img-lazy
-                :style="{ boxShadow: '0 6px 12px -3px  rgba(0,0,0,.32)'}"
                 :src="photo && require(`~/assets/${photo.slice(1)}`)"
                 width="800"
                 height="600"
@@ -92,18 +98,20 @@
       </section>
 
       <!-- event actions -->
-      <section>
+      <section v-if="event.next || event.prev">
         <b-container>
           <b-row class="py-5">
-            <b-col>
+            <b-col v-if="event.prev">
               <LmButton
+                :to="event.prev"
                 variant="primary"
               >
                 Anterior
               </LmButton>
             </b-col>
-            <b-col class="text-right">
+            <b-col v-if="event.next" class="text-right">
               <LmButton
+                :to="event.next"
                 variant="primary"
               >
                 Siguiente
@@ -131,10 +139,6 @@ export default {
     event() {
       return this.$cms.portfolio[this.$route.params.slug];
     }
-  },
-  methods: {
-    onNext() {},
-    onPrev() {}
   }
 };
 </script>
