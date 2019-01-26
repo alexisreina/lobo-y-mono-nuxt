@@ -13,10 +13,10 @@
 
         <div class="p-4 d-flex flex-row align-items-center bg-light rounde-bottom">
           <b-img
-            :src="review.author.photo && require(`~/assets/${review.author.photo.slice(1)}`)"
-            :alt="review.author.name"
-            :blank="!review.author.photo"
-            :blank-color="!review.author.photo && '#e03153'"
+            :src="review.image && require(`~/assets/${review.image.slice(1)}`)"
+            :alt="review.title"
+            :blank="!review.image"
+            :blank-color="!review.image ? '#e03153' : null"
             width="52"
             height="52"
             rounded="circle"
@@ -25,14 +25,16 @@
 
           <div class="py-1">
             <p class="mb-0">
-              {{review.author.name}}
+              {{review.title}}
             </p>
 
-            <Markdown class="review-info small" :content="review.author.info" />
+            <Markdown
+              :content="review.intro"
+              class="review-info small"
+            />
           </div>
 
         </div>
-
       </div>
     </b-col>
   </b-row>
@@ -48,7 +50,7 @@ export default {
   },
   props: {
     reviews: {
-      type: Array,
+      type: Object,
       required: true
     }
   }

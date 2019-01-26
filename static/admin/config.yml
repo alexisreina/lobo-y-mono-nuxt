@@ -250,14 +250,13 @@ collections:
     format: json
     identifier_field: id
     fields:
+      - { label: Autor, name: title, widget: string }
+      - {
+          label: Información Relacionada,
+          name: intro,
+          widget: markdown,
+          required: false,
+        }
+      - { label: Foto, name: image, widget: image }
       - { label: Texto, name: text, widget: markdown }
-      - label: Autor
-        name: author
-        widget: object
-        fields:
-          - { label: Nombre, name: name, widget: string }
-          - { label: Foto, name: photo, widget: image }
-          - label: Información Relacionada
-            name: info
-            widget: markdown
       - { label: id, name: id, widget: uuid }

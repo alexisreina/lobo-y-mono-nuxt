@@ -24,7 +24,7 @@
 
       <section v-if="$cms.reviews" class="pb-5">
         <b-container>
-          <Reviews :reviews="$cms.reviews.list" />
+          <Reviews :reviews="$cms.reviews" />
         </b-container>
       </section>
 
