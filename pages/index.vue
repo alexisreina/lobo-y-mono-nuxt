@@ -22,7 +22,7 @@
         </b-container>
       </section>
 
-      <section class="pb-5">
+      <section v-if="$cms.reviews" class="pb-5">
         <b-container>
           <Reviews :reviews="$cms.reviews.list" />
         </b-container>
@@ -48,7 +48,6 @@
 
       <section v-if="$cms.partners" class="py-4 partners">
         <b-container>
-          <pre class="text-white">{{$cms.portfolio._keys}}</pre>
           <Partners :partners="$cms.partners" />
         </b-container>
       </section>
