@@ -47,8 +47,8 @@ $body-color: $black;
 // Font, line-height, and color for body text, headings, and more.
 
 $font-family-base: Work Sans, sans-serif;
-$font-weight-base: 300;
-$font-size-base: 0.875rem;
+$font-weight-base: normal;
+$font-size-base: 15/16 * 1rem;
 // $headings-font-family: Schoolbell, cursive;
 
 // $lead-font-size: ($font-size-base * 1.25) !default;
@@ -91,6 +91,6 @@ $navbar-light-color: $primary;
 $navbar-light-hover-color: darken($primary, 5%);
 
 // Bootstrap
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
-@import '~bootstrap/scss/mixins';
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";

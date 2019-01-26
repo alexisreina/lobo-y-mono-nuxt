@@ -1,15 +1,15 @@
 <template lang="html">
-  <footer class="bg-dark text-white">
-    <b-container class="py-3">
+  <footer class="text-white footer pb-5">
+    <b-container class="py-3 pb-md-5">
 
       <!-- social media -->
       <AppFooterSocial
         :rrss="rrss"
-        class="py-3 d-flex flex-row justify-content-center"
+        class="py-3 py-lg-5 d-flex flex-row justify-content-center"
       />
       <!-- /social media -->
 
-      <hr class="mb-4">
+      <hr class="hr mb-4 my-md-5">
 
       <!-- footer navigation -->
       <b-row>
@@ -24,18 +24,20 @@
               md="6"
               lg="3"
             >
-              <h4 class="h5">
+              <h4 class="h5 mb-md-3 text-uppercase">
                 {{menu.title}}
               </h4>
 
-              <ul class="list-unstyled">
+              <ul class="footer__list list-unstyled mb-3 mb-md-5">
                 <li
                   v-for="item in menu.list"
                   :key="item.id"
+                  class="footer__list-item mb-2 mb-md-3"
                 >
                   <b-link
                     v-if="item.external"
                     :href="item.url"
+                    class="footer__list-link"
                   >
                     {{item.label}}
                   </b-link>
@@ -43,6 +45,7 @@
                   <b-link
                     v-else
                     :to="item.url"
+                    class="footer__list-link"
                   >
                     {{item.label}}
                   </b-link>
@@ -79,9 +82,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.icon {
-  fill: $red;
-  width: 32px;
-  height: 32px;
+.footer {
+  background-color: $black;
+
+  &__list-link {
+    color: $white;
+  }
+}
+.hr {
+  border-top-width: 1px;
+  border-top-color: $white;
 }
 </style>

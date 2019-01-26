@@ -4,7 +4,7 @@
       v-for="(social, key) in rrss"
       :key="key"
       :href="social.url"
-      class="d-flex flex-column flex-sm-row justify-content-center align-items-center mx-3"
+      class="link d-flex flex-column flex-sm-row justify-content-center align-items-center mx-3"
       rel="noopener noreferrer nofollow"
       target="_blank"
     >
@@ -57,8 +57,11 @@ export default {
 
 <style lang="scss" scoped>
 .icon {
-  fill: $red;
+  fill: $white;
   width: 32px;
   height: 32px;
+}
+.link {
+  color: $white;
 }
 </style>
