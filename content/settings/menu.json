@@ -1,34 +1,14 @@
 {
-  "menu": [
+  "links": [
     {
-      "id": "0",
       "label": "Eventos",
-      "url": "/eventos"
+      "url": "/eventos",
+      "id": "a4a38f90-219f-11e9-8000-5c2bf3ea0822"
     },
     {
-      "id": "1",
       "label": "Quienes Somos",
-      "url": "/quienes-somos"
-    },
-    {
-      "id": "2",
-      "label": "Qué Ofrecemos",
-      "url": "/que-ofrecemos"
-    },
-    {
-      "id": "3",
-      "label": "Colaboradores",
-      "url": "/colaboradores"
-    },
-    {
-      "id": "4",
-      "label": "Crea tu evento",
-      "url": "/crea-tu-evento"
-    },
-    {
-      "id": "5",
-      "label": "Contacto",
-      "url": "/contacto"
+      "url": "/quienes-somos",
+      "id": "b3694c90-219f-11e9-8001-f1eb21e2a5e3"
     }
   ]
 }
