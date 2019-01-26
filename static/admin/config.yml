@@ -62,13 +62,15 @@ collections:
         file: "content/settings/footer.json"
         fields:
           - { label: Copyright, name: copyright, widget: markdown }
-          - label: Navegación
+          - label: Menús
+            label_singula: Menú
             name: navigation
             widget: list
             fields:
               - { label: Título, name: title, widget: string }
               - { label: id, name: id, widget: uuid }
               - label: Enlaces
+                label_singular: Link
                 name: list
                 widget: list
                 fields:
@@ -222,6 +224,7 @@ collections:
     create: true
     extension: json
     format: json
+    identifier_field: id
     fields:
       - { label: Nombre, name: name, widget: string }
       - { label: Foto, name: photo, widget: image }
