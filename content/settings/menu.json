@@ -1,14 +1,14 @@
 {
   "links": [
     {
-      "label": "Eventos",
-      "url": "/eventos",
-      "id": "a4a38f90-219f-11e9-8000-5c2bf3ea0822"
-    },
-    {
       "label": "Quienes Somos",
       "url": "/quienes-somos",
       "id": "b3694c90-219f-11e9-8001-f1eb21e2a5e3"
+    },
+    {
+      "label": "Eventos",
+      "url": "/eventos",
+      "id": "a4a38f90-219f-11e9-8000-5c2bf3ea0822"
     }
   ]
 }
