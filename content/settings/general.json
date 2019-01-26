@@ -1,6 +1,5 @@
 {
-  "site": {
-    "name": "Lobo y Mono",
-    "claim": "Eventos salvajemente familiares"
-  }
+  "name": "Lobo y Mono",
+  "claim": "Eventos salvajemente familiares",
+  "lang": "es"
 }

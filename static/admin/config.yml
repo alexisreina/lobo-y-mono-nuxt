@@ -12,13 +12,9 @@ collections:
         name: general
         file: "content/settings/general.json"
         fields:
-          - label: Ajustes Generales
-            name: site
-            widget: object
-            fields:
-              - { label: Nombre del sitio, name: name, widget: string }
-              - { label: Slogan, name: claim, widget: string }
-              - { label: Idioma, name: lang, widget: hidden }
+          - { label: Nombre del sitio, name: name, widget: string }
+          - { label: Slogan, name: claim, widget: string }
+          - { label: Idioma, name: lang, widget: hidden }
       - label: Navegación
         name: menu
         file: "content/settings/menu.json"
@@ -39,7 +35,6 @@ collections:
         label_singular: Red Social
         name: rrss
         file: "content/settings/social.json"
-        widget: object
         fields:
           - label: Facebook
             name: facebook
@@ -65,7 +60,6 @@ collections:
       - label: Footer
         name: footer
         file: "content/settings/footer.json"
-        widget: object
         fields:
           - { label: Copyright, name: copyright, widget: markdown }
           - label: Navegación
