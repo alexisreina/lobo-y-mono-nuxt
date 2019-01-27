@@ -70,5 +70,13 @@ export default {
   margin-bottom: 0;
   font-size: 1.25rem;
   font-weight: bold;
+
+  &::before {
+    content: "“";
+  }
+
+  &::after {
+    content: "”";
+  }
 }
 </style>
