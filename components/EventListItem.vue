@@ -1,6 +1,6 @@
 <template lang="html">
   <nuxt-link
-    :to="{ name: 'eventos-slug', params: { slug: event.slug } }"
+    :to="{ name: 'eventos-slug', params: { slug: event.slug, id: event.id } }"
   >
     <figure class="event-list-item">
       <b-img

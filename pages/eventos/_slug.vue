@@ -137,7 +137,9 @@ export default {
   },
   computed: {
     event() {
-      return this.$cms.portfolio[this.$route.params.slug];
+      return this.$cms.portfolio.find(
+        item => item.id === this.$route.params.id
+      );
     }
   }
 };

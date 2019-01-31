@@ -13,8 +13,10 @@
 
     <main>
       <b-container>
-        <EventList :list="$cms.portfolio" />
+        <EventList :list="portfolio" />
       </b-container>
+
+      <pre>{{portfolio}}</pre>
     </main>
   </div>
 </template>
@@ -29,25 +31,20 @@ export default {
   components: {
     Markdown,
     EventList
+  },
+  computed: {
+    portfolio() {
+      return Object.keys(this.$cms.portfolio)
+        .sort((a, b) => {
+          a = a.replace(/^(.{8})-(.{4})-(.{4})/, "$3-$2-$1");
+          b = b.replace(/^(.{8})-(.{4})-(.{4})/, "$3-$2-$1");
+          return a > b ? -1 : a < b ? 1 : 0;
+        })
+        .map(uuid => {
+          return this.$cms.portfolio[uuid];
+        });
+    }
   }
-  // ,
-  // computed: {
-  //   page() {
-  //     return this.$cms.pages.events;
-  //   },
-  //   portfolio() {
-  //     return this.$cms.portfolio;
-  //   }
-  // }
-  // mounted() {
-  //   // eslint-disable-next-line
-  //   console.log(this.$cms.portfolio);
-  // },
-  // methods: {
-  //   log() {
-  //     return this.$cms.portfolio;
-  //   }
-  // }
 };
 </script>
 

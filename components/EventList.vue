@@ -20,7 +20,7 @@ export default {
   },
   props: {
     list: {
-      type: Object,
+      type: Array,
       required: true
     }
   }
