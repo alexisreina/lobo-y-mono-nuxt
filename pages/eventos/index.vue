@@ -15,8 +15,6 @@
       <b-container>
         <EventList :list="portfolio" />
       </b-container>
-
-      <pre>{{portfolio}}</pre>
     </main>
   </div>
 </template>
