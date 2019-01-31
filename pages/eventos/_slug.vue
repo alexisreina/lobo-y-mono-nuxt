@@ -106,7 +106,7 @@
                 :to="{ name: 'eventos-slug', params: { id: event.next.id, slug: event.next.slug } }"
                 variant="primary"
               >
-                Siguiente
+                Anterior
               </LmButton>
             </b-col>
 
@@ -115,7 +115,7 @@
                 :to="{ name: 'eventos-slug', params: { id: event.prev.id, slug: event.prev.slug } }"
                 variant="primary"
               >
-                Anterior
+                Siguiente
               </LmButton>
             </b-col>
           </b-row>
