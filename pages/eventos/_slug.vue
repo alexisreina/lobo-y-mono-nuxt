@@ -101,20 +101,21 @@
       <section v-if="event.next || event.prev">
         <b-container>
           <b-row class="py-5">
-            <b-col v-if="event.prev">
+            <b-col v-if="event.next">
               <LmButton
-                :to="event.prev"
-                variant="primary"
-              >
-                Anterior
-              </LmButton>
-            </b-col>
-            <b-col v-if="event.next" class="text-right">
-              <LmButton
-                :to="event.next"
+                :to="{ name: 'eventos-slug', params: { id: event.next.id, slug: event.next.slug } }"
                 variant="primary"
               >
                 Siguiente
+              </LmButton>
+            </b-col>
+
+            <b-col v-if="event.prev" class="text-right">
+              <LmButton
+                :to="{ name: 'eventos-slug', params: { id: event.prev.id, slug: event.prev.slug } }"
+                variant="primary"
+              >
+                Anterior
               </LmButton>
             </b-col>
           </b-row>
