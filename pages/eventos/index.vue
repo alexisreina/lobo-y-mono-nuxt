@@ -1,6 +1,5 @@
 <template lang="html">
   <div class="py-5">
-    <!-- <pre>{{log()}}</pre> -->
     <header>
       <b-container>
         <h1>
