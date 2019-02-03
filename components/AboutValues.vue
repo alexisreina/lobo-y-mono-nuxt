@@ -17,7 +17,7 @@
           :blank="!value.image"
           :width="!value.image ? 540 : null"
           :height="!value.image ? 325: null"
-          :blank-color="!value.image && '#e9e9e9'"
+          :blank-color="!value.image ? '#e9e9e9' : null"
           :alt="value.title"
           class="mb-3 mb-md-0"
           fluid

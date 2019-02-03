@@ -5,10 +5,10 @@
       :src="artist.photo && require(`~/assets/${artist.photo.slice(1)}`)"
       :alt="artist.name"
       :blank="!artist.photo"
+      :blank-color="!artist.photo ? '#e9e9e9' : null"
       :width="!artist.photo ? 350 : null"
       :height="!artist.photo ? 275 : null"
       :rounded="!artist.photo"
-      :blank-color="!artist.photo && '#e9e9e9'"
       class="mb-2"
       fluid
     />
