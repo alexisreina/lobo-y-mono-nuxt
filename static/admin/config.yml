@@ -86,7 +86,12 @@ collections:
         fields:
           - { label: id, name: id, widget: hidden }
           - { label: Título, name: header, widget: string }
-          - { label: Descripción, name: intro, widget: markdown }
+          - {
+              label: Descripción,
+              name: intro,
+              widget: markdown,
+              required: false,
+            }
           - { label: Imagen, name: image, widget: image }
           - label: CTA
             name: cta

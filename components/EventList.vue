@@ -3,7 +3,8 @@
     <b-col
       v-for="event in list"
       :key="event.id"
-      md="4"
+      md="6"
+      lg="4"
     >
       <EventListItem :event="event" />
     </b-col>
