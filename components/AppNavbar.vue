@@ -1,38 +1,14 @@
 <template lang="html">
-  <!-- <b-navbar
-    toggleable="lg"
-    type="dark"
-    variant="dark"
-  >
-    <b-navbar-toggle target="nav_collapse" />
-    <b-navbar-brand to="/">
-      {{brand}}
-    </b-navbar-brand>
-    <b-collapse id="nav_collapse" is-nav>
-      <b-navbar-nav class="ml-auto">
-        <b-nav-item
-          v-for="item in menu"
-          :key="item.id"
-          :to="item.url"
-        >
-          {{item.label}}
-        </b-nav-item>
-      </b-navbar-nav>
-    </b-collapse>
-  </b-navbar> -->
-
   <nav class="lm-Navbar">
     <div class="lm-Navbar__header">
       <div class="lm-Navbar__logo">
-        <!-- logo goes here -->
-        <nuxt-link to="/">
-          <!-- {{brand}} -->
+        <nuxt-link to="/" @click.native="onClick()">
           <img src="~/assets/svg/LYM-logotipo-17.svg" :alt="brand">
         </nuxt-link>
       </div>
 
       <div class="lm-Navbar__toggle">
-        <button class="menuFive" :class="{ 'clickMenuFive': toggle}" @click="toggle = !toggle">
+        <button class="lm-Navbar__toggle-button" :class="{ 'is-toggled': toggle}" @click="onToggle">
           <span />
           <span />
           <span />
@@ -41,26 +17,32 @@
     </div>
 
     <transition name="slide-fade">
-      <div v-show="toggle" class="lm-Navbar__link-container">
-        <div class="lm-Navbar__links-right">
+      <div v-show="toggle" class="lm-Navbar__nav">
+        <div class="lm-Navbar__nav-right">
           <nuxt-link
             v-for="item in menuLeft"
             :key="item.id"
             :to="item.url"
+            class="lm-Navbar__link"
+            @click.native="onClick()"
           >
             {{item.label}}
           </nuxt-link>
         </div>
 
         <div class="lm-Navbar__logo">
-          <img src="~/assets/svg/LYM-logotipo-17.svg" :alt="brand">
+          <nuxt-link to="/" @click.native="onClick()">
+            <img src="~/assets/svg/LYM-logotipo-17.svg" :alt="brand">
+          </nuxt-link>
         </div>
 
-        <div class="lm-Navbar__links-left">
+        <div class="lm-Navbar__nav-left">
           <nuxt-link
             v-for="item in menuRight"
             :key="item.id"
             :to="item.url"
+            class="lm-Navbar__link"
+            @click.native="onClick()"
           >
             {{item.label}}
           </nuxt-link>
@@ -99,13 +81,21 @@ export default {
         (item, index) => index >= Math.ceil(this.$props.menu.length / 2)
       );
     }
+  },
+  methods: {
+    onClick() {
+      this.toggle = false;
+    },
+    onToggle() {
+      this.toggle = !this.toggle;
+    }
   }
 };
 </script>
 
 <style scoped lang="scss">
 /* Enter and leave animations can use different */
-/* durations and timing functions.              */
+/* durations and timing functions.*/
 .slide-fade-enter-active {
   transition: all 0.3s ease;
 }
@@ -122,7 +112,7 @@ export default {
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: rgba($black, 0.96);
+  background-color: $black;
 
   &__header {
     padding: 5px 15px;
@@ -137,7 +127,7 @@ export default {
     }
   }
 
-  &__link-container {
+  &__nav {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -145,39 +135,39 @@ export default {
     > .lm-Navbar__logo {
       display: none;
     }
-
-    & /deep/ a {
-      position: relative;
-      display: block;
-      max-width: 280px;
-      padding: 5px 10px;
-      margin-bottom: 15px;
-      margin-left: auto;
-      color: #fff;
-      font-size: 21px;
-      font-weight: bold;
-
-      &:hover {
-        text-decoration: none;
-      }
-
-      &::after {
-        content: "";
-        width: 100%;
-        height: 2px;
-        background-color: #fff;
-        position: absolute;
-        top: 100%;
-        left: 0;
-      }
-    }
   }
 
-  &__links-left,
-  &__links-right {
+  &__nav-left,
+  &__nav-right {
     display: flex;
     flex-direction: column;
     text-align: center;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    max-width: 280px;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    color: $white;
+    font-size: 21px;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: $white;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
   }
 
   @media (min-width: 1071px) {
@@ -190,11 +180,11 @@ export default {
 
     &__logo {
       img {
-        max-height: 42px;
+        max-height: 36px;
       }
     }
 
-    &__link-container {
+    &__nav {
       display: flex !important;
       flex-direction: row;
       padding: 0;
@@ -203,29 +193,32 @@ export default {
       > .lm-Navbar__logo {
         display: block;
       }
-
-      & /deep/ a {
-        // min-width: 120px;
-        padding: 0 3px;
-        padding-bottom: 4px;
-        margin: 0 15px;
-        font-size: 15px;
-        font-weight: bold;
-      }
     }
 
-    &__links-left,
-    &__links-right {
+    &__nav-left,
+    &__nav-right {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
     }
 
-    &__links-left {
+    &__link {
+      padding: 0 3px;
+      padding-bottom: 4px;
+      margin: 0 15px;
+      font-size: 15px;
+      font-weight: normal;
+
+      // &::after {
+      //   height: 2px;
+      // }
+    }
+
+    &__nav-left {
       margin-right: 0;
       margin-left: auto;
 
-      & /deep/ a {
+      & /deep/ .lm-Navbar__link {
         padding-right: 1px;
         text-align: right;
         margin-right: 0;
@@ -233,11 +226,11 @@ export default {
       }
     }
 
-    &__links-right {
+    &__nav-right {
       margin-right: auto;
       margin-left: 0;
 
-      & /deep/ a {
+      & /deep/ .lm-Navbar__link {
         padding-left: 1px;
         text-align: left;
         margin-right: 30px;
@@ -247,64 +240,75 @@ export default {
   }
 }
 
-.lm-Navbar__toggle button {
+.lm-Navbar__toggle-button {
   padding: 5px;
   background-color: transparent;
   border: 0;
-
-  &:focus {
-    outline: none;
-    box-shadow: none;
-  }
-}
-/* menuFive */
-.menuFive {
   width: 35px;
   height: 30px;
   margin: 10px 10px;
   position: relative;
   cursor: pointer;
   display: inline-block;
-}
-.menuFive span {
-  background-color: #fff;
-  position: absolute;
-  border-radius: 2px;
-  transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
-  width: 100%;
-  height: 4px;
-  transition-duration: 500ms;
-}
-.menuFive span:nth-child(1) {
-  top: 0px;
-  left: 0px;
-}
-.menuFive span:nth-child(2) {
-  top: 13px;
-  left: 0px;
-}
-.menuFive span:nth-child(3) {
-  bottom: 0px;
-  left: 0px;
-}
-.menuFive:not(.clickMenuFive):hover span:nth-child(1) {
-  transform: rotate(-3deg) scaleY(1.1);
-}
-.menuFive:not(.clickMenuFive):hover span:nth-child(2) {
-  transform: rotate(3deg) scaleY(1.1);
-}
-.menuFive:not(.clickMenuFive):hover span:nth-child(3) {
-  transform: rotate(-4deg) scaleY(1.1);
-}
-.clickMenuFive span:nth-child(1) {
-  transform: rotate(45deg);
-  top: 13px;
-}
-.clickMenuFive span:nth-child(2) {
-  transform: scale(0.1);
-}
-.clickMenuFive span:nth-child(3) {
-  transform: rotate(-45deg);
-  top: 13px;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  & /deep/ span {
+    background-color: #fff;
+    position: absolute;
+    border-radius: 2px;
+    transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    width: 100%;
+    height: 4px;
+    transition-duration: 500ms;
+  }
+
+  & /deep/ span:nth-child(1) {
+    top: 0px;
+    left: 0px;
+  }
+
+  & /deep/ span:nth-child(2) {
+    top: 13px;
+    left: 0px;
+  }
+
+  & /deep/ span:nth-child(3) {
+    bottom: 0px;
+    left: 0px;
+  }
+
+  &:not(.is-toggled):hover {
+    & /deep/ span:nth-child(1) {
+      transform: rotate(-3deg) scaleY(1.1);
+    }
+
+    & /deep/ span:nth-child(2) {
+      transform: rotate(3deg) scaleY(1.1);
+    }
+
+    & /deep/ span:nth-child(3) {
+      transform: rotate(-4deg) scaleY(1.1);
+    }
+  }
+
+  &.is-toggled {
+    & /deep/ span:nth-child(1) {
+      transform: rotate(45deg);
+      top: 13px;
+    }
+
+    & /deep/ span:nth-child(2) {
+      transform: scale(0.1);
+    }
+
+    & /deep/ span:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 13px;
+    }
+  }
 }
 </style>
