@@ -190,6 +190,10 @@ export default {
       padding: 0;
       min-height: 100%;
       width: 100%;
+      max-width: 1140px;
+      margin-left: auto;
+      margin-right: auto;
+
       > .lm-Navbar__logo {
         display: block;
       }
