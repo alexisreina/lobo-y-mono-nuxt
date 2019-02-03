@@ -155,6 +155,7 @@ collections:
                 name: list
                 widget: list
                 fields:
+                  - { label: Título, name: title, widget: string }
                   - { label: Imagen, name: image, widget: image }
                   - { label: Descripción, name: text, widget: markdown }
                   - { label: Lista, name: items, widget: list }
