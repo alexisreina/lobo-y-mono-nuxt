@@ -14,19 +14,20 @@
               {{event.title}}
             </h1>
 
-            <b-img
-              v-if="event.image"
-              :src="require(`~/assets/${event.image.slice(1)}`)"
-              :class="[event.caption ? 'mb-1' : 'mb-3']"
-              class="d-block mx-auto"
-              fluid
-            />
-
-            <div v-if="event.caption" class="mb-3">
-              <small class="text-muted">
-                {{event.caption}}
-              </small>
-            </div>
+            <figure>
+              <b-img
+                v-if="event.image"
+                :src="require(`~/assets/${event.image.slice(1)}`)"
+                :class="[event.caption ? 'mb-1' : 'mb-3']"
+                class="d-block mx-auto"
+                fluid
+              />
+              <figcaption v-if="event.caption" class="mb-3">
+                <small class="text-muted">
+                  {{event.caption}}
+                </small>
+              </figcaption>
+            </figure>
           </b-col>
         </b-row>
       </b-container>

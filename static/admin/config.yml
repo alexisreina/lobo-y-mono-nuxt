@@ -131,7 +131,12 @@ collections:
         fields:
           - { label: id, name: id, widget: hidden }
           - { label: Título, name: header, widget: string }
-          - { label: Descripción, name: intro, widget: markdown }
+          - {
+              label: Descripción,
+              name: intro,
+              widget: markdown,
+              required: false,
+            }
           - label: Equipo
             name: team
             widget: object
@@ -166,7 +171,12 @@ collections:
         fields:
           - { label: id, name: id, widget: hidden }
           - { label: Título, name: header, widget: string }
-          - { label: Descripción, name: intro, widget: markdown }
+          - {
+              label: Descripción,
+              name: intro,
+              widget: markdown,
+              required: false,
+            }
           - label: Listado
             name: list
             widget: list
@@ -229,13 +239,23 @@ collections:
         fields:
           - { label: id, name: id, widget: hidden }
           - { label: Título, name: header, widget: string }
-          - { label: Descripción, name: intro, widget: markdown }
+          - {
+              label: Descripción,
+              name: intro,
+              widget: markdown,
+              required: false,
+            }
       - label: Colaboradores
         name: collab
         file: "content/pages/collaborators.json"
         fields:
           - { label: Título, name: header, widget: string }
-          - { label: Descripción, name: intro, widget: markdown }
+          - {
+              label: Descripción,
+              name: intro,
+              widget: markdown,
+              required: false,
+            }
           - label: CTA
             name: cta
             widget: object
