@@ -155,10 +155,6 @@ export default {
     font-size: 21px;
     font-weight: bold;
 
-    &:hover {
-      text-decoration: none;
-    }
-
     &::after {
       content: "";
       width: 100%;
@@ -167,6 +163,17 @@ export default {
       position: absolute;
       top: 100%;
       left: 0;
+    }
+
+    &.nuxt-link-active,
+    &:hover {
+      text-decoration: none;
+      color: $red;
+    }
+
+    &.nuxt-link-active::after,
+    &:hover::after {
+      background-color: $red;
     }
   }
 
