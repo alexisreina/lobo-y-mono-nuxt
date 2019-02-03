@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="py-5">
-    <!-- event title -->
+    <!-- event header -->
     <header>
       <b-container>
         <b-row>
@@ -10,10 +10,13 @@
             lg="8"
             offset-lg="2"
           >
+            <!-- event title -->
             <h1 class="text-capitalize text-center mb-4">
               {{event.title}}
             </h1>
+            <!-- /event title -->
 
+            <!-- event featured image -->
             <figure>
               <b-img
                 v-if="event.image"
@@ -28,10 +31,13 @@
                 </small>
               </figcaption>
             </figure>
+            <!-- /event featured image -->
+
           </b-col>
         </b-row>
       </b-container>
     </header>
+    <!-- /event header -->
 
     <main>
       <!-- event description -->
@@ -49,8 +55,9 @@
           </b-row>
         </b-container>
       </section>
+      <!-- /event description -->
 
-      <!-- event data -->
+      <!-- event miscellaneus -->
       <section
         v-if="event.miscellaneus && event.miscellaneus.length"
         class="mb-5"
@@ -69,6 +76,7 @@
           </b-row>
         </b-container>
       </section>
+      <!-- /event miscellaneus -->
 
       <!-- event gallery -->
       <section
@@ -92,27 +100,9 @@
 
             </div>
           </masonry>
-          <!-- <b-row>
-            <b-col
-              v-for="(photo, index) in event.gallery"
-              :key="index"
-              sm="4"
-              class="mb-4"
-            >
-
-              <b-img-lazy
-                :src="photo && require(`~/assets/${photo.slice(1)}`)"
-                width="800"
-                height="600"
-                blank-color="#e9e9e9"
-                blank
-                fluid
-              />
-
-            </b-col>
-          </b-row> -->
         </b-container>
       </section>
+      <!-- /event gallery -->
 
       <!-- event actions -->
       <section v-if="event.next || event.prev">
@@ -138,6 +128,7 @@
           </b-row>
         </b-container>
       </section>
+      <!-- /event actions -->
     </main>
   </div>
 </template>
