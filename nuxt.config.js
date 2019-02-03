@@ -20,13 +20,13 @@ module.exports = {
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
         rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css?family=Schoolbell|Work+Sans:300,400"
+        href: "https://fonts.googleapis.com/css?family=Work+Sans:400,800"
       }
     ],
     script: [
       {
-        src: "https://identity.netlify.com/v1/netlify-identity-widget.js"
+        src: "https://identity.netlify.com/v1/netlify-identity-widget.js",
+        defer: "defer"
       }
     ]
   },
@@ -44,16 +44,14 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ["~/plugins/vue-showdown"],
+  plugins: ["~/plugins/vue-showdown", "~/plugins/bootstrap-vue"],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
     ["nuxt-sass-resources-loader", "@/assets/styles/_custom.scss"],
-    // Doc: https://bootstrap-vue.js.org/docs/
-    ["bootstrap-vue/nuxt", { css: false }],
-    "~/modules/cms-img-previews",
+    "~/modules/my-netlify-cms-module",
     "nuxt-imagemin",
     "@nuxtjs/pwa"
   ],

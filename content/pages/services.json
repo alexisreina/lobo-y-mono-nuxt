@@ -1,0 +1,86 @@
+{
+  "id": "services",
+  "header": "Que Ofrecemos",
+  "intro": "Lobo y Mono Te ofrece la oportunidad de que cuentes tu propia historia utilizando la cultura y la tradición como herramienta narrativa, abarcando todo tipo de perfiles y edades, porque las familias son muy diversas!.",
+  "list": [
+    {
+      "id": "0",
+      "title": "Cultura y Ocio como transformación social",
+      "image": "/uploads/lym-illustracion_cultura-ocio.svg",
+      "description": "Nos dedicamos a crear eventos culturales en todo su espectro. Utilizamos el ocio y la diversión como herramienta de transformación social.\nPensamos el ocio como una oportunidad para aprender disfrutando."
+    },
+    {
+      "id": "1",
+      "title": "Diversidad",
+      "image": "/uploads/lym-illustracion_diversidad.svg",
+      "description": "Nuestras propuestas están orientadas a la pluralidad y la diversidad.\nLa diversidad es riqueza, cada día las familias son más plurales y diferentes."
+    },
+    {
+      "id": "3",
+      "title": "Intergeneracional",
+      "image": "/uploads/lym-illustracion_intergeneracional.svg",
+      "description": "Apostamos por el cuidado de la infancia. Nuestra prioridad es que tanto adultos como pequeños experimenten la calidad en el ocio de forma intergeneracional. Los peques lo pasarán genial y los mayores, ¡Aún mejor!."
+    }
+  ],
+  "tailored": {
+    "title": "Eventos a medida",
+    "intro": "¡Pero esto no es todo! si deseas que seamos tus narradoras y demos forma a tu idea, contacta con nosotras. Pondremos toda nuestra experiencia y creatividad a tu disposición, te ayudamos a que tu evento sea divertido, diferente y todo un éxito.",
+    "image": "/uploads/lym-illustracion_a-medida.svg"
+  },
+  "bundles": {
+    "title": "Paquetes prediseñados",
+    "intro": "",
+    "image": "/uploads/lym-illustracion_paquetes.svg",
+    "list": [
+      "Libroscopia",
+      "Al fresquito",
+      "Carnivàle",
+      "Business party",
+      "Fiesta música electrónica para familias",
+      "Veranillo"
+    ]
+  },
+  "other": {
+    "title": "Otros Servicios Complementarios:",
+    "description": "",
+    "list": [
+      {
+        "id": "0",
+        "image": "/uploads/lym-illustracion_audiovisual.svg",
+        "title": "Cobertura audiovisual",
+        "description": ""
+      },
+      {
+        "id": "1",
+        "image": "/uploads/lym-illustracion_decoracion-atrezo.svg",
+        "title": "Decoración y atrezzo",
+        "description": ""
+      },
+      {
+        "id": "2",
+        "image": "/uploads/lym-illustracion_tecnico.svg",
+        "title": "Personal técnico",
+        "description": ""
+      },
+      {
+        "id": "3",
+        "image": "/uploads/lym-illustracion_diseno-difusion.svg",
+        "title": "Diseño y difusión",
+        "description": ""
+      },
+      {
+        "id": "4",
+        "image": "/uploads/lym-illustracion_catering.svg",
+        "title": "Catering",
+        "description": ""
+      }
+    ]
+  },
+  "cta": {
+    "title": "",
+    "description": "!Lobo y Mono te ofrece la posibilidad de configurar tu evento y  obtener un presupuesto en tiempo real!",
+    "button": true,
+    "button_label": "Configura tu evento",
+    "button_url": "/crea-tu-evento"
+  }
+}

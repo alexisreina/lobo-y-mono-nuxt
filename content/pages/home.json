@@ -1,0 +1,41 @@
+{
+  "id": "home",
+  "header": "Eventos Salvajemente",
+  "intro": "Diseñamos eventos con carácter para todas las familias. Proponemos espacios de ocio temáticos en los que la tradición y las corrientes culturales actuales se funden.\nPara lobos que hacen el mono y monos que hacen el lobo.",
+  "image": "",
+  "cta": {
+    "label": "Crea tu evento",
+    "link": "/crea-tu-evento"
+  },
+  "services": {
+    "title": "Qué te ofrecemos",
+    "intro": "Diversión y cultura para todos los públicos.",
+    "link": {
+      "label": "Descubre lo que te ofrece Lobo y Mono",
+      "url": "/que-ofrecemos"
+    },
+    "list": [
+      {
+        "id": "0",
+        "title": "Cultura y Ocio como transformación social",
+        "image": "/uploads/lym-illustracion_cultura-ocio.svg",
+        "description": "Pensamos el ocio como una oportunidad para aprender disfrutando."
+      },
+      {
+        "id": "1",
+        "title": "Diversidad",
+        "image": "/uploads/lym-illustracion_diversidad.svg",
+        "description": "La diversidad es riqueza, cada díalas familias son más plurales y diferentes."
+      },
+      {
+        "id": "3",
+        "title": "Intergeneracional",
+        "image": "/uploads/lym-illustracion_intergeneracional.svg",
+        "description": "Los peques lo pasarán genial y los mayores, Aún mejor!."
+      }
+    ]
+  },
+  "reviews": {
+    "title": "Se dice comenta..."
+  }
+}

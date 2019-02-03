@@ -4,23 +4,19 @@
       <b-img
         :src="bundles.image && require(`~/assets/${bundles.image.slice(1)}`)"
         :alt="bundles.title"
-        :rounded="!bundles.image"
-        :blank="!bundles.image"
-        :blank-color="!bundles.image && '#e9e9e9'"
-        width="540"
-        height="325"
+        class="mx-auto"
         fluid
       />
     </b-col>
 
     <b-col md="6">
-      <h2>
+      <h2 class="h3">
         {{bundles.title}}
       </h2>
 
-      <Markdown :content="bundles.intro" />
+      <Markdown v-if="bundles.intro" :content="bundles.intro" />
 
-      <ul>
+      <ul v-if="bundles.list">
         <li
           v-for="(item, index) in bundles.list"
           :key="index"

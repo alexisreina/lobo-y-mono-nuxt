@@ -3,21 +3,17 @@
     <b-col
       v-for="service in services"
       :key="service.id"
-      md="4"
+      lg="4"
     >
 
       <b-img
-        :src="service.image && required(`~/assets/${service.image.slice(1)}`)"
+        :src="service.image && require(`~/assets/${service.image.slice(1)}`)"
         :alt="service.title"
-        :blank="!service.image"
-        :blank-color="!service.image && '#e9e9e9'"
         class="d-block mx-auto mb-3"
-        rounded="circle"
-        width="75"
-        height="75"
+        fluid
       />
 
-      <h3 class="h4 text-md-center">
+      <h3 class="h5 text-md-center">
         {{service.title}}
       </h3>
 

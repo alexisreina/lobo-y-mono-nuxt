@@ -1,35 +1,32 @@
 <template>
   <div>
+    <ComingSoon v-if="$route.name == 'index'" />
+
     <AppNavbar
-      :brand="data.site.name"
-      :menu="data.menu"
+      :brand="$cms.settings.general.name"
+      :menu="$cms.settings.menu.links"
     />
 
     <nuxt />
 
     <AppFooter
-      :rrss="data.rrss"
-      :menus="data.footer.navigation"
+      :rrss="$cms.settings.social"
+      :menus="$cms.settings.footer.navigation"
     />
+
   </div>
 </template>
 
 <script>
 import AppNavbar from "@/components/AppNavbar";
 import AppFooter from "@/components/AppFooter";
-
-// Content
-import data from "@/content/general.json";
+import ComingSoon from "@/components/ComingSoon";
 
 export default {
   components: {
+    ComingSoon,
     AppNavbar,
     AppFooter
-  },
-  data() {
-    return {
-      data
-    };
   }
 };
 </script>

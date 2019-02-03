@@ -1,4 +1,5 @@
 {
+  "id": "about",
   "header": "Quienes Somos",
   "intro": "",
   "team": {
@@ -20,7 +21,7 @@
     ]
   },
   "values": {
-    "title": "Nuestros Valores",
+    "title": "Nuestros valores",
     "list": [
       {
         "id": "family",
@@ -32,7 +33,7 @@
         "id": "focus",
         "title": "Eventos con objetivos",
         "text": "Nuestras propuestas siempre incluyen pilares que creemos imprescindibles, como el respeto a la infancia",
-        "image": "",
+        "image": "/uploads/lym-illustracion_con-objetivos.svg",
         "items": [
           "Cuidado de la infancia",
           "Cultura, tradición y Educación",
@@ -42,9 +43,9 @@
       },
       {
         "id": "service",
-        "title": "Atención al cliente",
+        "title": "Te escuchamos",
         "text": "Gracias a nuestra formación artística valoramos los detalles y le damos importancia a todo lo relacionado con lo estético y cuidado. Nos encanta reinventar conceptos y darle una vuelta a cualquier propuesta para que sea exclusiva y diferente.",
-        "image": "",
+        "image": "/uploads/lym-illustracion_te-escuchamos.svg",
         "items": [
           "Atención al detalle",
           "Te escuchamos",

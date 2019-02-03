@@ -86,6 +86,7 @@ sw.*
 # Static uploads
 static/uploads
 static/uploads/*
+static/cms.json
 
 # Mac .DS_Store files
 .DS_Store

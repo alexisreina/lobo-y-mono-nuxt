@@ -19,7 +19,7 @@
       >
         <span>Eventos Salvajemente</span>
         <span>&nbsp;</span>
-        <text-rotator style="width:167px;text-align:left;" :words="words" />
+        <text-rotator style="width:167px;text-align:left;" :words="$cms.settings.rotator.words" />
       </h1>
 
       <p
@@ -35,9 +35,6 @@
 <script>
 import TextRotator from "@/components/TextRotator";
 
-// Content
-import data from "@/content/rotator.json";
-
 export default {
   name: "ComingSoon",
   components: {
@@ -45,7 +42,7 @@ export default {
   },
   data() {
     return {
-      words: data.words,
+      // words: data.words,
       revealMsg: false
     };
   },
@@ -161,17 +158,17 @@ export default {
 
 <!-- Global styles -->
 <style lang="scss">
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-html {
-  font-size: 15px;
-  box-sizing: border-box;
-}
-body {
-  font-size: 100%;
-  margin: 0;
-}
+// *,
+// *::before,
+// *::after {
+//   box-sizing: inherit;
+// }
+// html {
+//   font-size: 15px;
+//   box-sizing: border-box;
+// }
+// body {
+//   font-size: 100%;
+//   margin: 0;
+// }
 </style>

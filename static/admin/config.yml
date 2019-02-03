@@ -3,146 +3,88 @@ backend:
   branch: next # Branch to update (optional; defaults to master)
 # This line should *not* be indented
 media_folder: "assets/uploads"
-public_folder: "uploads"
+public_folder: "/uploads"
 collections:
-  - label: Contenidos
-    name: cms
+  - label: Ajustes
+    name: settings
     files:
       - label: General
         name: general
-        file: "content/general.json"
+        file: "content/settings/general.json"
         fields:
-          - label: Ajustes Generales
-            name: site
-            widget: object
-            fields:
-              - { label: Nombre del sitio, name: name, widget: string }
-              - { label: Slogan, name: claim, widget: string }
-              - { label: Idioma, name: lang, widget: hidden }
+          - { label: Nombre del sitio, name: name, widget: string }
+          - { label: Slogan, name: claim, widget: string }
+          - { label: Idioma, name: lang, widget: hidden }
+      - label: Navegación
+        name: menu
+        file: "content/settings/menu.json"
+        fields:
           - label: Menu
-            name: menu
+            name: links
             widget: list
             fields:
               - { label: Nombre, name: label, widget: string }
               - { label: url, name: url, widget: string, default: "/" }
               - { label: id, name: id, widget: uuid }
-          - label: Redes Sociales
-            name: rrss
-            widget: object
-            fields:
-              - label: Facebook
-                name: facebook
-                widget: object
-                fields:
-                  - { label: Nombre, name: label, widget: string }
-                  - { label: Icono, name: icon, widget: image }
-                  - { label: url, name: url, widget: string }
-              - label: Instagram
-                name: instagram
-                widget: object
-                fields:
-                  - { label: Nombre, name: label, widget: string }
-                  - { label: Icono, name: icon, widget: image }
-                  - { label: url, name: url, widget: string }
-              - label: Linkedin
-                name: linkedin
-                widget: object
-                fields:
-                  - { label: Nombre, name: label, widget: string }
-                  - { label: Icono, name: icon, widget: image }
-                  - { label: url, name: url, widget: string }
-          - label: Footer
-            name: footer
-            widget: object
-            fields:
-              - { label: Copyright, name: copyright, widget: markdown }
-              - label: Navegación
-                name: navigation
-                widget: list
-                fields:
-                  - { label: Título, name: title, widget: string }
-                  - { label: id, name: id, widget: uuid }
-                  - label: Enlaces
-                    name: list
-                    widget: list
-                    fields:
-                      - { label: Nombre, name: label, widget: string }
-                      - { label: url, name: url, widget: string, default: "/" }
-                      - { label: id, name: id, widget: uuid }
       - label: Texto Rotativo
         name: rotator
-        file: "content/rotator.json"
+        file: "content/settings/rotator.json"
         fields:
           - { label: Palabras, name: words, widget: list }
-      - label: Portfolio
-        name: portfolio
-        file: "content/portfolio.json"
+      - label: Redes Sociales
+        label_singular: Red Social
+        name: rrss
+        file: "content/settings/social.json"
         fields:
-          - label: Eventos
-            label_singular: Evento
-            name: list
-            widget: list
-            fields:
-              - { label: slug, name: slug, widget: string }
-              - { label: Imagen destacada, name: image, widget: image }
-              - { label: Título, name: title, widget: string }
-              - { label: Lugar, name: location, width: string }
-              - { label: Fecha, name: date, widget: string }
-              - { label: Descripción, name: description, widget: markdown }
-              - { label: Miscelánea, name: miscellaneus, widget: list }
-              - label: Galería
-                name: gallery
-                widget: list
-                field: { label: Image, name: image, widget: image }
-              - { label: id, name: id, widget: uuid }
-      - label: Colaboradores
-        name: artist
-        file: "content/artist.json"
-        fields:
-          - label: Artistas
-            name: list
-            widget: list
-            fields:
-              - { label: Nombre, name: name, widget: string }
-              - { label: Foto, name: photo, widget: image }
-              - { label: id, name: id, widget: uuid }
-      - label: Reviews
-        name: reviews
-        file: "content/reviews.json"
-        fields:
-          - label: Items
-            name: list
-            widget: list
-            fields:
-              - { label: Texto, name: text, widget: markdown }
-              - label: Autor
-                name: author
-                widget: object
-                fields:
-                  - { label: Nombre, name: name, widget: string }
-                  - { label: Foto, name: photo, widget: image }
-                  - label: Información Relacionada
-                    name: info
-                    widget: markdown
-              - { label: id, name: id, widget: uuid }
-      - label: Partners
-        name: partners
-        file: "content/partners.json"
-        fields:
-          - label: Logos
-            name: list
-            widget: list
+          - label: Facebook
+            name: facebook
+            widget: object
             fields:
               - { label: Nombre, name: label, widget: string }
-              - { label: Logo, name: logo, widget: image }
+              - { label: Icono, name: icon, widget: image }
+              - { label: url, name: url, widget: string }
+          - label: Instagram
+            name: instagram
+            widget: object
+            fields:
+              - { label: Nombre, name: label, widget: string }
+              - { label: Icono, name: icon, widget: image }
+              - { label: url, name: url, widget: string }
+          - label: Linkedin
+            name: linkedin
+            widget: object
+            fields:
+              - { label: Nombre, name: label, widget: string }
+              - { label: Icono, name: icon, widget: image }
+              - { label: url, name: url, widget: string }
+      - label: Footer
+        name: footer
+        file: "content/settings/footer.json"
+        fields:
+          - { label: Copyright, name: copyright, widget: markdown }
+          - label: Menús
+            label_singula: Menú
+            name: navigation
+            widget: list
+            fields:
+              - { label: Título, name: title, widget: string }
               - { label: id, name: id, widget: uuid }
+              - label: Enlaces
+                label_singular: Link
+                name: list
+                widget: list
+                fields:
+                  - { label: Nombre, name: label, widget: string }
+                  - { label: url, name: url, widget: string, default: "/" }
+                  - { label: id, name: id, widget: uuid }
   - label: Páginas
     name: pages
     files:
       - label: Inicio
         name: home
-        file: "content/home.json"
+        file: "content/pages/home.json"
         fields:
+          - { label: id, name: id, widget: hidden }
           - { label: Título, name: header, widget: string }
           - { label: Descripción, name: intro, widget: markdown }
           - { label: Imagen, name: image, widget: image }
@@ -172,10 +114,17 @@ collections:
                   - { label: Imagen, name: image, widget: image }
                   - { label: Descripción, name: description, widget: markdown }
                   - { label: id, name: id, widget: uuid }
+          - label: Reviews
+            name: reviews
+            widget: object
+            fields:
+              - { label: Título, name: title, widget: string }
+              - { label: Descripción, name: intro, widget: markdown }
       - label: Quienes Somos
         name: about
-        file: "content/about.json"
+        file: "content/pages/about.json"
         fields:
+          - { label: id, name: id, widget: hidden }
           - { label: Título, name: header, widget: string }
           - { label: Descripción, name: intro, widget: markdown }
           - label: Equipo
@@ -207,8 +156,9 @@ collections:
                   - { label: id, name: id, widget: uuid }
       - label: Qué Ofrecemos
         name: services
-        file: "content/services.json"
+        file: "content/pages/services.json"
         fields:
+          - { label: id, name: id, widget: hidden }
           - { label: Título, name: header, widget: string }
           - { label: Descripción, name: intro, widget: markdown }
           - label: Listado
@@ -219,15 +169,64 @@ collections:
               - { label: Image, name: image, widget: image }
               - { label: Descripción, name: description, widget: markdown }
               - { label: id, name: id, widget: uuid }
+          - label: Eventons a medida
+            name: tailored
+            widget: object
+            fields:
+              - { label: Título, name: title, widget: string }
+              - { label: Texto, name: intro, widget: markdown }
+              - { label: Imagen, name: image, widget: image }
+          - label: Paquetes prediseñados
+            name: bundles
+            widget: object
+            fields:
+              - { label: Título, name: title, widget: string }
+              - { label: Texto, name: intro, widget: markdown }
+              - { label: Imagen, name: image, widget: image }
+              - { label: Listado, name: list, widget: list }
+          - label: Otros
+            name: other
+            widget: object
+            fields:
+              - { label: Título, name: title, widget: string }
+              - {
+                  label: Texto,
+                  name: description,
+                  widget: markdown,
+                  required: false,
+                }
+              - label: Listado
+                name: list
+                widget: list
+                fields:
+                  - { label: Título, name: title, widget: string }
+                  - { label: Imagen, name: image, widget: image }
+                  - {
+                      label: Descripción,
+                      name: description,
+                      widget: markdown,
+                      required: false,
+                    }
+                  - { label: id, name: id, widget: uuid }
+          - label: CTA
+            name: cta
+            widget: object
+            fields:
+              - { label: Título, name: title, widget: string }
+              - { label: Texto, name: description, widget: markdown }
+              - { label: Botón, name: button, widget: boolean }
+              - { label: Etiqueta, name: button_label, widget: string }
+              - { label: Enlace, name: button_url, widget: string }
       - label: Eventos
         name: events
-        file: "content/events.json"
+        file: "content/pages/events.json"
         fields:
+          - { label: id, name: id, widget: hidden }
           - { label: Título, name: header, widget: string }
           - { label: Descripción, name: intro, widget: markdown }
       - label: Colaboradores
         name: collab
-        file: "content/collaborators.json"
+        file: "content/pages/collaborators.json"
         fields:
           - { label: Título, name: header, widget: string }
           - { label: Descripción, name: intro, widget: markdown }
@@ -245,18 +244,79 @@ collections:
                   - { label: Url, name: link, widget: string, default: "/" }
       - label: Contacto
         name: contact
-        file: "content/contact.json"
+        file: "content/pages/contact.json"
         fields:
+          - { label: id, name: id, widget: hidden }
           - { label: Título, name: header, widget: string }
           - { label: Descripción, name: intro, widget: markdown }
-  - label: Tests
-    name: tests
-    label_singular: Test
-    description: This is a test
-    folder: "content/tests"
+  - label: Portfolio
+    name: portfolio
+    description: Catálogo de eventos realizados
+    folder: "content/portfolio"
     create: true
     extension: json
-    format: json-frontmatter
+    format: json
+    identifier_field: id
     fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Body, name: body, widget: markdown }
+      - { label: slug, name: slug, widget: string }
+      - { label: Título, name: title, widget: string }
+      - { label: Lugar, name: location, width: string }
+      - { label: Fecha, name: date, widget: string }
+      - { label: Imagen destacada, name: image, widget: image, required: false }
+      - {
+          label: Pié de foto,
+          name: image_caption,
+          widget: string,
+          required: false,
+        }
+      - { label: Descripción, name: description, widget: markdown }
+      - { label: Miscelánea, name: miscellaneus, widget: list, required: false }
+      - label: Galería
+        name: gallery
+        widget: list
+        required: false
+        field: { label: Image, name: image, widget: image }
+      - { label: id, name: id, widget: uuid }
+  - label: Artistas
+    label_singular: Artista
+    name: artists
+    folder: "content/artists"
+    create: true
+    extension: json
+    format: json
+    identifier_field: id
+    fields:
+      - { label: Nombre, name: name, widget: string }
+      - { label: Foto, name: photo, widget: image }
+      - { label: id, name: id, widget: uuid }
+  - label: Partners
+    label_singular: Partner
+    name: partners
+    folder: "content/partners"
+    create: true
+    extension: json
+    format: json
+    identifier_field: id
+    fields:
+      - { label: Nombre, name: title, widget: string }
+      - { label: Logo, name: logo, widget: image, required: false }
+      - { label: id, name: id, widget: uuid }
+  - label: Reviews
+    label_singular: Review
+    name: reviews
+    folder: "content/reviews"
+    create: true
+    extension: json
+    format: json
+    identifier_field: id
+    fields:
+      - { label: Autor, name: title, widget: string }
+      - {
+          label: Información Relacionada,
+          name: intro,
+          widget: markdown,
+          required: false,
+        }
+      - { label: Foto, name: image, widget: image }
+      - { label: Texto, name: text, widget: markdown }
+      - { label: id, name: id, widget: uuid }

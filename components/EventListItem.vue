@@ -1,6 +1,6 @@
 <template lang="html">
   <nuxt-link
-    :to="{ name: 'eventos-slug', params: { slug: event.slug } }"
+    :to="{ name: 'eventos-slug', params: { slug: event.slug, id: event.id, next: event.next } }"
   >
     <figure class="event-list-item">
       <b-img
@@ -10,7 +10,7 @@
         :width="!event.image ? 350 : null"
         :height="!event.image ? 260 : null"
         :rounded="!event.image"
-        :blank-color="!event.image && '#e9e9e9'"
+        :blank-color="!event.image ? '#e9e9e9' : null"
         class="mb-2"
         fluid
       />

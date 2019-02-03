@@ -10,38 +10,12 @@
       </b-col>
     </header>
 
-    <section>
-      <b-row>
-        <b-col
-          v-for="service in services.list"
-          :key="service.id"
-          md="4"
-        >
-          <div class="py-2">
-            <b-img
-              :src="service.image && require(`~/assets/${service.image.slice(1)}`)"
-              :alt="service.title"
-              :blank="!service.image"
-              :blank-color="!service.image && '#e9e9e9'"
-              class="d-block mx-auto mb-3"
-              width="75"
-              height="75"
-              rounded="circle"
-            />
+    <ServicesList :services="services.list" />
 
-            <h3
-              class="h5 text-center"
-            >
-              {{service.title}}
-            </h3>
-
-            <Markdown :content="service.description" />
-          </div>
-        </b-col>
-      </b-row>
-    </section>
-
-    <section class="text-center mb-3">
+    <section
+      v-if="services.link"
+      class="text-center mb-3"
+    >
       <b-link :to="services.link.url">
         {{services.link.label}}
       </b-link>
@@ -51,11 +25,13 @@
 
 <script>
 import Markdown from "@/components/Markdown.vue";
+import ServicesList from "@/components/ServicesList.vue";
 
 export default {
   name: "HomeServices",
   components: {
-    Markdown
+    Markdown,
+    ServicesList
   },
   props: {
     services: {
@@ -67,4 +43,8 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.title {
+  font-weight: 800;
+  font-size: 36/15 * 1rem;
+}
 </style>

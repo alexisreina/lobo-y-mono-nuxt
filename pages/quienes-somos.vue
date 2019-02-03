@@ -1,14 +1,13 @@
-<!-- eslint-disable -->
-<template>
+<template lang="html">
   <div class="about">
     <header class="py-5 sr-only">
       <b-container>
         <h1>
-          {{page.header}}
+          {{$cms.pages.about.header}}
         </h1>
 
-        <p v-if="page.intro">
-          {{page.intro}}
+        <p v-if="$cms.pages.about.intro">
+          {{$cms.pages.about.intro}}
         </p>
       </b-container>
     </header>
@@ -17,7 +16,7 @@
       <b-container class="py-5">
         <b-row>
           <b-col lg="10" offset-lg="1">
-            <AboutValues :values="page.values" />
+            <AboutValues :values="$cms.pages.about.values" />
           </b-col>
         </b-row>
       </b-container>
@@ -25,7 +24,7 @@
       <b-container class="py-3 py-md-5">
         <b-row class="mb-md-5">
           <b-col lg="10" offset-lg="1">
-            <AboutPeople :team="page.team" />
+            <AboutPeople :team="$cms.pages.about.team" />
           </b-col>
         </b-row>
       </b-container>
@@ -37,23 +36,12 @@
 import AboutPeople from "@/components/AboutPeople.vue";
 import AboutValues from "@/components/AboutValues.vue";
 
-// Content
-import page from "@/content/about.json";
-
 export default {
   name: "AboutPage",
   layout: "page",
   components: {
     AboutPeople,
     AboutValues
-  },
-  data() {
-    return {
-      page
-    };
   }
 };
 </script>
-
-<style lang="css">
-</style>

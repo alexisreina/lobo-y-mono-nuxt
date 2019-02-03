@@ -1,0 +1,81 @@
+{
+  "copyright": "",
+  "navigation": [
+    {
+      "id": "0",
+      "title": "Eventos",
+      "list": [
+        {
+          "id": "0",
+          "label": "Galería de Eventos",
+          "url": "/eventos"
+        },
+        {
+          "id": "1",
+          "label": "Eventos en familia",
+          "url": "/que-ofrecemos"
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Quienes Somos",
+      "list": [
+        {
+          "id": "0",
+          "label": "Lobo y Mono",
+          "url": "/quienes-somos"
+        },
+        {
+          "id": "1",
+          "label": "Cuento",
+          "url": "/cuento"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Servicios",
+      "list": [
+        {
+          "id": "0",
+          "label": "Qué ofrecemos",
+          "url": "/que-ofrecemos"
+        },
+        {
+          "id": "1",
+          "label": "Configura tu evento",
+          "url": "/crea-tu-evento"
+        },
+        {
+          "id": "2",
+          "label": "Artistas",
+          "url": "/colaboradores"
+        },
+        {
+          "id": "3",
+          "label": "Trabaja con nosotras",
+          "url": "/contacto"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Contacto",
+      "list": [
+        {
+          "id": "0",
+          "label": "hola@loboymono.com",
+          "url": "mailto:hola@loboymono.com",
+          "external": true
+        },
+        {
+          "id": "1",
+          "label": "902 123 456",
+          "url": "tel:0034902123456",
+          "external": true
+        }
+      ]
+    }
+  ]
+}

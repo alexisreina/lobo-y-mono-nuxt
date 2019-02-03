@@ -1,8 +1,7 @@
-<!-- eslint-disable -->
 <template lang="html">
-  <div>
+  <div class="py-5">
     <!-- event title -->
-    <header class="py-5" style >
+    <header>
       <b-container>
         <b-row>
           <b-col
@@ -18,9 +17,16 @@
             <b-img
               v-if="event.image"
               :src="require(`~/assets/${event.image.slice(1)}`)"
+              :class="[event.caption ? 'mb-1' : 'mb-3']"
               class="d-block mx-auto"
               fluid
             />
+
+            <div v-if="event.caption" class="mb-3">
+              <small class="text-muted">
+                {{event.caption}}
+              </small>
+            </div>
           </b-col>
         </b-row>
       </b-container>
@@ -44,7 +50,10 @@
       </section>
 
       <!-- event data -->
-      <section class="mb-5" v-if="event.miscellaneus && event.miscellaneus.length">
+      <section
+        v-if="event.miscellaneus && event.miscellaneus.length"
+        class="mb-5"
+      >
         <b-container>
           <b-row>
             <b-col class="text-center">
@@ -61,7 +70,10 @@
       </section>
 
       <!-- event gallery -->
-      <section class="py-3" v-if="event.gallery && event.gallery.length">
+      <section
+        v-if="event.gallery && event.gallery.length"
+        class="py-3"
+      >
         <b-container>
           <b-row>
             <b-col
@@ -72,7 +84,6 @@
             >
 
               <b-img-lazy
-                :style="{ boxShadow: '0 6px 12px -3px  rgba(0,0,0,.32)'}"
                 :src="photo && require(`~/assets/${photo.slice(1)}`)"
                 width="800"
                 height="600"
@@ -87,18 +98,21 @@
       </section>
 
       <!-- event actions -->
-      <section>
+      <section v-if="event.next || event.prev">
         <b-container>
           <b-row class="py-5">
-            <b-col>
+            <b-col v-if="event.next">
               <LmButton
+                :to="{ name: 'eventos-slug', params: { id: event.next.id, slug: event.next.slug } }"
                 variant="primary"
               >
                 Anterior
               </LmButton>
             </b-col>
-            <b-col class="text-right">
+
+            <b-col v-if="event.prev" class="text-right">
               <LmButton
+                :to="{ name: 'eventos-slug', params: { id: event.prev.id, slug: event.prev.slug } }"
                 variant="primary"
               >
                 Siguiente
@@ -115,9 +129,6 @@
 import Markdown from "@/components/Markdown.vue";
 import LmButton from "@/components/LmButton.vue";
 
-// Content
-import portfolio from "@/content/portfolio.json";
-
 export default {
   name: "EventPage",
   layout: "page",
@@ -127,14 +138,8 @@ export default {
   },
   computed: {
     event() {
-      return portfolio.list.find(
-        event => event.slug === this.$route.params.slug
-      );
+      return this.$cms.portfolio[this.$route.params.id];
     }
-  },
-  methods: {
-    onNext() {},
-    onPrev() {}
   }
 };
 </script>

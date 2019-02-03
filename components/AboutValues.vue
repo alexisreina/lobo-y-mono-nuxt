@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <h2 class="mb-5 text-uppercase text-center">
+    <h2 class="mb-5 text-center">
       {{values.title}}
     </h2>
 
@@ -26,7 +26,7 @@
       </b-col>
 
       <b-col md="6">
-        <h3 class="mb-md-3">
+        <h3 class="h4 mb-md-3">
           {{value.title}}
         </h3>
 
@@ -63,7 +63,7 @@ export default {
   methods: {
     reverseRow(value) {
       const values = this.$props.values;
-      return values.list.indexOf(value) % 2 !== 0
+      return values.list.indexOf(value) % 2 === 0
         ? "flex-md-row-reverse"
         : null;
     }
