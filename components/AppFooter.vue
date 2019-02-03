@@ -1,6 +1,11 @@
 <template lang="html">
   <footer class="text-white footer pb-5">
-    <b-container class="py-3 pb-md-5">
+    <b-container class="py-3 py-md-5">
+      <!-- partners -->
+      <div v-if="$cms.partners">
+        <Partners :partners="$cms.partners" />
+      </div>
+      <!-- /partners -->
 
       <!-- social media -->
       <AppFooterSocial
@@ -62,11 +67,13 @@
 
 <script>
 import AppFooterSocial from "@/components/AppFooterSocial";
+import Partners from "@/components/Partners.vue";
 
 export default {
   name: "AppFooter",
   components: {
-    AppFooterSocial
+    AppFooterSocial,
+    Partners
   },
   props: {
     rrss: {
@@ -84,6 +91,10 @@ export default {
 <style scoped lang="scss">
 .footer {
   background-color: $black;
+  background-image: url("~assets/svg/lym-bg-footer-izq.svg"),
+    url("~assets/svg/lym-bg-footer-der.svg");
+  background-position: bottom left, bottom right;
+  background-repeat: no-repeat, no-repeat;
 
   &__list-link {
     color: $white;

@@ -114,6 +114,12 @@ collections:
                   - { label: Imagen, name: image, widget: image }
                   - { label: Descripción, name: description, widget: markdown }
                   - { label: id, name: id, widget: uuid }
+          - label: Reviews
+            name: reviews
+            widget: object
+            fields:
+              - { label: Título, name: title, widget: string }
+              - { label: Descripción, name: intro, widget: markdown }
       - label: Quienes Somos
         name: about
         file: "content/pages/about.json"
@@ -163,6 +169,54 @@ collections:
               - { label: Image, name: image, widget: image }
               - { label: Descripción, name: description, widget: markdown }
               - { label: id, name: id, widget: uuid }
+          - label: Eventons a medida
+            name: tailored
+            widget: object
+            fields:
+              - { label: Título, name: title, widget: string }
+              - { label: Texto, name: intro, widget: markdown }
+              - { label: Imagen, name: image, widget: image }
+          - label: Paquetes prediseñados
+            name: bundles
+            widget: object
+            fields:
+              - { label: Título, name: title, widget: string }
+              - { label: Texto, name: intro, widget: markdown }
+              - { label: Imagen, name: image, widget: image }
+              - { label: Listado, name: list, widget: list }
+          - label: Otros
+            name: other
+            widget: object
+            fields:
+              - { label: Título, name: title, widget: string }
+              - {
+                  label: Texto,
+                  name: description,
+                  widget: markdown,
+                  required: false,
+                }
+              - label: Listado
+                name: list
+                widget: list
+                fields:
+                  - { label: Título, name: title, widget: string }
+                  - { label: Imagen, name: image, widget: image }
+                  - {
+                      label: Descripción,
+                      name: description,
+                      widget: markdown,
+                      required: false,
+                    }
+                  - { label: id, name: id, widget: uuid }
+          - label: CTA
+            name: cta
+            widget: object
+            fields:
+              - { label: Título, name: title, widget: string }
+              - { label: Texto, name: description, widget: markdown }
+              - { label: Botón, name: button, widget: boolean }
+              - { label: Etiqueta, name: button_label, widget: string }
+              - { label: Enlace, name: button_url, widget: string }
       - label: Eventos
         name: events
         file: "content/pages/events.json"
@@ -209,6 +263,12 @@ collections:
       - { label: Lugar, name: location, width: string }
       - { label: Fecha, name: date, widget: string }
       - { label: Imagen destacada, name: image, widget: image, required: false }
+      - {
+          label: Pié de foto,
+          name: image_caption,
+          widget: string,
+          required: false,
+        }
       - { label: Descripción, name: description, widget: markdown }
       - { label: Miscelánea, name: miscellaneus, widget: list, required: false }
       - label: Galería

@@ -1,17 +1,17 @@
 <template lang="html">
-  <div>
+  <div page-colab>
     <header class="py-3 pt-md-4">
       <b-container>
         <b-row>
           <b-col
-            lg="8"
-            offset-lg="0"
+            xl="8"
+            offset-xl="2"
           >
             <h1>
               {{$cms.pages.collaborators.header}}
             </h1>
 
-            <p class="lead">
+            <p>
               {{$cms.pages.collaborators.intro}}
             </p>
           </b-col>
@@ -26,17 +26,19 @@
         </b-container>
       </section>
 
-      <b-container class="py-5">
+      <b-container class="py-5 text-md-center">
         <h2>
           {{$cms.pages.collaborators.cta.title}}
         </h2>
 
-        <Markdown
-          :content="$cms.pages.collaborators.cta.description"
-          class="lead mb-5"
-        />
+        <div class="mx-auto" style="max-width:45rem">
+          <Markdown
+            :content="$cms.pages.collaborators.cta.description"
+            class="mb-5"
+          />
+        </div>
 
-        <div class="text-center">
+        <div v-if="$cms.pages.collaborators.cta.button" class="text-center">
           <LmButton
             :to="$cms.pages.collaborators.cta.button.link"
             variant="primary"

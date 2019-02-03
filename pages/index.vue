@@ -1,16 +1,5 @@
 <template lang="html">
-  <div class="home">
-    <!-- <header class="header py-5">
-      <b-container class="py-lg-3">
-        <HomeHero
-          :title="$cms.pages.homeheader"
-          :intro="$cms.pages.homeintro"
-          :image="$cms.pages.homeimage"
-          rotator
-        />
-      </b-container>
-    </header> -->
-
+  <div class="page-home">
     <main>
       <section class="py-5">
         <b-container>
@@ -22,33 +11,18 @@
         </b-container>
       </section>
 
-      <section v-if="$cms.reviews" class="pb-5">
+      <section v-if="$cms.reviews" class="section-reviews pb-5">
         <b-container>
+          <h2 class="h3 mb-5">
+            {{$cms.pages.home.reviews.title}}
+          </h2>
           <Reviews :reviews="$cms.reviews" />
         </b-container>
       </section>
 
-      <section class="py-5 bg-light">
+      <section class="section-cta py-5">
         <b-container class="py-3">
           <HomeCta :cta="$cms.pages.home.cta" />
-        </b-container>
-      </section>
-
-      <!-- <section class="py-5">
-        <b-container>
-          <home-event-gallery />
-        </b-container>
-      </section> -->
-
-      <!-- <section class="py-5 bg-light">
-        <b-container>
-          <subscribe />
-        </b-container>
-      </section> -->
-
-      <section v-if="$cms.partners" class="py-4 partners">
-        <b-container>
-          <Partners :partners="$cms.partners" />
         </b-container>
       </section>
     </main>
@@ -56,34 +30,26 @@
 </template>
 
 <script>
-// import HomeHero from "@/components/HomeHero.vue";
 import HomeServices from "@/components/HomeServices";
 import Reviews from "@/components/Reviews";
 import HomeCta from "@/components/HomeCta";
-// import HomeEventNext from "@/components/HomeEventNext";
-// import HomeEventGallery from "@/components/HomeEventGallery";
-// import Subscribe from "@/components/Subscribe";
-import Partners from "@/components/Partners";
 
 export default {
   name: "HomePage",
   layout: "page",
   components: {
-    // HomeHero,
     HomeServices,
     Reviews,
-    HomeCta,
-    // HomeEventNext,
-    // HomeEventGallery,
-    // Subscribe,
-    Partners
+    HomeCta
   }
 };
 </script>
 
 <style lang="scss" scoped>
-.header,
-.partners {
-  background-color: $black;
+.section-reviews {
+  background-image: url("~assets/svg/lym-pattern-hojas.svg");
+}
+.section-cta {
+  background-image: url("~assets/svg/lym-pattern-pelos.svg");
 }
 </style>

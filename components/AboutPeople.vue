@@ -19,9 +19,9 @@
           :src="person.photo && require(`~/assets${person.photo.slice(1)}`)"
           :alt="person.name"
           :width="!person.photo ? 150 : null"
-          :height="!person.photo ? 150: null"
+          :height="!person.photo ? 150 : null"
+          :blank-color="!person.photo ? '#e9e9e9' : null"
           :blank="!person.photo"
-          :blank-color="!person.photo && '#e9e9e9'"
           class="d-block mb-3 mb-md-4 mx-md-auto"
           rounded="circle"
           fluid
@@ -54,5 +54,5 @@ export default {
 };
 </script>
 
-<style lang="css">
+<style lang="scss" scoped>
 </style>

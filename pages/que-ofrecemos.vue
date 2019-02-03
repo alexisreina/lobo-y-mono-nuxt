@@ -1,19 +1,19 @@
 <template lang="html">
-  <div>
-    <header role="banner" class="bg-light">
-      <b-container class="py-3 py-lg-5 text-center mb-3 mb-lg-5">
+  <div class="py-3">
+    <header role="banner">
+      <b-container>
         <b-row>
           <b-col
-            md="10"
-            lg="8"
-            offset-md="1"
-            offset-lg="2"
+            lg="10"
+            xl="8"
+            offset-lg="1"
+            offset-xl="2"
           >
-            <h1 class="mb-3">
-              {{$cms.pages.services.header}}
+            <h1 class="h2 mb-3">
+              {{page.header}}
             </h1>
 
-            <Markdown :content="$cms.pages.services.intro" class="lead mb-0" />
+            <Markdown v-if="page.intro" :content="page.intro" />
           </b-col>
         </b-row>
       </b-container>
@@ -22,8 +22,8 @@
     <section class="mb-lg-5">
       <b-container>
         <b-row>
-          <b-col lg="10" offset-lg="1">
-            <ServicesList :services="$cms.pages.services.list" />
+          <b-col>
+            <ServicesList :services="page.list" />
           </b-col>
         </b-row>
       </b-container>
@@ -32,8 +32,8 @@
     <section class="bg-light mb-5">
       <b-container>
         <b-row>
-          <b-col lg="10" offset-lg="1">
-            <ServicesCta :cta="$cms.pages.services.cta" />
+          <b-col>
+            <ServicesCta :cta="page.cta" />
           </b-col>
         </b-row>
       </b-container>
@@ -42,34 +42,8 @@
     <section class="mb-lg-5">
       <b-container>
         <b-row>
-          <b-col lg="10" offset-lg="1">
-            <b-row align-v="center">
-              <b-col md="6">
-                <b-img
-                  blank
-                  blank-color="#e9e9e9"
-                  width="540"
-                  height="325"
-                  alt=""
-                  rounded
-                  fluid
-                />
-              </b-col>
-
-              <b-col md="6">
-                <h2>
-                  Eventos a medida
-                </h2>
-
-                <p>
-                  ¡Pero esto no es todo! si deseas que seamos tus nar-
-                  radoras y demos forma a tu idea, contacta con no-
-                  sotras. Pondremos toda nuestra experiencia y creativ-
-                  idad a tu disposición, te ayudamos a que tu evento sea divertido, diferente y todo un éxito.
-                </p>
-
-              </b-col>
-            </b-row>
+          <b-col>
+            <ServicesTailored :service="page.tailored" />
           </b-col>
         </b-row>
       </b-container>
@@ -78,18 +52,18 @@
     <section class="mb-lg-5">
       <b-container>
         <b-row>
-          <b-col lg="10" offset-lg="1">
-            <ServicesBundles :bundles="$cms.pages.services.bundles" />
+          <b-col>
+            <ServicesBundles :bundles="page.bundles" />
           </b-col>
         </b-row>
       </b-container>
     </section>
 
-    <section class="py-5 bg-light">
+    <section class="mb-3 mb-lg-5">
       <b-container>
         <b-row>
-          <b-col lg="6" offset-lg="3">
-            <ServicesOther :other="$cms.pages.services.other" />
+          <b-col>
+            <ServicesOther :other="page.other" />
           </b-col>
         </b-row>
       </b-container>
@@ -98,7 +72,7 @@
     <section class="py-5 text-center">
       <b-container>
         <b-row>
-          <b-col lg="10" offset-lg="1">
+          <b-col xl="10" offset-xl="1">
             <LmButton
               to="/contacto"
               variant="primary"
@@ -120,6 +94,7 @@ import ServicesOther from "@/components/ServicesOther.vue";
 import ServicesList from "@/components/ServicesList.vue";
 import ServicesBundles from "@/components/ServicesBundles.vue";
 import ServicesCta from "@/components/ServicesCta.vue";
+import ServicesTailored from "@/components/ServicesTailored.vue";
 
 export default {
   name: "ServicesPage",
@@ -130,7 +105,13 @@ export default {
     ServicesOther,
     ServicesList,
     ServicesBundles,
-    ServicesCta
+    ServicesCta,
+    ServicesTailored
+  },
+  computed: {
+    page() {
+      return this.$cms.pages.services;
+    }
   }
 };
 </script>

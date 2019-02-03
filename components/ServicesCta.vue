@@ -6,10 +6,10 @@
     />
 
     <LmButton
-      :to="cta.button.url"
+      :to="cta.button_url"
       variant="primary"
     >
-      {{cta.button.label}}
+      {{cta.button_label}}
     </LmButton>
   </div>
 </template>
