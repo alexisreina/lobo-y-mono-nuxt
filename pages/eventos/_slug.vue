@@ -76,7 +76,23 @@
         class="py-3"
       >
         <b-container>
-          <b-row>
+          <masonry
+            :cols="3"
+            :gutter="30"
+          >
+            <div
+              v-for="(photo, index) in event.gallery"
+              :key="index"
+              style="margin-bottom:30px"
+            >
+              <b-img
+                :src="photo && require(`~/assets/${photo.slice(1)}`)"
+                fluid
+              />
+
+            </div>
+          </masonry>
+          <!-- <b-row>
             <b-col
               v-for="(photo, index) in event.gallery"
               :key="index"
@@ -94,7 +110,7 @@
               />
 
             </b-col>
-          </b-row>
+          </b-row> -->
         </b-container>
       </section>
 
