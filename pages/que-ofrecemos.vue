@@ -29,7 +29,7 @@
       </b-container>
     </section>
 
-    <section class="bg-light mb-5">
+    <!-- <section class="bg-light mb-5">
       <b-container>
         <b-row>
           <b-col>
@@ -37,7 +37,7 @@
           </b-col>
         </b-row>
       </b-container>
-    </section>
+    </section> -->
 
     <section class="mb-lg-5">
       <b-container>
@@ -93,7 +93,7 @@ import LmButton from "@/components/LmButton.vue";
 import ServicesOther from "@/components/ServicesOther.vue";
 import ServicesList from "@/components/ServicesList.vue";
 import ServicesBundles from "@/components/ServicesBundles.vue";
-import ServicesCta from "@/components/ServicesCta.vue";
+// import ServicesCta from "@/components/ServicesCta.vue";
 import ServicesTailored from "@/components/ServicesTailored.vue";
 
 export default {
@@ -105,7 +105,7 @@ export default {
     ServicesOther,
     ServicesList,
     ServicesBundles,
-    ServicesCta,
+    // ServicesCta,
     ServicesTailored
   },
   computed: {
