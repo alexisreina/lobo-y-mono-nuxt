@@ -13,13 +13,9 @@
     </header>
 
     <main>
-      <b-container class="py-5">
-        <b-row>
-          <b-col>
-            <AboutValues :values="$cms.pages.about.values" />
-          </b-col>
-        </b-row>
-      </b-container>
+
+      <AboutValues :values="$cms.pages.about.values" />
+
 
       <b-container class="py-3 py-md-5">
         <b-row class="mb-md-5">
