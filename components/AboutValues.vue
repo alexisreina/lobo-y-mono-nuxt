@@ -14,17 +14,17 @@
       :class="`bg-${value.id}`"
     >
 
-      <b-container class="py-5">
+      <b-container class="py-3">
         <b-row
           :class="[reverseRow(value)]"
-          class="mb-3 mb-md-5 align-items-md-center"
+          class="align-items-md-center"
         >
           <b-col md="6">
 
             <b-img
               :src="value.image && require(`~/assets/${value.image.slice(1)}`)"
               :alt="value.title"
-              class="mb-3 mb-md-0"
+              class="pt-3 mb-3 mb-md-0"
               fluid
             />
 
@@ -32,7 +32,7 @@
 
           <b-col md="6">
 
-            <div class="mx-auto" style="max-width:25rem">
+            <div class="mx-auto mb-4" style="max-width:25rem">
               <h3 class="h4 mb-md-3">
                 {{value.title}}
               </h3>
@@ -84,22 +84,29 @@ export default {
 
 <style lang="scss" scoped>
 .bg-family {
-  background-image: url("~assets/svg/lym-bg-2.svg"),
-    url("~assets/svg/lym-pattern-dots.svg");
-  background-size: cover, auto;
-  background-position: left top, left -100%;
-  background-repeat: no-repeat, repeat-x;
+  background-image: url("~assets/svg/lym-curve-top-white.svg");
+  background-position: left top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #f5f4ed;
 }
 
 .bg-focus {
-  background-image: url("~assets/svg/lym-pattern-dots.svg");
+  background-image: url("~assets/svg/lym-curve-bottom-blue.svg"),
+    url("~assets/svg/lym-curve-top-cream.svg"),
+    url("~assets/svg/lym-pattern-dots.svg");
+  background-position: left 101%, left top, left top;
+  background-size: 100%, 100%, auto;
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-color: #fff;
+  padding: 5rem 0;
 }
 
 .bg-service {
-  background-image: url("~assets/svg/lym-bg-1.svg"),
-    url("~assets/svg/lym-pattern-dots.svg");
-  background-size: cover, auto;
-  background-position: left top, left 150%;
-  background-repeat: no-repeat, repeat-x;
+  background-image: url("~assets/svg/lym-curve-bottom-white.svg");
+  background-position: left 101%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #ebf2f1;
 }
 </style>
