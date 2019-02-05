@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ComingSoon v-if="$route.name == 'index'" />
+    <LmBanner v-if="$route.name == 'index'" />
 
     <AppNavbar
       :brand="$cms.settings.general.name"
@@ -20,11 +20,11 @@
 <script>
 import AppNavbar from "@/components/AppNavbar";
 import AppFooter from "@/components/AppFooter";
-import ComingSoon from "@/components/ComingSoon";
+import LmBanner from "@/components/LmBanner";
 
 export default {
   components: {
-    ComingSoon,
+    LmBanner,
     AppNavbar,
     AppFooter
   }
