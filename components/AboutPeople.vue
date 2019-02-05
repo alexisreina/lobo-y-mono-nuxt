@@ -14,24 +14,24 @@
         :key="person.id"
         md="6"
       >
+        <div class="person">
+          <div class="person__image mb-4">
+            <b-img
+              :src="person.photo && require(`~/assets/${person.photo.slice(1)}`)"
+              :alt="person.name"
+              fluid
+            />
+          </div>
 
-        <b-img
-          :src="person.photo && require(`~/assets/${person.photo.slice(1)}`)"
-          :alt="person.name"
-          :width="!person.photo ? 150 : null"
-          :height="!person.photo ? 150 : null"
-          :blank-color="!person.photo ? '#e9e9e9' : null"
-          :blank="!person.photo"
-          class="d-block mb-3 mb-md-4 mx-md-auto"
-          rounded="circle"
-          fluid
-        />
+          <h3 class="h4 person__name text-md-center">
+            {{person.name}}
+          </h3>
 
-        <h3 class="text-md-center">
-          {{person.name}}
-        </h3>
+          <div class="person__bio mx-auto">
+            <Markdown class="text-left" :content="person.bio" />
+          </div>
+        </div>
 
-        <Markdown :content="person.bio" />
       </b-col>
     </b-row>
   </div>
@@ -55,4 +55,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.person {
+  text-align: center;
+
+  &__image {
+    position: relative;
+    display: inline-block;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 3px solid $black;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    & /deep/ img {
+      transform: translate(5px, 7px);
+    }
+  }
+
+  &__bio {
+    max-width: 25rem;
+  }
+}
 </style>

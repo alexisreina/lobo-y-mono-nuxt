@@ -26,20 +26,23 @@
       </b-col>
 
       <b-col md="6">
-        <h3 class="h4 mb-md-3">
-          {{value.title}}
-        </h3>
 
-        <Markdown :content="value.text" />
+        <div class="mx-auto" style="max-width:25rem">
+          <h3 class="h4 mb-md-3">
+            {{value.title}}
+          </h3>
 
-        <ul v-if="value.items">
-          <li
-            v-for="item in value.items"
-            :key="item"
-          >
-            {{item}}
-          </li>
-        </ul>
+          <Markdown :content="value.text" />
+
+          <ul v-if="value.items">
+            <li
+              v-for="item in value.items"
+              :key="item"
+            >
+              {{item}}
+            </li>
+          </ul>
+        </div>
 
       </b-col>
     </b-row>
