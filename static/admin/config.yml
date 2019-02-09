@@ -249,7 +249,7 @@ collections:
             label_singular: Opción
             name: options
             widget: object
-            filelds:
+            fields:
               - label: Micro Cuento
                 name: microcuento
                 widget: object
