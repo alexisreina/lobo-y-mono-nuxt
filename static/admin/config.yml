@@ -63,7 +63,7 @@ collections:
         fields:
           - { label: Copyright, name: copyright, widget: markdown }
           - label: Menús
-            label_singula: Menú
+            label_singular: Menú
             name: navigation
             widget: list
             fields:
@@ -233,6 +233,118 @@ collections:
               - { label: Botón, name: button, widget: boolean }
               - { label: Etiqueta, name: button_label, widget: string }
               - { label: Enlace, name: button_url, widget: string }
+      - label: Configurador
+        name: configurator
+        file: "content/pages/configurator.json"
+        fields:
+          - { label: id, name: id, widget: hidden }
+          - { label: Título, name: title, widget: string }
+          - {
+              label: Descripción,
+              name: intro,
+              widget: markdown,
+              required: false,
+            }
+          - label: Opciones
+            label_singular: Opción
+            widget: object
+            filelds:
+              - label: Micro Cuento
+                name: microcuento
+                widget: object
+                fields:
+                  - { label: Título, name: title, widget: string }
+                  - label: Introducción
+                    name: intro
+                    widget: list
+                    fields:
+                      - { label: Nombre, name: title, widget: string }
+                      - { label: Precio, name: price, widget: string }
+                      - { label: id, name: id, widget: uuid }
+                  - label: Nudo
+                    name: nudo
+                    widget: list
+                    fields:
+                      - { label: Nombre, name: title, widget: string }
+                      - { label: Precio, name: price, widget: string }
+                      - { label: id, name: id, widget: uuid }
+                  - { label: Desenlace, name: desenlace, widget: hidden }
+                  - { label: id, name: id, widget: uuid }
+              - label: Micro Relato
+                name: microrelato
+                widget: object
+                fields:
+                  - { label: Título, name: title, widget: string }
+                  - label: Introducción
+                    name: intro
+                    widget: list
+                    fields:
+                      - { label: Nombre, name: title, widget: string }
+                      - { label: Precio, name: price, widget: string }
+                      - { label: id, name: id, widget: uuid }
+                  - label: Nudo
+                    name: nudo
+                    widget: list
+                    fields:
+                      - { label: Nombre, name: title, widget: string }
+                      - { label: Precio, name: price, widget: string }
+                      - { label: id, name: id, widget: uuid }
+                  - { label: Desenlace, name: desenlace, widget: hidden }
+                  - { label: id, name: id, widget: uuid }
+              - label: Cuento
+                name: cuento
+                widget: object
+                fields:
+                  - { label: Título, name: title, widget: string }
+                  - label: Introducción
+                    name: intro
+                    widget: list
+                    fields:
+                      - { label: Nombre, name: title, widget: string }
+                      - { label: Precio, name: price, widget: string }
+                      - { label: id, name: id, widget: uuid }
+                  - label: Nudo
+                    name: nudo
+                    widget: list
+                    fields:
+                      - { label: Nombre, name: title, widget: string }
+                      - { label: Precio, name: price, widget: string }
+                      - { label: id, name: id, widget: uuid }
+                  - label: Desenlace
+                    name: desenlace
+                    widget: list
+                    fields:
+                      - { label: Nombre, name: title, widget: string }
+                      - { label: Precio, name: price, widget: string }
+                      - { label: id, name: id, widget: uuid }
+                  - { label: id, name: id, widget: uuid }
+              - label: Novela
+                name: novela
+                widget: object
+                fields:
+                  - { label: Título, name: title, widget: string }
+                  - label: Introducción
+                    name: intro
+                    widget: list
+                    fields:
+                      - { label: Nombre, name: title, widget: string }
+                      - { label: Precio, name: price, widget: string }
+                      - { label: id, name: id, widget: uuid }
+                  - label: Nudo
+                    name: nudo
+                    widget: list
+                    fields:
+                      - { label: Nombre, name: title, widget: string }
+                      - { label: Precio, name: price, widget: string }
+                      - { label: id, name: id, widget: uuid }
+                  - label: Desenlace
+                    name: desenlace
+                    widget: list
+                    fields:
+                      - { label: Nombre, name: title, widget: string }
+                      - { label: Precio, name: price, widget: string }
+                      - { label: id, name: id, widget: uuid }
+                  - { label: id, name: id, widget: uuid }
       - label: Eventos
         name: events
         file: "content/pages/events.json"

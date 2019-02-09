@@ -110,7 +110,7 @@ $border-radius: 9999em;
   }
 }
 
-.LmButton--danger {
+.danger {
   &::after {
     background-color: theme-color("danger");
   }
