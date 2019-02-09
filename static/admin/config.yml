@@ -247,6 +247,7 @@ collections:
             }
           - label: Opciones
             label_singular: Opción
+            name: options
             widget: object
             filelds:
               - label: Micro Cuento
