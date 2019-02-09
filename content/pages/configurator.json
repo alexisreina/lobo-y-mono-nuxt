@@ -86,7 +86,7 @@
           "id": "54169f00-2ca7-11e9-8003-1e6c63f57a44"
         },
         {
-          "title": "Concierto",
+          "title": "Actuación",
           "price": "750",
           "id": "95e64770-2caa-11e9-801a-a3a6e7cc9b5b"
         },
@@ -173,6 +173,26 @@
           "title": "Lanzamiento de farolillos",
           "price": "2100",
           "id": "87871bd0-2ca7-11e9-8009-db2ab06d5f62"
+        },
+        {
+          "title": "Photocall",
+          "price": "400",
+          "id": "0f7fedb0-2cac-11e9-802d-85f70db39ddf"
+        },
+        {
+          "title": "Fuegos artificiales",
+          "price": "2500",
+          "id": "1aa1f710-2cac-11e9-802e-7869a0867572"
+        },
+        {
+          "title": "Globotá",
+          "price": "500",
+          "id": "28d44db0-2cac-11e9-802f-18303adb6db2"
+        },
+        {
+          "title": "Cañones de confetti",
+          "price": "1000",
+          "id": "34b73610-2cac-11e9-8030-1e912510aee7"
         }
       ]
     },
@@ -205,6 +225,31 @@
           "title": "Concierto",
           "price": "3800",
           "id": "711d0a80-2ca7-11e9-8007-4905ca2f6eaa"
+        },
+        {
+          "title": "Actuación",
+          "price": "1800",
+          "id": "85596990-2cab-11e9-8024-3ebdba372336"
+        },
+        {
+          "title": "Cuentacuentos",
+          "price": "450",
+          "id": "92285fa0-2cab-11e9-8025-5156b233698d"
+        },
+        {
+          "title": "Circo",
+          "price": "3600",
+          "id": "a1d93ff0-2cab-11e9-8026-3d60ecf4be12"
+        },
+        {
+          "title": "Taller",
+          "price": "450",
+          "id": "b248dc60-2cab-11e9-8027-306d4a3ab6da"
+        },
+        {
+          "title": "Proyecciones",
+          "price": "2500",
+          "id": "bbfc3a90-2cab-11e9-8028-8acdd3a375b4"
         }
       ],
       "desenlace": [
@@ -212,6 +257,26 @@
           "title": "Lanzamiento de farolillos",
           "price": "2100",
           "id": "7d4f7270-2ca7-11e9-8008-d81b1ca00f6f"
+        },
+        {
+          "title": "Photocall",
+          "price": "400",
+          "id": "d9a834e0-2cab-11e9-8029-7a0b10390026"
+        },
+        {
+          "title": "Fuegos artificiales",
+          "price": "2500",
+          "id": "e5c82640-2cab-11e9-802a-27a33dddc61c"
+        },
+        {
+          "title": "Globotá",
+          "price": "500",
+          "id": "f3c8be80-2cab-11e9-802b-66306f53658b"
+        },
+        {
+          "title": "Cañones de confetti",
+          "price": "1000",
+          "id": "ff637a50-2cab-11e9-802c-5805fff386ce"
         }
       ]
     }
