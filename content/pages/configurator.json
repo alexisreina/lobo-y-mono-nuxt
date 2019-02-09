@@ -10,6 +10,21 @@
           "title": "Pascalles",
           "price": "750",
           "id": "33e5a780-2ca7-11e9-8000-36652b6f2fdb"
+        },
+        {
+          "title": "Batucada",
+          "price": "750",
+          "id": "c0ed0470-2ca7-11e9-800a-57213cff351a"
+        },
+        {
+          "title": "Charanga",
+          "price": "750",
+          "id": "ca32fad0-2ca7-11e9-800b-adbbc64ab075"
+        },
+        {
+          "title": "Pintacaras",
+          "price": "200",
+          "id": "d51bcbc0-2ca7-11e9-800c-d013cb7714f3"
         }
       ],
       "nudo": [
@@ -17,6 +32,26 @@
           "title": "Concierto",
           "price": "750",
           "id": "3fa5ecb0-2ca7-11e9-8001-cde0569cd2d2"
+        },
+        {
+          "title": "Actuación",
+          "price": "550",
+          "id": "521c4e40-2caa-11e9-8016-17fd10aed92b"
+        },
+        {
+          "title": "Cuentacuentos",
+          "price": "450",
+          "id": "631e3fa0-2caa-11e9-8017-3cefe0666545"
+        },
+        {
+          "title": "Circo",
+          "price": "650",
+          "id": "6f442470-2caa-11e9-8018-b4029112c5cc"
+        },
+        {
+          "title": "Taller",
+          "price": "450",
+          "id": "7bf691d0-2caa-11e9-8019-cc81dcf4ed14"
         }
       ]
     },
@@ -27,6 +62,21 @@
           "title": "Pasacalles",
           "price": "850",
           "id": "47569d10-2ca7-11e9-8002-cf2f2dc457ce"
+        },
+        {
+          "title": "Batucada",
+          "price": "850",
+          "id": "e1988320-2ca7-11e9-800d-5437236b8873"
+        },
+        {
+          "title": "Charanga",
+          "price": "850",
+          "id": "ee0709b0-2ca7-11e9-800e-649181191cf1"
+        },
+        {
+          "title": "Pintacaras",
+          "price": "300",
+          "id": "f5a51c70-2ca7-11e9-800f-adbd59b4f6e5"
         }
       ],
       "nudo": [
@@ -34,6 +84,31 @@
           "title": "Concierto",
           "price": "1800",
           "id": "54169f00-2ca7-11e9-8003-1e6c63f57a44"
+        },
+        {
+          "title": "Concierto",
+          "price": "750",
+          "id": "95e64770-2caa-11e9-801a-a3a6e7cc9b5b"
+        },
+        {
+          "title": "Cuentacuentos",
+          "price": "450",
+          "id": "af25bfe0-2caa-11e9-801b-345e46f9fea3"
+        },
+        {
+          "title": "Circo",
+          "price": "1000",
+          "id": "bbac6250-2caa-11e9-801c-7d9e7c5eb318"
+        },
+        {
+          "title": "Taller",
+          "price": "450",
+          "id": "c6846a60-2caa-11e9-801d-0116e1a9f996"
+        },
+        {
+          "title": "Proyecciones",
+          "price": "2500",
+          "id": "cf208c30-2caa-11e9-801e-494c712c3d0e"
         }
       ]
     },
@@ -44,6 +119,21 @@
           "title": "Pasacalles",
           "price": "950",
           "id": "59a029a0-2ca7-11e9-8004-49dccf0fdc5f"
+        },
+        {
+          "title": "Batucada",
+          "price": "950",
+          "id": "02785840-2ca8-11e9-8010-cbd211a40723"
+        },
+        {
+          "title": "Charanga",
+          "price": "950",
+          "id": "0d166490-2ca8-11e9-8011-6f20d7d5c610"
+        },
+        {
+          "title": "Pintacaras",
+          "price": "400",
+          "id": "1647e890-2ca8-11e9-8012-70d38b8241fb"
         }
       ],
       "nudo": [
@@ -51,6 +141,31 @@
           "title": "Concierto",
           "price": "2500",
           "id": "62936c20-2ca7-11e9-8005-ba4591437b22"
+        },
+        {
+          "title": "Actuación",
+          "price": "1800",
+          "id": "db785670-2caa-11e9-801f-e577ecf4b8e9"
+        },
+        {
+          "title": "Cuentacuentos",
+          "price": "450",
+          "id": "eab9d320-2caa-11e9-8020-d7dc7c390c99"
+        },
+        {
+          "title": "Circo",
+          "price": "2800",
+          "id": "f9deee30-2caa-11e9-8021-311b43c233f9"
+        },
+        {
+          "title": "Taller",
+          "price": "450",
+          "id": "203b2e90-2cab-11e9-8022-8dc3f0e809f3"
+        },
+        {
+          "title": "Proyecciones",
+          "price": "2500",
+          "id": "2ec960d0-2cab-11e9-8023-3ed7fe8f2ec6"
         }
       ],
       "desenlace": [
@@ -68,6 +183,21 @@
           "title": "Pasacalles",
           "price": "950",
           "id": "6b15eb70-2ca7-11e9-8006-caa159adc3c6"
+        },
+        {
+          "title": "Batucada",
+          "price": "950",
+          "id": "20303970-2ca8-11e9-8013-a81303ba9a85"
+        },
+        {
+          "title": "Charanga",
+          "price": "950",
+          "id": "26848e20-2ca8-11e9-8014-42c1b4822944"
+        },
+        {
+          "title": "Pintacaras",
+          "price": "400",
+          "id": "2cafd700-2ca8-11e9-8015-c8104a557bbe"
         }
       ],
       "nudo": [
