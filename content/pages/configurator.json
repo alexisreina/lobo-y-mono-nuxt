@@ -6,14 +6,12 @@
     "microcuento": {
       "title": "Microcuento",
       "intro": [],
-      "nudo": [],
-      "desenlace": null
+      "nudo": []
     },
     "microrelato": {
       "title": "Microrelato",
       "intro": [],
-      "nudo": [],
-      "desenlace": null
+      "nudo": []
     },
     "cuento": {
       "title": "Cuento",
@@ -22,7 +20,7 @@
       "desenlace": []
     },
     "novela": {
-      "title": "Novel",
+      "title": "Novela",
       "intro": [],
       "nudo": [],
       "desenlace": []
