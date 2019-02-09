@@ -5,25 +5,85 @@
   "options": {
     "microcuento": {
       "title": "Microcuento",
-      "intro": [],
-      "nudo": []
+      "intro": [
+        {
+          "title": "Pascalles",
+          "price": "750",
+          "id": "33e5a780-2ca7-11e9-8000-36652b6f2fdb"
+        }
+      ],
+      "nudo": [
+        {
+          "title": "Concierto",
+          "price": "750",
+          "id": "3fa5ecb0-2ca7-11e9-8001-cde0569cd2d2"
+        }
+      ]
     },
     "microrelato": {
       "title": "Microrelato",
-      "intro": [],
-      "nudo": []
+      "intro": [
+        {
+          "title": "Pasacalles",
+          "price": "850",
+          "id": "47569d10-2ca7-11e9-8002-cf2f2dc457ce"
+        }
+      ],
+      "nudo": [
+        {
+          "title": "Concierto",
+          "price": "1800",
+          "id": "54169f00-2ca7-11e9-8003-1e6c63f57a44"
+        }
+      ]
     },
     "cuento": {
       "title": "Cuento",
-      "intro": [],
-      "nudo": [],
-      "desenlace": []
+      "intro": [
+        {
+          "title": "Pasacalles",
+          "price": "950",
+          "id": "59a029a0-2ca7-11e9-8004-49dccf0fdc5f"
+        }
+      ],
+      "nudo": [
+        {
+          "title": "Concierto",
+          "price": "2500",
+          "id": "62936c20-2ca7-11e9-8005-ba4591437b22"
+        }
+      ],
+      "desenlace": [
+        {
+          "title": "Lanzamiento de farolillos",
+          "price": "2100",
+          "id": "87871bd0-2ca7-11e9-8009-db2ab06d5f62"
+        }
+      ]
     },
     "novela": {
       "title": "Novela",
-      "intro": [],
-      "nudo": [],
-      "desenlace": []
+      "intro": [
+        {
+          "title": "Pasacalles",
+          "price": "950",
+          "id": "6b15eb70-2ca7-11e9-8006-caa159adc3c6"
+        }
+      ],
+      "nudo": [
+        {
+          "title": "Concierto",
+          "price": "3800",
+          "id": "711d0a80-2ca7-11e9-8007-4905ca2f6eaa"
+        }
+      ],
+      "desenlace": [
+        {
+          "title": "Lanzamiento de farolillos",
+          "price": "2100",
+          "id": "7d4f7270-2ca7-11e9-8008-d81b1ca00f6f"
+        }
+      ]
     }
   }
 }
