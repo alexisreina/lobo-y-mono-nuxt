@@ -270,7 +270,6 @@ collections:
                       - { label: Precio, name: price, widget: string }
                       - { label: id, name: id, widget: uuid }
                   - { label: Desenlace, name: desenlace, widget: hidden }
-                  - { label: id, name: id, widget: uuid }
               - label: Micro Relato
                 name: microrelato
                 widget: object
@@ -291,7 +290,6 @@ collections:
                       - { label: Precio, name: price, widget: string }
                       - { label: id, name: id, widget: uuid }
                   - { label: Desenlace, name: desenlace, widget: hidden }
-                  - { label: id, name: id, widget: uuid }
               - label: Cuento
                 name: cuento
                 widget: object
@@ -318,7 +316,6 @@ collections:
                       - { label: Nombre, name: title, widget: string }
                       - { label: Precio, name: price, widget: string }
                       - { label: id, name: id, widget: uuid }
-                  - { label: id, name: id, widget: uuid }
               - label: Novela
                 name: novela
                 widget: object
@@ -345,7 +342,6 @@ collections:
                       - { label: Nombre, name: title, widget: string }
                       - { label: Precio, name: price, widget: string }
                       - { label: id, name: id, widget: uuid }
-                  - { label: id, name: id, widget: uuid }
       - label: Eventos
         name: events
         file: "content/pages/events.json"
