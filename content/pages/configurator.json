@@ -4,25 +4,25 @@
   "intro": "Con nuestro configurador podrás hacerte una idea aproximada de tu presupuesto y crear tu evento a medida.\n\nPuedes elegir entre pasacalles, conciertos, actuaciones, circo, teatro, cuentacuentos, pintacaras, batucadas, sesiones de Dj's... a modo de INTRODUCCIÓN, NUDO Y DESENLACE.\n\n**¡JUGUEMOS!**",
   "options": {
     "microcuento": {
-      "title": "",
+      "title": "Microcuento",
       "intro": [],
       "nudo": [],
       "desenlace": null
     },
     "microrelato": {
-      "title": "",
+      "title": "Microrelato",
       "intro": [],
       "nudo": [],
       "desenlace": null
     },
     "cuento": {
-      "title": "",
+      "title": "Cuento",
       "intro": [],
       "nudo": [],
       "desenlace": []
     },
     "novela": {
-      "title": "",
+      "title": "Novel",
       "intro": [],
       "nudo": [],
       "desenlace": []
