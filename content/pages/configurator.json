@@ -5,6 +5,7 @@
   "options": {
     "microcuento": {
       "title": "Microcuento",
+      "image": "/uploads/lym-illustracion_microrelato.svg",
       "intro": [
         {
           "title": "Pascalles",
@@ -57,6 +58,7 @@
     },
     "microrelato": {
       "title": "Microrelato",
+      "image": "/uploads/lym-illustracion_relato.svg",
       "intro": [
         {
           "title": "Pasacalles",
@@ -114,6 +116,7 @@
     },
     "cuento": {
       "title": "Cuento",
+      "image": "/uploads/lym-illustracion_cuento.svg",
       "intro": [
         {
           "title": "Pasacalles",
@@ -198,6 +201,7 @@
     },
     "novela": {
       "title": "Novela",
+      "image": "/uploads/lym-illustracion_novela.svg",
       "intro": [
         {
           "title": "Pasacalles",
