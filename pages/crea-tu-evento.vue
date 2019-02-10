@@ -367,7 +367,10 @@ export default {
 
       // eslint-disable-next-line
       console.log(subtotal, comision, total);
-      return Math.round(total);
+      return Math.round(total).toLocaleString("es-ES", {
+        style: "currency",
+        currency: "EUR"
+      });
     }
   },
   created() {
