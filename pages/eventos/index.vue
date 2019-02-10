@@ -3,61 +3,76 @@
     <header>
       <b-container>
         <h1>
-          {{$cms.pages.events.header}}
+          {{page.header}}
         </h1>
 
-        <Markdown :content="$cms.pages.events.intro" class="lead" />
+        <Markdown :content="page.intro" class="lead" />
       </b-container>
     </header>
 
     <main>
-      <b-container>
-        <pre>{{$cms.portfolio._keys}}</pre>
-        <EventList :list="$cms.portfolio" />
-      </b-container>
+      <section class="container">
+        <div class="row">
+
+          <div
+            v-for="event in $cms.portfolio"
+            :key="event.id"
+            class="col-md-6 col-lg-4"
+          >
+
+            <nuxt-link
+              :to="{ name: 'eventos-slug', params: { slug: event.slug, id: event.id, next: event.next } }"
+              class="link"
+            >
+
+              <figure class="event-list-item">
+
+                <b-img
+                  :src="event.thumbnail && require(`~/assets/${event.thumbnail.slice(1)}`)"
+                  :alt="event.title"
+                  :blank="!event.thumbnail"
+                  :blank-color="!event.thumbnail ? '#e9e9e9' : null"
+                  width="400"
+                  height="267"
+                  class="mb-2"
+                  fluid
+                />
+
+                <figcaption class="mb-2">
+                  {{event.title}}, {{event.location}}, {{event.date}}.
+                </figcaption>
+
+              </figure>
+
+            </nuxt-link>
+
+          </div>
+        </div>
+      </section>
     </main>
   </div>
 </template>
 
 <script>
 import Markdown from "@/components/Markdown.vue";
-import EventList from "@/components/EventList.vue";
 
 export default {
   name: "EventsPage",
   layout: "page",
   components: {
-    Markdown,
-    EventList
+    Markdown
+  },
+  computed: {
+    page() {
+      return this.$cms.pages.events;
+    }
   }
-  // ,
-  // computed: {
-  //   portfolio() {
-  //     const uuids = Object.keys(this.$cms.portfolio);
-  //     const sorted = uuids.sort((a, b) => {
-  //       a = a.replace(/^(.{8})-(.{4})-(.{4})/, "$3-$2-$1");
-  //       b = b.replace(/^(.{8})-(.{4})-(.{4})/, "$3-$2-$1");
-  //       return a > b ? -1 : a < b ? 1 : 0;
-  //     });
-  //
-  //     const _portfolio = sorted.map(uuid => this.$cms.portfolio[uuid]);
-  //
-  //     return _portfolio.map((item, index, all) => {
-  //       const last = all.length - 1;
-  //
-  //       if (index < last) {
-  //         // eslint-disable-next-line
-  //         console.log(item);
-  //         const idx = index + 1;
-  //         item.next = all[idx].slug;
-  //       }
-  //
-  //       return item;
-  //     });
-  //   }
-  // }
 };
 </script>
 
-<style lang="css">
+<style lang="scss" scoped>
+.link {
+  text-decoration: none;
+  color: inherit;
+}
 </style>

@@ -3,6 +3,8 @@
   "title": "La noche mágica",
   "location": "San Sebastián de los Reyes",
   "date": "Junio 2016",
+  "image": "/uploads/lanochemagica-destacada.jpg",
+  "thumbnail": "/uploads/lanochemagica-thumbnail.jpg",
   "description": "Cuando el Ayuntamiento de San Sebastián de los Reyes nos pidió que diseñaremos una propuesta para el comienzo de la temporada cultural de verano en familia lo tuvimos claro. \n\nLA NOCHE MÁGICA sería inolvidable.\n\n**Si en algo somos especialmente buenas, es en crear entornos mágicos y especiales para mayores y pequeños.**\n\nIluminamos con más de 50.000 velas y farolillos los espacios de tránsito en un terreno de más de 120.000 metros cuadrados. Creamos pequeños espacios donde la luz y la decoración recreaban rincones especiales donde realizar talleres, dibujar, jugar, escuchar música... pedir deseos.\n\nConciertos, espectáculos de fuego, batucadas, en LA NOCHE MÁGICA, todos, especialmente nosotras nos adentramos en un sueño.",
   "miscellaneus": [
     "LA NOCHE MÁGICA",
@@ -10,6 +12,25 @@
     "San Sebastián de los Reyes",
     "10 de Junio 2016"
   ],
-  "gallery": [],
+  "gallery": [
+    "/uploads/lanochemagica-01.jpg",
+    "/uploads/lanochemagica-02.jpg",
+    "/uploads/lanochemagica-03.jpg",
+    "/uploads/lanochemagica-04.jpg",
+    "/uploads/lanochemagica-05.jpg",
+    "/uploads/lanochemagica-06.jpg",
+    "/uploads/lanochemagica-07.jpg",
+    "/uploads/lanochemagica-08.jpg",
+    "/uploads/lanochemagica-09.jpg",
+    "/uploads/lanochemagica-10.jpg",
+    "/uploads/lanochemagica-11.jpg",
+    "/uploads/lanochemagica-12.jpg",
+    "/uploads/lanochemagica-13.jpg",
+    "/uploads/lanochemagica-14.jpg",
+    "/uploads/lanochemagica-15.jpg",
+    "/uploads/lanochemagica-16.jpg",
+    "/uploads/lanochemagica-17.jpg",
+    "/uploads/lanochemagica-18.jpg"
+  ],
   "id": "ec293210-258d-11e9-8001-69aefc5d4d22"
 }

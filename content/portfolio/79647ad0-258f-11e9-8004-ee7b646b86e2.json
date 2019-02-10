@@ -1,35 +1,28 @@
 {
-  "slug": "navidades-en-la-vina-2016",
-  "date": "Navidades 2016",
-  "gallery": [
-    "/uploads/la-vina-2016-01.jpg",
-    "/uploads/la-vina-2016-02.jpg",
-    "/uploads/la-vina-2016-03.jpg",
-    "/uploads/la-vina-2016-04.jpg",
-    "/uploads/la-vina-2016-05.jpg",
-    "/uploads/la-vina-2016-06.jpg",
-    "/uploads/la-vina-2016-07.jpg",
-    "/uploads/la-vina-2016-08.jpg",
-    "/uploads/la-vina-2016-09.jpg",
-    "/uploads/la-vina-2016-10.jpg",
-    "/uploads/la-vina-2016-11.jpg",
-    "/uploads/la-vina-2016-12.jpg",
-    "/uploads/la-vina-2016-13.jpg",
-    "/uploads/la-vina-2016-14.jpg",
-    "/uploads/la-vina-2016-15.jpg",
-    "/uploads/la-vina-2016-16.jpg",
-    "/uploads/la-vina-2016-17.jpg",
-    "/uploads/la-vina-2016-18.jpg"
-  ],
-  "location": "San Sebastián de los Reyes",
+  "slug": "navidades-centro-comercial-la-vina",
   "title": "Navidades en La Viña 2016",
-  "id": "79647ad0-258f-11e9-8004-ee7b646b86e2",
-  "image": "/uploads/la-vina-2016-Destacada.jpg",
-  "description": "El \"Centro Comercial La Viña\" Repitiendo la experiencia del año anterior.\n\nLa compañía de percusión Tabarilea, realizó tres pases con los que era imposible no bailar. \n\nSe encargaron de sacar una sonrisa a todos los que pasaban para realizar sus compras navideñas. Animando a la gente a entrar guiados por la música y el ritmo. \n\nTambién impartieron un fantástico taller de percusión para niñas y niños. \n\nEl viernes, 5 de enero. Siendo la mañana de Reyes. La compañía FAN FIN FON realizó un espectáculo en el que cada puesto y comercio era un buen lugar para hacer un show participativo.\n\nUn espectáculo sensible, muy divertido con notas de circo clásico e instrumentos musicales.\n\nLos pasillos del centro comercial se convirtieron en un escenario improvisado y nos hicieron detener el tiempo para admirar un divertido espectáculo de payasos tradicionales, con malabares, equilibrio ¡Y mucha clase! Preparando la sonrisa para un día mágico.",
+  "location": "Madrid",
+  "date": "Navidades 2016",
+  "image": "/uploads/lavina2017-destacada.jpg",
+  "thumbnail": "/uploads/lavina2017-thumbnail.jpg",
+  "description": "En el \"Centro Comercial La Viña\". Llenamos los pasillos de color y ritmo. \n\nLa compañía de percusión Tabarilea, un grupo de mujeres percusionistas, realizaron tres pases con los que no bailar era imposible. Se encargaron de sacar una sonrisa a todos los que pasaban para realizar sus compras navideñas. También de atraer a posibles clientes desde la calle y así disfrutar del ambiente festivo navideño dentro del centro comercial. \n\nTabarilea Percusión impartió un fantástico taller para niñas y niños. Y un pintacaras para todos los públicos con sus personajes favoritos. Atracción e inspiración para todas.\n\nLa mañana de Reyes. Lobo y Mono impartió un taller de estampación para crear papel de regalo y tarjetas navideñas con pompas de jabón. Una propuesta en la que los mayores disfrutaron tanto como los pequeños.\n\nLa Cia Planeta Gudini, improvisó un escenario en los pasillos para que todos se impregnaran de la magia antes de la Cabalgata de Reyes. Un loco espectáculo que llenó de pompas de jabón \"La Viña\" \n\n**Nos volcamos para que el ambiente creado en el centro comercial sea recordado por todos los asistentes. Si nos das tiempo y espacio, te damos momentos inolvidables. Crearemos una propuesta diferenciadora y atractiva.**",
   "miscellaneus": [
-    "CC.CC LA VIÑA. San Sebastián de los reyes NAVIDADES",
-    "Dinamización",
-    "Centro Comercial la Viña",
+    "CENTRO COMERCIAL LA VIÑA",
+    "NAVIDADES",
+    "Dinamización Centro Comercial la Viña",
     "Navidades 2016"
-  ]
+  ],
+  "gallery": [
+    "/uploads/lavina2017-01.jpg",
+    "/uploads/lavina2017-02.jpg",
+    "/uploads/lavina2017-03.jpg",
+    "/uploads/lavina2017-04.jpg",
+    "/uploads/lavina2017-05.jpg",
+    "/uploads/lavina2017-06.jpg",
+    "/uploads/lavina2017-07.jpg",
+    "/uploads/lavina2017-08.jpg",
+    "/uploads/lavina2017-09.jpg",
+    "/uploads/lavina2017-10.jpg"
+  ],
+  "id": "79647ad0-258f-11e9-8004-ee7b646b86e2"
 }

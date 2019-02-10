@@ -4,13 +4,12 @@
   >
     <figure class="event-list-item">
       <b-img
-        :src="event.image && require(`~/assets/${event.image.slice(1)}`)"
+        :src="event.thumbnail && require(`~/assets/${event.thumbnail.slice(1)}`)"
         :alt="event.title"
-        :blank="!event.image"
-        :width="!event.image ? 350 : null"
-        :height="!event.image ? 260 : null"
-        :rounded="!event.image"
-        :blank-color="!event.image ? '#e9e9e9' : null"
+        :blank="!event.thumbnail"
+        :blank-color="!event.thumbnail ? '#e9e9e9' : null"
+        width="400"
+        height="267"
         class="mb-2"
         fluid
       />
