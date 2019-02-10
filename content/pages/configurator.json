@@ -31,12 +31,12 @@
       "nudo": [
         {
           "title": "Concierto",
-          "price": "750",
+          "price": "1500  ",
           "id": "3fa5ecb0-2ca7-11e9-8001-cde0569cd2d2"
         },
         {
           "title": "Actuación",
-          "price": "550",
+          "price": "1000",
           "id": "521c4e40-2caa-11e9-8016-17fd10aed92b"
         },
         {
@@ -46,7 +46,7 @@
         },
         {
           "title": "Circo",
-          "price": "650",
+          "price": "1000",
           "id": "6f442470-2caa-11e9-8018-b4029112c5cc"
         },
         {
