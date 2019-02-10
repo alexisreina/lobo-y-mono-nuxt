@@ -351,16 +351,23 @@ export default {
       }, {});
     },
     budget() {
-      return Object.keys(this.selected)
-        .reduce((total, item) => {
-          if (["intro", "nudo", "desenlace"].indexOf(item) !== -1) {
-            this.selected[item].forEach(item => total.push(item.price));
+      const subtotal = Object.keys(this.selected)
+        .reduce((prices, key) => {
+          if (["intro", "nudo", "desenlace"].indexOf(key) !== -1) {
+            this.selected[key].forEach(item => prices.push(Number(item.price)));
           }
-          return total;
+          return prices;
         }, [])
         .reduce((amount, next) => {
-          return Number(next) + amount;
+          return next + amount;
         }, 0);
+
+      const comision = (subtotal * this.selected.comision) / 100;
+      const total = subtotal + comision;
+
+      // eslint-disable-next-line
+      console.log(subtotal, comision, total);
+      return Math.round(total);
     }
   },
   created() {

@@ -255,20 +255,21 @@ collections:
                 widget: object
                 fields:
                   - { label: Título, name: title, widget: string }
+                  - { label: Comisión, name: comision, widget: number }
                   - { label: Icono, name: image, widget: image }
                   - label: Introducción
                     name: intro
                     widget: list
                     fields:
                       - { label: Nombre, name: title, widget: string }
-                      - { label: Precio, name: price, widget: string }
+                      - { label: Precio, name: price, widget: number }
                       - { label: id, name: id, widget: uuid }
                   - label: Nudo
                     name: nudo
                     widget: list
                     fields:
                       - { label: Nombre, name: title, widget: string }
-                      - { label: Precio, name: price, widget: string }
+                      - { label: Precio, name: price, widget: number }
                       - { label: id, name: id, widget: uuid }
                   - { label: Desenlace, name: desenlace, widget: hidden }
               - label: Micro Relato
@@ -276,20 +277,21 @@ collections:
                 widget: object
                 fields:
                   - { label: Título, name: title, widget: string }
+                  - { label: Comisión, name: comision, widget: number }
                   - { label: Icono, name: image, widget: image }
                   - label: Introducción
                     name: intro
                     widget: list
                     fields:
                       - { label: Nombre, name: title, widget: string }
-                      - { label: Precio, name: price, widget: string }
+                      - { label: Precio, name: price, widget: number }
                       - { label: id, name: id, widget: uuid }
                   - label: Nudo
                     name: nudo
                     widget: list
                     fields:
                       - { label: Nombre, name: title, widget: string }
-                      - { label: Precio, name: price, widget: string }
+                      - { label: Precio, name: price, widget: number }
                       - { label: id, name: id, widget: uuid }
                   - { label: Desenlace, name: desenlace, widget: hidden }
               - label: Cuento
@@ -297,54 +299,56 @@ collections:
                 widget: object
                 fields:
                   - { label: Título, name: title, widget: string }
+                  - { label: Comisión, name: comision, widget: number }
                   - { label: Icono, name: image, widget: image }
                   - label: Introducción
                     name: intro
                     widget: list
                     fields:
                       - { label: Nombre, name: title, widget: string }
-                      - { label: Precio, name: price, widget: string }
+                      - { label: Precio, name: price, widget: number }
                       - { label: id, name: id, widget: uuid }
                   - label: Nudo
                     name: nudo
                     widget: list
                     fields:
                       - { label: Nombre, name: title, widget: string }
-                      - { label: Precio, name: price, widget: string }
+                      - { label: Precio, name: price, widget: number }
                       - { label: id, name: id, widget: uuid }
                   - label: Desenlace
                     name: desenlace
                     widget: list
                     fields:
                       - { label: Nombre, name: title, widget: string }
-                      - { label: Precio, name: price, widget: string }
+                      - { label: Precio, name: price, widget: number }
                       - { label: id, name: id, widget: uuid }
               - label: Novela
                 name: novela
                 widget: object
                 fields:
                   - { label: Título, name: title, widget: string }
+                  - { label: Comisión, name: comision, widget: number }
                   - { label: Icono, name: image, widget: image }
                   - label: Introducción
                     name: intro
                     widget: list
                     fields:
                       - { label: Nombre, name: title, widget: string }
-                      - { label: Precio, name: price, widget: string }
+                      - { label: Precio, name: price, widget: number }
                       - { label: id, name: id, widget: uuid }
                   - label: Nudo
                     name: nudo
                     widget: list
                     fields:
                       - { label: Nombre, name: title, widget: string }
-                      - { label: Precio, name: price, widget: string }
+                      - { label: Precio, name: price, widget: number }
                       - { label: id, name: id, widget: uuid }
                   - label: Desenlace
                     name: desenlace
                     widget: list
                     fields:
                       - { label: Nombre, name: title, widget: string }
-                      - { label: Precio, name: price, widget: string }
+                      - { label: Precio, name: price, widget: number }
                       - { label: id, name: id, widget: uuid }
       - label: Eventos
         name: events
