@@ -21,50 +21,60 @@
         <div class="px-xl-5">
           <div class="row py-3 mb-lg-5">
             <div
-              v-for="(step, idx) in [1,2,3,4]"
-              :key="idx"
+              v-for="step in steps"
+              :key="step.id"
               class="col"
             >
 
               <div
-                class="mx-auto rounded-circle d-flex justify-content-center align-items-center"
-                :class="step === 1 ? 'bg-dark text-white' : 'bg-light'"
+                class="mx-auto rounded-circle d-flex justify-content-center align-items-center mb-3"
+                :class="step.id == currentStep.id ? 'bg-dark text-white' : 'bg-light'"
                 style="width:75px;height:75px;"
               >
-                <span class="text-bold lead">
-                  {{step}}
+                <span class="text-bold lead" style="font-size:30px">
+                  {{step.id}}
+                </span>
+
+              </div>
+
+              <div class="text-center">
+                <span>
+                  {{step.label}}
                 </span>
               </div>
+
             </div>
           </div>
 
-          <div class="text-center py-3">
+          <div v-if="currentStep.id == 1" class="text-center py-3">
             <h2 class="mb-md-3">
               Forma literaria
             </h2>
 
-            <p class="mb-lg-5">
+            <p class="">
               Elige el tipo de evento según la duración o complejidad que necesites.
             </p>
 
             <div class="row py-5">
               <div
-                v-for="(item, idx) in [1,2,3,4]"
-                :key="idx"
+                v-for="(option, key) in page.options"
+                :key="key"
                 class="col"
               >
 
                 <div class="text-center">
 
-                  <div
-                    class="rounded-circle bg-light mx-auto mb-4"
-                    style="width:120px;height:120px;"
-                  />
+                  <img
+                    :src="require(`~/assets/${option.image.slice(1)}`)"
+                    :alt="option.title"
+                    class="img-fluid"
+                  >
 
                   <LmButton
-                    variant="primary"
+                    :variant="btnVariant(key)"
+                    @click.native="selectEventType(key)"
                   >
-                    label {{item}}
+                    {{option.title}}
                   </LmButton>
 
                 </div>
@@ -74,32 +84,321 @@
             <div class="text-right py-3">
               <LmButton
                 variant="primary"
+                @click.native="nextStep()"
               >
                 Siguiente
               </LmButton>
             </div>
           </div>
+
+          <div v-if="currentStep.id == 2" class="py-3">
+            <h2 class="mb-md-3">
+              Argumento
+            </h2>
+
+            <p>
+              Es momento de elegir el típo de espectáculo y actividades que contarán a tu público el fin de tu evento.
+            </p>
+
+            <div class="py-5">
+
+              <div class="mb-3">
+                <h4>
+                  Planteamiento
+                </h4>
+
+                <b-button
+                  v-for="intro in currentEvent.intro"
+                  :key="intro.id"
+                  :pressed.sync="intro.state"
+                  variant="outline-primary"
+                  class="mr-1 mb1"
+                >
+                  {{intro.title}}
+                </b-button>
+              </div>
+
+              <div class="mb-3">
+                <h4>
+                  Nudo
+                </h4>
+
+                <b-button
+                  v-for="nudo in currentEvent.nudo"
+                  :key="nudo.id"
+                  :pressed.sync="nudo.state"
+                  variant="outline-info"
+                  class="mr-1 mb1"
+                >
+                  {{nudo.title}}
+                </b-button>
+              </div>
+
+              <div v-if="currentEvent.desenlace" class="mb-3">
+                <h4>
+                  Desenlace
+                </h4>
+
+                <b-button
+                  v-for="desenlace in currentEvent.desenlace"
+                  :key="desenlace.id"
+                  :pressed.sync="desenlace.state"
+                  variant="outline-warning"
+                  class="mr-1 mb1"
+                >
+                  {{desenlace.title}}
+                </b-button>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col py-3">
+                <LmButton
+                  variant="primary"
+                  @click.native="prevStep"
+                >
+                  Anterior
+                </LmButton>
+              </div>
+
+              <div class="col text-right py-3">
+                <LmButton
+                  variant="primary"
+                  @click.native="nextStep"
+                >
+                  Siguiente
+                </LmButton>
+              </div>
+            </div>
+
+          </div>
+
+          <div v-if="currentStep.id == 3" class="text-center py-3">
+            <h2 class="mb-md-3">
+              Tu Evento
+            </h2>
+
+            <img
+              :src="require(`~/assets/${selected.image.slice(1)}`)"
+              :alt="selected.title"
+              class="img-fluid"
+            >
+
+            <span class="d-block mb-4">
+              {{selected.title}}
+            </span>
+
+            <div class="row">
+              <div v-if="selected.intro" class="col">
+                <h3>
+                  Planteamiento
+                </h3>
+
+                <div
+                  v-for="intro in selected.intro"
+                  :key="intro.id"
+                  class="mb-1"
+                >
+                  <b-button
+                    variant="primary"
+                  >
+                    {{intro.title}}
+                  </b-button>
+                </div>
+
+              </div>
+
+              <div v-if="selected.nudo" class="col">
+                <h3>
+                  Nudo
+                </h3>
+
+                <div
+                  v-for="nudo in selected.nudo"
+                  :key="nudo.id"
+                  class="mb-1"
+                >
+                  <b-button
+                    variant="info"
+                  >
+                    {{nudo.title}}
+                  </b-button>
+                </div>
+
+              </div>
+
+              <div v-if="selected.desenlace" class="col">
+                <h3>
+                  Desenlace
+                </h3>
+
+                <div
+                  v-for="desenlace in selected.desenlace"
+                  :key="desenlace.id"
+                  class="mb-1"
+                >
+                  <b-button
+                    variant="warning"
+                  >
+                    {{desenlace.title}}
+                  </b-button>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col text-left py-3">
+                <LmButton
+                  variant="primary"
+                  @click.native="prevStep"
+                >
+                  Anterior
+                </LmButton>
+              </div>
+
+              <div class="col text-right py-3">
+                <LmButton
+                  variant="primary"
+                  @click.native="nextStep"
+                >
+                  Ver presupuesto
+                </LmButton>
+              </div>
+            </div>
+          </div>
+
+          <div v-if="currentStep.id == 4" class="text-center py-3">
+            <h2 class="mb-md-3">
+              Tu presupuesto
+            </h2>
+
+            <p class="display-3">
+              {{budget}}
+            </p>
+
+            <p>
+              Este presupuesto es una simple estimación abierta, no contiende IVA ni otros impuestos. Escríbenos para saber más.
+            </p>
+
+            <p>
+              Envíanos una consulta, tu proupesta, si necesitas alguna variación...
+            </p>
+
+            <ContactForm />
+
+          </div>
+
         </div>
       </div>
     </section>
   </div>
-
 </template>
 
 <script>
 import Markdown from "@/components/Markdown.vue";
 import LmButton from "@/components/LmButton.vue";
+import ContactForm from "@/components/ContactForm.vue";
 
 export default {
   name: "ConfiguratorPage",
   layout: "page",
   components: {
     Markdown,
-    LmButton
+    LmButton,
+    ContactForm
+  },
+  data() {
+    return {
+      currentEvent: null,
+      currentStep: null,
+      steps: [
+        {
+          id: "1",
+          name: "type",
+          label: "Tipo de evento"
+        },
+        {
+          id: "2",
+          name: "content",
+          label: "Contenido"
+        },
+        {
+          id: "3",
+          name: "result",
+          label: "Resultado de tu elección"
+        },
+        {
+          id: "4",
+          name: "budget",
+          label: "Obtén tu presupuesto"
+        }
+      ]
+    };
   },
   computed: {
     page() {
       return this.$cms.pages.configurator;
+    },
+    selected() {
+      return Object.keys(this.currentEvent).reduce((all, item) => {
+        if (["intro", "nudo", "desenlace"].indexOf(item) !== -1) {
+          all[item] = this.currentEvent[item].filter(option => option.state);
+        } else {
+          all[item] = this.currentEvent[item];
+        }
+        return all;
+      }, {});
+    },
+    budget() {
+      return Object.keys(this.selected)
+        .reduce((total, item) => {
+          if (["intro", "nudo", "desenlace"].indexOf(item) !== -1) {
+            this.selected[item].forEach(item => total.push(item.price));
+          }
+          return total;
+        }, [])
+        .reduce((amount, next) => {
+          return Number(next) + amount;
+        }, 0);
+    }
+  },
+  created() {
+    this.currentStep = this.steps[0];
+  },
+  methods: {
+    btnVariant(option) {
+      const variants = {
+        microcuento: "info",
+        microrelato: "success",
+        cuento: "warning",
+        novela: "danger"
+      };
+      return variants[option];
+    },
+    selectEventType(key) {
+      const selected = this.page.options[key];
+      this.currentEvent = this.addOptionState(selected);
+    },
+    addOptionState(option) {
+      return Object.keys(option).reduce((all, key) => {
+        if (["intro", "nudo", "desenlace"].indexOf(key) !== -1) {
+          all[key] = option[key].map(opt =>
+            Object.assign({ state: false }, opt)
+          );
+        } else {
+          all[key] = option[key];
+        }
+        return all;
+      }, {});
+    },
+    nextStep() {
+      const idx = this.steps.indexOf(this.currentStep);
+      this.currentStep = this.steps[idx + 1];
+    },
+    prevStep() {
+      const idx = this.steps.indexOf(this.currentStep);
+      this.currentStep = this.steps[idx - 1];
     }
   }
 };
