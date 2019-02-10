@@ -52,7 +52,7 @@
             </h2>
 
             <p class="">
-              Elige el tipo de evento según la duración o complejidad que necesites.
+              Elige el tipo de evento según la duración o complejidad que necesites.
             </p>
 
             <div class="row py-5">
@@ -97,7 +97,7 @@
             </h2>
 
             <p>
-              Es momento de elegir el típo de espectáculo y actividades que contarán a tu público el fin de tu evento.
+              Es momento de elegir el tipo de espectáculo y actividades que contarán a tu público el fin de tu evento.
             </p>
 
             <div class="py-5">
@@ -278,11 +278,11 @@
             </p>
 
             <p>
-              Este presupuesto es una simple estimación abierta, no contiende IVA ni otros impuestos. Escríbenos para saber más.
+              Este presupuesto es una simple estimación abierta, no contiende IVA ni otros impuestos. Escríbenos para saber más.
             </p>
 
             <p>
-              Envíanos una consulta, tu proupesta, si necesitas alguna variación...
+              Envíanos una consulta, tu proupesta, si necesitas alguna variación...
             </p>
 
             <ContactForm />

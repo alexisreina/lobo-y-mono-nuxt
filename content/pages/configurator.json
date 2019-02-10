@@ -1,7 +1,7 @@
 {
   "id": "configurator",
   "title": "Crea tu evento con nuestro configurador",
-  "intro": "Con nuestro configurador podrás hacerte una idea aproximada de tu presupuesto y crear tu evento a medida.\n\nPuedes elegir entre pasacalles, conciertos, actuaciones, circo, teatro, cuentacuentos, pintacaras, batucadas, sesiones de Dj's... a modo de INTRODUCCIÓN, NUDO Y DESENLACE.\n\n**¡JUGUEMOS!**",
+  "intro": "Con nuestro configurador podrás hacerte una idea aproximada de tu presupuesto y crear tu evento a medida.\n\nPuedes elegir entre pasacalles, conciertos, actuaciones, circo, teatro, cuentacuentos, pintacaras, batucadas, sesiones de Dj's... a modo de INTRDUCCIÓN, NUDO Y DESENLACE.\n\n**¡JUGUEMOS!**",
   "options": {
     "microcuento": {
       "title": "Microcuento",
