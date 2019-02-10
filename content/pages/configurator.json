@@ -99,7 +99,7 @@
         },
         {
           "title": "Circo",
-          "price": "1000",
+          "price": "1500",
           "id": "bbac6250-2caa-11e9-801c-7d9e7c5eb318"
         },
         {
@@ -142,7 +142,7 @@
       "nudo": [
         {
           "title": "Concierto",
-          "price": "2500",
+          "price": "3000",
           "id": "62936c20-2ca7-11e9-8005-ba4591437b22"
         },
         {
@@ -188,13 +188,8 @@
           "id": "1aa1f710-2cac-11e9-802e-7869a0867572"
         },
         {
-          "title": "Globotá",
-          "price": "500",
-          "id": "28d44db0-2cac-11e9-802f-18303adb6db2"
-        },
-        {
           "title": "Cañones de confetti",
-          "price": "1000",
+          "price": "1500",
           "id": "34b73610-2cac-11e9-8030-1e912510aee7"
         }
       ]
@@ -232,7 +227,7 @@
         },
         {
           "title": "Actuación",
-          "price": "1800",
+          "price": "5000",
           "id": "85596990-2cab-11e9-8024-3ebdba372336"
         },
         {
@@ -273,13 +268,8 @@
           "id": "e5c82640-2cab-11e9-802a-27a33dddc61c"
         },
         {
-          "title": "Globotá",
-          "price": "500",
-          "id": "f3c8be80-2cab-11e9-802b-66306f53658b"
-        },
-        {
           "title": "Cañones de confetti",
-          "price": "1000",
+          "price": "1500",
           "id": "ff637a50-2cab-11e9-802c-5805fff386ce"
         }
       ]
