@@ -9,9 +9,11 @@
 
       <!-- social media -->
       <AppFooterSocial
+        v-if="false"
         :rrss="rrss"
         class="py-3 py-lg-5 d-flex flex-row justify-content-center"
       />
+
       <!-- /social media -->
 
       <hr class="hr mb-4 my-md-5">
