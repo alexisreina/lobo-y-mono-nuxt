@@ -383,8 +383,15 @@ collections:
                 name: button
                 widget: object
                 fields:
-                  - { label: Texto, name: label, widget: string }
-                  - { label: Url, name: link, widget: string, default: "/" }
+                  - label: Activar
+                    name: active
+                    widget: boolean
+                    default: false
+                  - label: Texto
+                    name: label
+                    widget: string
+                    required: false
+                  - { label: Url, name: link, widget: string, required: false }
       - label: Contacto
         name: contact
         file: "content/pages/contact.json"
