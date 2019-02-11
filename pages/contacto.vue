@@ -1,19 +1,21 @@
 <template lang="html">
   <div class="contact">
-    <b-container class="py-3 pt-md-4">
-      <b-row>
-        <b-col lg="10" offset-lg="1">
-          <h1 class="text-white">
+    <div class="container py-3 pt-md-4">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <h1 class="h2 text-white mb-3">
             {{$cms.pages.contact.header}}
           </h1>
 
-          <Markdown class="text-white" :content="$cms.pages.contact.intro" />
-        </b-col>
-      </b-row>
+          <Markdown class="text-white mb-3 mb-md-5" :content="$cms.pages.contact.intro" />
 
-      <ContactForm />
+          <div class="py-3 py-md-5">
+            <ContactForm />
+          </div>
 
-    </b-container>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
