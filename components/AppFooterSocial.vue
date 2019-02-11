@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <b-link
+    <a
       v-for="(social, key) in rrss"
       :key="key"
       :href="social.url"
@@ -9,7 +9,7 @@
       target="_blank"
     >
 
-      <b-img
+      <img
         v-if="social.icon"
         :src="require(`~/assets/${social.icon.slice(1)}`)"
         class="mb-1 mb-sm-0 mr-sm-2"
@@ -39,7 +39,7 @@
       <span :class="{ 'text-capitalize': !social.label }">
         {{social.label || key}}
       </span>
-    </b-link>
+    </a>
   </div>
 </template>
 

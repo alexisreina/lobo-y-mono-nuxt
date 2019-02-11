@@ -1,6 +1,6 @@
 <template lang="html">
   <footer class="text-white footer pb-5">
-    <b-container class="py-3 py-md-5">
+    <div class="container py-3 py-md-5">
       <!-- partners -->
       <div v-if="$cms.partners">
         <Partners :partners="$cms.partners" />
@@ -13,23 +13,18 @@
         :rrss="rrss"
         class="py-3 py-lg-5 d-flex flex-row justify-content-center"
       />
-
       <!-- /social media -->
 
       <hr class="hr mb-4 my-md-5">
 
       <!-- footer navigation -->
-      <b-row>
-        <b-col
-          lg="10"
-          offset-lg="1"
-        >
-          <b-row>
-            <b-col
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <div class="row">
+            <div
               v-for="menu in menus"
               :key="menu.id"
-              md="6"
-              lg="3"
+              class="col-md-6 col-lg-3"
             >
               <h4 class="h5 mb-md-3 text-uppercase">
                 {{menu.title}}
@@ -41,29 +36,29 @@
                   :key="item.id"
                   class="footer__list-item mb-2 mb-md-3"
                 >
-                  <b-link
+                  <a
                     v-if="item.external"
                     :href="item.url"
                     class="footer__list-link"
                   >
                     {{item.label}}
-                  </b-link>
+                  </a>
 
-                  <b-link
+                  <nuxt-link
                     v-else
                     :to="item.url"
                     class="footer__list-link"
                   >
                     {{item.label}}
-                  </b-link>
+                  </nuxt-link>
                 </li>
               </ul>
-            </b-col>
-          </b-row>
-        </b-col>
-      </b-row>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- footer navigation -->
-    </b-container>
+    </div>
   </footer>
 </template>
 
@@ -90,7 +85,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .footer {
   background-color: $black;
   background-image: url("~assets/svg/lym-bg-footer-izq.svg"),
