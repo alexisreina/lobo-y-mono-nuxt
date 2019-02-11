@@ -61,6 +61,13 @@ module.exports = {
   ],
 
   /*
+  ** Generate dynamic routes
+  */
+  generate: {
+    routes: ["/eventos/fiestas-de-san-cayetano"]
+  },
+
+  /*
   ** Build configuration
   */
   build: {

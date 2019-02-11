@@ -16,7 +16,7 @@
         width="32"
         height="32"
         rounded="circle"
-      />
+      >
 
       <span
         v-else

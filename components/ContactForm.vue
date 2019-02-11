@@ -1,5 +1,5 @@
 <template lang="html">
-  <form netlify name="Contacto" id="form_contact">
+  <form id="form_contact" netlify name="Contacto">
     <div class="row">
       <div class="col-lg-4">
         <div class="form-group">
