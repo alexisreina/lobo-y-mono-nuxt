@@ -8,11 +8,11 @@
             offset-xl="2"
           >
             <h1>
-              {{$cms.pages.collaborators.header}}
+              {{page.header}}
             </h1>
 
             <p>
-              {{$cms.pages.collaborators.intro}}
+              {{page.intro}}
             </p>
           </b-col>
         </b-row>
@@ -27,24 +27,24 @@
       </section>
 
       <b-container class="py-5 text-md-center">
-        <h2>
-          {{$cms.pages.collaborators.cta.title}}
+        <h2 class="h4">
+          {{page.cta.title}}
         </h2>
 
         <div class="mx-auto" style="max-width:45rem">
           <Markdown
-            :content="$cms.pages.collaborators.cta.description"
+            :content="page.cta.description"
             class="mb-5"
           />
         </div>
 
-        <div v-if="$cms.pages.collaborators.cta.button" class="text-center">
+        <div v-if="page.cta.button" class="text-center">
           <LmButton
-            :to="$cms.pages.collaborators.cta.button.link"
+            :to="page.cta.button.link"
             variant="primary"
             size="lg"
           >
-            {{$cms.pages.collaborators.cta.button.label}}
+            {{page.cta.button.label}}
           </LmButton>
         </div>
       </b-container>
@@ -65,6 +65,11 @@ export default {
     ArtistList,
     Markdown,
     LmButton
+  },
+  computed: {
+    page() {
+      return this.$cms.pages.collaborators;
+    }
   }
 };
 </script>

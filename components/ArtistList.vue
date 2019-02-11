@@ -1,14 +1,13 @@
 <template lang="html">
-  <b-row>
-    <b-col
+  <div class="row">
+    <div
       v-for="artist in list"
       :key="artist.id"
-      md="6"
-      lg="4"
+      class="col-md-6 col-lg-4"
     >
       <ArtistListItem :artist="artist" />
-    </b-col>
-  </b-row>
+    </div>
+  </div>
 </template>
 
 <script>
