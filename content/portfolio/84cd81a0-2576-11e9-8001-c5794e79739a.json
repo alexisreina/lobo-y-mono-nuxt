@@ -1,17 +1,7 @@
 {
   "slug": "mi-juguete-favorito",
-  "title": "Mi Juguete Favorito",
-  "location": "Impact Hub Madrid",
-  "date": "Junio 2013",
-  "image": "/uploads/mijuguetefavorito-destacada.jpg",
   "thumbnail": "/uploads/mijuguetefavorito-thumbnail.jpg",
-  "description": "Una exposición y evento que tenía como protagonista el mundo del libro, siguiendo la estela que con Libroscopia y Poderío habíamos desarrollado para HUB Madrid.\n\nEn él, se expusieron las ilustraciones originales, firma de libros y catering para los asistentes. Se creó un ambiente cálido de fantasía, en el que todos nos sentimos un poco niños gracias a este nuevo proyecto.\n\nEste evento supuso la presentación de Ofegabous, una nueva editorial, que nace con la idea de apoyar la edición de libros de artista creando publicaciones cuidadas de principio a fin.\n\nEvento realizado por José Antonio Vallejo, junto a María Jesús Vallejo en el que nos embarcamos en un viaje al mundo de los sueños a través del libro de ilustraciones infantiles \"Mi juguete favorito\".",
-  "miscellaneus": [
-    "IMPACT HUB MADRID. HUB ART",
-    "MI JUGUETE FAVORITO",
-    "Presentación del libro",
-    "16 Junio 2013."
-  ],
+  "date": "Junio 2013",
   "gallery": [
     "/uploads/mijuguetefavorito-01.jpg",
     "/uploads/mijuguetefavorito-02.jpg",
@@ -21,7 +11,18 @@
     "/uploads/mijuguetefavorito-07.jpg",
     "/uploads/mijuguetefavorito-08.jpg",
     "/uploads/mijuguetefavorito-09.jpg",
-    "/uploads/mijuguetefavorito-10.jpg"
+    "/uploads/mijuguetefavorito-10.jpg",
+    "/uploads/cartel2.jpg"
   ],
-  "id": "84cd81a0-2576-11e9-8001-c5794e79739a"
+  "location": "Impact Hub Madrid",
+  "title": "Mi Juguete Favorito",
+  "id": "84cd81a0-2576-11e9-8001-c5794e79739a",
+  "image": "/uploads/mijuguetefavorito-destacada.jpg",
+  "description": "Una exposición y evento que tenía como protagonista el mundo del libro, siguiendo la estela que con Libroscopia y Poderío habíamos desarrollado para HUB Madrid.\n\nEn él, se expusieron las ilustraciones originales, firma de libros y catering para los asistentes. Se creó un ambiente cálido de fantasía, en el que todos nos sentimos un poco niños gracias a este nuevo proyecto.\n\nEste evento supuso la presentación de Ofegabous, una nueva editorial, que nace con la idea de apoyar la edición de libros de artista creando publicaciones cuidadas de principio a fin.\n\nEvento realizado por José Antonio Vallejo, junto a María Jesús Vallejo en el que nos embarcamos en un viaje al mundo de los sueños a través del libro de ilustraciones infantiles \"Mi juguete favorito\".",
+  "miscellaneus": [
+    "IMPACT HUB MADRID. HUB ART",
+    "MI JUGUETE FAVORITO",
+    "Presentación del libro",
+    "16 Junio 2013."
+  ]
 }
