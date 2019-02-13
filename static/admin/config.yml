@@ -410,6 +410,7 @@ collections:
     fields:
       - { label: slug, name: slug, widget: string }
       - { label: Título, name: title, widget: string }
+      - { label: Miniatura, name: thumbnail, widget: image, required: false }
       - { label: Lugar, name: location, width: string }
       - { label: Fecha, name: date, widget: string }
       - { label: Imagen destacada, name: image, widget: image, required: false }
