@@ -1,17 +1,7 @@
 {
   "slug": "en-verano-la-cultura-en-la-calle",
-  "title": "En verano la cultura en la calle",
-  "location": "San Sebastián de los Reyes",
-  "date": "Verano 2016",
-  "image": "/uploads/verano2016-destacada.jpg",
   "thumbnail": "/uploads/verano2016-thumbnail.jpg",
-  "description": "Nuestra apuesta veraniega siempre tiene como marco el espacio urbano. Desde Lobo y Mono creemos que es necesario que la cultura llegue a todo a cada rincón y se aproxime a cada barrio.\n\nAprovechando que los días son más largos y que el buen tiempo nos invita a ocupar parques y plazas, hemos diseñado un paquete veraniego de actuaciones, conciertos y cine de verano. \n\nNos relacionarnos más con nuestros vecinos, socializamos mucho más  y disfrutamos del fresco de la noche.\n\nTodos los sábados de junio, julio y agosto, disfrutamos de un espectáculo de carácter familiar y cine de verano. Compartimos experiencias con Lali be Good, Mastretta, los Green Chichón, Los Titiriteros de Binéfar ¡Entre otros muchos!.\n\nTambién nos encargamos de los diseños de programación y cartelería, otra de las opciones que se pueden contratar dentro del diseño de proyecto.\n\nAsí como programar dos actuaciones enmarcadas dentro de las fiestas populares del pueblo para la Concejalía de Igualdad, diversidad, participación y Cooperación ciudadana e inmigración,  de música Danza India y Folclore Balcánico Klezmer.\n\nEventos de carácter familiar que nos invitan a pasar momentos inolvidables en compañía de los seres queridos. Cada uno de nuestros veranos fueron únicos y especiales, por este motivo el ayuntamiento de San Sebastián de los Reyes apostó por nuestras apuestas durante tres años consecutivos.",
-  "miscellaneus": [
-    "EN VERANO LA CULTURA EN LA CALLE",
-    "Veranos culturales",
-    "Ayuntamiento de San Sebastián de los Reyes",
-    "Verano 2016"
-  ],
+  "date": "Verano 2016",
   "gallery": [
     "/uploads/verano2016-01.jpg",
     "/uploads/verano2016-02.jpg",
@@ -36,7 +26,18 @@
     "/uploads/verano2016-21.jpg",
     "/uploads/verano2016-22.jpg",
     "/uploads/verano2016-23.jpg",
-    "/uploads/verano2016-24.jpg"
+    "/uploads/verano2016-24.jpg",
+    "/uploads/cartelsanse1.jpg"
   ],
-  "id": "867e03e0-258e-11e9-8002-253f58f769ee"
+  "location": "San Sebastián de los Reyes",
+  "title": "En verano la cultura en la calle",
+  "id": "867e03e0-258e-11e9-8002-253f58f769ee",
+  "image": "/uploads/verano2016-destacada.jpg",
+  "description": "Nuestra apuesta veraniega siempre tiene como marco el espacio urbano. Desde Lobo y Mono creemos que es necesario que la cultura llegue a todo a cada rincón y se aproxime a cada barrio.\n\nAprovechando que los días son más largos y que el buen tiempo nos invita a ocupar parques y plazas, hemos diseñado un paquete veraniego de actuaciones, conciertos y cine de verano. \n\nNos relacionarnos más con nuestros vecinos, socializamos mucho más  y disfrutamos del fresco de la noche.\n\nTodos los sábados de junio, julio y agosto, disfrutamos de un espectáculo de carácter familiar y cine de verano. Compartimos experiencias con Lali be Good, Mastretta, los Green Chichón, Los Titiriteros de Binéfar ¡Entre otros muchos!.\n\nTambién nos encargamos de los diseños de programación y cartelería, otra de las opciones que se pueden contratar dentro del diseño de proyecto.\n\nAsí como programar dos actuaciones enmarcadas dentro de las fiestas populares del pueblo para la Concejalía de Igualdad, diversidad, participación y Cooperación ciudadana e inmigración,  de música Danza India y Folclore Balcánico Klezmer.\n\nEventos de carácter familiar que nos invitan a pasar momentos inolvidables en compañía de los seres queridos. Cada uno de nuestros veranos fueron únicos y especiales, por este motivo el ayuntamiento de San Sebastián de los Reyes apostó por nuestras apuestas durante tres años consecutivos.",
+  "miscellaneus": [
+    "EN VERANO LA CULTURA EN LA CALLE",
+    "Veranos culturales",
+    "Ayuntamiento de San Sebastián de los Reyes",
+    "Verano 2016"
+  ]
 }
