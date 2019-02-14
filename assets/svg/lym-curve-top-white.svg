@@ -1,12 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="1440px" height="75px" viewBox="0 0 1440 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
-    <title>lym-curve-top-white</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard" transform="translate(-280.000000, -75.000000)" fill="#FFFFFF" fill-rule="nonzero">
-            <path d="M280,75 L1720,75 L1720,106.646763 C1629.81775,135.548921 1495.25405,150 1316.30891,150 C1047.8912,150 884.617084,86.9919175 634.946613,86.9919175 C468.499632,86.9919175 350.184094,98.7422397 280,122.242884 L280,75 Z" id="lym-curve-top-white"></path>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1285.918px" height="117.333px" viewBox="0 0 1285.918 117.333" enable-background="new 0 0 1285.918 117.333"
+	 xml:space="preserve">
+<g id="grid" display="none">
+</g>
+<g id="Layer_1">
+	<path fill="#FFFFFF" d="M36.779,45.402C93.851,18.597,156.824,6.799,219.48,3.474c66.486-3.531,133.213,1.752,199.007,11.345
+		c59.773,8.715,118.988,20.972,177.777,34.783c44.603,10.478,88.697,23.071,132.966,34.852
+		c108.467,28.865,174.218,25.394,286.868,29.828c83.833,3.3,169.924-17.14,269.82-48.049V0H-4v70C-4,70,26.119,50.409,36.779,45.402
+		z"/>
+</g>
 </svg>
