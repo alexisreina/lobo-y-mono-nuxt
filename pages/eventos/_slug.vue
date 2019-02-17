@@ -2,8 +2,8 @@
   <div class="py-5">
     <!-- event header -->
     <header>
-      <b-container>
-        <b-row>
+      <div class="container">
+        <div class="row">
           <b-col
             md="10"
             offset-md="1"
@@ -18,32 +18,34 @@
 
             <!-- event featured image -->
             <figure>
-              <b-img
+              <img
                 v-if="event.image"
                 :src="require(`~/assets/${event.image.slice(1)}`)"
                 :class="[event.caption ? 'mb-1' : 'mb-3']"
-                class="d-block mx-auto"
+                class="d-block mx-auto img-fluid"
                 fluid
-              />
+              >
+
               <figcaption v-if="event.caption" class="mb-3">
                 <small class="text-muted">
                   {{event.caption}}
                 </small>
               </figcaption>
+
             </figure>
             <!-- /event featured image -->
 
           </b-col>
-        </b-row>
-      </b-container>
+        </div>
+      </div>
     </header>
     <!-- /event header -->
 
     <main>
       <!-- event description -->
       <section class="mb-3">
-        <b-container>
-          <b-row>
+        <div class="container">
+          <div class="row">
             <b-col
               md="10"
               offset-md="1"
@@ -52,8 +54,8 @@
             >
               <Markdown :content="event.description" />
             </b-col>
-          </b-row>
-        </b-container>
+          </div>
+        </div>
       </section>
       <!-- /event description -->
 
@@ -62,8 +64,8 @@
         v-if="event.miscellaneus && event.miscellaneus.length"
         class="mb-5"
       >
-        <b-container>
-          <b-row>
+        <div class="container">
+          <div class="row">
             <b-col class="text-center">
               <div
                 v-for="(item, index) in event.miscellaneus"
@@ -73,8 +75,8 @@
                 {{item}}
               </div>
             </b-col>
-          </b-row>
-        </b-container>
+          </div>
+        </div>
       </section>
       <!-- /event miscellaneus -->
 
@@ -83,7 +85,7 @@
         v-if="event.gallery && event.gallery.length"
         class="py-3"
       >
-        <b-container>
+        <div class="container">
           <masonry
             :cols="3"
             :gutter="30"
@@ -93,24 +95,25 @@
               :key="index"
               style="margin-bottom:30px"
             >
-              <b-img
+
+              <b-img-lazy
                 :src="photo && require(`~/assets/${photo.slice(1)}`)"
                 fluid
               />
 
             </div>
           </masonry>
-        </b-container>
+        </div>
       </section>
       <!-- /event gallery -->
 
       <!-- event actions -->
       <section v-if="event.next || event.prev">
-        <b-container>
-          <b-row class="py-5">
+        <div class="container">
+          <div class="row py-5">
             <b-col v-if="event.next">
               <LmButton
-                :to="{ name: 'eventos-slug', params: { id: event.next.id, slug: event.next.slug } }"
+                :to="{ name: 'eventos-slug', params: { slug: event.next.slug } }"
                 variant="primary"
               >
                 Anterior
@@ -119,14 +122,14 @@
 
             <b-col v-if="event.prev" class="text-right">
               <LmButton
-                :to="{ name: 'eventos-slug', params: { id: event.prev.id, slug: event.prev.slug } }"
+                :to="{ name: 'eventos-slug', params: { slug: event.prev.slug } }"
                 variant="primary"
               >
                 Siguiente
               </LmButton>
             </b-col>
-          </b-row>
-        </b-container>
+          </div>
+        </div>
       </section>
       <!-- /event actions -->
     </main>
@@ -146,7 +149,11 @@ export default {
   },
   computed: {
     event() {
-      return this.$cms.portfolio[this.$route.params.id];
+      const uuid = Object.keys(this.$cms.portfolio).find(
+        uuid => this.$cms.portfolio[uuid].slug === this.$route.params.slug
+      );
+
+      return this.$cms.portfolio[uuid];
     }
   }
 };

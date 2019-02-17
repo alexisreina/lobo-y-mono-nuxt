@@ -21,7 +21,7 @@
           >
 
             <nuxt-link
-              :to="{ name: 'eventos-slug', params: { slug: event.slug, id: event.id, next: event.next } }"
+              :to="{ name: 'eventos-slug', params: { slug: event.slug } }"
               class="link"
             >
 
