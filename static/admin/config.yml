@@ -482,4 +482,5 @@ collections:
         }
       - { label: Foto, name: image, widget: image }
       - { label: Texto, name: text, widget: markdown }
+      - { label: Home, name: show_in_home, widget: boolean, default: false }
       - { label: id, name: id, widget: uuid }
