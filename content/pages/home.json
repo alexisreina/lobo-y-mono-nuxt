@@ -15,22 +15,22 @@
     },
     "list": [
       {
-        "id": "0",
         "title": "Cultura y Ocio como transformación social",
         "image": "/uploads/lym-illustracion_cultura-ocio.svg",
-        "description": "Pensamos el ocio como una oportunidad para aprender disfrutando."
+        "description": "Pensamos el ocio como una oportunidad para aprender disfrutando.",
+        "id": "0"
       },
       {
-        "id": "1",
         "title": "Diversidad",
         "image": "/uploads/lym-illustracion_diversidad.svg",
-        "description": "La diversidad es riqueza, cada díalas familias son más plurales y diferentes."
+        "description": "La diversidad es riqueza, cada díalas familias son más plurales y diferentes.",
+        "id": "1"
       },
       {
-        "id": "3",
         "title": "Intergeneracional",
         "image": "/uploads/lym-illustracion_intergeneracional.svg",
-        "description": "Los peques lo pasarán genial y los mayores, Aún mejor!."
+        "description": "Los peques lo pasarán genial y los mayores, Aún mejor!.",
+        "id": "3"
       }
     ]
   },
