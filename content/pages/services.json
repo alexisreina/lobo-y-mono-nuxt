@@ -4,22 +4,22 @@
   "intro": "Lobo y Mono Te ofrece la oportunidad de que cuentes tu propia historia utilizando la cultura y la tradición como herramienta narrativa, abarcando todo tipo de perfiles y edades, porque las familias son muy diversas!.",
   "list": [
     {
-      "id": "0",
       "title": "Cultura y Ocio como transformación social",
       "image": "/uploads/lym-illustracion_cultura-ocio.svg",
-      "description": "Nos dedicamos a crear eventos culturales en todo su espectro. Utilizamos el ocio y la diversión como herramienta de transformación social.\nPensamos el ocio como una oportunidad para aprender disfrutando."
+      "description": "Nos dedicamos a crear eventos culturales en todo su espectro. Utilizamos el ocio y la diversión como herramienta de transformación social.\nPensamos el ocio como una oportunidad para aprender disfrutando.",
+      "id": "0"
     },
     {
-      "id": "1",
       "title": "Diversidad",
       "image": "/uploads/lym-illustracion_diversidad.svg",
-      "description": "Nuestras propuestas están orientadas a la pluralidad y la diversidad.\nLa diversidad es riqueza, cada día las familias son más plurales y diferentes."
+      "description": "Nuestras propuestas están orientadas a la pluralidad y la diversidad.\nLa diversidad es riqueza, cada día las familias son más plurales y diferentes.",
+      "id": "1"
     },
     {
-      "id": "3",
       "title": "Intergeneracional",
       "image": "/uploads/lym-illustracion_intergeneracional.svg",
-      "description": "Apostamos por el cuidado de la infancia. Nuestra prioridad es que tanto adultos como pequeños experimenten la calidad en el ocio de forma intergeneracional. Los peques lo pasarán genial y los mayores, ¡Aún mejor!."
+      "description": "Apostamos por el cuidado de la infancia. Nuestra prioridad es que tanto adultos como pequeños experimenten la calidad en el ocio de forma intergeneracional. Los peques lo pasarán genial y los mayores, ¡Aún mejor!.",
+      "id": "3"
     }
   ],
   "tailored": {
@@ -45,34 +45,34 @@
     "description": "",
     "list": [
       {
-        "id": "0",
-        "image": "/uploads/lym-illustracion_audiovisual.svg",
         "title": "Cobertura audiovisual",
-        "description": ""
+        "image": "/uploads/lym-illustracion_audiovisual.svg",
+        "description": "",
+        "id": "0"
       },
       {
-        "id": "1",
-        "image": "/uploads/lym-illustracion_decoracion-atrezo.svg",
         "title": "Decoración y atrezzo",
-        "description": ""
+        "image": "/uploads/lym-illustracion_decoracion-atrezo.svg",
+        "description": "",
+        "id": "1"
       },
       {
-        "id": "2",
-        "image": "/uploads/lym-illustracion_tecnico.svg",
         "title": "Personal técnico",
-        "description": ""
+        "image": "/uploads/lym-illustracion_tecnico.svg",
+        "description": "",
+        "id": "2"
       },
       {
-        "id": "3",
-        "image": "/uploads/lym-illustracion_diseno-difusion.svg",
         "title": "Diseño y difusión",
-        "description": ""
+        "image": "/uploads/lym-illustracion_diseno-difusion.svg",
+        "description": "",
+        "id": "3"
       },
       {
-        "id": "4",
-        "image": "/uploads/lym-illustracion_catering.svg",
         "title": "Catering",
-        "description": ""
+        "image": "/uploads/lym-illustracion_catering.svg",
+        "description": "",
+        "id": "4"
       }
     ]
   },
