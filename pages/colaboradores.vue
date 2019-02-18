@@ -60,14 +60,12 @@
 
 <script>
 import Markdown from "@/components/Markdown.vue";
-import LmButton from "@/components/LmButton.vue";
 
 export default {
   name: "CollabPage",
   layout: "page",
   components: {
-    Markdown,
-    LmButton
+    Markdown
   },
   computed: {
     page() {
