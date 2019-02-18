@@ -46,14 +46,14 @@
             </div>
           </div>
 
-          <div v-if="currentStep.id == 1" class="text-center py-3">
-            <h2 class="mb-md-3">
-              Forma literaria
-            </h2>
+          <div v-if="currentStep.id == 1" class="py-3">
+            <div class="text-center">
+              <h2 class="mb-md-3">
+                {{currentStep.title}}
+              </h2>
 
-            <p class="">
-              Elige el tipo de evento según la duración o complejidad que necesites.
-            </p>
+              <Markdown :content="currentStep.description" />
+            </div>
 
             <div class="row py-5">
               <div
@@ -84,6 +84,7 @@
             <div class="text-right py-3">
               <LmButton
                 variant="primary"
+                :disabled="!currentEvent"
                 @click.native="nextStep()"
               >
                 Siguiente
@@ -92,13 +93,13 @@
           </div>
 
           <div v-if="currentStep.id == 2" class="py-3">
-            <h2 class="mb-md-3">
-              Argumento
-            </h2>
+            <div class="text-center">
+              <h2 class="mb-md-3">
+                {{currentStep.title}}
+              </h2>
 
-            <p>
-              Es momento de elegir el tipo de espectáculo y actividades que contarán a tu público el fin de tu evento.
-            </p>
+              <Markdown :content="currentStep.description" />
+            </div>
 
             <div class="py-5">
 
@@ -164,6 +165,7 @@
               <div class="col text-right py-3">
                 <LmButton
                   variant="primary"
+                  :disabled="!hasSelectedItems"
                   @click.native="nextStep"
                 >
                   Siguiente
@@ -175,7 +177,7 @@
 
           <div v-if="currentStep.id == 3" class="text-center py-3">
             <h2 class="mb-md-3">
-              Tu Evento
+              {{currentStep.title}}
             </h2>
 
             <img
@@ -188,7 +190,7 @@
               {{selected.title}}
             </span>
 
-            <div class="row">
+            <div class="row pb-5 mb-5">
               <div v-if="selected.intro" class="col">
                 <h3>
                   Planteamiento
@@ -270,25 +272,18 @@
 
           <div v-if="currentStep.id == 4" class="text-center py-3">
             <h2 class="mb-md-3">
-              Tu presupuesto
+              {{currentStep.title}}
             </h2>
 
             <p class="display-3">
               {{budget}}
             </p>
 
-            <p>
-              Este presupuesto es una simple estimación abierta, no contiende IVA ni otros impuestos. Escríbenos para saber más.
-            </p>
-
-            <p>
-              Envíanos una consulta, tu proupesta, si necesitas alguna variación...
-            </p>
+            <Markdown :content="currentStep.description" />
 
             <ContactForm />
 
           </div>
-
         </div>
       </div>
     </section>
@@ -311,34 +306,15 @@ export default {
   data() {
     return {
       currentEvent: null,
-      currentStep: null,
-      steps: [
-        {
-          id: "1",
-          name: "type",
-          label: "Tipo de evento"
-        },
-        {
-          id: "2",
-          name: "content",
-          label: "Contenido"
-        },
-        {
-          id: "3",
-          name: "result",
-          label: "Resultado de tu elección"
-        },
-        {
-          id: "4",
-          name: "budget",
-          label: "Obtén tu presupuesto"
-        }
-      ]
+      currentStep: null
     };
   },
   computed: {
     page() {
       return this.$cms.pages.configurator;
+    },
+    steps() {
+      return this.$cms.pages.configurator.steps;
     },
     selected() {
       return Object.keys(this.currentEvent).reduce((all, item) => {
@@ -350,23 +326,22 @@ export default {
         return all;
       }, {});
     },
+    hasSelectedItems() {
+      return Object.keys(this.selected)
+        .filter(key => ["intro", "nudo", "desenlace"].indexOf(key) !== -1)
+        .every(item => this.selected[item].length > 0);
+    },
     budget() {
-      const subtotal = Object.keys(this.selected)
-        .reduce((prices, key) => {
-          if (["intro", "nudo", "desenlace"].indexOf(key) !== -1) {
-            this.selected[key].forEach(item => prices.push(Number(item.price)));
-          }
-          return prices;
-        }, [])
-        .reduce((amount, next) => {
-          return next + amount;
-        }, 0);
+      const subtotal = Object.keys(this.selected).reduce((amount, key) => {
+        if (["intro", "nudo", "desenlace"].indexOf(key) !== -1) {
+          this.selected[key].forEach(item => (amount += Number(item.price)));
+        }
+        return amount;
+      }, 0);
 
       const comision = (subtotal * this.selected.comision) / 100;
       const total = subtotal + comision;
 
-      // eslint-disable-next-line
-      console.log(subtotal, comision, total);
       return Math.round(total).toLocaleString("es-ES", {
         style: "currency",
         currency: "EUR"

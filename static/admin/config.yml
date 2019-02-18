@@ -245,6 +245,17 @@ collections:
               widget: markdown,
               required: false,
             }
+          - label: Pasos
+            label_singular: Paso
+            name: steps
+            widget: list
+            allow_add: false
+            fields:
+              - { label: id, name: id, widget: hidden }
+              - { label: Nombre, name: name, widget: hidden }
+              - { label: Etiqueta, name: label, widget: string }
+              - { label: Título, name: title, widget: string }
+              - { label: Descripción, name: description, widget: markdown }
           - label: Opciones
             label_singular: Opción
             name: options

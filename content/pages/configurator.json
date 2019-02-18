@@ -2,6 +2,36 @@
   "id": "configurator",
   "title": "Crea tu evento con nuestro configurador",
   "intro": "Con nuestro configurador podrás hacerte una idea aproximada de tu presupuesto y crear tu evento a medida.\n\nPuedes elegir entre pasacalles, conciertos, actuaciones, circo, teatro, cuentacuentos, pintacaras, batucadas, sesiones de Dj's... a modo de INTRDUCCIÓN, NUDO Y DESENLACE.\n\n**¡JUGUEMOS!**",
+  "steps": [
+    {
+      "id": "1",
+      "name": "type",
+      "label": "Tipo de evento",
+      "title": "Forma literaria",
+      "description": "Elige el tipo de evento según la duración o complejidad que necesites."
+    },
+    {
+      "id": "2",
+      "name": "content",
+      "label": "Contenido",
+      "title": "Argumento",
+      "description": "Es momento de elegir el tipo de espectáculo y actividades que contarán a tu público el fin de tu evento."
+    },
+    {
+      "id": "3",
+      "name": "result",
+      "label": "Resultado de tu elección",
+      "title": "Tu Evento",
+      "description": ""
+    },
+    {
+      "id": "4",
+      "name": "budget",
+      "label": "Obtén tu presupuesto",
+      "title": "Tu presupuesto",
+      "description": "Este presupuesto es una simple estimación abierta, no contiende IVA ni otros impuestos. Escríbenos para saber más.\n\nEnvíanos una consulta, tu proupesta, si necesitas alguna variación..."
+    }
+  ],
   "options": {
     "microcuento": {
       "title": "Microcuento",

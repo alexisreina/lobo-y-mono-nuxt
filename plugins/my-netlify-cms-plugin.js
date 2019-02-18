@@ -53,7 +53,7 @@ const linkCollection = ({ cms, key }) => {
 const collections = [
   { key: "portfolio", reverse: true, link: true },
   { key: "partners", reverse: false, link: false },
-  { key: "reviews", reverse: false, link: false },
+  { key: "reviews", reverse: true, link: false },
   { key: "artists", reverse: false, link: false }
 ];
 

@@ -1,29 +1,27 @@
 <template lang="html">
   <div class="page-home">
     <main>
-      <section class="py-5">
-        <b-container>
-          <b-row>
-            <b-col>
-              <HomeServices :services="$cms.pages.home.services" />
-            </b-col>
-          </b-row>
-        </b-container>
+      <section class="container py-5">
+        <div class="row">
+          <div class="col">
+            <HomeServices :services="page.services" />
+          </div>
+        </div>
       </section>
 
       <section v-if="$cms.reviews" class="section-reviews pb-5">
-        <b-container>
+        <div class="container-fluid">
           <h2 class="h3 mb-5">
             {{$cms.pages.home.reviews.title}}
           </h2>
           <Reviews :reviews="$cms.reviews" />
-        </b-container>
+        </div>
       </section>
 
       <section class="section-cta py-5">
-        <b-container class="py-3">
-          <HomeCta :cta="$cms.pages.home.cta" />
-        </b-container>
+        <div class="container py-3">
+          <HomeCta :cta="page.cta" />
+        </div>
       </section>
     </main>
   </div>
@@ -41,6 +39,11 @@ export default {
     HomeServices,
     Reviews,
     HomeCta
+  },
+  computed: {
+    page() {
+      return this.$cms.pages.home;
+    }
   }
 };
 </script>

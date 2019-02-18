@@ -1,5 +1,5 @@
 <template lang="html">
-  <div page-colab>
+  <div class="page-collab">
     <header class="py-3 pt-md-4">
       <div class="container">
         <div class="row">
@@ -27,17 +27,11 @@
             >
               <figure>
 
-                <b-img
+                <img
                   :src="artist.photo && require(`~/assets/${artist.photo.slice(1)}`)"
                   :alt="artist.name"
-                  :blank="!artist.photo"
-                  :blank-color="!artist.photo ? '#e9e9e9' : null"
-                  :width="!artist.photo ? 350 : null"
-                  :height="!artist.photo ? 275 : null"
-                  :rounded="!artist.photo"
-                  class="mb-2"
-                  fluid
-                />
+                  class="mb-2 img-fluid"
+                >
 
                 <figcaption class="mb-3">
                   {{artist.name}}

@@ -1,27 +1,24 @@
 <template lang="html">
-  <b-row>
-    <b-col
+  <div class="row">
+    <div
       v-for="review in reviews"
       :key="review.id"
-      lg="6"
-      class="mb-3 mb-md-0"
+      lg="4"
+      class="col-md-6 col-lg-4 mb-md-0"
     >
-      <div class="review mx-auto">
+      <div class="review mx-auto mb-3">
         <div class="review-body">
           <Markdown :content="review.text" />
         </div>
 
         <div class="review-footer d-flex flex-row align-items-center bg-light">
-          <b-img
+          <img
             :src="review.image && require(`~/assets/${review.image.slice(1)}`)"
             :alt="review.title"
-            :blank="!review.image"
-            :blank-color="!review.image ? '#e03153' : null"
+            class="d-block mr-3 rounded-circle"
             width="52"
             height="52"
-            rounded="circle"
-            class="d-block mr-3"
-          />
+          >
 
           <div class="py-1">
             <p class="mb-0">
@@ -32,12 +29,12 @@
               :content="review.intro"
               class="review-info small"
             />
-          </div>
 
+          </div>
         </div>
       </div>
-    </b-col>
-  </b-row>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -59,7 +56,7 @@ export default {
 
 <style scoped lang="scss">
 $review-border-radius: 64px;
-$review-max-width: 25rem;
+$review-max-width: 35rem;
 .review {
   position: relative;
   max-width: $review-max-width;
@@ -114,7 +111,7 @@ $review-max-width: 25rem;
 
 .review-body /deep/ p {
   margin-bottom: 0;
-  font-size: 1.5rem;
+  font-size: 1.17rem;
   font-weight: 800;
 
   &::before {
@@ -123,10 +120,6 @@ $review-max-width: 25rem;
 
   &::after {
     content: "”";
-  }
-
-  @media (min-width: 768px) {
-    font-size: 2rem;
   }
 }
 </style>
