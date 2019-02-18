@@ -52,7 +52,11 @@
                 {{currentStep.title}}
               </h2>
 
-              <Markdown :content="currentStep.description" />
+              <Markdown
+                v-if="currentStep.description"
+                :content="currentStep.description"
+              />
+
             </div>
 
             <div class="row py-5">
@@ -98,7 +102,11 @@
                 {{currentStep.title}}
               </h2>
 
-              <Markdown :content="currentStep.description" />
+              <Markdown
+                v-if="currentStep.description"
+                :content="currentStep.description"
+              />
+
             </div>
 
             <div class="py-5">
@@ -279,7 +287,10 @@
               {{budget}}
             </p>
 
-            <Markdown :content="currentStep.description" />
+            <Markdown
+              v-if="currentStep.description"
+              :content="currentStep.description"
+            />
 
             <ContactForm />
 

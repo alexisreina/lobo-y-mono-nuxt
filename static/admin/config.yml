@@ -253,7 +253,12 @@ collections:
             fields:
               - { label: Etiqueta, name: label, widget: string }
               - { label: Título, name: title, widget: string }
-              - { label: Descripción, name: description, widget: markdown }
+              - {
+                  label: Descripción,
+                  name: description,
+                  widget: markdown,
+                  required: false,
+                }
               - { label: Nombre, name: name, widget: hidden }
               - { label: id, name: id, widget: hidden }
           - label: Opciones
