@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="py-3">
     <header role="banner">
-      <b-container>
-        <b-row>
+      <div class="container">
+        <div class="row">
           <b-col
             lg="10"
             xl="8"
@@ -15,63 +15,37 @@
 
             <Markdown v-if="page.intro" :content="page.intro" />
           </b-col>
-        </b-row>
-      </b-container>
+        </div>
+      </div>
     </header>
 
     <section class="mb-lg-5">
-      <b-container>
-        <b-row>
-          <b-col>
-            <ServicesList :services="page.list" />
-          </b-col>
-        </b-row>
-      </b-container>
-    </section>
-
-    <!-- <section class="bg-light mb-5">
-      <b-container>
-        <b-row>
-          <b-col>
-            <ServicesCta :cta="page.cta" />
-          </b-col>
-        </b-row>
-      </b-container>
-    </section> -->
-
-    <section class="mb-lg-5">
-      <b-container>
-        <b-row>
-          <b-col>
-            <ServicesTailored :service="page.tailored" />
-          </b-col>
-        </b-row>
-      </b-container>
+      <div class="container">
+        <ServicesList :services="page.list" />
+      </div>
     </section>
 
     <section class="mb-lg-5">
-      <b-container>
-        <b-row>
-          <b-col>
-            <ServicesBundles :bundles="page.bundles" />
-          </b-col>
-        </b-row>
-      </b-container>
+      <div class="container">
+        <ServicesTailored :service="page.tailored" />
+      </div>
+    </section>
+
+    <section class="mb-lg-5">
+      <div class="container">
+        <ServicesBundles :bundles="page.bundles" />
+      </div>
     </section>
 
     <section class="mb-3 mb-lg-5">
-      <b-container>
-        <b-row>
-          <b-col>
-            <ServicesOther :other="page.other" />
-          </b-col>
-        </b-row>
-      </b-container>
+      <div class="container">
+        <ServicesOther :other="page.other" />
+      </div>
     </section>
 
     <section class="py-5 text-center">
-      <b-container>
-        <b-row>
+      <div class="container">
+        <div class="row">
           <b-col xl="10" offset-xl="1">
             <LmButton
               to="/contacto"
@@ -81,8 +55,8 @@
               Contacta con nosotras
             </LmButton>
           </b-col>
-        </b-row>
-      </b-container>
+        </div>
+      </div>
     </section>
   </div>
 </template>

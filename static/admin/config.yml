@@ -187,21 +187,26 @@ collections:
             fields:
               - { label: Título, name: title, widget: string }
               - { label: Image, name: image, widget: image }
-              - { label: Descripción, name: description, widget: markdown }
+              - {
+                  label: Descripción,
+                  name: description,
+                  widget: markdown,
+                  required: false,
+                }
               - { label: id, name: id, widget: uuid }
           - label: Eventons a medida
             name: tailored
             widget: object
             fields:
               - { label: Título, name: title, widget: string }
-              - { label: Texto, name: intro, widget: markdown }
+              - { label: Texto, name: intro, widget: markdown, required: false }
               - { label: Imagen, name: image, widget: image }
           - label: Paquetes prediseñados
             name: bundles
             widget: object
             fields:
               - { label: Título, name: title, widget: string }
-              - { label: Texto, name: intro, widget: markdown }
+              - { label: Texto, name: intro, widget: markdown, required: false }
               - { label: Imagen, name: image, widget: image }
               - { label: Listado, name: list, widget: list }
           - label: Otros
@@ -232,7 +237,7 @@ collections:
             name: cta
             widget: object
             fields:
-              - { label: Título, name: title, widget: string }
+              - { label: Título, name: title, widget: string, required: false }
               - { label: Texto, name: description, widget: markdown }
               - { label: Botón, name: button, widget: boolean }
               - { label: Etiqueta, name: button_label, widget: string }
