@@ -92,7 +92,6 @@ collections:
               widget: markdown,
               required: false,
             }
-          - { label: Imagen, name: image, widget: image }
           - label: CTA
             name: cta
             widget: object
