@@ -12,8 +12,14 @@
       <section v-if="$cms.reviews" class="section-reviews pb-5">
         <div class="container-fluid">
           <h2 class="h3 mb-5">
-            {{$cms.pages.home.reviews.title}}
+            {{page.reviews.title}}
           </h2>
+
+          <Makrdown
+            v-if="page.reviews.description"
+            :content="page.reviews.description"
+          />
+
           <Reviews :reviews="$cms.reviews" />
         </div>
       </section>

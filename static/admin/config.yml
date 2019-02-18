@@ -124,7 +124,12 @@ collections:
             widget: object
             fields:
               - { label: Título, name: title, widget: string }
-              - { label: Descripción, name: intro, widget: markdown }
+              - {
+                  label: Descripción,
+                  name: intro,
+                  widget: markdown,
+                  required: false,
+                }
       - label: Quienes Somos
         name: about
         file: "content/pages/about.json"
