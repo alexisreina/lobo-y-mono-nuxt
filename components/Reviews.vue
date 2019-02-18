@@ -11,7 +11,7 @@
           <Markdown :content="review.text" />
         </div>
 
-        <div class="review-footer d-flex flex-row align-items-center bg-light">
+        <div class="review-footer mt-auto d-flex flex-row align-items-center bg-light">
           <img
             :src="review.image && require(`~/assets/${review.image.slice(1)}`)"
             :alt="review.title"
@@ -56,7 +56,7 @@ export default {
 
 <style scoped lang="scss">
 $review-border-radius: 64px;
-$review-max-width: 35rem;
+$review-max-width: 20rem;
 .review {
   position: relative;
   max-width: $review-max-width;
@@ -111,7 +111,7 @@ $review-max-width: 35rem;
 
 .review-body /deep/ p {
   margin-bottom: 0;
-  font-size: 1.17rem;
+  font-size: 1.05rem;
   font-weight: 800;
 
   &::before {

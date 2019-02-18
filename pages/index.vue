@@ -10,7 +10,7 @@
       </section>
 
       <section v-if="$cms.reviews" class="section-reviews pb-5">
-        <div class="container-fluid">
+        <div class="container">
           <h2 class="h3 mb-5">
             {{page.reviews.title}}
           </h2>
