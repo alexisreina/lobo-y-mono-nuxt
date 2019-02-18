@@ -20,7 +20,7 @@
             :content="page.reviews.description"
           />
 
-          <Reviews :reviews="$cms.reviews" />
+          <Reviews :reviews="reviews" />
         </div>
       </section>
 
@@ -49,6 +49,14 @@ export default {
   computed: {
     page() {
       return this.$cms.pages.home;
+    },
+    reviews() {
+      return Object.keys(this.$cms.reviews).reduce((filtered, key) => {
+        if (this.$cms.reviews[key].show_in_home) {
+          filtered[key] = this.$cms.reviews[key];
+        }
+        return filtered;
+      }, {});
     }
   }
 };
