@@ -8,9 +8,7 @@
               {{page.header}}
             </h1>
 
-            <p>
-              {{page.intro}}
-            </p>
+            <Markdown v-if="page.intro" :content="page.intro" />
           </div>
         </div>
       </div>
@@ -53,16 +51,6 @@
             :content="page.cta.description"
             class="mb-5"
           />
-        </div>
-
-        <div v-if="page.cta.button.active" class="text-center">
-          <LmButton
-            :to="page.cta.button.link"
-            variant="primary"
-            size="lg"
-          >
-            {{page.cta.button.label}}
-          </LmButton>
         </div>
       </div>
     </main>
