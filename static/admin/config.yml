@@ -251,11 +251,11 @@ collections:
             widget: list
             allow_add: false
             fields:
-              - { label: id, name: id, widget: hidden }
-              - { label: Nombre, name: name, widget: hidden }
               - { label: Etiqueta, name: label, widget: string }
               - { label: Título, name: title, widget: string }
               - { label: Descripción, name: description, widget: markdown }
+              - { label: Nombre, name: name, widget: hidden }
+              - { label: id, name: id, widget: hidden }
           - label: Opciones
             label_singular: Opción
             name: options
