@@ -53,8 +53,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,600");
-
 .cComingSoon {
   display: flex;
   justify-content: center;
@@ -158,6 +156,7 @@ export default {
 
 <!-- Global styles -->
 <style lang="scss">
+// @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,600");
 // *,
 // *::before,
 // *::after {

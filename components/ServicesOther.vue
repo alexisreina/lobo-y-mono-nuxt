@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <h2
-      class="h4"
+      class="h4 mb-3"
       :class="{'mb-5': !other.description}"
     >
       {{other.title}}
@@ -20,13 +20,11 @@
       >
 
         <div class="text-center">
-          <b-img
+          <img
             :src="item.image"
             :alt="item.title"
-            class="mb-3"
-            width="194"
-            height="158"
-          />
+            class="mb-3 img-fluid"
+          >
 
           <h4 class="h6">
             {{item.title}}

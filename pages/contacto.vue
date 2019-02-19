@@ -1,21 +1,24 @@
 <template lang="html">
-  <div class="contact">
-    <div class="container py-3 pt-md-4">
+  <div class="page-contact">
+    <main class="container py-3 pt-md-5">
       <div class="row">
         <div class="col-lg-10 offset-lg-1">
-          <h1 class="h2 text-white mb-3">
-            {{$cms.pages.contact.header}}
-          </h1>
 
-          <Markdown class="text-white mb-3 mb-md-5" :content="$cms.pages.contact.intro" />
+          <div class="text-md-center">
+            <h1 class="h2 text-white mb-3">
+              {{$cms.pages.contact.header}}
+            </h1>
 
-          <div class="py-3 py-md-5">
+            <Markdown class="text-white mb-3 mb-md-5" :content="$cms.pages.contact.intro" />
+          </div>
+
+          <div class="py-3 pt-md-5">
             <ContactForm />
           </div>
 
         </div>
       </div>
-    </div>
+    </main>
   </div>
 </template>
 
@@ -34,7 +37,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.contact {
+.page-contact {
   background-color: $black;
   background-image: url("~assets/svg/lym-telefono.svg");
   background-repeat: no-repeat;

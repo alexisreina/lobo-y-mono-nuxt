@@ -1,59 +1,47 @@
 <template lang="html">
-  <div class="py-5">
+  <div class="page-event py-5">
     <!-- event header -->
-    <header>
-      <div class="container">
-        <div class="row">
-          <b-col
-            md="10"
-            offset-md="1"
-            lg="8"
-            offset-lg="2"
-          >
-            <!-- event title -->
-            <h1 class="text-capitalize text-center mb-4">
-              {{event.title}}
-            </h1>
-            <!-- /event title -->
+    <header class="container" role="banner">
+      <div class="row">
+        <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 
-            <!-- event featured image -->
-            <figure>
-              <img
-                v-if="event.image"
-                :src="require(`~/assets/${event.image.slice(1)}`)"
-                :class="[event.caption ? 'mb-1' : 'mb-3']"
-                class="d-block mx-auto img-fluid"
-                fluid
-              >
+          <!-- event title -->
+          <h1 class="text-capitalize text-center mb-4">
+            {{event.title}}
+          </h1>
+          <!-- /event title -->
 
-              <figcaption v-if="event.caption" class="mb-3">
-                <small class="text-muted">
-                  {{event.caption}}
-                </small>
-              </figcaption>
+          <!-- event featured image -->
+          <figure>
+            <img
+              v-if="event.image"
+              :src="require(`~/assets/${event.image.slice(1)}`)"
+              :class="[event.caption ? 'mb-1' : 'mb-3']"
+              class="d-block mx-auto img-fluid"
+              fluid
+            >
 
-            </figure>
-            <!-- /event featured image -->
+            <figcaption v-if="event.caption" class="mb-3">
+              <small class="text-muted">
+                {{event.caption}}
+              </small>
+            </figcaption>
 
-          </b-col>
+          </figure>
+          <!-- /event featured image -->
+
         </div>
       </div>
     </header>
     <!-- /event header -->
 
-    <main>
+    <main role="main">
+
       <!-- event description -->
-      <section class="mb-3">
-        <div class="container">
-          <div class="row">
-            <b-col
-              md="10"
-              offset-md="1"
-              lg="8"
-              offset-lg="2"
-            >
-              <Markdown :content="event.description" />
-            </b-col>
+      <section class="container mb-3">
+        <div class="row">
+          <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+            <Markdown :content="event.description" />
           </div>
         </div>
       </section>
@@ -62,76 +50,74 @@
       <!-- event miscellaneus -->
       <section
         v-if="event.miscellaneus && event.miscellaneus.length"
-        class="mb-5"
+        class="mb-5 container text-center"
       >
-        <div class="container">
-          <div class="row">
-            <b-col class="text-center">
-              <div
-                v-for="(item, index) in event.miscellaneus"
-                :key="index"
-                class="small block"
-              >
-                {{item}}
-              </div>
-            </b-col>
-          </div>
-        </div>
+        <p
+          v-for="(item, index) in event.miscellaneus"
+          :key="index"
+          class="small mb-0"
+        >
+          {{item}}
+        </p>
       </section>
       <!-- /event miscellaneus -->
 
       <!-- event gallery -->
       <section
         v-if="event.gallery && event.gallery.length"
-        class="py-3"
+        class="py-3 container"
       >
-        <div class="container">
-          <masonry
-            :cols="3"
-            :gutter="30"
+        <masonry
+          :cols="3"
+          :gutter="30"
+        >
+          <div
+            v-for="(photo, index) in event.gallery"
+            :key="index"
+            style="margin-bottom:30px"
           >
-            <div
-              v-for="(photo, index) in event.gallery"
-              :key="index"
-              style="margin-bottom:30px"
-            >
 
-              <b-img-lazy
-                :src="photo && require(`~/assets/${photo.slice(1)}`)"
-                fluid
-              />
+            <b-img-lazy
+              :src="photo && require(`~/assets/${photo.slice(1)}`)"
+              fluid
+            />
 
-            </div>
-          </masonry>
-        </div>
+          </div>
+        </masonry>
       </section>
       <!-- /event gallery -->
 
       <!-- event actions -->
-      <section v-if="event.next || event.prev">
-        <div class="container">
-          <div class="row py-5">
-            <b-col v-if="event.next">
-              <LmButton
-                :to="{ name: 'eventos-slug', params: { slug: event.next.slug } }"
-                variant="primary"
-              >
-                Anterior
-              </LmButton>
-            </b-col>
+      <section v-if="event.next || event.prev" class="container">
+        <div class="row py-5">
+          <div v-if="event.next" class="col-6">
 
-            <b-col v-if="event.prev" class="text-right">
-              <LmButton
-                :to="{ name: 'eventos-slug', params: { slug: event.prev.slug } }"
-                variant="primary"
-              >
-                Siguiente
-              </LmButton>
-            </b-col>
+            <LmButton
+              :to="{ name: 'eventos-slug', params: { slug: event.next.slug } }"
+              variant="primary"
+            >
+              Anterior
+            </LmButton>
+          </div>
+
+          <div
+            v-if="event.prev"
+            :class="{'offset-6':!event.next}"
+            class="col-6 text-right"
+          >
+
+            <LmButton
+              :to="{ name: 'eventos-slug', params: { slug: event.prev.slug } }"
+              variant="primary"
+            >
+              Siguiente
+            </LmButton>
+
           </div>
         </div>
       </section>
       <!-- /event actions -->
+
     </main>
   </div>
 </template>

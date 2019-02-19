@@ -1,16 +1,41 @@
 <template lang="html">
-  <div class="page-home">
-    <main>
-      <section class="container py-5">
-        <div class="row">
-          <div class="col">
-            <HomeServices :services="page.services" />
+  <div class="page-home pt-3 pt-md-5">
+    <main role="main">
+      <!-- services -->
+      <section class="container mb-3 mb-md-5">
+
+        <header class="row mb-3">
+          <div class="col-lg-10 offset-lg-1">
+            <h2 class="h3 mb-1">
+              {{page.services.title}}
+            </h2>
+
+            <Markdown
+              v-if="page.services.intro"
+              :content="page.services.intro"
+              class="mb-md-4"
+            />
+
           </div>
-        </div>
+        </header>
+
+        <ServicesList :services="page.services.list" />
+
+        <footer
+          v-if="page.services.link"
+          class="text-center mb-3 mb-md-5 py-3"
+        >
+          <nuxt-link :to="page.services.link.url">
+            {{page.services.link.label}}
+          </nuxt-link>
+        </footer>
+
       </section>
+      <!-- /services -->
 
       <section v-if="$cms.reviews" class="section-reviews pb-5">
         <div class="container">
+
           <h2 class="h3 mb-5">
             {{page.reviews.title}}
           </h2>
@@ -34,17 +59,19 @@
 </template>
 
 <script>
-import HomeServices from "@/components/HomeServices";
-import Reviews from "@/components/Reviews";
-import HomeCta from "@/components/HomeCta";
+import Markdown from "@/components/Markdown.vue";
+import Reviews from "@/components/Reviews.vue";
+import HomeCta from "@/components/HomeCta.vue";
+import ServicesList from "@/components/ServicesList.vue";
 
 export default {
   name: "HomePage",
   layout: "page",
   components: {
-    HomeServices,
+    Markdown,
     Reviews,
-    HomeCta
+    HomeCta,
+    ServicesList
   },
   computed: {
     page() {

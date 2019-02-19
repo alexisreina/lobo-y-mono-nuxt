@@ -1,23 +1,23 @@
 <template lang="html">
-  <b-row align-v="center">
-    <b-col lg="6">
-      <b-img
+  <div class="row align-items-md-center">
+    <div class="col-md-4 col-lg-6">
+      <img
         :src="service.image"
         :alt="service.title"
-        fluid
-      />
-    </b-col>
+        class="img-fluid d-block mx-auto mb-3 mb-md-4 mb-lg-0"
+      >
+    </div>
 
-    <b-col lg="6">
-      <div style="max-width:30rem">
-        <h2 class="h3">
+    <div class="col-md-8 col-lg-6">
+      <div style="max-width:25rem" class="mx-auto">
+        <h2 class="h4 mb-3">
           {{service.title}}
         </h2>
 
         <Markdown v-if="service.intro" :content="service.intro" />
       </div>
-    </b-col>
-  </b-row>
+    </div>
+  </div>
 </template>
 
 <script>

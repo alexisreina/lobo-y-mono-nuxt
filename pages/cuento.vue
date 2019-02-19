@@ -1,8 +1,8 @@
 <template lang="html">
-  <div class="cuento">
-    <b-container>
+  <div class="page-cuento">
+    <div class="container">
       <h1>Cuento</h1>
-    </b-container>
+    </div>
   </div>
 </template>
 

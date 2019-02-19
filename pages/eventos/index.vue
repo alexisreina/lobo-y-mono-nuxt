@@ -1,20 +1,18 @@
 <template lang="html">
-  <div class="py-3 py-md-5">
-    <header class="mb-3 mb-xl-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10 offset-lg-1">
-            <h1 class="h2 mb-0">
-              {{page.header}}
-            </h1>
+  <div class="page-events py-3 py-md-5">
+    <header role="banner" class="container mb-3 mb-xl-5">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <h1 class="h2 mb-0">
+            {{page.header}}
+          </h1>
 
-            <Markdown :content="page.intro" />
-          </div>
+          <Markdown v-if="page.intro" :content="page.intro" />
         </div>
       </div>
     </header>
 
-    <main>
+    <main role="main">
       <section class="container">
         <div class="row">
 
