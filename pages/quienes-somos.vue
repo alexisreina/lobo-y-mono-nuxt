@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="about">
+  <div class="page-about">
     <header role="banner" class="container py-5 sr-only">
       <div class="row">
         <div class="col-lg-10 offset-lg-1">
