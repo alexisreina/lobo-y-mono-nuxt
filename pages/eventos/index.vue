@@ -1,13 +1,17 @@
 <template lang="html">
-  <div class="py-5">
-    <header>
-      <b-container>
-        <h1>
-          {{page.header}}
-        </h1>
+  <div class="py-3 py-md-5">
+    <header class="mb-3 mb-xl-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+            <h1 class="h2 mb-0">
+              {{page.header}}
+            </h1>
 
-        <Markdown :content="page.intro" class="lead" />
-      </b-container>
+            <Markdown :content="page.intro" />
+          </div>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -22,23 +26,20 @@
 
             <nuxt-link
               :to="{ name: 'eventos-slug', params: { slug: event.slug } }"
-              class="link"
+              class="event-link"
             >
 
               <figure class="event-list-item">
 
-                <b-img
+                <img
                   :src="event.thumbnail && require(`~/assets/${event.thumbnail.slice(1)}`)"
                   :alt="event.title"
-                  :blank="!event.thumbnail"
-                  :blank-color="!event.thumbnail ? '#e9e9e9' : null"
+                  class="event-img img-fluid mb-2"
                   width="400"
                   height="267"
-                  class="mb-2"
-                  fluid
-                />
+                >
 
-                <figcaption class="mb-2">
+                <figcaption class="mb-2 small">
                   {{event.title}}, {{event.location}}, {{event.date}}.
                 </figcaption>
 
@@ -71,8 +72,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.link {
+.event-link {
   text-decoration: none;
   color: inherit;
+
+  &:hover .event-img {
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.45);
+  }
+}
+
+.event-img {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
+  transition-duration: 200ms;
 }
 </style>
