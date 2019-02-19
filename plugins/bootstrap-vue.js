@@ -7,7 +7,6 @@ import {
   FormTextarea,
   Image,
   Link,
-  Layout,
   Navbar
 } from "bootstrap-vue/es/components";
 
@@ -17,6 +16,5 @@ Vue.use(FormGroup);
 Vue.use(FormInput);
 Vue.use(FormTextarea);
 Vue.use(Image);
-Vue.use(Layout);
 Vue.use(Link);
 Vue.use(Navbar);

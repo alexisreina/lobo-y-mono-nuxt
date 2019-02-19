@@ -13,10 +13,11 @@
       :content="other.description"
     />
 
-    <b-row>
-      <b-col
+    <div class="row">
+      <div
         v-for="item in other.list"
         :key="item.id"
+        class="col"
       >
 
         <div class="text-center">
@@ -31,8 +32,8 @@
           </h4>
         </div>
 
-      </b-col>
-    </b-row>
+      </div>
+    </div>
 
   </div>
 </template>

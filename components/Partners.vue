@@ -1,17 +1,18 @@
 <template lang="html">
-  <b-row class="partners">
-    <b-col
+  <div class="row partners">
+    <div
       v-for="partner in $cms.partners"
       :key="partner.id"
+      class="col"
     >
-      <b-img
+      <img
         :src="partner.logo && require(`~/assets/${partner.logo.slice(1)}`)"
         :alt="partner.label"
         :title="partner.label"
         class="d-block mx-auto partners__logo"
-      />
-    </b-col>
-  </b-row>
+      >
+    </div>
+  </div>
 </template>
 
 <script>

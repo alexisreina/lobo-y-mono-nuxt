@@ -8,19 +8,19 @@
       {{team.intro}}
     </p>
 
-    <b-row>
-      <b-col
+    <div class="row">
+      <div
         v-for="person in team.people"
         :key="person.id"
-        md="6"
+        class="col-md-6"
       >
         <div class="person">
           <div class="person__image mb-4">
-            <b-img
+            <img
               :src="person.photo && require(`~/assets/${person.photo.slice(1)}`)"
               :alt="person.name"
-              fluid
-            />
+              class="img-fluid"
+            >
           </div>
 
           <h3 class="h4 person__name text-md-center">
@@ -32,8 +32,8 @@
           </div>
         </div>
 
-      </b-col>
-    </b-row>
+      </div>
+    </div>
   </div>
 </template>
 
