@@ -1,18 +1,7 @@
 {
   "slug": "usted-esta-aqui",
-  "title": "Usted está aquí",
-  "location": "Madrid",
-  "date": "Marzo 2012",
-  "image": "/uploads/ustedestaqui-destacada.jpg",
   "thumbnail": "/uploads/ustedestaqui-thumbnail.jpg",
-  "description": "Evento diseñado para Hub Madrid en el proyecto \"Hub Art\" en el que se creaban redes profesionales entre artistas y nuevos emprendedores.\n\nExposición y presentación del proyecto artístico \"Usted está aquí\". \n\nEn la producción del evento se trató de recrear un espacio de diálogo en el que poder debatir sobre Sociología del Arte Urbano y Graffiti. Creando un espacio en el que convivieron tanto artistas urbanos como estudiantes de bellas artes de la Universidad Complutense. \n\nContamos con la participación de diferentes colectivos y sociólogos sobre el tema, así como con vecinos del barrio. El evento fue dirigido por Sr Mu, Dr. Humes y Sara Formoso. \n\n**Desde Lobo y Mono, ofrecemos crear y adaptar el espacio, para que tu evento recree el clímax adecuado para que sucedan cosas bonitas. Así como cobertura audiovisual y cualquier cosa que se nos ocurra juntas.**\n\nArtistas: Sr. Mú y Sara Formoso.\n\nTítulo: \"Usted está aquí\"\n\nTécnica: Intervención Work in Progress de Arte Urbano e Instalación site-specific. Y mesa redonda sobre \"Arte Urbano como vehículo de transformación social\".",
-  "miscellaneus": [
-    "HUB MADRID",
-    "HUB ART",
-    "USTED ESTÁ AQUÍ",
-    "Exposición y Mesa Redonda",
-    "21 marzo 2012"
-  ],
+  "date": "Marzo 2012",
   "gallery": [
     "/uploads/ustedestaqui-01.jpg",
     "/uploads/ustedestaqui-02.jpg",
@@ -20,5 +9,16 @@
     "/uploads/ustedestaqui-04.jpg",
     "/uploads/ustedestaqui-05.jpg"
   ],
-  "id": "e69896d0-2572-11e9-8001-b43320e3af97"
+  "location": "Madrid",
+  "title": "Usted está aquí",
+  "id": "e69896d0-2572-11e9-8001-b43320e3af97",
+  "image": "/uploads/ustedestaqui-destacada.jpg",
+  "description": "Evento diseñado para Hub Madrid en el proyecto “Hub Art” en el que se crearon redes profesionales entre artistas y nuevos emprendedores.\n\nExposición y presentación del proyecto artístico “Usted está aquí”. En la producción del evento se generó un espacio de diálogo en el que debatir sobre la Sociología del Arte Urbano y el Graffiti. Tanto artistas urbanos como estudiantes de bellas artes de la Universidad Complutense de Madrid compartieron experiencias  y conocimientos. \n\nContamos con la participación de diferentes colectivos y sociólogos sobre el tema, artistas urbanos, así como con vecinos del barrio. El evento fue dirigido por Sr Mu, Dr. Humes y Sara Formoso. \n\n**Lobo y Mono configura el espacio donde se vaya a desarrollar tu evento para que sea muy sencillo generar un ambiente donde las cosas bonitas, simplemente, sucedan :). Además te ofrecemos la posibilidad de contratar cobertura audiovisual para promos o simplemente para recordar con las personas participantes la experiencia.**",
+  "miscellaneus": [
+    "HUB MADRID",
+    "HUB ART",
+    "USTED ESTÁ AQUÍ",
+    "Exposición y Mesa Redonda",
+    "21 marzo 2012"
+  ]
 }
