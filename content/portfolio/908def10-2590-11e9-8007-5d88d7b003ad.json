@@ -1,11 +1,7 @@
 {
   "slug": "veranos-culturales-3",
-  "title": "Veranos Culturales III",
-  "location": "San Sebastián de los Reyes",
-  "date": "Verano 2018",
-  "image": "/uploads/verano2018-destacada.jpg",
   "thumbnail": "/uploads/verano2018-thumbnail.gif",
-  "description": "Nuestra apuesta veraniega siempre tiene como marco el espacio urbano. Desde Lobo y Mono creemos que es necesario que la cultura llegue a todo a cada rincón y se aproxime a cada barrio.\n\nAprovechando que los días son más largos y que el buen tiempo nos invita a ocupar parques y plazas, hemos diseñado un paquete veraniego de actuaciones, conciertos y cine de verano. \n\nNos relacionarnos más con nuestros vecinos, socializamos mucho más  y disfrutamos del fresco de la noche.\n\nTodos los sábados de junio, julio y agosto, disfrutamos de un espectáculo de carácter familiar y cine de verano. En el 2018, contamos con la participación de la Cia Vol'e Temps, Cia Barré, Cia Maintomano, Concierto de Billy Boom Band y Ombligo. Así como nuestro tradicional cine de verano.\n\nEventos que nos invitan a pasar momentos inolvidables en compañía de los seres queridos. Cada uno de nuestros veranos fueron únicos y especiales, por este motivo el ayuntamiento de San Sebastián de los Reyes apostó por nuestras apuestas durante tres años consecutivos.",
+  "date": "Verano 2018",
   "gallery": [
     "/uploads/verano2018-01.jpg",
     "/uploads/verano2018-02.jpg",
@@ -13,9 +9,14 @@
     "/uploads/verano2018-04.jpg",
     "/uploads/verano2018-05.jpg",
     "/uploads/verano2018-06.jpg",
+    "/uploads/ezgif.com-gif-maker.gif",
     "/uploads/verano2018-07.jpg",
     "/uploads/verano2018-08.jpg",
     "/uploads/verano2018-09.jpg"
   ],
-  "id": "908def10-2590-11e9-8007-5d88d7b003ad"
+  "location": "San Sebastián de los Reyes",
+  "title": "Veranos Culturales III",
+  "id": "908def10-2590-11e9-8007-5d88d7b003ad",
+  "image": "/uploads/verano2018-destacada.jpg",
+  "description": "Nuestra apuesta veraniega siempre tiene como marco el espacio urbano. Desde Lobo y Mono creemos que es necesario que la cultura llegue a todo a cada rincón y se aproxime a cada barrio.\n\nAprovechando que los días son más largos y que el buen tiempo nos invita a ocupar parques y plazas, hemos diseñado un paquete veraniego de actuaciones, conciertos y cine de verano. \n\nNos relacionarnos más con nuestros vecinos, socializamos mucho más  y disfrutamos del fresco de la noche.\n\nTodos los sábados de junio, julio y agosto, disfrutamos de un espectáculo de carácter familiar y cine de verano. En el 2018, contamos con la participación de la Cia Vol'e Temps, Cia Barré, Cia Maintomano, Concierto de Billy Boom Band y Ombligo. Así como nuestro tradicional cine de verano.\n\nEventos que nos invitan a pasar momentos inolvidables en compañía de los seres queridos. Cada uno de nuestros veranos fueron únicos y especiales, por este motivo el ayuntamiento de San Sebastián de los Reyes apostó por nuestras apuestas durante tres años consecutivos."
 }
