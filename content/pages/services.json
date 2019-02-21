@@ -77,8 +77,8 @@
     ]
   },
   "cta": {
-    "title": "",
-    "description": "!Lobo y Mono te ofrece la posibilidad de configurar tu evento y  obtener un presupuesto en tiempo real!",
+    "title": "Crea tu evento",
+    "description": "Crea tu evento con nuestro configurador\n\nCon esta herramienta online podrás configurar las preferencias para tu evento y recibir un presupuesto inmediato.",
     "button": true,
     "button_label": "Configura tu evento",
     "button_url": "/crea-tu-evento"
