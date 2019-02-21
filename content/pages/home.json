@@ -1,7 +1,7 @@
 {
   "id": "home",
   "header": "Eventos Salvajemente",
-  "intro": "Diseñamos eventos con carácter para todas las familias. Proponemos espacios de ocio temáticos en los que la tradición y las corrientes culturales actuales se funden.\nPara lobos que hacen el mono y monos que hacen el lobo.",
+  "intro": "Diseñamos eventos con carácter para todas las familias. Proponemos espacios de ocio temáticos en los que la tradición y las corrientes culturales actuales se funden.",
   "cta": {
     "label": "Crea tu evento",
     "link": "/crea-tu-evento"
@@ -15,7 +15,7 @@
     },
     "list": [
       {
-        "title": "Cultura y Ocio como transformación social",
+        "title": "Ocio como transformación social",
         "image": "/uploads/lym-illustracion_cultura-ocio.svg",
         "description": "Pensamos el ocio como una oportunidad para aprender disfrutando.",
         "id": "0"
