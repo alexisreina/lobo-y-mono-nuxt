@@ -26,7 +26,7 @@
       {
         "title": "Eventos para todos los miembros de la familia.",
         "image": "/uploads/lym-para-todos.svg",
-        "text": "Por ello creemos indispensable proporcionar espacios en el que las familias en toda su diversidad encuentren un momento de diversión para compartir con los más peques. Nos merecemos espacios de ocio alternativo en el que los adultos podamos enseñar cuáles fueron las cosas que nos motivaron de jóvenes y las que nos mueven actualmente.",
+        "text": "Es indispensable proporcionar espacios en el que las familias en toda su diversidad encuentren un momento de diversión para compartir con los más peques. Nos merecemos una oferta de ocio alternativo en el que adultos y pequeños podamos compartir nuestras experiencias. El ocio unido a la cultura nos enriquecen como sociedad.",
         "id": "family"
       },
       {
@@ -35,7 +35,8 @@
         "text": "Nuestras propuestas siempre incluyen pilares que creemos imprescindibles, como el respeto a la infancia",
         "items": [
           "Cuidado de la infancia",
-          "Cultura, tradición y Educación",
+          "Cultura",
+          "tradición y educación",
           "Ecología y concienciación",
           "Respeto a los animales y el medio ambiente"
         ],
