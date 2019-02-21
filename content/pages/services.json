@@ -1,7 +1,7 @@
 {
   "id": "services",
-  "header": "Que Ofrecemos",
-  "intro": "Lobo y Mono Te ofrece la oportunidad de que cuentes tu propia historia utilizando la cultura y la tradición como herramienta narrativa, abarcando todo tipo de perfiles y edades, porque las familias son muy diversas!.",
+  "header": "Qué ofrecemos",
+  "intro": "En Lobo y Mono queremos ponerte fácil la creación de eventos en los que cuentes tu propia historia. Utilizamos la cultura y la tradición como herramienta narrativa, abarcando todo tipo de perfiles y edades, porque las familias son muy diversas!.",
   "list": [
     {
       "title": "Cultura y Ocio como transformación social",
@@ -41,7 +41,7 @@
     ]
   },
   "other": {
-    "title": "Otros Servicios Complementarios:",
+    "title": "Servicios complementarios:",
     "description": "Un evento puede tener diferentes necesidades a cubrir, desde técnicas a estéticas, por ello te proponemos servicios complementarios para cubrir las expectativas de tu público.",
     "list": [
       {
