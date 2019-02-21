@@ -77,8 +77,8 @@
     ]
   },
   "cta": {
-    "title": "Crea tu evento",
-    "description": "Crea tu evento con nuestro configurador\n\nCon esta herramienta online podrás configurar las preferencias para tu evento y recibir un presupuesto inmediato.",
+    "title": "Crea tu evento con nuestro configurador",
+    "description": "Con esta herramienta online podrás configurar las preferencias para tu evento y recibir un presupuesto inmediato.",
     "button": true,
     "button_label": "Configura tu evento",
     "button_url": "/crea-tu-evento"
