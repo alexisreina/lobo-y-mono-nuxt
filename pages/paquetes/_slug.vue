@@ -104,13 +104,17 @@ export default {
   color: #fff;
 }
 
+.theme-libroscopia {
+  background-color: #d6d5d6;
+}
+
 .event-description {
   & /deep/ ul {
     list-style-type: none;
     > li:before {
-      margin-left: -12px;
-      padding-right: 6px;
-      font-size: 7px;
+      margin-left: -15px;
+      padding-right: 10px;
+      font-size: 8px;
       vertical-align: middle;
       content: "♥";
     }
