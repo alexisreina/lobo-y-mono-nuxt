@@ -126,7 +126,7 @@ export default {
   & /deep/ ul {
     list-style-type: none;
     > li:before {
-      margin-left: -15px;
+      margin-left: -18px;
       padding-right: 10px;
       font-size: 8px;
       vertical-align: middle;
