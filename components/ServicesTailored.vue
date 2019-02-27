@@ -14,7 +14,11 @@
           {{service.title}}
         </h2>
 
-        <Markdown v-if="service.intro" :content="service.intro" />
+        <Markdown class="mb-md-5" v-if="service.intro" :content="service.intro" />
+
+        <LmButton :to="{ name: 'contacto' }" variant="primary">
+          Contacta con nosotras
+        </LmButton>
       </div>
     </div>
   </div>
@@ -22,11 +26,13 @@
 
 <script>
 import Markdown from "@/components/Markdown.vue";
+import LmButton from "@/components/LmButton.vue";
 
 export default {
   name: "ServicesTailored",
   components: {
-    Markdown
+    Markdown,
+    LmButton
   },
   props: {
     service: {
