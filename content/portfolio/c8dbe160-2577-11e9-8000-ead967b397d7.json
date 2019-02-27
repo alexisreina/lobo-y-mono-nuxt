@@ -1,17 +1,7 @@
 {
   "slug": "navidades-en-la-vina-2016",
-  "title": "Navidades en La Viña 2015",
-  "location": "San Sebastián de los Reyes",
-  "date": "Navidades 2015",
-  "image": "/uploads/la-vina-2016-destacada.jpg",
   "thumbnail": "/uploads/la-vina-2016-thumbnail.jpg",
-  "description": "El \"Centro Comercial La Viña\" Repitiendo la experiencia del año anterior.\n\nLa compañía de percusión Tabarilea, realizó tres pases con los que era imposible no bailar. \n\nSe encargaron de sacar una sonrisa a todos los que pasaban para realizar sus compras navideñas. Animando a la gente a entrar guiados por la música y el ritmo. \n\nTambién impartieron un fantástico taller de percusión para niñas y niños. \n\nEl viernes, 5 de enero. Siendo la mañana de Reyes. La compañía FAN FIN FON realizó un espectáculo en el que cada puesto y comercio era un buen lugar para hacer un show participativo.\n\nUn espectáculo sensible, muy divertido con notas de circo clásico e instrumentos musicales.\n\nLos pasillos del centro comercial se convirtieron en un escenario improvisado y nos hicieron detener el tiempo para admirar un divertido espectáculo de payasos tradicionales, con malabares, equilibrio ¡Y mucha clase! Preparando la sonrisa para un día mágico.",
-  "miscellaneus": [
-    "CC.CC LA VIÑA. San Sebastián de los reyes NAVIDADES",
-    "Dinamización",
-    "Centro Comercial la Viña",
-    "Navidades 2016"
-  ],
+  "date": "Navidades 2015",
   "gallery": [
     "/uploads/la-vina-2016-01.jpg",
     "/uploads/la-vina-2016-02.jpg",
@@ -32,5 +22,13 @@
     "/uploads/la-vina-2016-17.jpg",
     "/uploads/la-vina-2016-18.jpg"
   ],
-  "id": "c8dbe160-2577-11e9-8000-ead967b397d7"
+  "location": "San Sebastián de los Reyes",
+  "title": "Navidades en La Viña 2015",
+  "id": "c8dbe160-2577-11e9-8000-ead967b397d7",
+  "image": "/uploads/la-vina-2016-destacada.jpg",
+  "description": "El \"Centro Comercial La Viña\" Repitiendo la experiencia del año anterior.\n\nLa compañía de percusión Tabarilea, realizó tres pases con los que era imposible no bailar. \n\nSe encargaron de sacar una sonrisa a todos los que pasaban para realizar sus compras navideñas. Animando a la gente a entrar guiados por la música y el ritmo. \n\nTambién impartieron un fantástico taller de percusión para niñas y niños. \n\nEl viernes, 5 de enero. Siendo la mañana de Reyes. La compañía FAN FIN FON realizó un espectáculo en el que cada puesto y comercio era un buen lugar para hacer un show participativo.\n\nUn espectáculo sensible, muy divertido con notas de circo clásico e instrumentos musicales.\n\nLos pasillos del centro comercial se convirtieron en un escenario improvisado y nos hicieron detener el tiempo para admirar un divertido espectáculo de payasos tradicionales, con malabares, equilibrio ¡Y mucha clase! Preparando la sonrisa para un día mágico.",
+  "miscellaneus": [
+    "Centro Comercial la Viña",
+    "Navidades 2016"
+  ]
 }
