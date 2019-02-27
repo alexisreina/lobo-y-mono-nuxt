@@ -15,31 +15,37 @@
     <main role="main">
       <section class="container">
         <div class="row">
-          <div
-            v-for="event in $cms.catalog"
-            :key="event.id"
-            class="col-md-4"
-          >
+          <div class="col-xl-10 offset-xl-1">
+            <div class="row">
 
-            <nuxt-link
-              :to="{ name: 'paquetes-slug', params: { slug: event.slug } }"
-              class="d-block"
-            >
+              <div
+                v-for="event in $cms.catalog"
+                :key="event.id"
+                class="col-md-4 text-center"
+              >
 
-              <figure class="event-image">
-
-                <img
-                  :src="event.thumbnail && require(`~/assets/${event.thumbnail.slice(1)}`)"
-                  :alt="event.title"
-                  class="img-fluid d-block"
-                  width="210"
-                  height="171"
+                <nuxt-link
+                  :to="{ name: 'paquetes-slug', params: { slug: event.slug } }"
+                  class="d-inline-block"
                 >
 
-              </figure>
+                  <figure class="event-image">
 
-            </nuxt-link>
+                    <img
+                      :src="event.thumbnail && require(`~/assets/${event.thumbnail.slice(1)}`)"
+                      :alt="event.title"
+                      class="img-fluid"
+                      width="301"
+                      height="246"
+                    >
 
+                  </figure>
+
+                </nuxt-link>
+
+              </div>
+
+            </div>
           </div>
         </div>
       </section>
@@ -65,23 +71,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$event-border-radius: 32px;
+$event-border-width: 3px;
+
 .event-image {
-  border-radius: 30px;
+  border-radius: $event-border-radius;
   position: relative;
   display: inline-block;
 
   img {
-    border-radius: 30px;
-    transform: translate(6px, 6px);
+    border-radius: $event-border-radius;
+    transform: translate(5px, 5px);
   }
 
   &::before {
     content: "";
-    border: 2px solid $black;
+    border: $event-border-width solid $black;
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 30px;
+    border-radius: $event-border-radius;
     z-index: 1;
   }
 }
