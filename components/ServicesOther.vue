@@ -7,10 +7,10 @@
       {{other.title}}
     </h2>
 
-
     <Markdown
       v-if="other.description"
       :content="other.description"
+      class="mb-md-5"
     />
 
     <div class="row">
@@ -27,9 +27,9 @@
             class="mb-3 img-fluid"
           >
 
-          <h4 class="h6">
+          <p>
             {{item.title}}
-          </h4>
+          </p>
         </div>
 
       </div>
