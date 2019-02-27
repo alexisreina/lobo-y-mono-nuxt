@@ -35,7 +35,7 @@
       <section class="container mb-3">
         <div class="row">
           <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-            <Markdown :content="event.description" />
+            <Markdown class="event-description" :content="event.description" />
           </div>
         </div>
       </section>
@@ -79,11 +79,27 @@ export default {
     },
     theme() {
       const theme = this.event.theme;
-      return theme;
+      return `theme-${theme}`;
     }
   }
 };
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
+.theme-fresquito {
+  background: url("~assets/svg/lym-pattern-estrellas.svg") #cae0e6;
+}
+
+.event-description {
+  & /deep/ ul {
+    list-style-type: none;
+    > li:before {
+      margin-left: -12px;
+      padding-right: 6px;
+      font-size: 7px;
+      vertical-align: middle;
+      content: "♥";
+    }
+  }
+}
 </style>

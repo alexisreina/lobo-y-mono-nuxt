@@ -23,16 +23,17 @@
 
             <nuxt-link
               :to="{ name: 'paquetes-slug', params: { slug: event.slug } }"
+              class="d-block"
             >
 
-              <figure>
+              <figure class="event-image">
 
                 <img
                   :src="event.thumbnail && require(`~/assets/${event.thumbnail.slice(1)}`)"
                   :alt="event.title"
-                  class="img-fluid mb-2"
-                  width="400"
-                  height="267"
+                  class="img-fluid d-block"
+                  width="210"
+                  height="171"
                 >
 
               </figure>
@@ -47,9 +48,14 @@
 </template>
 
 <script>
+import Markdown from "@/components/Markdown.vue";
+
 export default {
   name: "CatalogPage",
   layout: "page",
+  components: {
+    Markdown
+  },
   computed: {
     page() {
       return this.$cms.pages.catalog;
@@ -59,4 +65,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.event-image {
+  border-radius: 30px;
+  position: relative;
+  display: inline-block;
+
+  img {
+    border-radius: 30px;
+    transform: translate(6px, 6px);
+  }
+
+  &::before {
+    content: "";
+    border: 2px solid $black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    z-index: 1;
+  }
+}
 </style>
