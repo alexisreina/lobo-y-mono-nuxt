@@ -21,7 +21,7 @@
               <div
                 v-for="event in $cms.catalog"
                 :key="event.id"
-                class="col-md-4 text-center"
+                class="col-md-4 text-center mb-3"
               >
 
                 <nuxt-link
