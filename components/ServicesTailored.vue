@@ -14,9 +14,13 @@
           {{service.title}}
         </h2>
 
-        <Markdown class="mb-md-5" v-if="service.intro" :content="service.intro" />
+        <Markdown
+          v-if="service.intro"
+          :content="service.intro"
+          class="mb-5"
+        />
 
-        <LmButton :to="{ name: 'contacto' }" variant="primary">
+        <LmButton :to="{ name: 'contacto' }" variant="primary" class="mb-3">
           Contacta con nosotras
         </LmButton>
       </div>

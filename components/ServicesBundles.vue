@@ -18,10 +18,12 @@
 
         <ul v-if="bundles.list">
           <li
-            v-for="(item, index) in bundles.list"
+            v-for="(item, index) in links"
             :key="index"
           >
-            {{item}}
+            <nuxt-link :to="{ name: 'paquetes-slug', params: { slug: item.slug } }">
+              {{item.label}}
+            </nuxt-link>
           </li>
         </ul>
       </div>
@@ -41,6 +43,40 @@ export default {
       type: Object,
       required: true
     }
+  },
+  data() {
+    return {
+      links: [
+        {
+          label: "Libroscopia",
+          slug: "libroscopia"
+        },
+        {
+          label: "Al fresquito",
+          slug: "al-fresquito-en-familia"
+        },
+        {
+          label: "Carnaval",
+          slug: "carnavales"
+        },
+        {
+          label: "En verano la cultura a la calle",
+          slug: "en-verano-la-cultura-a-la-calle"
+        },
+        {
+          label: "HUHA! Party",
+          slug: "huha-party"
+        },
+        {
+          label: "Convenciones en familia",
+          slug: "convenciones-en-familia"
+        },
+        {
+          label: "Re-concíliate",
+          slug: "re-conciliate"
+        }
+      ]
+    };
   }
 };
 </script>
