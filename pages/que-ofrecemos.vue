@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="page-services py-3 py-md-5">
+  <div class="page-services pt-3 pt-md-5">
     <header role="banner" class="container mb-3 mb-xl-5">
       <div class="row">
         <div class="col-lg-10 offset-lg-1">
@@ -16,27 +16,35 @@
       <ServicesList :services="page.list" />
     </section>
 
-    <section class="container mb-3 mb-md-5">
+    <section class="container mb-3 mb-md-5 py-3">
       <ServicesBundles :bundles="page.bundles" />
     </section>
 
-    <section class="container mb-3 mb-md-5">
+    <section class="container mb-3 mb-md-5 py-3">
       <ServicesTailored :service="page.tailored" />
     </section>
 
-    <section class="container mb-3 mb-md-5">
+    <section class="container mb-3 mb-md-5 py-3">
       <ServicesOther :other="page.other" />
     </section>
 
-    <section class="container py-5 text-center">
-      <div class="row">
-        <div class="col-lg-10 offset-lg-1">
+    <section class="py-5 text-center section-cta">
+      <div class="container py-5">
+        <div class="mx-auto" style="max-width: 33rem">
+          <h3>
+            Crea tu evento con nuestro configurador
+          </h3>
+
+          <p class="mb-5">
+            Con nuestro configurador podrás obtener un presupuesto inmediato ajustado a tus preferencias.
+          </p>
+
           <LmButton
-            to="/contacto"
+            :to="{ name: 'crea-tu-evento' }"
             variant="primary"
             size="lg"
           >
-            Contacta con nosotras
+            Crea tu evento
           </LmButton>
         </div>
       </div>
@@ -71,5 +79,8 @@ export default {
 };
 </script>
 
-<style lang="css">
+<style lang="scss" scoped>
+.section-cta {
+  background: url("~assets/svg/lym-pattern-pelos.svg");
+}
 </style>
