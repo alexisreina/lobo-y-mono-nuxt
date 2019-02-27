@@ -113,6 +113,15 @@ export default {
   color: #fff;
 }
 
+.theme-reconcilia {
+  background-image: repeating-linear-gradient(
+    #fff,
+    #fff 3.2rem,
+    #556db4 3.2rem,
+    #9198e5 calc(3.2rem + 1px)
+  );
+}
+
 .event-description {
   & /deep/ ul {
     list-style-type: none;
