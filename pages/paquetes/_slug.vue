@@ -108,6 +108,11 @@ export default {
   background-color: #d6d5d6;
 }
 
+.theme-convenciones {
+  background-color: #2f333f;
+  color: #fff;
+}
+
 .event-description {
   & /deep/ ul {
     list-style-type: none;
