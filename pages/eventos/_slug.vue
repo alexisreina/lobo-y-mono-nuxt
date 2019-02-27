@@ -18,7 +18,6 @@
               :src="require(`~/assets/${event.image.slice(1)}`)"
               :class="[event.caption ? 'mb-1' : 'mb-3']"
               class="d-block mx-auto img-fluid"
-              fluid
             >
 
             <figcaption v-if="event.caption" class="mb-3">

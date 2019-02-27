@@ -387,6 +387,18 @@ collections:
               widget: markdown,
               required: false,
             }
+      - label: Catálogo
+        name: catalog
+        file: "content/pages/catalog.json"
+        fields:
+          - { label: id, name: id, widget: hidden }
+          - { label: Título, name: header, widget: string }
+          - {
+              label: Descripción,
+              name: intro,
+              widget: markdown,
+              required: false,
+            }
       - label: Colaboradores
         name: collab
         file: "content/pages/collaborators.json"
@@ -439,6 +451,28 @@ collections:
         widget: list
         required: false
         field: { label: Image, name: image, widget: image }
+      - { label: id, name: id, widget: uuid }
+  - label: Paquetes
+    label_singular: Paquete
+    name: catalog
+    folder: "content/catalog"
+    create: true
+    extension: json
+    formart: json
+    identifier_field: id
+    fields:
+      - { label: slug, name: slug, widget: string }
+      - { label: Miniatura, name: thumbnail, widget: image }
+      - { label: Título, name: title, widget: string }
+      - { label: Imagen destacada, name: image, widget: image }
+      - { label: Descripción, name: description, widget: markdown }
+      - { label: Precio, name: price, widget: number }
+      - {
+          label: Servicios Complementarios,
+          name: other,
+          widget: list,
+          required: false,
+        }
       - { label: id, name: id, widget: uuid }
   - label: Artistas
     label_singular: Artista
