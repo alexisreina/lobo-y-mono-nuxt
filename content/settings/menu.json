@@ -16,14 +16,14 @@
       "id": "2bedd520-21a8-11e9-8003-bec59c568197"
     },
     {
-      "label": "Crea tu evento",
-      "url": "/crea-tu-evento",
-      "id": "59551000-21a8-11e9-8004-55ec13565a63"
-    },
-    {
       "label": "Catálogo",
       "url": "/paquetes",
       "id": "677f0230-21a8-11e9-8005-2b72cfc60574"
+    },
+    {
+      "label": "Crea tu evento",
+      "url": "/crea-tu-evento",
+      "id": "59551000-21a8-11e9-8004-55ec13565a63"
     },
     {
       "label": "Contacto",
