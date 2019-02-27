@@ -473,6 +473,7 @@ collections:
           widget: list,
           required: false,
         }
+      - { label: theme, name: theme, widget: hidden }
       - { label: id, name: id, widget: uuid }
   - label: Artistas
     label_singular: Artista
