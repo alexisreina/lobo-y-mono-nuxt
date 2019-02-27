@@ -1,23 +1,24 @@
 <template lang="html">
-  <div class="page-catalog-item">
+  <div class="page-catalog-item py-5">
     <!-- event header -->
     <header class="container" role="banner">
       <div class="row">
         <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 
           <!-- event title -->
-          <h1 class="text-capitalize text-center mb-4">
+          <h1 class="text-capitalize text-center mb-4 sr-only">
             {{event.title}}
           </h1>
           <!-- /event title -->
 
           <!-- event featured image -->
           <figure>
+
             <img
               v-if="event.image"
               :src="require(`~/assets/${event.image.slice(1)}`)"
               :alt="event.title"
-              class="d-block mx-auto img-fluid"
+              class="d-block mx-auto img-fluid mb-3"
             >
 
           </figure>
@@ -54,12 +55,20 @@
         </p>
       </section>
       <!-- /event miscellaneus -->
+
     </main>
   </div>
 </template>
 
 <script>
+import Markdown from "@/components/Markdown.vue";
+
 export default {
+  name: "CatalogItemPage",
+  layout: "page",
+  components: {
+    Markdown
+  },
   computed: {
     event() {
       const uuid = Object.keys(this.$cms.catalog).find(
