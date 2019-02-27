@@ -1,11 +1,7 @@
 {
   "slug": "al-fresquito-en-familia-2",
-  "title": "Al fresquito en familia II",
-  "location": "San Sebastián de los Reyes",
-  "date": "Navidades 2016",
-  "image": "/uploads/navidad2016-destacada.jpg",
   "thumbnail": "/uploads/navidad2016-thumbnail.jpg",
-  "description": "Para la organización/producción de este evento nuestro objetivo era que los adultos disfrutaran igual o más que los pequeños.\n\nPasamos un día en que todas las vecinas y vecinos de San Sebastián de los Reyes pudieron disfrutar de actividades y espectáculos para toda la familia.\n\nDurante los días 19, 24 y 31 de Diciembre se facilitaron talleres de percusión corporal, circo, swing, robótica, creación de videojuegos, cocina/decoración de cupcakes y laboratorio de texturas en el Museo Etnográfico \n\nTambién se realizó un pasacalles y actuaciones de circo, magia y conciertos en la Plaza de la Constitución.\n\nNo podía faltar el clásico pintacaras para peques y mayores, con diseños pensados exclusivamente para este mágico día. \n\nTres jornadas enmarcadas en plena Navidad, en la que pudimos disfrutar en comunidad de una experiencia en la que se respiró un ambiente entrañable.\n\nCada una de las actividades facilitadas por Lobo y Mono promueven espacios de encuentro en los que la cultura llegue a cada uno de los participantes con calidad y respeto.\n\nNos encanta cuando al despedirse los niños nos sonríen, y los adultos nos preguntan por nuestros próximos eventos.\n",
+  "date": "Navidades 2016",
   "gallery": [
     "/uploads/navidad2016-01.jpg",
     "/uploads/navidad2016-02.jpg",
@@ -32,5 +28,14 @@
     "/uploads/navidad2016-23.jpg",
     "/uploads/navidad2016-24.jpg"
   ],
-  "id": "fed3ade0-258e-11e9-8003-4e39f20d5f93"
+  "location": "San Sebastián de los Reyes",
+  "title": "Al fresquito en familia II",
+  "id": "fed3ade0-258e-11e9-8003-4e39f20d5f93",
+  "image": "/uploads/navidad2016-destacada.jpg",
+  "description": "Para la organización/producción de este evento nuestro objetivo era que los adultos disfrutaran igual o más que los pequeños. Pasamos un día en que todas las vecinas y vecinos de San Sebastián de los Reyes pudieron disfrutar de actividades y espectáculos para toda la familia.\n\nDurante los días 19, 24 y 31 de Diciembre se facilitaron talleres de percusión corporal, circo, danza contemporánea, juegos con luz, cocina/decoración de cupcakes y juguetes reciclados en el Museo Etnográfico \n\nTambién se realizaron pasacalles y actuaciones de circo, magia y conciertos en la Plaza de la Constitución. \n\nNo podía faltar el clásico pintacaras para peques y mayores, con diseños pensados exclusivamente para este mágico día. \n\nTres jornadas enmarcadas en plena Navidad, en la que pudimos disfrutar en comunidad de una experiencia en la que se respiró un ambiente entrañable.\n\n**Cada una de las actividades facilitadas por Lobo y Mono promueven espacios de encuentro en los que la cultura llegue a cada uno de los participantes con calidad y respeto.** Nos encanta cuando al despedirse los niños nos sonríen, y los adultos nos preguntan por nuestros próximos eventos.\n\n**Créditos:**\n\nBatucadas: _Hakuna Ma Samba, Tabarilea Percussion._\n\nPasacalles: _Bambolea Producciones. Cia Artlequin._\n\nActuaciones Circo: _Malabreikers, Chup Chup Cia. Artlequin._\n\nConciertos: _Lali Begood. Vera Green. Gibelle_\n\nTalleres: _Crea tu Belén con Luz impartido por Tia Hommes. Reciclaje de Juguetes por José a. Vallejo. Circo por el Circodromo. Taller de percusión corporal y movimiento por Tabarilea Percussion._\n\nDanza Contemporánea: _Arborecer_",
+  "miscellaneus": [
+    "Al Fresquito en Familia II",
+    "Ayto. de San Sebastián de los Reyes",
+    "Navidad 2016"
+  ]
 }
