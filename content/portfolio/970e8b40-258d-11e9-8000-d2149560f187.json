@@ -1,17 +1,7 @@
 {
   "slug": "consulta-de-participacion-ciudadana-en-carnavales",
-  "title": "Consulta de participación ciudadana en Carnavales",
-  "location": "San Sebastián de los Reyes",
-  "date": "Febrero 2016",
-  "image": "/uploads/conquistalamarina-destacada.jpg",
   "thumbnail": "/uploads/conquistalamarina-thumbnail.jpg",
-  "description": "Los Carnavales de 2016 en San Sebastián de los Reyes fueron una fiesta en la que los vecinos del pueblo pudieron por primera vez conocer los terrenos que hasta la fecha habían estado reservados al uso militar del Ejército de la Marina.\n\nUnos Carnavales especiales en los que la opinión ciudadana era el motor conductor. Para ello recreamos un ambiente festivo y colocamos mesas para realizar una Consulta de Participación Ciudadana, batucadas, pasacalles, talleres participativos y actuaciones para toda la familia. Durante este proyecto se diseñó un plan de usos de la Concejalía de Participación Ciudadana  y Urbanismo del mismo Ayuntamiento, con el apoyo de la Concejalía de Cultura. Durante todo el fin de semana se desarrollaron propuestas de distintas asociaciones del pueblo y entidades como la instalación de VIC (Vivero de iniciativas ciudadanas).\n\nEn estos carnavales tan especiales todas las personas que trabajamos en la Consulta de Participación Ciudadana, fuimos disfrazados de marineros, como elemento identificativo de la organización, facilitando a los asistentes puntos de información y consulta. Trabajamos en equipo con Asociaciones del pueblo para diseñar talleres y visitas guiadas por los espacios históricos del enclave.",
-  "miscellaneus": [
-    "Ayto. San Sebastián de los Reyes",
-    "Carnavales",
-    "Consulta de participación ciudadana",
-    "6 febrero 2016"
-  ],
+  "date": "Febrero 2016",
   "gallery": [
     "/uploads/conquistalamarina-02.jpg",
     "/uploads/conquistalamarina-03.jpg",
@@ -39,5 +29,15 @@
     "/uploads/conquistalamarina-24.jpg",
     "/uploads/conquistalamarina-25.jpg"
   ],
-  "id": "970e8b40-258d-11e9-8000-d2149560f187"
+  "location": "San Sebastián de los Reyes",
+  "title": "Consulta de participación ciudadana en Carnavales",
+  "id": "970e8b40-258d-11e9-8000-d2149560f187",
+  "image": "/uploads/conquistalamarina-destacada.jpg",
+  "description": "Los Carnavales de 2016 en San Sebastián de los Reyes fueron una fiesta en la que los vecinos del pueblo pudieron por primera vez conocer los terrenos que hasta la fecha habían estado reservados al uso militar del Ejército de la Marina.\n\nUnos Carnavales especiales en los que la opinión ciudadana era el motor conductor. Para ello recreamos un ambiente festivo y colocamos mesas para realizar una Consulta de Participación Ciudadana, batucadas, pasacalles, talleres participativos y actuaciones para toda la familia. Durante este proyecto se diseñó un plan de usos de la Concejalía de Participación Ciudadana  y Urbanismo del mismo Ayuntamiento, con el apoyo de la Concejalía de Cultura. Durante todo el fin de semana se desarrollaron propuestas de distintas asociaciones del pueblo y entidades como la instalación de VIC (Vivero de iniciativas ciudadanas).\n\nEn estos Carnavales tan especiales todas las personas que trabajamos en la Consulta de Participación Ciudadana, fuimos disfrazados de marineros, como elemento identificativo de la organización, facilitando a los asistentes puntos de información y consulta. Trabajamos en equipo con Asociaciones del pueblo para diseñar talleres y visitas guiadas por los espacios históricos del enclave.\n\n**Creditos:**\n\nBatucada: _Hakuna Ma Samba_\n\nActuación de Flamenco para Niños: _Desiree Paredes_\n\nActuación de Circo: _Eddie Eighty_\n\nGymkana: _Planeta Gudini_\n\nTaller de Pintura Mural: _Sr. Mu y Taña Maña_\n\nTaller de Moldes: _Joshu Larrey_\n\nActuación Swing: _Rolling Stomps_\n\nTaller de Swing: _Escuela Bigh South_\n\nConcurso de baile y disfraces ceremoniado por _Pablo, Big South._\n\nDinamización con Payasos.",
+  "miscellaneus": [
+    "Ayto. San Sebastián de los Reyes",
+    "Carnavales",
+    "Consulta de participación ciudadana",
+    "6 febrero 2016"
+  ]
 }
