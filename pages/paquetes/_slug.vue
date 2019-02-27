@@ -90,6 +90,15 @@ export default {
   background: url("~assets/svg/lym-pattern-estrellas.svg") #cae0e6;
 }
 
+.theme-carnaval {
+  background-color: #643b46;
+  color: #fff;
+}
+
+.theme-verano {
+  background-color: #f5f1ea;
+}
+
 .event-description {
   & /deep/ ul {
     list-style-type: none;
