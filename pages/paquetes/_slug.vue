@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="page-catalog-item py-5">
+  <div :class="[theme]" class="page-catalog-item py-5">
     <!-- event header -->
     <header class="container" role="banner">
       <div class="row">
@@ -76,6 +76,10 @@ export default {
       );
 
       return this.$cms.catalog[uuid];
+    },
+    theme() {
+      const theme = this.event.theme;
+      return theme;
     }
   }
 };
