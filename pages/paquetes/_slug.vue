@@ -34,7 +34,7 @@
       <!-- event description -->
       <section class="container mb-3">
         <div class="row">
-          <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+          <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2" :style="{ backgroundColor: event.theme == 'huha' ? '#231f20' : null }">
             <Markdown class="event-description" :content="event.description" />
           </div>
         </div>
@@ -97,6 +97,11 @@ export default {
 
 .theme-verano {
   background-color: #f5f1ea;
+}
+
+.theme-huha {
+  background: url("~assets/svg/lym-pattern-huha.svg") #231f20;
+  color: #fff;
 }
 
 .event-description {
