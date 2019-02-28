@@ -1,79 +1,77 @@
 {
-  "copyright": "",
+  "copyright": "Lobo y Mono 2019",
   "navigation": [
     {
-      "id": "0",
       "title": "Eventos",
+      "id": "0",
       "list": [
         {
-          "id": "0",
           "label": "Galería de Eventos",
-          "url": "/eventos"
+          "url": "/eventos",
+          "id": "0"
         },
         {
-          "id": "1",
           "label": "Eventos en familia",
-          "url": "/que-ofrecemos"
+          "url": "/que-ofrecemos",
+          "id": "1"
         }
       ]
     },
     {
-      "id": "1",
       "title": "Quienes Somos",
+      "id": "1",
       "list": [
         {
-          "id": "0",
           "label": "Lobo y Mono",
-          "url": "/quienes-somos"
+          "url": "/quienes-somos",
+          "id": "0"
         },
         {
-          "id": "1",
           "label": "Cuento",
-          "url": "/cuento"
+          "url": "/cuento",
+          "id": "1"
         }
       ]
     },
     {
-      "id": "2",
       "title": "Servicios",
+      "id": "2",
       "list": [
         {
-          "id": "0",
           "label": "Qué ofrecemos",
-          "url": "/que-ofrecemos"
+          "url": "/que-ofrecemos",
+          "id": "0"
         },
         {
-          "id": "1",
           "label": "Configura tu evento",
-          "url": "/crea-tu-evento"
+          "url": "/crea-tu-evento",
+          "id": "1"
         },
         {
-          "id": "2",
           "label": "Artistas",
-          "url": "/colaboradores"
+          "url": "/colaboradores",
+          "id": "2"
         },
         {
-          "id": "3",
           "label": "Trabaja con nosotras",
-          "url": "/contacto"
+          "url": "/contacto",
+          "id": "3"
         }
       ]
     },
     {
-      "id": "3",
       "title": "Contacto",
+      "id": "3",
       "list": [
         {
-          "id": "0",
           "label": "hola@loboymono.com",
           "url": "mailto:hola@loboymono.com",
-          "external": true
+          "id": "0"
         },
         {
-          "id": "1",
-          "label": "902 123 456",
-          "url": "tel:0034902123456",
-          "external": true
+          "label": "627 21 23 44",
+          "url": "tel:0034627212344",
+          "id": "1"
         }
       ]
     }
