@@ -1,5 +1,5 @@
 <template lang="html">
-  <form id="form_create" name="Crea tu evento" method="post" data-netlify="true">
+  <form id="form_create" name="Crea tu evento" method="post" action="/gracias" data-netlify="true">
 
     <div class="d-none">
       <input type="hidden" name="Título" :value="event.title">
