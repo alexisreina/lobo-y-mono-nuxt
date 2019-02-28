@@ -1,5 +1,14 @@
 <template lang="html">
   <form id="form_contact" netlify name="Crea tu evento">
+
+    <div class="d-none">
+      <input type="hidden" name="Título" :value="event.title">
+      <input type="hidden" name="Introducción" :value="getItemValues(event.intro)">
+      <input type="hidden" name="Nudo" :value="getItemValues(event.nudo)">
+      <input v-if="event.desenlace" type="text" name="Desenlace" :value="getItemValues(event.desenlace)">
+      <input type="hidden" name="Presupuesto" :value="budget">
+    </div>
+
     <div class="row align-items-lg-center">
       <div class="col-lg-6">
         <LmInput class="mb-lg-4">
@@ -28,7 +37,7 @@
             class="form-control"
             type="tel"
             name="Teléfono"
-            placeholder="teléfono*"
+            placeholder="Teléfono*"
             autocomplete="tel"
             required
           >
@@ -44,7 +53,7 @@
             class="form-control"
             type="text"
             name="Empresa"
-            placeholder="empresa"
+            placeholder="Empresa*"
             autocomplete="organization"
             required
           >
@@ -75,6 +84,7 @@
         </div>
       </div>
     </div>
+
   </form>
 </template>
 
@@ -87,6 +97,26 @@ export default {
   components: {
     LmButton,
     LmInput
+  },
+  props: {
+    event: {
+      type: Object,
+      required: true
+    },
+    budget: {
+      type: String,
+      required: true
+    }
+  },
+  methods: {
+    getItemValues(list) {
+      return list
+        .reduce((result, item) => {
+          result.push(`${item.title} (${item.price}€)`);
+          return result;
+        }, [])
+        .join();
+    }
   }
 };
 </script>

@@ -294,11 +294,15 @@
             <Markdown
               v-if="currentStep.description"
               :content="currentStep.description"
-              class="mx-auto"
+              class="mx-auto mb-md-5"
               style="max-width:35rem"
             />
 
-            <FormCreate />
+            <div class="row mb-5">
+              <div class="col-md-10 offset-md-1">
+                <FormCreate :event="selected" :budget="budget" />
+              </div>
+            </div>
 
           </div>
         </div>

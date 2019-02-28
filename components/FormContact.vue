@@ -1,7 +1,7 @@
 <template lang="html">
   <form id="form_contact" netlify name="Contacto">
     <div class="row">
-      <div class="col-lg-4">
+      <div class="col-lg-4 mb-3">
         <LmInput>
           <label for="input_email" class="sr-only">
             Email
@@ -19,7 +19,7 @@
         </LmInput>
       </div>
 
-      <div class="col-lg-4">
+      <div class="col-lg-4 mb-3">
         <LmInput>
           <label for="input_phone" class="sr-only">
             Teléfono
@@ -30,14 +30,14 @@
             class="form-control"
             type="tel"
             name="Teléfono"
-            placeholder="teléfono*"
+            placeholder="Teléfono*"
             autocomplete="tel"
             required
           >
         </LmInput>
       </div>
 
-      <div class="col-lg-4">
+      <div class="col-lg-4 mb-3">
         <LmInput>
           <label for="input_company" class="sr-only">
             Empresa
@@ -48,7 +48,7 @@
             class="form-control"
             type="text"
             name="Empresa"
-            placeholder="empresa"
+            placeholder="Empresa*"
             autocomplete="organization"
             required
           >
@@ -94,6 +94,3 @@ export default {
   }
 };
 </script>
-
-<style>
-</style>
