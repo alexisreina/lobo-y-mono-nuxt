@@ -91,12 +91,12 @@
         <div class="row py-5">
           <div v-if="event.next" class="col-6">
 
-            <LmButton
-              :to="{ name: 'eventos-slug', params: { slug: event.next.slug } }"
-              variant="primary"
+            <LmButtonIcon
+              :to="{ name: 'portfolio-slug', params: { slug: event.next.slug } }"
+              :prev="true"
             >
               Anterior
-            </LmButton>
+            </LmButtonIcon>
           </div>
 
           <div
@@ -105,12 +105,12 @@
             class="col-6 text-right"
           >
 
-            <LmButton
-              :to="{ name: 'eventos-slug', params: { slug: event.prev.slug } }"
-              variant="primary"
+            <LmButtonIcon
+              :to="{ name: 'portfolio-slug', params: { slug: event.prev.slug } }"
+              :next="true"
             >
               Siguiente
-            </LmButton>
+            </LmButtonIcon>
 
           </div>
         </div>
@@ -123,14 +123,14 @@
 
 <script>
 import Markdown from "@/components/Markdown.vue";
-import LmButton from "@/components/LmButton.vue";
+import LmButtonIcon from "@/components/LmButtonIcon.vue";
 
 export default {
   name: "EventPage",
   layout: "page",
   components: {
     Markdown,
-    LmButton
+    LmButtonIcon
   },
   computed: {
     event() {

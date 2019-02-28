@@ -92,13 +92,14 @@
             </div>
 
             <div class="text-right py-3">
-              <LmButton
+              <LmButtonIcon
                 variant="primary"
+                :next="true"
                 :disabled="!currentEvent"
                 @click.native="nextStep()"
               >
                 Siguiente
-              </LmButton>
+              </LmButtonIcon>
             </div>
           </div>
 
@@ -168,29 +169,29 @@
 
             <div class="row">
               <div class="col py-3">
-                <LmButton
-                  variant="primary"
+                <LmButtonIcon
+                  :prev="true"
                   @click.native="prevStep"
                 >
                   Anterior
-                </LmButton>
+                </LmButtonIcon>
               </div>
 
               <div class="col text-right py-3">
-                <LmButton
-                  variant="primary"
+                <LmButtonIcon
                   :disabled="!hasSelectedItems"
+                  :next="true"
                   @click.native="nextStep"
                 >
                   Siguiente
-                </LmButton>
+                </LmButtonIcon>
               </div>
             </div>
 
           </div>
 
           <div v-if="currentStep.id == 3" class="text-center py-3">
-            <div class="rounded bg-light p-3 px-lg-5 mx-auto mb-5" style="max-width: 768px">
+            <div class="curtain bg-light px-lg-5 mx-auto mb-5" style="max-width: 768px">
               <h2 class="my-3 my-md-5">
                 {{currentStep.title}}
               </h2>
@@ -270,12 +271,12 @@
 
             <div class="row">
               <div class="col text-left mt-5 py-3">
-                <LmButton
-                  variant="primary"
+                <LmButtonIcon
+                  :prev="true"
                   @click.native="prevStep"
                 >
                   Anterior
-                </LmButton>
+                </LmButtonIcon>
               </div>
 
               <div class="col text-right mt-5 py-3">
@@ -311,7 +312,6 @@
                 <FormCreate :event="selected" :budget="budget" />
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -322,6 +322,7 @@
 <script>
 import Markdown from "@/components/Markdown.vue";
 import LmButton from "@/components/LmButton.vue";
+import LmButtonIcon from "@/components/LmButtonIcon.vue";
 import FormCreate from "@/components/FormCreate.vue";
 
 export default {
@@ -330,6 +331,7 @@ export default {
   components: {
     Markdown,
     LmButton,
+    LmButtonIcon,
     FormCreate
   },
   data() {
@@ -522,7 +524,9 @@ $budget-border-radius: 9999em;
   }
 }
 
-// .curtain {
-//   background: url("~assets/svg/lym-config-pelos.svg") center bottom no-repeat;
-// }
+.curtain {
+  border-top: 2px solid $gray-300;
+  background: url("~assets/svg/lym-config-pelos.svg") center bottom no-repeat;
+  padding-bottom: 80px;
+}
 </style>
