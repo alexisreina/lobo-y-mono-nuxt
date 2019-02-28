@@ -22,7 +22,12 @@
       "id": "1",
       "list": [
         {
-          "label": "Lobo y Mono",
+          "label": "Nuestros valores",
+          "url": "/quienes-somos",
+          "id": "979b5e00-3aee-11e9-8000-879409d6585a"
+        },
+        {
+          "label": "Detrás de Lobo y Mono",
           "url": "/quienes-somos",
           "id": "0"
         }
