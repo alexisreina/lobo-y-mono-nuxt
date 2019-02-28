@@ -25,7 +25,7 @@ module.exports = {
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css?family=Work+Sans:400,700"
+        href: "https://fonts.googleapis.com/css?family=Work+Sans:400,500,700"
       }
     ],
     script: [
