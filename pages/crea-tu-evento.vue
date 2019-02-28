@@ -279,17 +279,20 @@
           </div>
 
           <div v-if="currentStep.id == 4" class="text-center py-3">
-            <h2 class="mb-md-3">
+            <h2 class="mb-md-5">
               {{currentStep.title}}
             </h2>
 
-            <p class="display-3">
+            <p class="budget text-center mx-auto my-3 my-md-5">
               {{budget}}
             </p>
+
 
             <Markdown
               v-if="currentStep.description"
               :content="currentStep.description"
+              class="mx-auto"
+              style="max-width:35rem"
             />
 
             <FormCreate />
@@ -401,4 +404,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$border-width: 3px;
+$border-radius: 9999em;
+
+.budget {
+  position: relative;
+  font-size: 1.65rem;
+  font-weight: bold;
+  max-width: 25rem;
+  padding: 0.75rem 2.25rem;
+  z-index: 2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: $border-width * -1;
+    left: $border-width * -1;
+    width: calc(100% + #{$border-width * 2});
+    height: calc(100% + #{$border-width * 2});
+    border: $border-width solid currentColor;
+    border-radius: $border-radius;
+    z-index: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% + #{$border-width});
+    height: calc(100% + #{$border-width});
+    z-index: -1;
+    background-color: $gray-100;
+    border-radius: $border-radius;
+    transform: translate($border-width, $border-width);
+  }
+}
 </style>
