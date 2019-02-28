@@ -116,9 +116,9 @@ export default {
 .theme-reconcilia {
   background-image: repeating-linear-gradient(
     #fff,
-    #fff 39px,
-    #556db4 39px,
-    #556db4 40px
+    #fff 50px,
+    #556db4 50px,
+    #556db4 51px
   );
 }
 

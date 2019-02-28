@@ -77,13 +77,13 @@
                     class="img-fluid"
                   >
 
-                  <LmButton
+                  <b-button
                     :variant="btnVariant(key)"
-                    @click.native="selectEventType(key)"
+                    :pressed="(key == currentEventKey)"
+                    @click="selectEventType(key)"
                   >
                     {{option.title}}
-                  </LmButton>
-
+                  </b-button>
                 </div>
               </div>
             </div>
@@ -327,6 +327,7 @@ export default {
   data() {
     return {
       currentEvent: null,
+      currentEventKey: "",
       currentStep: null
     };
   },
@@ -375,16 +376,17 @@ export default {
   methods: {
     btnVariant(option) {
       const variants = {
-        microcuento: "info",
-        microrelato: "success",
-        cuento: "warning",
-        novela: "danger"
+        microcuento: "outline-info",
+        microrelato: "outline-success",
+        cuento: "outline-warning",
+        novela: "outline-danger"
       };
       return variants[option];
     },
     selectEventType(key) {
       const selected = this.page.options[key];
       this.currentEvent = this.addOptionState(selected);
+      this.currentEventKey = key;
     },
     addOptionState(option) {
       return Object.keys(option).reduce((all, key) => {
