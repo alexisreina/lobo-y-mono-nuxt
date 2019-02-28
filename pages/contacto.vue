@@ -13,7 +13,7 @@
           </div>
 
           <div class="py-3 pt-md-5">
-            <ContactForm />
+            <FormContact />
           </div>
 
         </div>
@@ -24,14 +24,14 @@
 
 <script>
 import Markdown from "@/components/Markdown.vue";
-import ContactForm from "@/components/ContactForm.vue";
+import FormContact from "@/components/FormContact.vue";
 
 export default {
   name: "ContactPage",
   layout: "page",
   components: {
     Markdown,
-    ContactForm
+    FormContact
   }
 };
 </script>

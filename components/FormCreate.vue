@@ -1,8 +1,8 @@
 <template lang="html">
-  <form id="form_contact" netlify name="Contacto">
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="form-group">
+  <form id="form_contact" netlify name="Crea tu evento">
+    <div class="row align-items-lg-center">
+      <div class="col-lg-6">
+        <LmInput class="mb-lg-4">
           <label for="input_email" class="sr-only">
             Email
           </label>
@@ -16,11 +16,9 @@
             autocomplete="email"
             required
           >
-        </div>
-      </div>
+        </LmInput>
 
-      <div class="col-lg-4">
-        <div class="form-group">
+        <LmInput class="mb-lg-4">
           <label for="input_phone" class="sr-only">
             Teléfono
           </label>
@@ -34,11 +32,9 @@
             autocomplete="tel"
             required
           >
-        </div>
-      </div>
+        </LmInput>
 
-      <div class="col-lg-4">
-        <div class="form-group">
+        <LmInput class="mb-lg-3">
           <label for="input_company" class="sr-only">
             Empresa
           </label>
@@ -52,11 +48,11 @@
             autocomplete="organization"
             required
           >
-        </div>
+        </LmInput>
       </div>
 
-      <div class="col-12">
-        <div class="form-group">
+      <div class="col-lg-6">
+        <LmInput>
           <label for="input_message" class="sr-only">
             Teléfono
           </label>
@@ -66,9 +62,9 @@
             class="form-control"
             name="Mensaje"
             placeholder="Escribe aquí tu mensaje..."
-            rows="8"
+            rows="6"
           />
-        </div>
+        </LmInput>
       </div>
 
       <div class="col-12 text-right">
@@ -84,10 +80,16 @@
 
 <script>
 import LmButton from "@/components/LmButton.vue";
+import LmInput from "@/components/LmInput.vue";
+
 export default {
   name: "ContactForm",
   components: {
-    LmButton
+    LmButton,
+    LmInput
   }
 };
 </script>
+
+<style>
+</style>

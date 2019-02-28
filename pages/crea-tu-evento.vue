@@ -292,7 +292,7 @@
               :content="currentStep.description"
             />
 
-            <ContactForm />
+            <FormCreate />
 
           </div>
         </div>
@@ -304,7 +304,7 @@
 <script>
 import Markdown from "@/components/Markdown.vue";
 import LmButton from "@/components/LmButton.vue";
-import ContactForm from "@/components/ContactForm.vue";
+import FormCreate from "@/components/FormCreate.vue";
 
 export default {
   name: "ConfiguratorPage",
@@ -312,7 +312,7 @@ export default {
   components: {
     Markdown,
     LmButton,
-    ContactForm
+    FormCreate
   },
   data() {
     return {
