@@ -53,22 +53,6 @@ export default function(moduleOptions) {
     );
   };
 
-  // watch for contentChanges
-  if (process.env.NODE_ENV === "development") {
-    chokidar
-      .watch([basePath, mediaFolder], { ignoreInitial: true })
-      .on("all", (event, path) => {
-        if (path.includes("uploads")) {
-          consola.info("Copying uploaded assets to static folder");
-          copyImages();
-        } else {
-          consola.info("Building cms");
-          const cms = buildFilesTree(basePath);
-          createJson(cms);
-        }
-      });
-  }
-
   const generateRoutes = collection => {
     Object.keys(cms[collection.name]).forEach(uuid => {
       const item = cms[collection.name][uuid];
@@ -89,6 +73,22 @@ export default function(moduleOptions) {
   const cms = buildFilesTree(basePath);
   createJson(cms);
 
+  // watch for content changes in development
+  if (process.env.NODE_ENV === "development") {
+    chokidar
+      .watch([basePath, mediaFolder], { ignoreInitial: true })
+      .on("all", (event, path) => {
+        if (path.includes("uploads")) {
+          consola.info("Copying uploaded assets to static folder");
+          copyImages();
+        } else {
+          consola.info("Building cms");
+          const cms = buildFilesTree(basePath);
+          createJson(cms);
+        }
+      });
+  }
+
   // This will be called before Nuxt generates your pages
   this.nuxt.hook("generate:before", async generator => {
     // Generate dynamic routes
@@ -106,7 +106,7 @@ export default function(moduleOptions) {
   });
 
   // move uploads folder to static as netlify-cms
-  // uses it to generate for the image preview in image widget
+  // used to generate image previews by the image widget
   consola.info("Copying uploaded assets to static folder");
   return copyImages();
 }
