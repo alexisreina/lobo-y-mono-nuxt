@@ -1,5 +1,5 @@
 <template lang="html">
-  <form id="form_contact" netlify name="Contacto">
+  <form id="form_contact" name="Contacto" method="post" data-netlify="true">
     <div class="row">
       <div class="col-lg-4 mb-3">
         <LmInput>
