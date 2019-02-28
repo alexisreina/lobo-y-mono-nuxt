@@ -57,10 +57,12 @@ export default {
 <style scoped lang="scss">
 $review-border-radius: 64px;
 $review-max-width: 20rem;
+
 .review {
   position: relative;
   max-width: $review-max-width;
   background-color: $white;
+  border-radius: $review-border-radius;
   z-index: 2;
 
   &::before {

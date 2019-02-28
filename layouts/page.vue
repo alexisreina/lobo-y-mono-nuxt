@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
     <LmBanner v-if="$route.name == 'index'" />
 
     <AppNavbar
@@ -30,3 +30,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.wrapper {
+  overflow-x: hidden;
+}
+</style>

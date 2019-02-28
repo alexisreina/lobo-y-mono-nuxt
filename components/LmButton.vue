@@ -1,6 +1,10 @@
 <template lang="html">
   <b-button
-    :class="[$style.LmButton, $style[variant]]"
+    :class="[
+      $style.LmButton,
+      $style[variant],
+      fav && $style.LmButtonFav
+    ]"
     :size="size"
     :to="to"
     :block="block"
@@ -13,7 +17,7 @@
 export default {
   name: "LmButton",
   // eslint-disable-next-line
-  props: ["variant", "size", "block", "to"]
+  props: ["variant", "size", "block", "to", "fav"]
 };
 </script>
 
@@ -77,6 +81,25 @@ $border-radius: 9999em;
     &:active:not(:disabled):not(.disabled) {
       color: $white;
     }
+  }
+}
+
+.LmButtonFav {
+  width: 120px;
+  height: 120px;
+  padding: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.032em;
+
+  &::before,
+  &::after {
+    width: 120px;
+    height: 120px;
+    border-width: 3px;
   }
 }
 

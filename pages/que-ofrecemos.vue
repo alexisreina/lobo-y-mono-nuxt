@@ -16,21 +16,21 @@
       <ServicesList :services="page.list" />
     </section>
 
-    <section class="container mb-3 mb-md-5 py-3">
+    <section class="container mb-3 mb-md-5 py-3 py-md-4">
       <ServicesBundles :bundles="page.bundles" />
     </section>
 
-    <section class="container mb-3 mb-md-5 py-3">
+    <section class="container mb-3 mb-md-5 py-3 py-md-4">
       <ServicesTailored :service="page.tailored" />
     </section>
 
-    <section class="container mb-3 mb-md-5 py-3">
+    <section class="container mb-3 mb-md-5 py-3 py-md-4">
       <ServicesOther :other="page.other" />
     </section>
 
     <section class="py-5 text-center section-cta">
       <div class="container py-5">
-        <div class="mx-auto" style="max-width: 33rem">
+        <div class="mx-auto py-3" style="max-width: 33rem">
           <h3>
             Crea tu evento con nuestro configurador
           </h3>
@@ -41,6 +41,8 @@
 
           <LmButton
             :to="{ name: 'crea-tu-evento' }"
+            :fav="true"
+            class="mb-3 mb-md-5"
             variant="primary"
             size="lg"
           >

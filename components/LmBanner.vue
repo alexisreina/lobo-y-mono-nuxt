@@ -22,7 +22,7 @@
       </h1>
 
       <div
-        class="banner__icon text-center"
+        class="banner__icon text-center d-none"
         :class="{ enter: revealMsg }"
       >
         <img src="~/assets/svg/lym-icon-arrow-down.svg" alt="">

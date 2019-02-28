@@ -21,7 +21,10 @@
               {{service.title}}
             </h3>
 
-            <Markdown :content="service.description" />
+            <Markdown
+              :content="service.description"
+              class="contemt mb-md-5"
+            />
           </div>
         </div>
       </div>
@@ -45,5 +48,5 @@ export default {
 };
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 </style>

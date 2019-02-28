@@ -21,7 +21,7 @@
             v-for="(item, index) in links"
             :key="index"
           >
-            <nuxt-link :to="{ name: 'paquetes-slug', params: { slug: item.slug } }">
+            <nuxt-link :to="{ name: 'paquetes-slug', params: { slug: item.slug } }" class="link">
               {{item.label}}
             </nuxt-link>
           </li>
@@ -81,5 +81,9 @@ export default {
 };
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
+.link {
+  color: $black;
+  text-decoration: underline;
+}
 </style>
