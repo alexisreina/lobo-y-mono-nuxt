@@ -1,4 +1,4 @@
-const pkg = require("./package");
+// const pkg = require("./package");
 
 module.exports = {
   mode: "spa",
@@ -14,13 +14,18 @@ module.exports = {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: pkg.description }
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "En Lobo y Mono creamos eventos salvajemente familiares. ¿Qué significa?, que podrás pasar tiempo de calidad con toda tu familia. Nuestro objetivo es unir cultura y diversión. Para conocer más visita nuestra web <3"
+      }
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css?family=Work+Sans:400,800"
+        href: "https://fonts.googleapis.com/css?family=Work+Sans:400,700"
       }
     ],
     script: [
