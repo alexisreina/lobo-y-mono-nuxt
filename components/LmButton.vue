@@ -5,6 +5,9 @@
       $style[variant],
       fav && $style.LmButtonFav
     ]"
+    :to="to"
+    :size="size"
+    :block="block"
   >
     <slot />
   </b-button>
