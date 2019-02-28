@@ -5,9 +5,6 @@
       $style[variant],
       fav && $style.LmButtonFav
     ]"
-    :size="size"
-    :to="to"
-    :block="block"
   >
     <slot />
   </b-button>
@@ -52,13 +49,13 @@ $border-radius: 9999em;
     width: calc(100% + #{$border-width});
     height: calc(100% + #{$border-width});
     z-index: -1;
-    background-color: theme-color("secondary");
+    background-color: transparent;
     border-radius: $border-radius;
     transform: translate($border-width, $border-width);
     transition: transform 50ms ease-out;
   }
 
-  &:hover,
+  &:hover:not(:disabled):not(.disabled),
   &:focus:not(:disabled):not(.disabled),
   &:active:not(:disabled):not(.disabled) {
     border-color: transparent;
@@ -67,10 +64,23 @@ $border-radius: 9999em;
     color: $black;
   }
 
-  &:hover::after,
-  &:focus::after,
-  &:active::after {
+  &:hover:not(:disabled):not(.disabled)::after,
+  &:focus:not(:disabled):not(.disabled)::after,
+  &:active:not(:disabled):not(.disabled)::after {
     transform: translate($border-width * 2, $border-width * 2);
+  }
+
+  &:disabled {
+    background-color: transparent;
+    color: $black;
+  }
+
+  &:disabled::before {
+    border-color: $gray-200;
+  }
+
+  &:disabled::after {
+    background-color: $gray-100;
   }
 
   &.LmButton--light {
@@ -103,51 +113,35 @@ $border-radius: 9999em;
   }
 }
 
-.primary {
-  &::after {
-    background-color: theme-color("primary");
-  }
+.primary:not(:disabled)::after {
+  background-color: theme-color("primary");
 }
 
-.secondary {
-  &::after {
-    background-color: theme-color("secondary");
-  }
+.secondary:not(:disabled)::after {
+  background-color: theme-color("secondary");
 }
 
-.success {
-  &::after {
-    background-color: theme-color("success");
-  }
+.success:not(:disabled)::after {
+  background-color: theme-color("success");
 }
 
-.info {
-  &::after {
-    background-color: theme-color("info");
-  }
+.info:not(:disabled)::after {
+  background-color: theme-color("info");
 }
 
-.warning {
-  &::after {
-    background-color: theme-color("warning");
-  }
+.warning:not(:disabled)::after {
+  background-color: theme-color("warning");
 }
 
-.danger {
-  &::after {
-    background-color: theme-color("danger");
-  }
+.danger:not(:disabled)::after {
+  background-color: theme-color("danger");
 }
 
-.light {
-  &::after {
-    background-color: theme-color("light");
-  }
+.light:not(:disabled)::after {
+  background-color: theme-color("light");
 }
 
-.dark {
-  &::after {
-    background-color: theme-color("dark");
-  }
+.dark:not(:disabled)::after {
+  background-color: theme-color("dark");
 }
 </style>

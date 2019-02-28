@@ -69,7 +69,7 @@
                 class="col"
               >
 
-                <div class="text-center">
+                <div class="mx-auto text-center" style="max-width:180px">
 
                   <img
                     :src="require(`~/assets/${option.image.slice(1)}`)"
@@ -77,13 +77,16 @@
                     class="img-fluid"
                   >
 
-                  <b-button
-                    :variant="btnVariant(key)"
-                    :pressed="(key == currentEventKey)"
-                    @click="selectEventType(key)"
-                  >
-                    {{option.title}}
-                  </b-button>
+                  <div class="px-xl-3">
+                    <b-button
+                      :variant="btnVariant(key)"
+                      :pressed="(key == currentEventKey)"
+                      block
+                      @click="selectEventType(key)"
+                    >
+                      {{option.title}}
+                    </b-button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -100,7 +103,7 @@
           </div>
 
           <div v-if="currentStep.id == 2" class="py-3">
-            <div class="text-center">
+            <div class="text-center py-md-5 mx-auto" style="">
               <h2 class="mb-md-3">
                 {{currentStep.title}}
               </h2>
@@ -114,8 +117,8 @@
 
             <div class="py-5">
 
-              <div class="mb-3">
-                <h4>
+              <div class="mb-5">
+                <h4 class="mb-3 text-primary">
                   Planteamiento
                 </h4>
 
@@ -124,14 +127,14 @@
                   :key="intro.id"
                   :pressed.sync="intro.state"
                   variant="outline-primary"
-                  class="mr-1 mb1"
+                  class="mr-2 mb-2"
                 >
                   {{intro.title}}
                 </b-button>
               </div>
 
-              <div class="mb-3">
-                <h4>
+              <div class="mb-5">
+                <h4 class="mb-3 text-info">
                   Nudo
                 </h4>
 
@@ -140,14 +143,14 @@
                   :key="nudo.id"
                   :pressed.sync="nudo.state"
                   variant="outline-info"
-                  class="mr-1 mb1"
+                  class="mr-2 mb-2"
                 >
                   {{nudo.title}}
                 </b-button>
               </div>
 
-              <div v-if="currentEvent.desenlace" class="mb-3">
-                <h4>
+              <div v-if="currentEvent.desenlace" class="mb-5">
+                <h4 class="mb-3 text-danger">
                   Desenlace
                 </h4>
 
@@ -155,8 +158,8 @@
                   v-for="desenlace in currentEvent.desenlace"
                   :key="desenlace.id"
                   :pressed.sync="desenlace.state"
-                  variant="outline-warning"
-                  class="mr-1 mb1"
+                  variant="outline-danger"
+                  class="mr-2 mb-2"
                 >
                   {{desenlace.title}}
                 </b-button>
@@ -187,81 +190,86 @@
           </div>
 
           <div v-if="currentStep.id == 3" class="text-center py-3">
-            <h2 class="mb-md-3">
-              {{currentStep.title}}
-            </h2>
+            <div class="rounded bg-light p-3 px-lg-5 mx-auto mb-5" style="max-width: 768px">
+              <h2 class="my-3 my-md-5">
+                {{currentStep.title}}
+              </h2>
 
-            <img
-              :src="require(`~/assets/${selected.image.slice(1)}`)"
-              :alt="selected.title"
-              class="img-fluid"
-            >
+              <img
+                :src="require(`~/assets/${selected.image.slice(1)}`)"
+                :alt="selected.title"
+                class="img-fluid"
+              >
 
-            <span class="d-block mb-4">
-              {{selected.title}}
-            </span>
+              <strong class="d-block mb-5 text-muted">
+                {{selected.title}}
+              </strong>
 
-            <div class="row pb-5 mb-5">
-              <div v-if="selected.intro" class="col">
-                <h3>
-                  Planteamiento
-                </h3>
+              <div class="row pb-5 mb-5">
+                <div v-if="selected.intro" class="col">
+                  <h3 class="h4 mb-3 text-primary">
+                    Planteamiento
+                  </h3>
 
-                <div
-                  v-for="intro in selected.intro"
-                  :key="intro.id"
-                  class="mb-1"
-                >
-                  <b-button
-                    variant="primary"
+                  <div
+                    v-for="intro in selected.intro"
+                    :key="intro.id"
+                    class="mb-2"
                   >
-                    {{intro.title}}
-                  </b-button>
+                    <b-button
+                      variant="primary"
+                      block
+                    >
+                      {{intro.title}}
+                    </b-button>
+                  </div>
+
                 </div>
 
-              </div>
+                <div v-if="selected.nudo" class="col">
+                  <h3 class="h4 mb-3 text-info">
+                    Nudo
+                  </h3>
 
-              <div v-if="selected.nudo" class="col">
-                <h3>
-                  Nudo
-                </h3>
-
-                <div
-                  v-for="nudo in selected.nudo"
-                  :key="nudo.id"
-                  class="mb-1"
-                >
-                  <b-button
-                    variant="info"
+                  <div
+                    v-for="nudo in selected.nudo"
+                    :key="nudo.id"
+                    class="mb-2"
                   >
-                    {{nudo.title}}
-                  </b-button>
+                    <b-button
+                      variant="info"
+                      block
+                    >
+                      {{nudo.title}}
+                    </b-button>
+                  </div>
+
                 </div>
 
-              </div>
+                <div v-if="selected.desenlace" class="col">
+                  <h3 class="h4 mb-3 text-danger">
+                    Desenlace
+                  </h3>
 
-              <div v-if="selected.desenlace" class="col">
-                <h3>
-                  Desenlace
-                </h3>
-
-                <div
-                  v-for="desenlace in selected.desenlace"
-                  :key="desenlace.id"
-                  class="mb-1"
-                >
-                  <b-button
-                    variant="warning"
+                  <div
+                    v-for="desenlace in selected.desenlace"
+                    :key="desenlace.id"
+                    class="mb-2"
                   >
-                    {{desenlace.title}}
-                  </b-button>
-                </div>
+                    <b-button
+                      variant="danger"
+                      block
+                    >
+                      {{desenlace.title}}
+                    </b-button>
+                  </div>
 
+                </div>
               </div>
             </div>
 
             <div class="row">
-              <div class="col text-left py-3">
+              <div class="col text-left mt-5 py-3">
                 <LmButton
                   variant="primary"
                   @click.native="prevStep"
@@ -270,7 +278,7 @@
                 </LmButton>
               </div>
 
-              <div class="col text-right py-3">
+              <div class="col text-right mt-5 py-3">
                 <LmButton
                   variant="primary"
                   @click.native="nextStep"
@@ -513,4 +521,8 @@ $budget-border-radius: 9999em;
     transform: translate($budget-border-width, $budget-border-width);
   }
 }
+
+// .curtain {
+//   background: url("~assets/svg/lym-config-pelos.svg") center bottom no-repeat;
+// }
 </style>
