@@ -41,12 +41,23 @@ export default {
   background-color: $black;
   background-image: url("~assets/svg/lym-telefono.svg");
   background-repeat: no-repeat;
-  background-position: 250% bottom;
-  background-size: 90% auto;
+  background-position: -300px bottom;
+  background-size: 1200px auto;
 
-  @media (min-width: 1440px) {
-    background-position: 125% bottom;
-    background-size: 75% auto;
+  @media (min-width: 768px) {
+    background-position: 0 bottom;
+  }
+
+  @media (min-width: 1200px) {
+    background-position: 356px bottom;
+  }
+
+  @media (min-width: 1600px) {
+    background-position: 440px bottom;
+  }
+
+  @media (min-width: 1921px) {
+    background-position: center bottom;
   }
 }
 
