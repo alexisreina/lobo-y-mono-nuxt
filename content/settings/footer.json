@@ -6,12 +6,12 @@
       "id": "0",
       "list": [
         {
-          "label": "Galería de Eventos",
+          "label": "Portfolio de eventos",
           "url": "/eventos",
           "id": "0"
         },
         {
-          "label": "Eventos temáticos",
+          "label": "Catálogo de eventos",
           "url": "/paquetes",
           "id": "1"
         }
