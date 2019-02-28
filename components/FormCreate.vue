@@ -5,7 +5,7 @@
       <input type="hidden" name="Título" :value="event.title">
       <input type="hidden" name="Introducción" :value="getItemValues(event.intro)">
       <input type="hidden" name="Nudo" :value="getItemValues(event.nudo)">
-      <input v-if="event.desenlace" type="text" name="Desenlace" :value="getItemValues(event.desenlace)">
+      <input v-if="event.desenlace" type="hidden" name="Desenlace" :value="getItemValues(event.desenlace)">
       <input type="hidden" name="Presupuesto" :value="budget">
     </div>
 
