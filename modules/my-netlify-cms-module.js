@@ -93,8 +93,8 @@ export default function(moduleOptions) {
   this.nuxt.hook("generate:before", async generator => {
     // Generate dynamic routes
     const collections = [
-      { name: "portfolio", basePath: "eventos" },
-      { name: "catalog", basePath: "paquetes" }
+      { name: "portfolio", basePath: "portfolio" },
+      { name: "catalog", basePath: "catalogo" }
     ];
 
     await collections.forEach(collection => generateRoutes(collection));

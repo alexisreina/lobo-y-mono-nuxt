@@ -12,12 +12,12 @@
     },
     {
       "label": "Portfolio",
-      "url": "/eventos",
+      "url": "/portfolio",
       "id": "2bedd520-21a8-11e9-8003-bec59c568197"
     },
     {
       "label": "Catálogo",
-      "url": "/paquetes",
+      "url": "/catalogo",
       "id": "677f0230-21a8-11e9-8005-2b72cfc60574"
     },
     {

@@ -7,12 +7,12 @@
       "list": [
         {
           "label": "Portfolio de eventos",
-          "url": "/eventos",
+          "url": "/portfolio",
           "id": "0"
         },
         {
           "label": "Catálogo de eventos",
-          "url": "/paquetes",
+          "url": "/catalogo",
           "id": "1"
         }
       ]

@@ -25,7 +25,7 @@
               >
 
                 <nuxt-link
-                  :to="{ name: 'paquetes-slug', params: { slug: event.slug } }"
+                  :to="{ name: 'catalogo-slug', params: { slug: event.slug } }"
                   class="d-inline-block"
                 >
 

@@ -21,7 +21,7 @@
             v-for="(item, index) in links"
             :key="index"
           >
-            <nuxt-link :to="{ name: 'paquetes-slug', params: { slug: item.slug } }" class="link">
+            <nuxt-link :to="{ name: 'catalogo-slug', params: { slug: item.slug } }" class="link">
               {{item.label}}
             </nuxt-link>
           </li>
