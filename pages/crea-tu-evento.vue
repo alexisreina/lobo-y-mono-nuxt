@@ -17,7 +17,7 @@
     </header>
 
     <section class="pb-5">
-      <div class="container bg-white py-3 pb-5 py-md-5 mb-5 rounded">
+      <div class="container bg-white sheet py-3 pb-5 py-md-5 mb-5">
         <div class="px-xl-5">
           <div class="row py-3 mb-lg-5">
             <div
@@ -27,17 +27,20 @@
             >
 
               <div
-                class="mx-auto rounded-circle d-flex justify-content-center align-items-center mb-3"
-                :class="step.id == currentStep.id ? 'bg-dark text-white' : 'bg-light'"
-                style="width:75px;height:75px;"
+                class="stepper__indicator mx-auto mb-3"
+                :class="[
+                  step.id == currentStep.id ? 'bg-dark' : 'bg-light',
+                  step.id == 1 ? 'isFirst' : null,
+                  step.id == 4 ? 'isLast' : null
+                ]"
               >
-                <span class="text-bold lead" style="font-size:30px">
+                <span class="stepper__number">
                   {{step.id}}
                 </span>
 
               </div>
 
-              <div class="text-center">
+              <div class="text-center d-none d-md-block">
                 <span>
                   {{step.label}}
                 </span>
@@ -404,8 +407,72 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$border-width: 3px;
-$border-radius: 9999em;
+.sheet {
+  border-radius: 64px;
+}
+
+.stepper {
+  &__indicator {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      background-color: $gray-100;
+    }
+
+    &::before {
+      right: 125%;
+      width: 7vw;
+    }
+
+    &::after {
+      left: 125%;
+      width: 7vw;
+    }
+
+    &.isFirst::before {
+      display: none;
+    }
+
+    &.isLast::after {
+      display: none;
+    }
+  }
+
+  &__number {
+    font-weight: normal;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  @media (min-width: 768px) {
+    &__indicator {
+      width: 64px;
+      height: 64px;
+
+      &::before,
+      &::after {
+        height: 3px;
+      }
+    }
+
+    &__number {
+      font-size: 30px;
+    }
+  }
+}
+
+$budget-border-width: 3px;
+$budget-border-radius: 9999em;
 
 .budget {
   position: relative;
@@ -418,12 +485,12 @@ $border-radius: 9999em;
   &::before {
     content: "";
     position: absolute;
-    top: $border-width * -1;
-    left: $border-width * -1;
-    width: calc(100% + #{$border-width * 2});
-    height: calc(100% + #{$border-width * 2});
-    border: $border-width solid currentColor;
-    border-radius: $border-radius;
+    top: $budget-border-width * -1;
+    left: $budget-border-width * -1;
+    width: calc(100% + #{$budget-border-width * 2});
+    height: calc(100% + #{$budget-border-width * 2});
+    border: $budget-border-width solid currentColor;
+    border-radius: $budget-border-radius;
     z-index: 0;
   }
 
@@ -432,12 +499,12 @@ $border-radius: 9999em;
     position: absolute;
     top: 0;
     left: 0;
-    width: calc(100% + #{$border-width});
-    height: calc(100% + #{$border-width});
+    width: calc(100% + #{$budget-border-width});
+    height: calc(100% + #{$budget-border-width});
     z-index: -1;
     background-color: $gray-100;
-    border-radius: $border-radius;
-    transform: translate($border-width, $border-width);
+    border-radius: $budget-border-radius;
+    transform: translate($budget-border-width, $budget-border-width);
   }
 }
 </style>
