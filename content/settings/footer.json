@@ -11,8 +11,8 @@
           "id": "0"
         },
         {
-          "label": "Eventos en familia",
-          "url": "/que-ofrecemos",
+          "label": "Eventos temáticos",
+          "url": "/paquetes",
           "id": "1"
         }
       ]
@@ -25,11 +25,6 @@
           "label": "Lobo y Mono",
           "url": "/quienes-somos",
           "id": "0"
-        },
-        {
-          "label": "Cuento",
-          "url": "/cuento",
-          "id": "1"
         }
       ]
     },
