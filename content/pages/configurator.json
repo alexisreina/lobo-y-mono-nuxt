@@ -27,7 +27,7 @@
     {
       "label": "Obtén tu presupuesto",
       "title": "Tu presupuesto",
-      "description": "Este presupuesto es una simple estimación abierta, no contiende IVA ni otros impuestos. Escríbenos para saber más.\n\nEnvíanos una consulta, tu proupesta, si necesitas alguna variación...",
+      "description": "Este presupuesto es una simple estimación abierta, no contiene IVA ni otros impuestos. Escríbenos para saber más.\n\nEnvíanos una consulta junto tu propuesta si necesitas alguna variación.",
       "name": "budget",
       "id": "4"
     }
