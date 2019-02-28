@@ -69,11 +69,36 @@ export default function(moduleOptions) {
       });
   }
 
+  const generateRoutes = collection => {
+    Object.keys(cms[collection.name]).forEach(uuid => {
+      const item = cms[collection.name][uuid];
+      const path = collection.basePath;
+      const slug = item.slug;
+      const route = `/${path}/${slug}`;
+      const routes = this.options.generate.routes;
+
+      if (routes.indexOf(route) === -1) {
+        routes.push(route);
+      }
+    });
+    // consola.log(this.options.generate.routes);
+  };
+
   // Build cms
   consola.info("Building cms");
   const cms = buildFilesTree(basePath);
-
   createJson(cms);
+
+  // This will be called before Nuxt generates your pages
+  this.nuxt.hook("generate:before", async generator => {
+    // Generate dynamic routes
+    const collections = [
+      { name: "portfolio", basePath: "eventos" },
+      { name: "catalog", basePath: "paquetes" }
+    ];
+
+    await collections.forEach(collection => generateRoutes(collection));
+  });
 
   // Register $cms plugin
   this.addPlugin({
