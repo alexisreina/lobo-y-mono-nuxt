@@ -1,5 +1,18 @@
 <template lang="html">
-  <form id="form_contact" name="Contacto" method="post" action="/gracias/" data-netlify="true">
+  <form
+    id="form_contact"
+    name="Contacto"
+    method="post"
+    action="/gracias"
+    data-netlify="true"
+    netlify-honeypot="bot"
+  >
+
+    <div class="d-none">
+      <input name="bot">
+      <input type="hidden" name="form-name" value="Contacto">
+    </div>
+
     <div class="row">
       <div class="col-lg-4 mb-3">
         <LmInput>

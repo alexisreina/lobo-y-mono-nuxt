@@ -1,7 +1,19 @@
 <template lang="html">
-  <form id="form_create" name="Crea tu evento" method="post" action="/gracias/" data-netlify="true">
+  <form
+    id="form_create"
+    name="Crea tu evento"
+    method="post"
+    action="/gracias"
+    data-netlify="true"
+    netlify-honeypot="bot"
+  >
 
     <div class="d-none">
+      <input name="bot">
+      <input type="hidden" name="form-name" value="Crea tu evento">
+    </div>
+
+    <div class="">
       <input type="hidden" name="Título" :value="event.title">
       <input type="hidden" name="Introducción" :value="getItemValues(event.intro)">
       <input type="hidden" name="Nudo" :value="getItemValues(event.nudo)">
