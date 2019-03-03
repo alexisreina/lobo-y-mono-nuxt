@@ -191,23 +191,24 @@
           </div>
 
           <div v-if="currentStep.id == 3" class="text-center py-3">
-            <div class="curtain bg-light px-lg-5 mx-auto mb-5" style="max-width: 768px">
-              <h2 class="my-3 my-md-5">
-                {{currentStep.title}}
-              </h2>
 
-              <img
-                :src="require(`~/assets/${selected.image.slice(1)}`)"
-                :alt="selected.title"
-                class="img-fluid"
-              >
+            <h2 class="my-3 my-md-5">
+              {{currentStep.title}}
+            </h2>
 
-              <strong class="d-block mb-5 text-muted">
-                {{selected.title}}
-              </strong>
+            <img
+              :src="require(`~/assets/${selected.image.slice(1)}`)"
+              :alt="selected.title"
+              class="img-fluid"
+            >
 
-              <div class="row pb-5 mb-5">
-                <div v-if="selected.intro" class="col">
+            <strong class="d-block mb-5 text-muted">
+              {{selected.title}}
+            </strong>
+
+            <div class="curtain bg-light px-3 px-lg-5 py-5 mx-auto mb-5" style="max-width: 768px">
+              <div class="row pb-3 mb-5">
+                <div v-if="selected.intro" class="col mb-3">
                   <h3 class="h4 mb-3 text-primary">
                     Planteamiento
                   </h3>
@@ -217,17 +218,14 @@
                     :key="intro.id"
                     class="mb-2"
                   >
-                    <b-button
-                      variant="primary"
-                      block
-                    >
+                    <span class="btn btn-primary">
                       {{intro.title}}
-                    </b-button>
+                    </span>
                   </div>
 
                 </div>
 
-                <div v-if="selected.nudo" class="col">
+                <div v-if="selected.nudo" class="col mb-3">
                   <h3 class="h4 mb-3 text-info">
                     Nudo
                   </h3>
@@ -237,17 +235,14 @@
                     :key="nudo.id"
                     class="mb-2"
                   >
-                    <b-button
-                      variant="info"
-                      block
-                    >
+                    <span class="btn btn-info">
                       {{nudo.title}}
-                    </b-button>
+                    </span>
                   </div>
 
                 </div>
 
-                <div v-if="selected.desenlace" class="col">
+                <div v-if="selected.desenlace" class="col mb-3">
                   <h3 class="h4 mb-3 text-danger">
                     Desenlace
                   </h3>
@@ -257,12 +252,9 @@
                     :key="desenlace.id"
                     class="mb-2"
                   >
-                    <b-button
-                      variant="danger"
-                      block
-                    >
+                    <span class="btn btn-danger">
                       {{desenlace.title}}
-                    </b-button>
+                    </span>
                   </div>
 
                 </div>

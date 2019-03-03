@@ -41,8 +41,8 @@ $input-border-radius: 54px;
     height: 100%;
     transform: translate(5px, 7px);
     border-radius: $input-border-radius;
-    border: 1px solid $gray-200;
-    background-color: $gray-200;
+    border: 1px solid $gray-100;
+    background-color: $gray-100;
     z-index: 0;
   }
 

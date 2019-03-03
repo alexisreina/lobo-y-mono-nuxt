@@ -71,11 +71,12 @@ export default {
 
 <style lang="scss" scoped>
 .event-link {
+  display: block;
   text-decoration: none;
   color: inherit;
 
   &:hover .event-img {
-    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.45);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
   }
 }
 
