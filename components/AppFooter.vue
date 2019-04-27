@@ -60,8 +60,8 @@
       <!-- footer navigation -->
 
       <!-- footer copyright -->
-      <div class="text-center">
-        <small>{{copyright}}</small>
+      <div class="footer__copyright text-center small">
+        <Markdown :content="copyright" />
       </div>
       <!-- /footer copyright -->
     </div>
@@ -71,12 +71,14 @@
 <script>
 import AppFooterSocial from "@/components/AppFooterSocial";
 import Partners from "@/components/Partners.vue";
+import Markdown from "@/components/Markdown.vue";
 
 export default {
   name: "AppFooter",
   components: {
     AppFooterSocial,
-    Partners
+    Partners,
+    Markdown
   },
   props: {
     rrss: {
@@ -103,6 +105,7 @@ export default {
   background-position: bottom left, bottom right;
   background-repeat: no-repeat, no-repeat;
 
+  &__copyright /deep/ a,
   &__list-link {
     color: $white;
   }
