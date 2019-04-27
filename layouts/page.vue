@@ -12,6 +12,7 @@
     <AppFooter
       :rrss="$cms.settings.social"
       :menus="$cms.settings.footer.navigation"
+      :copyright="$cms.settings.footer.copyright"
     />
 
   </div>

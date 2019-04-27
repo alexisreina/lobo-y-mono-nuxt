@@ -18,7 +18,7 @@
       <hr class="hr mb-4 my-md-5">
 
       <!-- footer navigation -->
-      <div class="row">
+      <div class="row mb-3">
         <div class="col-lg-10 offset-lg-1">
           <div class="row">
             <div
@@ -58,6 +58,12 @@
         </div>
       </div>
       <!-- footer navigation -->
+
+      <!-- footer copyright -->
+      <div class="text-center">
+        <small>{{copyright}}</small>
+      </div>
+      <!-- /footer copyright -->
     </div>
   </footer>
 </template>
@@ -79,6 +85,10 @@ export default {
     },
     menus: {
       type: Array,
+      required: true
+    },
+    copyright: {
+      type: String,
       required: true
     }
   }
