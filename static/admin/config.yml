@@ -486,6 +486,8 @@ collections:
     fields:
       - { label: Nombre, name: name, widget: string }
       - { label: Foto, name: photo, widget: image }
+      - { label: Descripción, name: description, widget: text, required: false }
+      - { label: Enlace, name: link, widget: string, required: false }
       - { label: id, name: id, widget: uuid }
   - label: Partners
     label_singular: Partner
